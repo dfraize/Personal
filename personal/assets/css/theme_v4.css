@@ -1,0 +1,1450 @@
+/*------------------------------------------------------------------------------------------
+SASS Boilerplate - Styles CSS
+DATE - November 22, 2011
+AUTHOR - Doug Fraize
+------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - Base Import Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - Reset Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del,
+dfn, em, font, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  background: transparent; }
+
+textarea, input, select {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  white-space: normal;
+  text-align: left;
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+nav ul {
+  list-style-type: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+:focus {
+  outline: 0; }
+
+button::-moz-focus-inner {
+  border-color: transparent; }
+
+del, ins {
+  text-decoration: none;
+  text-decoration: line-through; }
+
+/*--- No styles for hidden inputs in older versions of Firefox ----------------------------*/
+input[type="hidden"] {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  border: 0px; }
+
+/*--- Tables still need 'cellspacing="0"' in the HTML markup ------------------------------*/
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: transparent;
+  width: auto;
+  height: auto; }
+
+.never {
+  display: none; }
+
+/*USED TO SET ANY ITEMS VISIBILITY TO NONE*/
+/*--- BOX MODEL RESET ---------------------------------------------------------------------*/
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*--- HIDE TRACKING PIXEL ---------------------------------------------------------------------*/
+.tracking {
+  position: absolute; }
+
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - Type Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+body {
+  color: #494949;
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: .9375em; }
+
+/*----- HEADERS ------------------------------------------------------------------------*/
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: "myriad-pro-1", "myriad-pro-2", "Myriad Pro", Arial, Helvetica, sans-serif; }
+
+h4, .h4, h5, .h5 {
+  font-family: "Arial", Helvetica, sans-serif; }
+
+h1, .h1, h2, .h2,
+h3, .h3, h4, .h4,
+h5, .h5 {
+  font-weight: 700;
+  margin-bottom: 0.533em;
+  color: #000; }
+
+h1, .h1 {
+  font-size: 2em; }
+
+h2, .h2 {
+  font-size: 1.533em; }
+
+h3, .h3 {
+  font-size: 1.267em; }
+
+h4, .h4 {
+  font-size: 1.067em; }
+
+h5, .h5 {
+  font-size: 0.933em; }
+
+b, strong, th, thead,
+dt, legend {
+  font-weight: bold; }
+
+/*----- PARAGRAPH ---------------------------------------------------------------------*/
+p {
+  line-height: 1.467em;
+  margin: 0 0 1em 0; }
+
+/*----- FOOTNOTES ---------------------------------------------------------------------*/
+small {
+  font-size: 0.667em; }
+
+p small {
+  display: block;
+  line-height: 1.467em; }
+
+/*----- LIST ITEMS --------------------------------------------------------------------*/
+ul {
+  list-style: disc outside;
+  margin-left: 1.133em; }
+
+ol {
+  list-style: decimal outside;
+  margin-left: 1.367em; }
+
+ul, ol, dl, dialog {
+  margin-bottom: 1em; }
+
+ul li, ol li, dl dd {
+  line-height: 1.467em;
+  margin-top: 0; }
+
+ol ol, ul ul, ol ul, ul ol {
+  margin-top: 0.533em; }
+
+dt {
+  color: #000; }
+
+.lower-alpha {
+  list-style-type: lower-alpha; }
+
+.upper-alpha {
+  list-style-type: upper-alpha; }
+
+.lower-roman {
+  list-style-type: lower-roman; }
+
+.upper-roman {
+  list-style-type: upper-roman; }
+
+.list-style-none {
+  list-style-type: none; }
+
+/*----- BLOCKQUOTE ------------------------------------------------------------------*/
+blockquote {
+  padding: 0.433em 1.3em 1.3em 1.3em; }
+
+blockquote p {
+  margin: 0;
+  line-height: 1.467em;
+  font-style: italic; }
+
+/*----- TABLE -----------------------------------------------------------------------*/
+table {
+  font: inherit; }
+
+/*----- LINKS ----------------------------------------------------------------------*/
+a:link {
+  color: #01417e;
+  text-decoration: underline;
+  cursor: pointer; }
+a:visited {
+  color: #666; }
+a:hover, a:focus, a:active {
+  text-decoration: none; }
+
+/*----- OTHER ELEMENTS -----------------------------------------------------------------------*/
+abbr {
+  cursor: help;
+  border-bottom: 1px dotted #000; }
+
+sup, sub {
+  font-size: 0.667em; }
+
+sup {
+  vertical-align: 0.333em; }
+
+sub {
+  vertical-align: -0.267em; }
+
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - Grid Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== HTML SETUP ==========================================================================*/
+html {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%; }
+
+/*=== PAGE SETUP ==========================================================================*/
+.page-adjust {
+  width: 100%; }
+
+/* PAGE ADJUST NOTES:
+THE FOLLOWING SHOULD BE AN OVERRIDE IN PRODUCT SPECIFIC STYLESHEET
+If you need to have a layout with header and footer are 100% of the page with grid
+fixed just set the width of page adjust to 100% then use a fixed value in grid adjust max width.
+{width:980px;}
+{width:100%;} */
+/*=== MASTHEAD & FOOTER SETUP =============================================================*/
+.masthead,
+.footer {
+  *zoom: 1;
+  position: relative;
+  text-align: left; }
+  .masthead:after,
+  .footer:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+
+.masthead {
+  margin-bottom: 1em;
+  padding: 1em 0; }
+
+.footer {
+  margin-top: 1em;
+  padding: 1em 0 0 0; }
+
+.masthead-adjust,
+.footer-adjust {
+  *zoom: 1;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 980px;
+  min-width: 320px;
+  padding: 0 2em; }
+  .masthead-adjust:after,
+  .footer-adjust:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+
+/*=== GRID SETUP ==========================================================================*/
+/*--- GRID ADJUST -------------------------------------------------------------------------*/
+.grid {
+  *zoom: 1;
+  text-align: left;
+  display: block;
+  padding: 0 2em; }
+  .grid:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+
+.grid-adjust {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 980px;
+  min-width: 320px; }
+
+/* GRID ADJUST NOTES
+THE FOLLOWING SHOULD BE AN OVERRIDE IN PRODUCT SPECIFIC STYLESHEET
+If you need to the grid to be 100% of the page just leave grid adjust empty, if you
+need a fixed layout for grid then use the below:
+{margin:0 auto; width:980px;}*/
+/*--- GRID MIN HEIGHT ---------------------------------------------------------------------*/
+.min-height {
+  min-height: 36.667em;
+  height: auto !important;
+  height: 36.667em; }
+
+/*--- GRID GLOBAL ATTRIBUTES  -------------------------------------------------------------*/
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8,
+.col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16,
+.col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
+  float: left;
+  margin-right: 2.04%;
+  min-height: 2.04%;
+  padding: 0; }
+
+.grid-nomargin .col-1, .grid-nomargin .col-2, .grid-nomargin .col-3, .grid-nomargin .col-4, .grid-nomargin .col-5, .grid-nomargin .col-6, .grid-nomargin .col-7, .grid-nomargin .col-8,
+.grid-nomargin .col-9, .grid-nomargin .col-10, .grid-nomargin .col-11, .grid-nomargin .col-12, .grid-nomargin .col-13, .grid-nomargin .col-14, .grid-nomargin .col-15, .grid-nomargin .col-16,
+.grid-nomargin .col-17, .grid-nomargin .col-18, .grid-nomargin .col-19, .grid-nomargin .col-20, .grid-nomargin .col-21, .grid-nomargin .col-22, .grid-nomargin .col-23, .grid-nomargin .col-24 {
+  margin-right: 0; }
+
+/*--- GRID PRESETS  -----------------------------------------------------------------------*/
+.col-1 {
+  width: 2.21%; }
+
+.col-2 {
+  width: 6.46%; }
+
+.col-3 {
+  width: 10.71%; }
+
+.col-4 {
+  width: 14.96%; }
+
+.col-5 {
+  width: 19.21%; }
+
+.col-6 {
+  width: 23.46%; }
+
+.col-7 {
+  width: 27.71%; }
+
+.col-8 {
+  width: 31.96%; }
+
+.col-9 {
+  width: 36.21%; }
+
+.col-10 {
+  width: 40.46%; }
+
+.col-11 {
+  width: 44.71%; }
+
+.col-12 {
+  width: 48.96%; }
+
+.col-13 {
+  width: 53.21%; }
+
+.col-14 {
+  width: 57.46%; }
+
+.col-15 {
+  width: 61.71%; }
+
+.col-16 {
+  width: 65.96%; }
+
+.col-17 {
+  width: 70.21%; }
+
+.col-18 {
+  width: 74.46%; }
+
+.col-19 {
+  width: 78.71%; }
+
+.col-20 {
+  width: 82.96%; }
+
+.col-21 {
+  width: 87.21%; }
+
+.col-22 {
+  width: 91.46%; }
+
+.col-23 {
+  width: 95.71%; }
+
+.col-24 {
+  width: 99.96%; }
+
+/*--- GRID PRESETS  -----------------------------------------------------------------------*/
+.grid-nomargin .col-1 {
+  width: 4.166%; }
+.grid-nomargin .col-2 {
+  width: 8.332%; }
+.grid-nomargin .col-3 {
+  width: 12.498%; }
+.grid-nomargin .col-4 {
+  width: 16.664%; }
+.grid-nomargin .col-5 {
+  width: 20.83%; }
+.grid-nomargin .col-6 {
+  width: 24.996%; }
+.grid-nomargin .col-7 {
+  width: 29.162%; }
+.grid-nomargin .col-8 {
+  width: 33.328%; }
+.grid-nomargin .col-9 {
+  width: 37.494%; }
+.grid-nomargin .col-10 {
+  width: 41.66%; }
+.grid-nomargin .col-11 {
+  width: 45.826%; }
+.grid-nomargin .col-12 {
+  width: 49.992%; }
+.grid-nomargin .col-13 {
+  width: 54.158%; }
+.grid-nomargin .col-14 {
+  width: 58.324%; }
+.grid-nomargin .col-15 {
+  width: 62.49%; }
+.grid-nomargin .col-16 {
+  width: 66.656%; }
+.grid-nomargin .col-17 {
+  width: 70.822%; }
+.grid-nomargin .col-18 {
+  width: 74.988%; }
+.grid-nomargin .col-19 {
+  width: 79.154%; }
+.grid-nomargin .col-20 {
+  width: 83.32%; }
+.grid-nomargin .col-21 {
+  width: 87.486%; }
+.grid-nomargin .col-22 {
+  width: 91.652%; }
+.grid-nomargin .col-23 {
+  width: 95.818%; }
+.grid-nomargin .col-24 {
+  width: 99.984%; }
+
+/*--- GRID LAST ADJUST  ------------------------------------------------------------------*/
+.last {
+  margin-right: 0; }
+
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - Form Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== GLOBAL FORM ELEMENTS ================================================================*/
+form, legend, label {
+  color: #333; }
+
+input, select, button {
+  color: #666;
+  cursor: pointer; }
+
+form {
+  position: relative; }
+
+fieldset, input, select, textarea, label {
+  display: block; }
+
+fieldset {
+  border: 0; }
+
+label {
+  clear: both;
+  font-weight: 900; }
+
+input, select {
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  border-radius: 0.2em;
+  border: 2px solid #DEDED0;
+  padding: 2px;
+  width: 100%;
+  max-width: 20em; }
+
+select {
+  width: 100%;
+  max-width: 20.467em; }
+
+/* Make sure to add 7px from the input width value */
+textarea {
+  width: 100%;
+  max-width: 20.467em;
+  height: auto; }
+
+input:hover,
+select:hover {
+  border: 2px solid #c4c4b4; }
+
+legend {
+  padding: 0; }
+
+fieldset ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: outside; }
+
+fieldset ol li {
+  list-style-type: none;
+  margin: 0 0 0.667em 0; }
+
+input[type="hidden"] {
+  display: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  border: 0;
+  display: inline;
+  width: 1.2em; }
+
+input[type="text"]:valid {
+  color: #666; }
+input[type="text"]:invalid {
+  color: red; }
+
+:invalid {
+  box-shadow: none; }
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="range"],
+input[type="url"],
+input[type="tel"],
+input[type="week"],
+input[type="datetime-local"],
+input[type="color"] {
+  -webkit-appearance: none; }
+
+/*=== UI FORM =============================================================================*/
+.ui-form .ui-form-inline-element {
+  display: inline-block;
+  width: auto; }
+.ui-form .fieldhint-color {
+  color: #b5aaa9; }
+.ui-form input, .ui-form select {
+  margin-top: 0.133em; }
+.ui-form .chx-radio {
+  display: block;
+  margin: 0 0 0.667em 0; }
+  .ui-form .chx-radio #opt_in_text {
+    border: 0;
+    clear: both;
+    display: inline;
+    margin-right: 0.2em;
+    width: auto; }
+  .ui-form .chx-radio label {
+    font-weight: normal;
+    position: relative;
+    top: 0.133em; }
+.ui-form .email-opt-in .email {
+  border: 2px solid #DEDED0;
+  vertical-align: -0.133em; }
+  .ui-form .email-opt-in .email:hover {
+    border: 2px solid #c4c4b4; }
+.ui-form .email-opt-in .email-label {
+  font-weight: 900; }
+.ui-form .email-opt-in .email-optin-label {
+  margin-top: 0.333em;
+  font-size: 0.867em;
+  line-height: 1.333em; }
+  .ui-form .email-opt-in .email-optin-label input {
+    margin-right: 0.067em;
+    width: 1.2em; }
+.ui-form .city-zip-lyt .city-label {
+  margin-bottom: 0.333em; }
+.ui-form .city-zip-lyt .zip-label, .ui-form .city-zip-lyt .state-label {
+  clear: none;
+  display: block;
+  float: left;
+  width: auto !important; }
+.ui-form .city-zip-lyt .state-label {
+  margin-right: 0.667em; }
+  .ui-form .city-zip-lyt .state-label select {
+    width: auto; }
+.ui-form .city-zip-lyt .zip {
+  width: 4em; }
+
+/*--- INLINE FORM ELEMENTS -------------------------------------------------------------------
+Use the class of ui-form-inline on the form element, it will place the labels to the left of inputs
+--------------------------------------------------------------------------------------------*/
+.ui-form-inline label {
+  display: inline-block; }
+.ui-form-inline input,
+.ui-form-inline textarea,
+.ui-form-inline select {
+  display: inline; }
+.ui-form-inline .city-zip-lyt label {
+  clear: none;
+  float: left;
+  width: auto !important;
+  margin-left: 0.333em;
+  margin-right: 0 !important; }
+  .ui-form-inline .city-zip-lyt label:first-child {
+    margin-left: 0; }
+.ui-form-inline .city-zip-lyt input,
+.ui-form-inline .city-zip-lyt select {
+  width: auto;
+  display: block; }
+
+/*--- FIELDHINT DISPLAY --------------------------------------------------------------------*/
+.ui-help-text {
+  color: #666;
+  font-style: italic;
+  font-weight: 500; }
+
+/*--- UI FORM ACTION ROW -------------------------------------------------------------------*/
+.ui-form-action {
+  margin: 0.667em 0 0 0;
+  -webkit-margin-top-collapse: separate; }
+
+/*=== ERROR, NOTICE, INFO & SUCCESS ========================================================*/
+/*--- ERROR, NOTICE, INFO & SUCCESS CONTAINERS ---------------------------------------------*/
+.error-ctn, .alert-ctn,
+.notice-ctn,
+.success-ctn,
+.info-ctn {
+  -moz-border-radius: 0.65em;
+  -webkit-border-radius: 0.65em;
+  -o-border-radius: 0.65em;
+  border-radius: 0.65em;
+  border: 2px solid #DDDDDD;
+  margin-bottom: 0.867em;
+  padding: 0.693em; }
+
+/*--- ERROR HANDLING -----------------------------------------------------------------------*/
+.error-ctn, .alert-ctn {
+  background-color: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #8A1F11; }
+
+.error-ctn a, .alert-ctn a {
+  color: #8A1F11; }
+
+.error-text {
+  color: #8A1F11;
+  font-weight: normal; }
+
+.error, .ui-form .error, .ui-form .error:hover {
+  background-color: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #333; }
+
+/*--- NOTICE HANDLING ----------------------------------------------------------------------*/
+.notice-ctn {
+  background-color: #FFF6BF;
+  border-color: #FFD324;
+  color: #514721; }
+  .notice-ctn a {
+    color: #514721; }
+
+/*--- INFO HANDLING ------------------------------------------------------------------------*/
+.info-ctn {
+  background-color: #D5EDF8;
+  border-color: #92CAE4;
+  color: #205791; }
+  .info-ctn a {
+    color: #205791; }
+
+/*--- SUCCESS HANDLING ---------------------------------------------------------------------*/
+.success-ctn {
+  background-color: #E6EFC2;
+  border-color: #C6D880;
+  color: #264409; }
+  .success-ctn a {
+    color: #264409; }
+
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - Page Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*----- HR ELEMENTS -----------------------------------------------------------------*/
+hr {
+  background-color: #FFF;
+  border: 0;
+  border-top: 1px solid #CCC;
+  clear: both;
+  color: #FFF;
+  display: block;
+  height: 0.133em;
+  margin: 1em 0; }
+
+/*--- ICON SPRITE  -------------------------------------------------------*/
+.ui-icn-sprite {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  display: inline-block; }
+
+/* Icon sprite call and setup */
+/*--- BASIC TABLE STYLES ------------------------------------------------------------------*/
+table {
+  width: 100%;
+  border: 1px dotted #CCC;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #000;
+  margin-bottom: 1em; }
+  table caption {
+    padding: 0.067em 0 0.333em 0;
+    font-weight: 900;
+    text-align: left; }
+  table th {
+    background-color: #ccc;
+    border-right: 1px solid #FFF;
+    padding: 0.333em 0.267em;
+    text-align: left; }
+    table th.last-child, table th:last-child {
+      border-right: 0; }
+  table td {
+    border: 1px dotted #CCC;
+    padding: 0.2em 0.267em; }
+  table .even td {
+    background-color: #fff; }
+  table .odd td {
+    background-color: #efefef; }
+
+/*--- BASIC IMAGE STYLES ------------------------------------------------------------------*/
+img {
+  max-width: 100%; }
+  img.left {
+    float: left;
+    margin: 0.3em 1em 1em 0; }
+  img.right {
+    float: right;
+    margin: 0.3em 0 1em 1em; }
+
+/*--- HORIZONTAL NAVIGATION SETUP ---------------------------------------------------------*/
+.link-list-horz {
+  padding: 0;
+  margin: 0; }
+  .link-list-horz dd, .link-list-horz li {
+    display: inline;
+    padding: 0;
+    margin: 0 0.4em 0 0; }
+    .link-list-horz dd a, .link-list-horz li a {
+      display: inline-block;
+      padding: 0 0.533em 0 0;
+      margin: 0; }
+
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - UI Box Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== BOX BASE SETUP ======================================================================*/
+.ui-box, .ui-box-rnd, .ui-box-rnd-shadow, .ui-box-rnd-adv, .ui-box-rnd-shadow-adv, .ui-box-shadow, .ui-box-shadow-adv {
+  position: relative;
+  border-bottom: 1px solid transparent;
+  margin-bottom: 1em;
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* must clearfix the box to use grid cols inside ui-box */
+  *zoom: 1;
+  /* this would be use if you are using the box footer */ }
+  .ui-box:after, .ui-box-rnd:after, .ui-box-rnd-shadow:after, .ui-box-rnd-adv:after, .ui-box-rnd-shadow-adv:after, .ui-box-shadow:after, .ui-box-shadow-adv:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+  .ui-box .box-hdr, .ui-box-rnd .box-hdr, .ui-box-rnd-shadow .box-hdr, .ui-box-rnd-adv .box-hdr, .ui-box-rnd-shadow-adv .box-hdr, .ui-box-shadow .box-hdr, .ui-box-shadow-adv .box-hdr {
+    background-color: #CCC;
+    padding: 1em; }
+  .ui-box .box-bdy, .ui-box-rnd .box-bdy, .ui-box-rnd-shadow .box-bdy, .ui-box-rnd-adv .box-bdy, .ui-box-rnd-shadow-adv .box-bdy, .ui-box-shadow .box-bdy, .ui-box-shadow-adv .box-bdy {
+    padding: 1em 1em 0 1em; }
+  .ui-box .box-ftr, .ui-box-rnd .box-ftr, .ui-box-rnd-shadow .box-ftr, .ui-box-rnd-adv .box-ftr, .ui-box-rnd-shadow-adv .box-ftr, .ui-box-shadow .box-ftr, .ui-box-shadow-adv .box-ftr {
+    display: none;
+    padding: 0 1em; }
+  .ui-box .last, .ui-box-rnd .last, .ui-box-rnd-shadow .last, .ui-box-rnd-adv .last, .ui-box-rnd-shadow-adv .last, .ui-box-shadow .last, .ui-box-shadow-adv .last {
+    margin-bottom: 0; }
+
+/*--- BOX WITH ROUNDED CORNERS ---------------------------------------------------------------*/
+.ui-box-rnd, .ui-box-rnd-shadow {
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em;
+  padding: 1em 1em 0 1em; }
+
+.ui-box-rnd-adv, .ui-box-rnd-shadow-adv {
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em; }
+  .ui-box-rnd-adv .box-hdr, .ui-box-rnd-shadow-adv .box-hdr {
+    -moz-border-radius: 0.333em 0.333em 0 0;
+    -webkit-border-radius: 0.333em 0.333em 0 0;
+    -o-border-radius: 0.333em 0.333em 0 0;
+    border-radius: 0.333em 0.333em 0 0; }
+
+/*--- BOX WITH A DROP SHADOW -----------------------------------------------------------------*/
+.ui-box-shadow {
+  -moz-box-shadow: 0 0 0.333em #cccccc;
+  -webkit-box-shadow: 0 0 0.333em #cccccc;
+  -o-box-shadow: 0 0 0.333em #cccccc;
+  box-shadow: 0 0 0.333em #cccccc;
+  padding: 1em 1em 0 1em; }
+
+.ui-box-shadow-adv {
+  -moz-box-shadow: 0 0 0.333em #cccccc;
+  -webkit-box-shadow: 0 0 0.333em #cccccc;
+  -o-box-shadow: 0 0 0.333em #cccccc;
+  box-shadow: 0 0 0.333em #cccccc; }
+
+/*--- ROUNDED CORNER BOX WITH A DROP SHADOW ------------------------------------------------*/
+.ui-box-rnd-shadow {
+  -moz-box-shadow: 0 0 0.333em #cccccc;
+  -webkit-box-shadow: 0 0 0.333em #cccccc;
+  -o-box-shadow: 0 0 0.333em #cccccc;
+  box-shadow: 0 0 0.333em #cccccc; }
+
+.ui-box-rnd-shadow-adv {
+  -moz-box-shadow: 0 0 0.333em #cccccc;
+  -webkit-box-shadow: 0 0 0.333em #cccccc;
+  -o-box-shadow: 0 0 0.333em #cccccc;
+  box-shadow: 0 0 0.333em #cccccc; }
+
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - UI Button Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== CORE BUTTON SETUP ===================================================================*/
+.ui-btn-ctn, .ui-btn .x-small, .ui-btn .small, .ui-btn .medium, .ui-btn .large, .ui-btn .x-large, .ui-btn .xx-large, .ui-btn .xxx-large {
+  background-color: #efefef;
+  background-image: -moz-linear-gradient(top, #efefef, #cccccd);
+  /* FF3.6 */
+  background-image: -o-linear-gradient(top, #efefef, #cccccd);
+  /* Opera 11.10+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #efefef), color-stop(1, #cccccd));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(#efefef, #cccccd);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: linear-gradient(top, #efefef, #cccccd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#efefef', EndColorStr='#cccccd');
+  /* IE6 - IE9 */
+  -moz-border-radius: 0.65em;
+  -webkit-border-radius: 0.65em;
+  -o-border-radius: 0.65em;
+  border-radius: 0.65em;
+  -moz-box-shadow: 0 1px 1px #cccccc;
+  -webkit-box-shadow: 0 1px 1px #cccccc;
+  -o-box-shadow: 0 1px 1px #cccccc;
+  box-shadow: 0 1px 1px #cccccc;
+  border: 1px solid #B4B4B4;
+  transition: box-shadow 0.15s ease-in-out 0s;
+  -moz-transition: -moz-box-shadow 0.15s ease-in-out 0s;
+  -webkit-transition: -webkit-box-shadow 0.15s ease-in-out 0s;
+  -o-transition: -o-box-shadow 0.15s ease-in-out 0s;
+  text-shadow: 1px 1px 1px #FFF;
+  color: #333;
+  font-weight: 900;
+  line-height: 1em;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0.433em 0.65em;
+  position: relative;
+  display: block; }
+
+.ui-btn {
+  background-color: transparent;
+  border-width: 0;
+  font-family: "Arial", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  display: inline-block;
+  overflow: visible;
+  /* Removes horz. padding of button tag in IE7 */
+  cursor: pointer;
+  text-decoration: none; }
+  .ui-btn .x-small {
+    font-size: 0.667em;
+    min-width: 2.564em;
+    font-weight: normal; }
+  .ui-btn .small {
+    font-size: 0.8em;
+    min-width: 4.2735em; }
+  .ui-btn .medium {
+    font-size: 0.933em;
+    min-width: 5.25em; }
+  .ui-btn .large, .ui-btn .x-large, .ui-btn .xx-large, .ui-btn .xxx-large {
+    font-family: "myriad-pro-1", "myriad-pro-2", "Myriad Pro", Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    min-width: 5.5em;
+    font-weight: 700; }
+  .ui-btn .x-large {
+    font-size: 1.467em;
+    min-width: 5.66em; }
+  .ui-btn .xx-large {
+    font-size: 1.733em;
+    min-width: 5.77em; }
+  .ui-btn .xxx-large {
+    font-size: 2.2em;
+    min-width: 5.4em; }
+  .ui-btn:link, .ui-btn:visited {
+    color: #333;
+    text-decoration: none; }
+  .ui-btn:hover .ui-btn-ctn, .ui-btn:hover .x-small, .ui-btn:hover .small, .ui-btn:hover .medium, .ui-btn:hover .large, .ui-btn:hover .x-large, .ui-btn:hover .xx-large, .ui-btn:hover .xxx-large {
+    background-color: #efefef;
+    background-image: -moz-linear-gradient(top, #efefef, #bbbaba);
+    /* FF3.6 */
+    background-image: -o-linear-gradient(top, #efefef, #bbbaba);
+    /* Opera 11.10+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #efefef), color-stop(1, #bbbaba));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(#efefef, #bbbaba);
+    /* Chrome 10+, Saf5.1+ */
+    background-image: linear-gradient(top, #efefef, #bbbaba);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#efefef', EndColorStr='#bbbaba');
+    /* IE6 - IE9 */
+    border: 1px solid #999;
+    color: #000; }
+  .ui-btn:active .ui-btn-ctn, .ui-btn:active .x-small, .ui-btn:active .small, .ui-btn:active .medium, .ui-btn:active .large, .ui-btn:active .x-large, .ui-btn:active .xx-large, .ui-btn:active .xxx-large {
+    background-color: #bbbaba;
+    background-image: -moz-linear-gradient(top, #bbbaba, #efefef);
+    /* FF3.6 */
+    background-image: -o-linear-gradient(top, #bbbaba, #efefef);
+    /* Opera 11.10+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #bbbaba), color-stop(1, #efefef));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(#bbbaba, #efefef);
+    /* Chrome 10+, Saf5.1+ */
+    background-image: linear-gradient(top, #bbbaba, #efefef);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#bbbaba', EndColorStr='#efefef');
+    /* IE6 - IE9 */
+    -moz-box-shadow: 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -o-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    transition: translate(0, 0);
+    -moz-transition: translate(0, 0);
+    -webkit-transition: translate(0, 0);
+    -o-transition: translate(0, 0);
+    text-shadow: -1px -1px 1px white; }
+  .ui-btn .ui-btn-icn-left,
+  .ui-btn .ui-btn-icn-right {
+    display: inline-block; }
+  .ui-btn .ui-btn-icn-left {
+    margin-right: 0.347em; }
+  .ui-btn .ui-btn-icn-right {
+    margin-left: 0.347em; }
+  .ui-btn .ui-btn-icn-top,
+  .ui-btn .ui-btn-icn-bottom {
+    display: block; }
+  .ui-btn .ui-btn-icn-top {
+    margin: 0 auto 0.2em auto; }
+  .ui-btn .ui-btn-icn-bottom {
+    margin: 0.2em auto 0 auto; }
+
+.ui-btn-grp-vert .ui-btn {
+  display: block; }
+  .ui-btn-grp-vert .ui-btn .ui-btn-ctn, .ui-btn-grp-vert .ui-btn .x-small, .ui-btn-grp-vert .ui-btn .small, .ui-btn-grp-vert .ui-btn .medium, .ui-btn-grp-vert .ui-btn .large, .ui-btn-grp-vert .ui-btn .x-large, .ui-btn-grp-vert .ui-btn .xx-large, .ui-btn-grp-vert .ui-btn .xxx-large {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border-top: 0; }
+.ui-btn-grp-vert .ui-btn:first-child .ui-btn-ctn, .ui-btn-grp-vert .ui-btn:first-child .x-small, .ui-btn-grp-vert .ui-btn:first-child .small, .ui-btn-grp-vert .ui-btn:first-child .medium, .ui-btn-grp-vert .ui-btn:first-child .large, .ui-btn-grp-vert .ui-btn:first-child .x-large, .ui-btn-grp-vert .ui-btn:first-child .xx-large, .ui-btn-grp-vert .ui-btn:first-child .xxx-large {
+  -moz-border-radius: 0.65em 0.65em 0 0;
+  -webkit-border-radius: 0.65em 0.65em 0 0;
+  -o-border-radius: 0.65em 0.65em 0 0;
+  border-radius: 0.65em 0.65em 0 0;
+  border-top: 1px solid #B4B4B4; }
+.ui-btn-grp-vert .ui-btn:last-child .ui-btn-ctn, .ui-btn-grp-vert .ui-btn:last-child .x-small, .ui-btn-grp-vert .ui-btn:last-child .small, .ui-btn-grp-vert .ui-btn:last-child .medium, .ui-btn-grp-vert .ui-btn:last-child .large, .ui-btn-grp-vert .ui-btn:last-child .x-large, .ui-btn-grp-vert .ui-btn:last-child .xx-large, .ui-btn-grp-vert .ui-btn:last-child .xxx-large {
+  -moz-border-radius: 0 0 0.65em 0.65em;
+  -webkit-border-radius: 0 0 0.65em 0.65em;
+  -o-border-radius: 0 0 0.65em 0.65em;
+  border-radius: 0 0 0.65em 0.65em; }
+
+.ui-btn-grp-horz {
+  *zoom: 1; }
+  .ui-btn-grp-horz:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+  .ui-btn-grp-horz .ui-btn {
+    float: left; }
+    .ui-btn-grp-horz .ui-btn .ui-btn-ctn, .ui-btn-grp-horz .ui-btn .x-small, .ui-btn-grp-horz .ui-btn .small, .ui-btn-grp-horz .ui-btn .medium, .ui-btn-grp-horz .ui-btn .large, .ui-btn-grp-horz .ui-btn .x-large, .ui-btn-grp-horz .ui-btn .xx-large, .ui-btn-grp-horz .ui-btn .xxx-large {
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0;
+      border-top: 1px solid #B4B4B4;
+      border-bottom: 1px solid #B4B4B4;
+      border-left: 0;
+      border-right: 1px solid #B4B4B4; }
+  .ui-btn-grp-horz .ui-btn:first-child .ui-btn-ctn, .ui-btn-grp-horz .ui-btn:first-child .x-small, .ui-btn-grp-horz .ui-btn:first-child .small, .ui-btn-grp-horz .ui-btn:first-child .medium, .ui-btn-grp-horz .ui-btn:first-child .large, .ui-btn-grp-horz .ui-btn:first-child .x-large, .ui-btn-grp-horz .ui-btn:first-child .xx-large, .ui-btn-grp-horz .ui-btn:first-child .xxx-large {
+    -moz-border-radius: 0.65em 0 0 0.65em;
+    -webkit-border-radius: 0.65em 0 0 0.65em;
+    -o-border-radius: 0.65em 0 0 0.65em;
+    border-radius: 0.65em 0 0 0.65em;
+    border-left: 1px solid #B4B4B4; }
+  .ui-btn-grp-horz .ui-btn:last-child .ui-btn-ctn, .ui-btn-grp-horz .ui-btn:last-child .x-small, .ui-btn-grp-horz .ui-btn:last-child .small, .ui-btn-grp-horz .ui-btn:last-child .medium, .ui-btn-grp-horz .ui-btn:last-child .large, .ui-btn-grp-horz .ui-btn:last-child .x-large, .ui-btn-grp-horz .ui-btn:last-child .xx-large, .ui-btn-grp-horz .ui-btn:last-child .xxx-large {
+    -moz-border-radius: 0 0.65em 0.65em 0;
+    -webkit-border-radius: 0 0.65em 0.65em 0;
+    -o-border-radius: 0 0.65em 0.65em 0;
+    border-radius: 0 0.65em 0.65em 0; }
+
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - IE Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== _RESET.SCSS =========================================================================*/
+/*=== _TYPE.SCSS ==========================================================================*/
+/*=== _GRID.SCSS ===========================================================================*/
+/*=== _FORM.SCSS ===========================================================================*/
+/*--- GLOBAL SETUP OF ELEMENTS -------------------------------------------------------------*/
+select {
+  max-width/*\**/: 20em\9;
+  /* IE8 */ }
+
+/*--- UI FORM ------------------------------------------------------------------------------*/
+.ui-form .chx-radio input {
+  vertical-align/*\**/: -0.133em\9;
+  /* IE8 */ }
+  .ui-form .chx-radio input:hover {
+    border/*\**/: 0\9;
+    /* IE8 */ }
+.ui-form .checkbox input {
+  vertical-align/*\**/: -0.133em\9;
+  /* IE8 */ }
+.ui-form .email-opt-in .email-optin-label {
+  margin-top/*\**/: 0\9;
+  /* IE8 */
+  line-height/*\**/: 0.667em\9;
+  /* IE8 */ }
+  .ui-form .email-opt-in .email-optin-label input {
+    background-color/*\**/: transparent\9;
+    /* IE8 */
+    margin/*\**/: 0\9;
+    /* IE8 */
+    width/*\**/: 0.733em\9;
+    /* IE8 */ }
+
+/*=== _PAGE.SCSS ==========================================================================*/
+/*=== _UI_BOX.SCSS ========================================================================*/
+.ui-box-rnd, .ui-box-rnd-shadow,
+.ui-box-rnd-adv,
+.ui-box-rnd-shadow-adv,
+.ui-box-rnd-shadow,
+.ui-box-rnd-shadow-adv {
+  border-radius: 0\0\/;
+  /* IE8+9 */ }
+  .ui-box-rnd .box-hdr, .ui-box-rnd-shadow .box-hdr,
+  .ui-box-rnd-adv .box-hdr,
+  .ui-box-rnd-shadow-adv .box-hdr,
+  .ui-box-rnd-shadow .box-hdr,
+  .ui-box-rnd-shadow-adv .box-hdr {
+    border-radius: 0\0\/;
+    /* IE8+9 */ }
+
+/*=== _UI_BTN.SCSS ========================================================================*/
+.ui-btn {
+  margin/*\**/: 0\9;
+  /* IE8 */
+  /* Fix IE9 bug when border-radius is used with IE filter */ }
+  .ui-btn .ui-btn-ctn, .ui-btn .x-small, .ui-btn .small, .ui-btn .medium, .ui-btn .large, .ui-btn .x-large, .ui-btn .xx-large, .ui-btn .xxx-large {
+    border-radius: 0\0\/;
+    /* IE8+9 */
+    /* IE8 requires a forced filter for the active state on link type buttons, this hack will need to be used in ie stylesheet for website and gradient colors will need to be overridden */ }
+    .ui-btn .ui-btn-ctn:active, .ui-btn .x-small:active, .ui-btn .small:active, .ui-btn .medium:active, .ui-btn .large:active, .ui-btn .x-large:active, .ui-btn .xx-large:active, .ui-btn .xxx-large:active {
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#bbbaba', EndColorStr='#efefef');
+      /* IE8 */ }
+
+.ui-btn-grp-vert .ui-btn:first-child .ui-btn-ctn, .ui-btn-grp-vert .ui-btn:first-child .x-small, .ui-btn-grp-vert .ui-btn:first-child .small, .ui-btn-grp-vert .ui-btn:first-child .medium, .ui-btn-grp-vert .ui-btn:first-child .large, .ui-btn-grp-vert .ui-btn:first-child .x-large, .ui-btn-grp-vert .ui-btn:first-child .xx-large, .ui-btn-grp-vert .ui-btn:first-child .xxx-large {
+  border-radius: 0\0\/;
+  /* IE8+9 */ }
+.ui-btn-grp-vert .ui-btn:last-child .ui-btn-ctn, .ui-btn-grp-vert .ui-btn:last-child .x-small, .ui-btn-grp-vert .ui-btn:last-child .small, .ui-btn-grp-vert .ui-btn:last-child .medium, .ui-btn-grp-vert .ui-btn:last-child .large, .ui-btn-grp-vert .ui-btn:last-child .x-large, .ui-btn-grp-vert .ui-btn:last-child .xx-large, .ui-btn-grp-vert .ui-btn:last-child .xxx-large {
+  border-radius: 0\0\/;
+  /* IE8+9 */ }
+
+.ui-btn-grp-horz .ui-btn:first-child .ui-btn-ctn, .ui-btn-grp-horz .ui-btn:first-child .x-small, .ui-btn-grp-horz .ui-btn:first-child .small, .ui-btn-grp-horz .ui-btn:first-child .medium, .ui-btn-grp-horz .ui-btn:first-child .large, .ui-btn-grp-horz .ui-btn:first-child .x-large, .ui-btn-grp-horz .ui-btn:first-child .xx-large, .ui-btn-grp-horz .ui-btn:first-child .xxx-large {
+  border-radius: 0\0\/;
+  /* IE8+9 */ }
+.ui-btn-grp-horz .ui-btn:last-child .ui-btn-ctn, .ui-btn-grp-horz .ui-btn:last-child .x-small, .ui-btn-grp-horz .ui-btn:last-child .small, .ui-btn-grp-horz .ui-btn:last-child .medium, .ui-btn-grp-horz .ui-btn:last-child .large, .ui-btn-grp-horz .ui-btn:last-child .x-large, .ui-btn-grp-horz .ui-btn:last-child .xx-large, .ui-btn-grp-horz .ui-btn:last-child .xxx-large {
+  border-radius: 0\0\/;
+  /* IE8+9 */ }
+
+/*------------------------------------------------------------------------------------------
+CORE v3.4 - Responsive Design Partial
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*--- Portrait iPhone, landscape iPhone, portrait smart phones -----------------------------*/
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  /*=== _TYPE.SCSS ==========================================================================*/
+  body {
+    font-size: 1em; }
+
+  /*=== _GRID.SCSS ===========================================================================*/
+  /*--- GRID GLOBAL ATTRIBUTES  --------------------------------------------------------------*/
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+  .col-7, .col-8, .col-9, .col-10, .col-11,
+  .col-12, .col-13, .col-14, .col-15, .col-16,
+  .col-17, .col-18, .col-19, .col-20, .col-21,
+  .col-22, .col-23, .col-24 {
+    clear: both;
+    float: none;
+    width: 100%; }
+
+  .grid-nomargin .col-1, .grid-nomargin .col-2, .grid-nomargin .col-3, .grid-nomargin .col-4, .grid-nomargin .col-5, .grid-nomargin .col-6, .grid-nomargin .col-7, .grid-nomargin .col-8,
+  .grid-nomargin .col-9, .grid-nomargin .col-10, .grid-nomargin .col-11, .grid-nomargin .col-12, .grid-nomargin .col-13, .grid-nomargin .col-14, .grid-nomargin .col-15, .grid-nomargin .col-16,
+  .grid-nomargin .col-17, .grid-nomargin .col-18, .grid-nomargin .col-19, .grid-nomargin .col-20, .grid-nomargin .col-21, .grid-nomargin .col-22, .grid-nomargin .col-23, .grid-nomargin .col-24 {
+    clear: both;
+    float: none;
+    width: 100%; }
+
+  /*=== _FORM.SCSS ===========================================================================*/
+  .ui-form .city-zip-lyt .state-label {
+    clear: both;
+    margin: 0; }
+
+  /*=== _PAGE.SCSS ==========================================================================*/
+  /*--- VERTICAL NAVIGATION SETUP -----------------------------------------------------------*/
+  .mb-link-list-vert {
+    padding: 0;
+    margin: 0; }
+    .mb-link-list-vert dd, .mb-link-list-vert li {
+      display: block;
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid #ccc; }
+      .mb-link-list-vert dd a, .mb-link-list-vert li a {
+        display: block;
+        padding: 0.938em;
+        margin: 0; }
+      .mb-link-list-vert dd .pipe, .mb-link-list-vert li .pipe {
+        display: none; }
+
+  /*=== _UI_BTN.SCSS ========================================================================*/
+  /*--- BUTTON GROUP ------------------------------------------------------------------------*/
+  .ui-btn-grp-horz .ui-btn .x-small {
+    min-width: 2em; }
+  .ui-btn-grp-horz .ui-btn .small {
+    min-width: 3em; }
+  .ui-btn-grp-horz .ui-btn .medium {
+    min-width: 4em; }
+  .ui-btn-grp-horz .ui-btn .large, .ui-btn-grp-horz .ui-btn .x-large, .ui-btn-grp-horz .ui-btn .xx-large, .ui-btn-grp-horz .ui-btn .xxx-large {
+    min-width: 2.5em; }
+
+  /*=== _UI_TOOLTIP.SCSS =====================================================================*/
+  .ui-tooltip-ctn {
+    max-width: 55% !important; }
+    .ui-tooltip-ctn p {
+      margin: 0;
+      font-size: 0.688em;
+      line-height: 1.375em !important; } }
+/*--- Portrait e-readers (Nook/Kindle/Kindle Fire) ---------------------------------------------*/
+@media only screen and (min-width : 481px) and (max-width : 640px) {
+  /*=== _FORM.SCSS ===========================================================================*/
+  .ui-form .city-zip-lyt .state-label {
+    clear: both;
+    margin: 0; }
+
+  /*=== _UI_TOOLTIP.SCSS =====================================================================*/
+  .ui-tooltip-ctn {
+    max-width: 40% !important; } }
+/*--- Portrait iPad, portrait tablets, low-res laptops and desktops ------------------------*/
+@media only screen and (min-width : 641px) and (max-width : 980px) {
+  /*=== _UI_BTN.SCSS ========================================================================*/
+  /*--- BUTTON GROUP ------------------------------------------------------------------------*/
+  .ui-btn-grp-horz .ui-btn .large, .ui-btn-grp-horz .ui-btn .x-large, .ui-btn-grp-horz .ui-btn .xx-large, .ui-btn-grp-horz .ui-btn .xxx-large {
+    min-width: 5em; } }
+/*--- Landscape iPad, laptops and desktops beyond 980px ------------------------------------*/
+@media only screen and (min-width : 981px) and (max-width : 1024px) {
+  /*=== _UI_BTN.SCSS ========================================================================*/
+  /*--- BUTTON GROUP ------------------------------------------------------------------------*/
+  .ui-btn-grp-horz .ui-btn .large, .ui-btn-grp-horz .ui-btn .x-large, .ui-btn-grp-horz .ui-btn .xx-large, .ui-btn-grp-horz .ui-btn .xxx-large {
+    min-width: 5em; } }
+/*--- Big landscape tablets, laptops and desktops beyond 980px ----------------------------*/
+/*--- Hi-res laptops and desktops ---------------------------------------------------------*/
+/*=== WEBSITE STYLES ======================================================================*/
+/*--- GLOBAL ------------------------------------------------------------------------------*/
+.page-container {
+  width: 100%;
+  max-width: 100%;
+  background-color: #445D73; }
+
+.page-adjust {
+  width: 100%; }
+
+.grid-adjust {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow: 0 0 5px #1e2b39;
+  -webkit-box-shadow: 0 0 5px #1e2b39;
+  -o-box-shadow: 0 0 5px #1e2b39;
+  box-shadow: 0 0 5px #1e2b39;
+  background-color: #F0F4F8;
+  border: 3px solid #FFF;
+  margin: 0 auto;
+  max-width: 980px; }
+
+.section {
+  height: 107.692em;
+  padding-top: 9.231em;
+  padding-left: 1.538em;
+  padding-right: 1.538em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "myriad-pro-1", "myriad-pro-2", "Myriad Pro", Arial, Helvetica, sans-serif;
+  /*					text-transform:uppercase; */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #6F6F6F; }
+
+h1 {
+  font-size: 1.7em;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #505667;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+
+h2 {
+  letter-spacing: -0.03em;
+  color: #7f8596;
+  font-size: 1.4em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+
+h3 {
+  color: #d5d2c6;
+  font-size: 1.2em;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+  text-transform: uppercase; }
+
+/*----- LINKS ----------------------------------------------------------------------*/
+a:link {
+  color: #0a7bc1;
+  text-decoration: none;
+  cursor: pointer; }
+a:visited {
+  color: #0A7BC1; }
+a:hover, a:focus, a:active {
+  text-decoration: underline; }
+
+/*----- HR ELEMENTS -----------------------------------------------------------------*/
+hr {
+  background-color: #FFF;
+  border-top: 1px solid #c2d8eb; }
+
+/*--- NAVBAR ------------------------------------------------------------------------------*/
+.masthead {
+  -moz-box-shadow: 0 0 25px #1e2b39;
+  -webkit-box-shadow: 0 0 25px #1e2b39;
+  -o-box-shadow: 0 0 25px #1e2b39;
+  box-shadow: 0 0 25px #1e2b39;
+  background-color: #3C5975;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 5.846em; }
+  .masthead .navbar {
+    position: relative;
+    margin: 0 auto;
+    width: 75.385em; }
+    .masthead .navbar a {
+      height: 3.462em;
+      width: 5.385em;
+      padding: 1.231em 0 0 0;
+      font-weight: bold;
+      font-size: 1.231em;
+      text-shadow: 1px 1px 1px #333; }
+      .masthead .navbar a span {
+        display: block;
+        font-weight: normal;
+        font-size: 0.615em;
+        text-shadow: 0 0 0; }
+      .masthead .navbar a:link, .masthead .navbar a:visited {
+        color: #d8d9da;
+        text-decoration: none; }
+      .masthead .navbar a:hover, .masthead .navbar a:focus, .masthead .navbar a:active {
+        text-decoration: none;
+        color: #FFF; }
+        .masthead .navbar a:hover span, .masthead .navbar a:focus span, .masthead .navbar a:active span {
+          font-style: italic; }
+    .masthead .navbar .link-list-horz {
+      position: absolute;
+      top: 0;
+      right: 0; }
+    .masthead .navbar .logo-arrow {
+      background-color: #3e4758;
+      background-image: -moz-linear-gradient(top, #3e4758, #1f2530);
+      /* FF3.6 */
+      background-image: -o-linear-gradient(top, #3e4758, #1f2530);
+      /* Opera 11.10+ */
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3e4758), color-stop(1, #1f2530));
+      /* Saf4+, Chrome */
+      background-image: -webkit-linear-gradient(#3e4758, #1f2530);
+      /* Chrome 10+, Saf5.1+ */
+      background-image: linear-gradient(top, #3e4758, #1f2530);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3e4758', EndColorStr='#1f2530');
+      /* IE6 - IE9 */
+      -moz-box-shadow: 0 -4px 6px #333333;
+      -webkit-box-shadow: 0 -4px 6px #333333;
+      -o-box-shadow: 0 -4px 6px #333333;
+      box-shadow: 0 -4px 6px #333333;
+      width: 55px;
+      height: 100px;
+      position: relative;
+      top: 2px;
+      left: 20px; }
+    .masthead .navbar .logo-arrow .arrow {
+      font-size: 0px;
+      line-height: 0%;
+      width: 0px;
+      border-bottom: 28px solid #F0F4F8;
+      border-left: 28px solid transparent;
+      border-right: 27px solid transparent;
+      position: absolute;
+      bottom: -1px; }
+    .masthead .navbar .logo-arrow .cirlce {
+      -moz-border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -o-border-radius: 30px;
+      border-radius: 30px;
+      background-color: #1d222e;
+      color: #3c465e;
+      padding: 5px;
+      position: absolute;
+      top: 30px;
+      left: 13px;
+      text-shadow: 0 1px 0 #000; }
+    .masthead .navbar .logo {
+      color: #FFF;
+      font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
+      font-size: 2.154em;
+      position: absolute;
+      top: 12px;
+      left: 90px;
+      text-shadow: 1px 1px 1px #333; }
+    .masthead .navbar .logo .tagline {
+      display: block;
+      font-size: 0.4em;
+      letter-spacing: -0.03em;
+      margin: -2px 0 0 0; }
+
+/*--- HOMEPAGE ------------------------------------------------------------------------------*/
+.hp-intro-hdr {
+  font-size: 3.462em;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 2px #fff; }
+
+.hp-intro {
+  font-size: 1.538em;
+  border-bottom: 1px dotted #c2d8eb;
+  padding-bottom: 20px;
+  margin-bottom: 25px; }
+
+.inspiration-list {
+  padding: 0;
+  margin: 0; }
+  .inspiration-list li {
+    background: url(/assets/images/bullet_star.png) 0 3px no-repeat;
+    list-style-type: none;
+    padding-left: 1.538em;
+    margin-left: 0; }
+
+/**/
+.curled-box {
+  background-color: #FFF;
+  border: 1px solid #e6e6e6;
+  border-bottom: 0;
+  padding: 20px;
+  position: relative; }
+  .curled-box .masking-tape {
+    background: url(../images/masking_tape.png) 0 0 no-repeat;
+    height: 28px;
+    width: 22px;
+    position: absolute;
+    top: -12px; }
+  .curled-box .masking-left {
+    left: 12px; }
+  .curled-box .masking-right {
+    right: 12px; }
+  .curled-box .box-shadow {
+    background: url(../images/box_shadow.png) 0 0 no-repeat;
+    height: 8px;
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    left: 0; }
+  .curled-box p {
+    color: #6F6F6F;
+    font-size: 0.85em;
+    margin-top: 8px;
+    margin-left: 2px;
+    width: 221px; }
+
+.portfolio-box {
+  float: left;
+  margin: 0 26px 30px 0;
+  height: 160px;
+  width: 245px; }
+
+/*--- FOOTER ------------------------------------------------------------------------------*/
+.footer {
+  margin: 0 0 -1.154em 0; }
+  .footer .footer-ctn {
+    min-height: 15.538em;
+    margin: 0 auto;
+    padding: 1.538em 2.154em 0 2.154em;
+    max-width: 980px; }
+
+/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones (landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */
+/* iPhone 4 ----------- */

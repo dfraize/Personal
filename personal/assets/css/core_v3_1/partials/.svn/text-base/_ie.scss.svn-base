@@ -1,0 +1,153 @@
+/*------------------------------------------------------------------------------------------
+CORE v3.1 - IE Partial
+DATE - September 20, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+
+//=== SASS VARS =============================================================================
+
+//--- SIZE VARS -----------------------------------------------------------------------------
+$context-size:13; // 13px
+
+//--- SIZE FUNCTION -------------------------------------------------------------------------
+
+// $target-size = size you want in pixels
+// $context-size = base size in pixels
+// $target-size/$context-size = size in ems
+
+@function size($target-size) {
+	@return $target-size/$context-size;
+}
+
+/*=== _RESET.SCSS =========================================================================*/
+
+
+/*=== _TYPE.SCSS ==========================================================================*/
+
+
+/*--- LIST ITEMS --------------------------------------------------------------------------*/
+
+ul								{
+								*margin-left:#{size(16.25)}em; /* IE7 */
+								}
+ol								{
+								*margin-left:#{size(24.7)}em; /* IE7 */
+								}
+
+/*=== _GRID.SCSS ===========================================================================*/
+
+
+/*=== _FORM.SCSS ===========================================================================*/
+
+/*--- GLOBAL SETUP OF ELEMENTS -------------------------------------------------------------*/
+select							{
+								max-width/*\**/:#{size(300)}em\9;
+								}
+
+legend							{
+								*margin:0 0 0 #{size(-4)}em; /* IE7 */
+								}
+
+/*--- UI FORM ------------------------------------------------------------------------------*/
+.ui-form										{
+
+	// RADIO AND CHECKBOX STYLES
+
+	.chx-radio										{
+
+		input 											{
+														vertical-align/*\**/:#{size(-2)}em\9; /* IE7+8 */
+														
+			&:hover											{
+															border/*\**/:0\9; /* IE7+8 */
+															}
+														
+														}
+
+													}
+
+	.checkbox										{
+
+		input 											{
+														vertical-align/*\**/:#{size(-2)}em\9; /* IE7+8 */
+														}
+
+													}
+
+	// DEFAULT LAYOUT FOR OPT IN EMAIL
+
+	.email-opt-in									{
+
+		.email											{
+														*vertical-align:#{size(-6)}em; /* IE7 */
+														}
+		.email-optin-label								{
+														margin-top/*\**/:0\9; /* IE7+8 */
+														line-height/*\**/:#{size(10)}em\9; /* IE7+8 */
+
+			input											{
+															background-color/*\**/:transparent\9; /* IE7+8 */
+															margin/*\**/:0\9; /* IE7+8 */
+															width/*\**/:#{size(11)}em\9; /* IE7+8 */
+															}
+
+														}
+													}
+													
+												}
+
+
+/*=== _PAGE.SCSS ==========================================================================*/
+
+
+/*=== _UI_BOX.SCSS ========================================================================*/
+
+
+/*=== _UI_BTN.SCSS ========================================================================*/
+.ui-btn							{
+								margin/*\**/:0\9; /* IE7+8 */
+
+	/* Fix IE9 bug when border-radius is used with IE filter */
+	.ui-btn-ctn						{
+									*width:1%; /* IE7 */
+									border-radius:0\0\/; /* IE8+9 */
+
+		/* IE8 requires a forced filter for the active state on link type buttons, this hack will need to be used in ie stylesheet for website and gradient colors will need to be overridden */
+		&:active						{
+										filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#bbbaba', EndColorStr='#efefef'); /* IE8 */
+										}
+									
+									}
+	.ui-btn-icn-left				{
+									*margin-right:#{size(9.75)}em;
+									}
+	.ui-btn-icn-right				{
+									*margin-left:#{size(9.75)}em;
+									}
+								}
+								
+.ui-btn-grp-vert				{
+	.ui-btn:first-child				{
+		.ui-btn-ctn	 					{
+										border-radius:0\0\/; /* IE8+9 */
+										}
+									}
+	.ui-btn:last-child				{
+		.ui-btn-ctn	 					{
+										border-radius:0\0\/; /* IE8+9 */
+										}
+									}
+								}
+								
+.ui-btn-grp-horz				{
+	.ui-btn:first-child				{
+		.ui-btn-ctn	 					{
+										border-radius:0\0\/; /* IE8+9 */
+										}
+									}
+	.ui-btn:last-child				{
+		.ui-btn-ctn	 					{
+										border-radius:0\0\/; /* IE8+9 */
+										}
+									}
+								}

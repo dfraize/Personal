@@ -1,0 +1,60 @@
+/*------------------------------------------------------------------------------------------
+UI Overlay CSS
+DATE - September 20, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+
+//=== SASS VARS =============================================================================
+
+//--- SIZE VARS -----------------------------------------------------------------------------
+$context-size:13; // 13px
+
+//--- SIZE FUNCTION -------------------------------------------------------------------------
+
+// $target-size = size you want in pixels
+// $context-size = base size in pixels
+// $target-size/$context-size = size in ems
+
+@function size($target-size) {
+	@return $target-size/$context-size;
+}
+
+/*--- DEFAULT STYLES FOR JS DIALOG DISPLAY ------------------------------------------------*/
+.ui-widget-overlay				{
+								background-color:#000;
+								position:absolute;
+								top:0;
+								opacity:0.4;
+								filter:alpha(opacity=40);
+								}
+
+.ui-dialog						{
+								border:1px dotted #333;
+								}
+.ui-dialog-title				{
+								font-weight:bold;
+								}
+.ui-dialog-titlebar				{
+								background-color:#F2F6FF;
+								border-bottom:1em dotted #666;
+								cursor:move;
+								padding:#{size(7)}em 0 #{size(7)}em #{size(10)}em;
+								position:relative;
+								}
+.ui-dialog-titlebar-close		{
+								position:absolute;
+								right:#{size(10)}em;
+								text-transform:capitalize;
+								}
+.ui-dialog-content				{
+								background-color:#FFF;
+								line-height:#{size(18.2)}em;
+								}
+
+.ui-icon-gripsmall-diagonal-se	{
+								background:url("/images/icon_grip_resize.png") 99.5% 0 no-repeat #FFF;
+								cursor:nw-resize;
+								height:#{size(11)}em;
+								padding-bottom:#{size(3)}em;
+								width:100%;
+								}

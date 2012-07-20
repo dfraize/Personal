@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------------------------------
+UI Accordian CSS
+DATE - September 20, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+
+//=== SASS VARS =============================================================================
+
+//--- SIZE VARS -----------------------------------------------------------------------------
+$context-size:13; // 13px
+
+//--- SIZE FUNCTION -------------------------------------------------------------------------
+
+// $target-size = size you want in pixels
+// $context-size = base size in pixels
+// $target-size/$context-size = size in ems
+
+@function size($target-size) {
+	@return $target-size/$context-size;
+}
+
+.accordian											{margin-bottom:#{size(30)}em}
+.accordian h3										{font-size:#{size(13)}em;}
+.accordian h3 a,
+.accordian h3 a:link,
+.accordian h3 a:visited								{
+													border:1px solid #CCC;
+													@include border-radius(#{size(5)}em, all);
+													@include background-gradient(#ffffff, #cccccc);
+													color:#333;
+													display:block;
+													font-size:#{size(15.6)}em;
+													padding:#{size(4)}em;
+													text-decoration:none;
+													}
+.accordian h3 a:hover								{
+													@include background-gradient(#ffffff, #efefef);
+													}

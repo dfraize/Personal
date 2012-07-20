@@ -1,0 +1,57 @@
+/*
+$Date: 2010-07-16 15:07:21 -0400 (Fri, 16 Jul 2010) $
+$Rev: 4993 $
+$Id: print.css 4993 2010-07-16 19:07:21Z doug $
+Author: Matthew Holmes
+****************************************************************/
+
+
+/*------------------------------------------------------------
+CORE PRINT STYLES
+------------------------------------------------------------*/
+
+/*---- SET ALL TEXT TO BLACK AND PAGE BACKGROUND TO WHITE ----*/
+* {color:#000 !important;}
+body, input, select, textarea, table {color:#000 !important; background:#fff !important;}
+
+/*---- SET ALL LINKS TO BLACK AND UNDERLINED ----*/
+a:link, a:visited, a:hover, a:active {color:#000 !important; text-decoration:underline !important;}
+
+
+/*------------------------------------------------------------
+CORE CONTAINER PRINT STYLES
+------------------------------------------------------------*/
+
+/*---- RESET CONTAINERS ----*/
+body, .page_setup, .page_layout, .grid, .masthead, div.col_1, div.col_2, div.col_3, div.col_4, div.col_5, div.col_6, div.col_7, div.col_8, div.col_9, div.col_10, div.col_11, div.col_12, div.col_13, div.col_14, div.col_15, div.col_16, div.col_17, div.col_18, div.col_19, div.col_20, div.col_21, div.col_22, div.col_23, div.col_24, .footer {float: none !important; width: auto !important; margin: 0 !important; padding: 0 !important;}
+
+/*---- REMOVE HEIGHT AND MIN HEIGHT FROM PAGE ----*/
+html {height:auto;}
+.min_height {min-height:0;}
+
+/*---- REMOVE STYLES FROM ROUNDED CORNER BOXES ----*/
+div.box_rd5 .header {border-left-width:0; border-left-style:none; border-right-width:0; border-right-style:none;}
+.box_rd5 .box_content {border-left-width:0; border-left-style:none; border-right-width:0; border-right-style:none;}
+.box_rd5 .crn_style div {display: none;}
+
+
+/*------------------------------------------------------------
+HIDE NON-PRINTABLE OBJECTS
+------------------------------------------------------------*/
+
+/*---- USE CLASS ON OBJECTS NOT BEING PRINTED ----*/
+.print_never {display:none !important;}
+
+
+/*------------------------------------------------------------
+PAGE BREAKS
+------------------------------------------------------------*/
+
+.page_break {display:block; page-break-before:always;}
+
+
+/*------------------------------------------------------------
+PRINT LINK URLS
+------------------------------------------------------------*/
+
+a[href].print_url:after {content: " (" attr(href) ") ";}

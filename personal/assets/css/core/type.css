@@ -1,0 +1,112 @@
+/*
+Date: May 28 2009
+Author: Doug Fraize
+Tool used to do the calculations can be found here - http://pxtoem.com/
+----------------------------------------------------------------------------------------*/
+body						{
+							color:#333;
+							font-family:"Arial", helvetica, sans-serif;
+							font-size:0.813em; /* = 13px*/
+							}
+
+/*----- HEADERS ------------------------------------------------------------------------*/
+h1, .h1, h2, .h2, h5, .h5	{font-family:"myriad-pro-1", "myriad-pro-2", "Myriad Pro", Arial, Helvetica, sans-serif;}
+h3, .h3, h4, .h4			{font-family:"Arial", Helvetica, sans-serif;}
+
+h1, .h1, h2, .h2,
+h3, .h3, h4, .h4,
+h5, .h5						{
+							font-weight:700;
+							margin-bottom:0.2em; /* =3px */
+							}
+
+h1, .h1						{font-size:2.154em; /* =28px */}
+h2, .h2						{font-size:1.615em; /* = 21px*/}
+h3, .h3						{font-size:1.308em; /* = 17px*/ font-style:italic;}
+h4, .h4						{font-size:1.077em; /* = 14px*/}
+h5, .h5						{font-size:4.308em; /* = 56px*/}
+
+b, strong, th, thead,
+dt, legend					{font-weight:bold;}
+
+/*----- PARAGRAPH ---------------------------------------------------------------------*/
+p							{
+							line-height:1.26em; /* =16.26px */
+							margin:0 0 0.923em 0;
+							}
+							
+/*----- FOOTNOTES ---------------------------------------------------------------------*/
+small						{font-size:.8em;}				
+p small						{display:block; line-height:1.4em;}
+
+/*----- LIST ITEMS --------------------------------------------------------------------*/
+ul							{
+							list-style:disc outside;
+							margin-left:1.0em;
+							}
+
+ol							{
+							list-style:decimal outside;
+							margin-left:1.5em;
+							}
+
+ul, ol, dl, dialog			{
+							margin-bottom:1.0em;
+							}
+
+ul li, ol li, dl dd			{
+							line-height:1.26em; /* =16.26px */
+							margin-top:0;
+							margin-bottom:8px;
+							}
+							
+ol ol, ul ul, ol ul, ul ol	{
+							margin-top:8px;
+							}
+
+/*----- FORM ELEMENTS -----------------------------------------------------------------*/
+form, legend, label			{color:#333;}
+input, select, button		{color:#666; cursor:pointer;}
+
+/*----- HR ELEMENTS -----------------------------------------------------------------*/
+hr							{
+							background-color:#FFF;
+							border:0;
+							border-top:1px solid #CCC;
+							clear:both;
+							color:#FFF;
+							display:block;
+							height:2px;
+							margin:12px 0;
+							}
+
+/*----- BLOCKQUOTE ------------------------------------------------------------------*/
+blockquote					{padding:.5em 1.5em 1.5em 1.5em;}
+blockquote p				{margin:0; line-height:1.5em; font-style:italic;}
+
+/*----- TABLE -----------------------------------------------------------------------*/
+table						{font:inherit;}
+
+/*----- LINKS ----------------------------------------------------------------------*/
+a, a:link					{
+							color:#01417E;
+							text-decoration:underline;
+							}
+a:visited					{color:#666;}
+
+a:hover, a:focus, a:active	{
+							color:#01417E;
+							cursor:pointer;
+							text-decoration:none;
+							}
+
+
+a.drk-bck, a.drk-bck:link	{color:#FFF;}
+a.drk-bck:visited			{color:#C9CDCC;}
+a.drk-bck:hover,
+a.drk-bck:focus,
+a.drk-bck:active			{color:#FFF;}
+
+/*----- OTHER ELEMENTS -----------------------------------------------------------------------*/
+abbr						{cursor:help; border-bottom:1px dotted #000;}
+sup, sub					{font-size:.8em;}

@@ -1,0 +1,1042 @@
+/*------------------------------------------------------------------------------------------
+CORE v3 - Base Import Partial
+DATE - September 19, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------
+CORE v3 - Reset Partial
+DATE - September 19, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del,
+dfn, em, font, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  background: transparent; }
+
+textarea, input, select {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  white-space: normal;
+  text-align: left;
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+nav ul {
+  list-style-type: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+:focus {
+  outline: 0; }
+
+button::-moz-focus-inner {
+  border-color: transparent; }
+
+del, ins {
+  text-decoration: none;
+  text-decoration: line-through; }
+
+/*--- No styles for hidden inputs in older versions of Firefox ----------------------------*/
+input[type="hidden"] {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  border: 0px; }
+
+/*--- Tables still need 'cellspacing="0"' in the HTML markup ------------------------------*/
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: transparent;
+  width: auto;
+  height: auto; }
+
+.never {
+  display: none; }
+
+/*USED TO SET ANY ITEMS VISIBILITY TO NONE*/
+/*------------------------------------------------------------------------------------------
+CORE v3 - Type Partial
+DATE - September 20, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+body {
+  color: #333;
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: .813em; }
+
+/*----- HEADERS ------------------------------------------------------------------------*/
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: "myriad-pro-1", "myriad-pro-2", "Myriad Pro", Arial, Helvetica, sans-serif; }
+
+h4, .h4, h5, .h5 {
+  font-family: "Arial", Helvetica, sans-serif; }
+
+h1, .h1, h2, .h2,
+h3, .h3, h4, .h4,
+h5, .h5 {
+  font-weight: 700;
+  margin-bottom: 0.615em; }
+
+h1, .h1 {
+  font-size: 2.308em; }
+
+h2, .h2 {
+  font-size: 1.769em; }
+
+h3, .h3 {
+  font-size: 1.462em; }
+
+h4, .h4 {
+  font-size: 1.231em; }
+
+h5, .h5 {
+  font-size: 1.077em; }
+
+b, strong, th, thead,
+dt, legend {
+  font-weight: bold; }
+
+/*----- PARAGRAPH ---------------------------------------------------------------------*/
+p {
+  line-height: 1.26em;
+  margin: 0 0 1.154em 0; }
+
+/*----- FOOTNOTES ---------------------------------------------------------------------*/
+small {
+  font-size: 0.769em; }
+
+p small {
+  display: block;
+  line-height: 1.4em; }
+
+/*----- LIST ITEMS --------------------------------------------------------------------*/
+ul {
+  list-style: disc outside;
+  margin-left: 1em; }
+
+ol {
+  list-style: decimal outside;
+  margin-left: 1.5em; }
+
+ul, ol, dl, dialog {
+  margin-bottom: 1.154em; }
+
+ul li, ol li, dl dd {
+  line-height: 1.26em;
+  margin-top: 0;
+  margin-bottom: 0.615em; }
+
+ol ol, ul ul, ol ul, ul ol {
+  margin-top: 0.615em; }
+
+/*----- BLOCKQUOTE ------------------------------------------------------------------*/
+blockquote {
+  padding: 0.5em 1.5em 1.5em 1.5em; }
+
+blockquote p {
+  margin: 0;
+  line-height: 1.5em;
+  font-style: italic; }
+
+/*----- TABLE -----------------------------------------------------------------------*/
+table {
+  font: inherit; }
+
+/*----- LINKS ----------------------------------------------------------------------*/
+a:link {
+  color: #01417e;
+  text-decoration: underline;
+  cursor: pointer; }
+a:visited {
+  color: #666; }
+a:hover, a:focus, a:active {
+  text-decoration: none; }
+
+/*----- OTHER ELEMENTS -----------------------------------------------------------------------*/
+abbr {
+  cursor: help;
+  border-bottom: 1px dotted #000; }
+
+sup, sub {
+  font-size: 0.769em; }
+
+/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones (landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */
+/* iPhone 4 ----------- */
+/*------------------------------------------------------------------------------------------
+CORE v3 - Grid Partial
+DATE - September 19, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== HTML SETUP ==========================================================================*/
+html {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%; }
+
+/*=== PAGE SETUP ==========================================================================*/
+.page {
+  text-align: center; }
+
+.page-container {
+  margin: 0 auto;
+  width: 95.7%;
+  max-width: 980px; }
+
+/* PAGE ADJUST NOTES:
+THE FOLLOWING SHOULD BE AN OVERRIDE IN PRODUCT SPECIFIC STYLESHEET
+If you need to have a layout with header and footer are 100% of the page with grid
+fixed just set the width of page adjust to 100% then use a fixed value in grid adjust.
+{width:980px;}
+{width:100%;} */
+/*=== MASTHEAD & FOOTER SETUP =============================================================*/
+.masthead, .footer {
+  position: relative;
+  text-align: left; }
+
+.masthead {
+  margin: 0; }
+
+/* USED TO MATCH INDENT OF THE GRID */
+.footer {
+  margin: 0 0 1.154em 0;
+  *zoom: 1; }
+  .footer:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+
+/* USED TO MATCH INDENT OF THE GRID */
+/*=== GRID SETUP ==========================================================================*/
+/*--- GRID ADJUST -------------------------------------------------------------------------*/
+.grid {
+  margin: 0;
+  text-align: left;
+  display: block;
+  *zoom: 1; }
+  .grid:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+
+/* GRID ADJUST NOTES
+THE FOLLOWING SHOULD BE AN OVERRIDE IN PRODUCT SPECIFIC STYLESHEET
+If you need to the grid to be 100% of the page just leave grid adjust empty, if you
+need a fixed layout for grid then use the below:
+{margin:0 auto; width:980px;}*/
+/*--- GRID MIN HEIGHT ---------------------------------------------------------------------*/
+.min-height {
+  min-height: 71.6%;
+  height: auto !important;
+  height: 71.6%; }
+
+/*--- GRID GLOBAL ATTRIBUTES  -------------------------------------------------------------*/
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8,
+.col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16,
+.col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
+  float: left;
+  margin-right: 2.04%;
+  min-height: 2.04%;
+  padding: 0; }
+
+/*--- GRID PRESETS  -----------------------------------------------------------------------*/
+.col-1 {
+  width: 2.21%; }
+
+.col-2 {
+  width: 6.46%; }
+
+.col-3 {
+  width: 10.71%; }
+
+.col-4 {
+  width: 14.96%; }
+
+.col-5 {
+  width: 19.21%; }
+
+.col-6 {
+  width: 23.46%; }
+
+.col-7 {
+  width: 27.71%; }
+
+.col-8 {
+  width: 31.96%; }
+
+.col-9 {
+  width: 36.21%; }
+
+.col-10 {
+  width: 40.46%; }
+
+.col-11 {
+  width: 44.71%; }
+
+.col-12 {
+  width: 48.96%; }
+
+.col-13 {
+  width: 53.21%; }
+
+.col-14 {
+  width: 57.46%; }
+
+.col-15 {
+  width: 61.71%; }
+
+.col-16 {
+  width: 65.96%; }
+
+.col-17 {
+  width: 70.21%; }
+
+.col-18 {
+  width: 74.46%; }
+
+.col-19 {
+  width: 78.71%; }
+
+.col-20 {
+  width: 82.96%; }
+
+.col-21 {
+  width: 87.21%; }
+
+.col-22 {
+  width: 91.46%; }
+
+.col-23 {
+  width: 95.71%; }
+
+.col-24 {
+  width: 99.96%; }
+
+/*--- GRID LAST ADJUST  ------------------------------------------------------------------*/
+.last {
+  margin-right: 0; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8,
+  .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16,
+  .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
+    clear: both;
+    float: none;
+    width: 100%; } }
+/* Smartphones (landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */
+/* iPhone 4 ----------- */
+/*------------------------------------------------------------------------------------------
+CORE v3 - Form Partial
+DATE - September 19, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== GLOBAL FORM ELEMENTS ================================================================*/
+form, legend, label {
+  color: #333; }
+
+input, select, button {
+  color: #666;
+  cursor: pointer; }
+
+form {
+  position: relative; }
+
+fieldset, input, select, textarea, label {
+  display: block; }
+
+fieldset {
+  border: 0; }
+
+label {
+  clear: both;
+  font-weight: 900; }
+
+input, select {
+  -moz-border-radius: 0.231em;
+  -webkit-border-radius: 0.231em;
+  -o-border-radius: 0.231em;
+  border-radius: 0.231em;
+  border: 2px solid #DEDED0;
+  padding: 2px;
+  width: 100%;
+  max-width: 23.077em; }
+
+select {
+  width: 100%;
+  max-width: 23.615em; }
+
+/* Make sure to add 7px from the input width value */
+textarea {
+  width: 100%;
+  max-width: 23.615em;
+  height: auto; }
+
+input:hover,
+select:hover {
+  border: 2px solid #c4c4b4; }
+
+legend {
+  padding: 0; }
+
+fieldset ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: outside; }
+
+fieldset ol li {
+  list-style-type: none;
+  margin: 0 0 0.769em 0; }
+
+input[type="hidden"] {
+  display: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  border: 0;
+  display: inline;
+  width: 1.385em; }
+
+/*=== UI FORM =============================================================================*/
+.ui-form .fieldhint-color {
+  color: #b5aaa9; }
+.ui-form input, .ui-form select {
+  margin-top: 0.154em; }
+.ui-form .chx-radio {
+  display: block;
+  margin: 0 0 0.769em 0; }
+  .ui-form .chx-radio #opt_in_text {
+    border: 0;
+    clear: both;
+    display: inline;
+    margin-right: 0.231em;
+    width: auto; }
+  .ui-form .chx-radio label {
+    font-weight: normal;
+    position: relative;
+    top: 0.154em; }
+.ui-form .email-opt-in .email {
+  border: 2px solid #DEDED0;
+  vertical-align: -0.154em; }
+  .ui-form .email-opt-in .email:hover {
+    border: 2px solid #c4c4b4; }
+.ui-form .email-opt-in .email-label {
+  font-weight: 900; }
+.ui-form .email-opt-in .email-optin-label {
+  margin-top: 0.154em; }
+  .ui-form .email-opt-in .email-optin-label input {
+    margin-right: 0.077em;
+    width: 1em; }
+.ui-form .city-zip-lyt .city-label {
+  margin-bottom: 0.385em; }
+.ui-form .city-zip-lyt .zip-label, .ui-form .city-zip-lyt .state-label {
+  clear: none;
+  display: block;
+  float: left;
+  width: auto !important; }
+.ui-form .city-zip-lyt .state-label {
+  margin-right: 0.769em; }
+  .ui-form .city-zip-lyt .state-label select {
+    width: auto; }
+.ui-form .city-zip-lyt .zip {
+  width: 4.615em; }
+
+/*--- DEFAULT GRAD YEAR LAYOUT -------------------------------------------------------------*/
+.grad-year select {
+  display: inline;
+  margin-right: 0.769em;
+  width: auto; }
+
+/*--- INLINE FORM ELEMENTS -------------------------------------------------------------------
+Use the class of ui-form-inline on the form element, it will place the labels to the left of inputs
+--------------------------------------------------------------------------------------------*/
+.ui-form-inline label {
+  display: inline-block; }
+.ui-form-inline input,
+.ui-form-inline textarea,
+.ui-form-inline select {
+  display: inline; }
+.ui-form-inline .city-zip-lyt label {
+  clear: none;
+  float: left;
+  width: auto !important;
+  margin-left: 0.385em;
+  margin-right: 0 !important; }
+  .ui-form-inline .city-zip-lyt label:first-child {
+    margin-left: 0; }
+.ui-form-inline .city-zip-lyt input,
+.ui-form-inline .city-zip-lyt select {
+  width: auto;
+  display: block; }
+
+/*--- FIELDHINT DISPLAY --------------------------------------------------------------------*/
+.ui-help-text {
+  color: #666;
+  font-style: italic;
+  font-weight: 500; }
+
+/*--- UI FORM ACTION ROW -------------------------------------------------------------------*/
+.ui-form-action {
+  margin: 0.769em 0 0 0;
+  -webkit-margin-top-collapse: separate; }
+
+/*=== ERROR, NOTICE, INFO & SUCCESS ========================================================*/
+/*--- ERROR, NOTICE, INFO & SUCCESS CONTAINERS ---------------------------------------------*/
+.error-ctn, .alert-ctn,
+.notice-ctn,
+.success-ctn,
+.info-ctn {
+  border: 2px solid #DDDDDD;
+  margin-bottom: 1em;
+  padding: 0.8em; }
+
+/*--- ERROR HANDLING -----------------------------------------------------------------------*/
+.error-ctn, .alert-ctn {
+  background-color: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #8A1F11; }
+
+.error-ctn a, .alert-ctn a {
+  color: #8A1F11; }
+
+.error-text {
+  color: #8A1F11;
+  font-weight: normal; }
+
+.error, .ui-form .error, .ui-form .error:hover {
+  background-color: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #333; }
+
+/*--- NOTICE HANDLING ----------------------------------------------------------------------*/
+.notice-ctn {
+  background-color: #FFF6BF;
+  border-color: #FFD324;
+  color: #514721; }
+  .notice-ctn a {
+    color: #514721; }
+
+/*--- INFO HANDLING ------------------------------------------------------------------------*/
+.info-ctn {
+  background-color: #D5EDF8;
+  border-color: #92CAE4;
+  color: #205791; }
+  .info-ctn a {
+    color: #205791; }
+
+/*--- SUCCESS HANDLING ---------------------------------------------------------------------*/
+.success-ctn {
+  background-color: #E6EFC2;
+  border-color: #C6D880;
+  color: #264409; }
+  .success-ctn a {
+    color: #264409; }
+
+/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones (landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */
+/* iPhone 4 ----------- */
+/*------------------------------------------------------------------------------------------
+CORE v3 - Page Partial
+DATE - September 19, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*----- HR ELEMENTS -----------------------------------------------------------------*/
+hr {
+  background-color: #FFF;
+  border: 0;
+  border-top: 1px solid #CCC;
+  clear: both;
+  color: #FFF;
+  display: block;
+  height: 0.154em;
+  margin: 1.154em 0; }
+
+/*--- ICON SPRITE  -------------------------------------------------------*/
+.ui-icn-sprite {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  display: inline-block; }
+
+/* Icon sprite call and setup */
+/*--- BASIC TABLE STYLES ------------------------------------------------------------------*/
+table {
+  width: 100%;
+  border: 1px dotted #CCC;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #000;
+  margin-bottom: 1.154em; }
+  table caption {
+    padding: 0.077em 0 0.385em 0;
+    font-weight: 900;
+    text-align: left; }
+  table th {
+    background-color: #ccc;
+    border-right: 1px solid #FFF;
+    padding: 0.385em 0.308em;
+    text-align: left; }
+    table th.last-child, table th:last-child {
+      border-right: 0; }
+  table td {
+    border: 1px dotted #CCC;
+    padding: 0.231em 0.308em; }
+  table .even td {
+    background-color: #fff; }
+  table .odd td {
+    background-color: #efefef; }
+
+/*--- BASIC IMAGE STYLES ------------------------------------------------------------------*/
+img {
+  max-width: 100%; }
+  img.left {
+    float: left;
+    margin: 0.346em 1.154em 1.154em 0; }
+  img.right {
+    float: right;
+    margin: 0.346em 0 1.154em 1.154em; }
+
+/*--- HORIZONTAL NAVIGATION SETUP ---------------------------------------------------------*/
+.link-list-horz {
+  padding: 0;
+  margin: 0; }
+  .link-list-horz dd, .link-list-horz li {
+    display: inline;
+    padding: 0;
+    margin: 0 0.462em 0 0; }
+    .link-list-horz dd a, .link-list-horz li a {
+      display: inline-block;
+      padding: 0 0.615em 0 0;
+      margin: 0; }
+
+/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones (landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */
+/* iPhone 4 ----------- */
+/*------------------------------------------------------------------------------------------
+CORE v3 - UI Box Partial
+DATE - September 20, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== BOX BASE SETUP ======================================================================*/
+.ui-box, .ui-box-rnd, .ui-box-rnd-shadow, .ui-box-rnd-adv, .ui-box-rnd-shadow-adv, .ui-box-shadow, .ui-box-shadow-adv {
+  background-color: #FFF;
+  position: relative;
+  border-bottom: 1px solid transparent;
+  margin-bottom: 1.154em;
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* must clearfix the box to use grid cols inside ui-box */
+  *zoom: 1;
+  /* this would be use if you are using the box footer */ }
+  .ui-box:after, .ui-box-rnd:after, .ui-box-rnd-shadow:after, .ui-box-rnd-adv:after, .ui-box-rnd-shadow-adv:after, .ui-box-shadow:after, .ui-box-shadow-adv:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+  .ui-box .box-hdr, .ui-box-rnd .box-hdr, .ui-box-rnd-shadow .box-hdr, .ui-box-rnd-adv .box-hdr, .ui-box-rnd-shadow-adv .box-hdr, .ui-box-shadow .box-hdr, .ui-box-shadow-adv .box-hdr {
+    background-color: #CCC;
+    padding: 1.154em; }
+  .ui-box .box-bdy, .ui-box-rnd .box-bdy, .ui-box-rnd-shadow .box-bdy, .ui-box-rnd-adv .box-bdy, .ui-box-rnd-shadow-adv .box-bdy, .ui-box-shadow .box-bdy, .ui-box-shadow-adv .box-bdy {
+    padding: 1.154em 1.154em 0 1.154em; }
+  .ui-box .box-ftr, .ui-box-rnd .box-ftr, .ui-box-rnd-shadow .box-ftr, .ui-box-rnd-adv .box-ftr, .ui-box-rnd-shadow-adv .box-ftr, .ui-box-shadow .box-ftr, .ui-box-shadow-adv .box-ftr {
+    display: none;
+    padding: 0 1.154em; }
+  .ui-box .last, .ui-box-rnd .last, .ui-box-rnd-shadow .last, .ui-box-rnd-adv .last, .ui-box-rnd-shadow-adv .last, .ui-box-shadow .last, .ui-box-shadow-adv .last {
+    margin-bottom: 0; }
+
+/*--- BOX WITH ROUNDED CORNERS ---------------------------------------------------------------*/
+.ui-box-rnd, .ui-box-rnd-shadow {
+  -moz-border-radius: 0.462em;
+  -webkit-border-radius: 0.462em;
+  -o-border-radius: 0.462em;
+  border-radius: 0.462em;
+  padding: 1.154em 1.154em 0 1.154em; }
+
+.ui-box-rnd-adv, .ui-box-rnd-shadow-adv {
+  -moz-border-radius: 0.462em;
+  -webkit-border-radius: 0.462em;
+  -o-border-radius: 0.462em;
+  border-radius: 0.462em; }
+  .ui-box-rnd-adv .box-hdr, .ui-box-rnd-shadow-adv .box-hdr {
+    -moz-border-radius: 0.385em 0.385em 0 0;
+    -webkit-border-radius: 0.385em 0.385em 0 0;
+    -o-border-radius: 0.385em 0.385em 0 0;
+    border-radius: 0.385em 0.385em 0 0; }
+
+/*--- BOX WITH A DROP SHADOW -----------------------------------------------------------------*/
+.ui-box-shadow {
+  -moz-box-shadow: 0 0 0.385em #cccccc;
+  -webkit-box-shadow: 0 0 0.385em #cccccc;
+  -o-box-shadow: 0 0 0.385em #cccccc;
+  box-shadow: 0 0 0.385em #cccccc;
+  padding: 1.154em 1.154em 0 1.154em; }
+
+.ui-box-shadow-adv {
+  -moz-box-shadow: 0 0 0.385em #cccccc;
+  -webkit-box-shadow: 0 0 0.385em #cccccc;
+  -o-box-shadow: 0 0 0.385em #cccccc;
+  box-shadow: 0 0 0.385em #cccccc; }
+
+/*--- ROUNDED CORNER BOX WITH A DROP SHADOW ------------------------------------------------*/
+.ui-box-rnd-shadow {
+  -moz-box-shadow: 0 0 0.385em #cccccc;
+  -webkit-box-shadow: 0 0 0.385em #cccccc;
+  -o-box-shadow: 0 0 0.385em #cccccc;
+  box-shadow: 0 0 0.385em #cccccc; }
+
+.ui-box-rnd-shadow-adv {
+  -moz-box-shadow: 0 0 0.385em #cccccc;
+  -webkit-box-shadow: 0 0 0.385em #cccccc;
+  -o-box-shadow: 0 0 0.385em #cccccc;
+  box-shadow: 0 0 0.385em #cccccc; }
+
+/*------------------------------------------------------------------------------------------
+CORE v3 - UI Button Partial
+DATE - September 20, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== CORE BUTTON SETUP ===================================================================*/
+.ui-btn-ctn, .ui-btn .x-small, .ui-btn .small, .ui-btn .medium, .ui-btn .large, .ui-btn .x-large, .ui-btn .xx-large, .ui-btn .xxx-large {
+  background-color: #efefef;
+  background-image: -moz-linear-gradient(top, #efefef, #cccccc);
+  /* FF3.6 */
+  background-image: -o-linear-gradient(top, #efefef, #cccccc);
+  /* Opera 11.10+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #efefef), color-stop(1, #cccccc));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(#efefef, #cccccc);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: linear-gradient(top, #efefef, #cccccc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#efefef', EndColorStr='#cccccc');
+  /* IE6 - IE9 */
+  -moz-border-radius: 0.65em;
+  -webkit-border-radius: 0.65em;
+  -o-border-radius: 0.65em;
+  border-radius: 0.65em;
+  -moz-box-shadow: 0 0.077em 0.385em #cccccc;
+  -webkit-box-shadow: 0 0.077em 0.385em #cccccc;
+  -o-box-shadow: 0 0.077em 0.385em #cccccc;
+  box-shadow: 0 0.077em 0.385em #cccccc;
+  border: 1px solid #B4B4B4;
+  transition: box-shadow 0.15s ease-in-out 0s;
+  -moz-transition: -moz-box-shadow 0.15s ease-in-out 0s;
+  -webkit-transition: -webkit-box-shadow 0.15s ease-in-out 0s;
+  -o-transition: -o-box-shadow 0.15s ease-in-out 0s;
+  text-shadow: 1px 1px 1px #FFF;
+  color: #333;
+  font-weight: 900;
+  line-height: 1em;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0.5em 0.75em;
+  position: relative;
+  display: block; }
+
+.ui-btn {
+  background-color: transparent;
+  border-width: 0;
+  font-family: "Arial", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  display: inline-block;
+  overflow: visible;
+  /* Removes horz. padding of button tag in IE7 */
+  cursor: pointer;
+  text-decoration: none; }
+  .ui-btn .x-small {
+    font-size: 0.769em;
+    min-width: 2.564em;
+    font-weight: normal; }
+  .ui-btn .small {
+    font-size: 0.923em;
+    min-width: 4.2735em; }
+  .ui-btn .medium {
+    font-size: 1.077em;
+    min-width: 5.25em; }
+  .ui-btn .large, .ui-btn .x-large, .ui-btn .xx-large, .ui-btn .xxx-large {
+    font-family: "myriad-pro-1", "myriad-pro-2", "Myriad Pro", Arial, Helvetica, sans-serif;
+    font-size: 1.385em;
+    min-width: 5.5em;
+    font-weight: 700; }
+  .ui-btn .x-large {
+    font-size: 1.692em;
+    min-width: 5.66em; }
+  .ui-btn .xx-large {
+    font-size: 2em;
+    min-width: 5.77em; }
+  .ui-btn .xxx-large {
+    font-size: 2.538em;
+    min-width: 5.4em; }
+  .ui-btn:link, .ui-btn:visited {
+    color: #333;
+    text-decoration: none; }
+  .ui-btn:hover .ui-btn-ctn, .ui-btn:hover .x-small, .ui-btn:hover .small, .ui-btn:hover .medium, .ui-btn:hover .large, .ui-btn:hover .x-large, .ui-btn:hover .xx-large, .ui-btn:hover .xxx-large {
+    background-color: #efefef;
+    background-image: -moz-linear-gradient(top, #efefef, #bbbaba);
+    /* FF3.6 */
+    background-image: -o-linear-gradient(top, #efefef, #bbbaba);
+    /* Opera 11.10+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #efefef), color-stop(1, #bbbaba));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(#efefef, #bbbaba);
+    /* Chrome 10+, Saf5.1+ */
+    background-image: linear-gradient(top, #efefef, #bbbaba);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#efefef', EndColorStr='#bbbaba');
+    /* IE6 - IE9 */ }
+  .ui-btn:active .ui-btn-ctn, .ui-btn:active .x-small, .ui-btn:active .small, .ui-btn:active .medium, .ui-btn:active .large, .ui-btn:active .x-large, .ui-btn:active .xx-large, .ui-btn:active .xxx-large {
+    background-color: #bbbaba;
+    background-image: -moz-linear-gradient(top, #bbbaba, #efefef);
+    /* FF3.6 */
+    background-image: -o-linear-gradient(top, #bbbaba, #efefef);
+    /* Opera 11.10+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #bbbaba), color-stop(1, #efefef));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(#bbbaba, #efefef);
+    /* Chrome 10+, Saf5.1+ */
+    background-image: linear-gradient(top, #bbbaba, #efefef);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#bbbaba', EndColorStr='#efefef');
+    /* IE6 - IE9 */
+    -moz-box-shadow: 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -o-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    transition: translate(0, 0);
+    -moz-transition: translate(0, 0);
+    -webkit-transition: translate(0, 0);
+    -o-transition: translate(0, 0);
+    text-shadow: -1px -1px 1px white; }
+  .ui-btn .ui-btn-icn-left {
+    margin-right: 0.4em; }
+  .ui-btn .ui-btn-icn-right {
+    margin-left: 0.4em; }
+
+/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones (landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */
+/* iPhone 4 ----------- */
+/*------------------------------------------------------------------------------------------
+CORE v3 - IE Partial
+DATE - September 20, 2011
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+/*=== _RESET.SCSS =========================================================================*/
+/*=== _TYPE.SCSS ==========================================================================*/
+/*--- LIST ITEMS --------------------------------------------------------------------------*/
+ul {
+  *margin-left: 1.25em;
+  /* IE7 */ }
+
+ol {
+  *margin-left: 1.9em;
+  /* IE7 */ }
+
+/*=== _GRID.SCSS ===========================================================================*/
+/*=== _FORM.SCSS ===========================================================================*/
+/*--- GLOBAL SETUP OF ELEMENTS -------------------------------------------------------------*/
+select {
+  max-width/*\**/: 23.077em\9; }
+
+legend {
+  *margin: 0 0 0 -0.308em;
+  /* IE7 */ }
+
+/*--- UI FORM ------------------------------------------------------------------------------*/
+.ui-form .chx-radio input {
+  vertical-align/*\**/: -0.154em\9;
+  /* IE7+8 */ }
+  .ui-form .chx-radio input:hover {
+    border/*\**/: 0\9;
+    /* IE7+8 */ }
+.ui-form .checkbox input {
+  vertical-align/*\**/: -0.154em\9;
+  /* IE7+8 */ }
+.ui-form .email-opt-in .email {
+  *vertical-align: -0.462em;
+  /* IE7 */ }
+.ui-form .email-opt-in .email-optin-label {
+  margin-top/*\**/: 0\9;
+  /* IE7+8 */
+  line-height/*\**/: 0.769em\9;
+  /* IE7+8 */ }
+  .ui-form .email-opt-in .email-optin-label input {
+    background-color/*\**/: transparent\9;
+    /* IE7+8 */
+    margin/*\**/: 0\9;
+    /* IE7+8 */
+    width/*\**/: 0.846em\9;
+    /* IE7+8 */ }
+
+/*=== _PAGE.SCSS ==========================================================================*/
+/*=== _UI_BOX.SCSS ========================================================================*/
+/*=== _UI_BTN.SCSS ========================================================================*/
+.ui-btn {
+  margin/*\**/: 0\9;
+  /* IE7+8 */
+  /* Fix IE9 bug when border-radius is used with IE filter */ }
+  .ui-btn .ui-btn-ctn, .ui-btn .x-small, .ui-btn .small, .ui-btn .medium, .ui-btn .large, .ui-btn .x-large, .ui-btn .xx-large, .ui-btn .xxx-large {
+    border-radius: 0\0\/;
+    /* IE8+9 */
+    /* IE8 requires a forced filter for the active state on link type buttons, this hack will need to be used in ie stylesheet for website and gradient colors will need to be overridden */ }
+    .ui-btn .ui-btn-ctn:active, .ui-btn .x-small:active, .ui-btn .small:active, .ui-btn .medium:active, .ui-btn .large:active, .ui-btn .x-large:active, .ui-btn .xx-large:active, .ui-btn .xxx-large:active {
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#bbbaba', EndColorStr='#efefef');
+      /* IE8 */ }
+  .ui-btn .ui-btn-icn-left {
+    *margin-right: 0.75em; }
+  .ui-btn .ui-btn-icn-right {
+    *margin-left: 0.75em; }
+
+body {
+  background-color: #f9f9f9;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, Helvetica, Tahoma, sans-serif; }
+
+.masthead, .navbar {
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  height: 60px; }
+
+.masthead {
+  background: url(/assets/images/navbar_bck.png) 0 0 repeat-x;
+  border: 1px solid #010005;
+  box-shadow: 0 0 6px #333;
+  -moz-box-shadow: 0 0 6px #333;
+  -webkit-box-shadow: 0 0 6px #333;
+  margin-top: 70px;
+  position: relative;
+  width: 980px; }
+
+.navbar {
+  border: 1px solid #828c98;
+  height: 37px;
+  padding-top: 21px;
+  padding-left: 20px; }
+
+.navbar a,
+.navbar a:link,
+.navbar a:visited {
+  color: #FFF;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px 8px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #010005; }
+
+.navbar a:hover {
+  background-color: #5d7486;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
+
+.logo {
+  color: #33465c;
+  font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
+  position: absolute;
+  top: -57px;
+  left: 27px; }
+
+.logo .tagline {
+  display: block;
+  font-size: 0.4em;
+  letter-spacing: -0.03em;
+  margin-top: -2px; }
+
+.grid-adjust {
+  background-color: #FFF;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  padding: 20px 27px; }
+
+.footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 10px 0 40px 27px; }
+
+#loader {
+  background: url(/assets/images/ajax-loader.gif);
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 75px;
+  height: 31px;
+  width: 31px; }
+
+#main .intro {
+  font-size: 1.1em; }
+
+.intro-headline {
+  color: #323232;
+  font-size: 1.55em;
+  font-weight: 600; }
+
+.intro-headline span {
+  color: #494a5c;
+  font-size: 1.45em;
+  font-weight: 800; }

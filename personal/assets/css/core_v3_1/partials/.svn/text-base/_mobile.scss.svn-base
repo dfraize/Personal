@@ -1,0 +1,191 @@
+/*------------------------------------------------------------------------------------------
+CORE v3.1 - Mobile Partial
+DATE - January 20, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+
+//=== SASS VARS =============================================================================
+
+//--- SIZE VARS -----------------------------------------------------------------------------
+$context-size:16; // 16px
+
+//--- SIZE FUNCTION -------------------------------------------------------------------------
+
+// $target-size = size you want in pixels
+// $context-size = base size in pixels
+// $target-size/$context-size = size in ems
+
+@function size($target-size) {
+	@return $target-size/$context-size;
+}
+
+//=== MEDIA QUERIES =========================================================================
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+	/*=== _TYPE.SCSS ==========================================================================*/
+	// Remember to change the font-size on the body tag to correspond to the context, for example:
+	// if the context size is 10 (10px) you need to change the body font-size to .625em or 62.5%.
+	// 62.5% on the body is 62.5% of 16px which is the base font size for most browsers,
+	// giving you a base of 10px
+	
+	body											{
+													font-size: 1em; // 16px
+													}
+	
+	/*=== _GRID.SCSS ===========================================================================*/
+	
+	/*--- PAGE SETUP ---------------------------------------------------------------------------*/
+	.page-container									{
+													width:92%;
+													}
+
+	/*--- GRID GLOBAL ATTRIBUTES  --------------------------------------------------------------*/
+	.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+	.col-7, .col-8, .col-9, .col-10, .col-11, 
+	.col-12, .col-13, .col-14, .col-15, .col-16, 
+	.col-17, .col-18, .col-19, .col-20, .col-21, 
+	.col-22, .col-23, .col-24						{
+													clear:both;
+													float:none;
+													width:100%;
+													}
+
+	/*=== _PAGE.SCSS ==========================================================================*/
+	
+	/*--- VERTICAL NAVIGATION SETUP -----------------------------------------------------------*/
+	.mb-link-list-vert								{
+													padding:0;
+													margin:0;
+		dd,li											{
+														display:block;
+														padding:0;
+														margin:0;
+														border-bottom:1px solid #ccc;
+			a												{
+															display:block;
+															padding:#{size(15)}em;
+															margin:0;
+															}
+			.pipe											{
+															display:none;
+															}
+														}
+													}
+													
+	/*=== _UI_BTN.SCSS ========================================================================*/
+	
+	/*--- BUTTON GROUP ------------------------------------------------------------------------*/
+	.ui-btn-grp-horz								{
+		.ui-btn											{
+			.large	 										{
+															min-width:5em;
+															}
+														}
+													}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+	/*=== _UI_BTN.SCSS ========================================================================*/
+	
+	/*--- BUTTON GROUP ------------------------------------------------------------------------*/
+	.ui-btn-grp-horz								{
+		.ui-btn											{
+			.x-small	 									{
+															min-width:2em;
+															}
+			.small	 										{
+															min-width:3em;
+															}
+			.medium	 										{
+															min-width:4em;
+															}
+			.large	 										{
+															min-width:2.5em;
+															}
+														}
+													}
+													
+}
+
+/* Smartphones (portrait and landscape) & iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+
+	/*=== _FORM.SCSS ===========================================================================*/
+	
+	/*--- GLOBAL FORM ELEMENTS -----------------------------------------------------------------*/
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="range"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="week"],
+	input[type="datetime-local"],
+	input[type="color"]								{
+													-webkit-appearance:none;
+													}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+	/*=== _TYPE.SCSS ==========================================================================*/
+	// Remember to change the font-size on the body tag to correspond to the context, for example:
+	// if the context size is 10 (10px) you need to change the body font-size to .625em or 62.5%.
+	// 62.5% on the body is 62.5% of 16px which is the base font size for most browsers,
+	// giving you a base of 10px
+	
+	body											{
+													font-size: 1.125em; // 18px
+													}
+													
+	/*=== _UI_BTN.SCSS ========================================================================*/
+	
+	/*--- BUTTON GROUP ------------------------------------------------------------------------*/
+	.ui-btn-grp-horz								{
+		.ui-btn											{
+			.large	 										{
+															min-width:5em;
+															}
+														}
+													}
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+
+}
