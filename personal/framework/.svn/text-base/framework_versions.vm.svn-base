@@ -1,0 +1,209 @@
+<h1>CSS framework versions for sparky <em>trunk</em> websites</h1>
+<div class="notice-ctn">
+	<strong>Last updated:</strong> 5/21/2012 - <a href="/framework_changelog">change log</a>
+</div>
+
+<table class="core-version-tbl" cellpadding="0" cellspacing="0" border="0">
+	<thead>
+		<tr class="select-row">
+			<td></td>
+			<td>v1</td>
+			<td>v2</td>
+			<td>v3</td>
+			<td>v3.3</td>
+			<td>v3.4</td>
+			<td>v3.5</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>admin<small>sparky admin</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-5"></td>
+		</tr>
+		<tr>
+			<td>bank<small>smarterbank prelaunch site</small></td>
+			<td></td>
+			<td></td>
+			<td class="v3"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>cca<small>college cost adjuster</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-4"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>crushstudentdebt<small>crushstudentdebt</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-4"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>internal<small>intranet prototype</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>leads<small>degreewise</small></td>
+			<td class="v1"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>loan<small>loan comparison</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-4"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>rc<small>resource center</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-4"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>reports<small>???</small></td>
+			<td class="v1"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>sbank<small>smarterbank</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-3"></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>sbucks<small>smarterbucks</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-3"></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>scholarships<small>scholarships center</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-5"></td>
+		</tr>
+		<tr>
+			<td>school_reviews<small>degreewise school reviews</small></td>
+			<td class="v1"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>simplespend<small>simplespend</small></td>
+			<td class="v1"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>slmc<small>paybacksmarter</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-4"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>st<small>simpletuition</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-4"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>test<small>???</small></td>
+			<td></td>
+			<td></td>
+			<td class="v3"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>tpc<small>testprep center</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-4"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>ui_guidelines<small>ui guidelines</small></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="v3-5"></td>
+		</tr>
+	</tbody>
+</table>
+
+<article>
+	<aside class="ui-box-rnd-adv">
+		<header class="box-hdr">
+			<h6>Instructions for creating a new version of CSS core</h6>
+		</header>
+		<section class="box-bdy">
+			<ol>
+				<li>Copy core subdirectories and files from previous CSS core version</li>
+				<li>Update new core css files to reference new version in import file paths and update comments to identify new version</li>
+				<li>Update new sass boilerplate css files to reference new version in import file paths and update comments to identify new version</li>
+				<li>Update build.xml to exclude mixin scss files for the new core version directory</li>
+				<li>Update ui_guidelines site styles.scss to reference new core version in import file paths, always use ui_guidelines to work on experimental stuff and then test in major web browers and on mobile devices, once version passes apply new core version of other sparky sites</li>
+			</ol>
+		</section>
+		<footer class="box-ftr"></footer>
+	</aside>
+</article>

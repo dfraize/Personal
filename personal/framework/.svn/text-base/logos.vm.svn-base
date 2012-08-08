@@ -1,0 +1,63 @@
+<h1>Brand - logos</h1>
+
+#parse("websites/ui_guidelines/brand_nav.vm")
+
+<article class="col-24">
+	<div class="col-16 last">
+		<section class="logo-ctn">
+			<h2 style="margin-bottom:20px;">SimpleTuition logos with tagline</h2>
+
+			(480 x 100 jpg)
+			<img src="/images/ui_guidelines/ST_Logo_withTagline_480x100.jpg" />
+			(480 x 100 png)
+			<img src="/images/ui_guidelines/ST_Logo_withTagline_480x100.png" />
+			(432 x 99 jpg)
+			<img src="/images/ui_guidelines/ST_Logo_withTag_fullcolor432x99.jpg" />
+			(240 x 50 jpg)
+			<img src="/images/ui_guidelines/ST_Logo_withTagline_240x50.jpg" />
+			(240 x 50 png)
+			<img src="/images/ui_guidelines/ST_Logo_withTagline_240x50.png" />
+			(230 x 60 jpg)
+			<img src="/images/ui_guidelines/ST_Logo_FullColor_RGB_230x60.jpg" />
+		</section>
+
+		#parse("websites/ui_guidelines/back_to_top.vm")
+		<hr />
+
+		<section class="logo-ctn">
+			<h2>SimpleTuition logos without tagline</h2>
+
+			(480 x 120 jpg)
+			<img src="/images/ui_guidelines/st_logo_color_480x120.jpg" />
+			(480 x 100 png)
+			<img src="/images/ui_guidelines/ST_Logo_noTagline_480x100.png" />
+			(480 x 100 jpg)
+			<img src="/images/ui_guidelines/ST_Logo_noTagline_480x100.jpg" />
+			(432 x 99 jpg)
+			<img src="/images/ui_guidelines/ST_Logo_NoTag_432x99.jpg" />
+			(240 x 50 jpg)
+			<img src="/images/ui_guidelines/ST_Logo_noTagline_240x50.jpg" />
+			(240 x 50 png)
+			<img src="/images/ui_guidelines/ST_Logo_noTagline_240x50.png" />
+		</section>
+	</div>
+
+	<div class="col-8 last">
+		<section class="logo-ctn">
+			<h2 style="margin-bottom:20px;">SimpleTuition icon logos</h2>
+
+			(196 x 300 jpg)
+			<img src="/images/ui_guidelines/ST_Icon_196x300.jpg" /><br />
+			(196 x 300 png)
+			<img src="/images/ui_guidelines/ST_Icon_196x300.png" /><br />
+			(100 x 153 jpg)
+			<img src="/images/ui_guidelines/ST_Icon_100x153.jpg" /><br />
+			(100 x 153 png)
+			<img src="/images/ui_guidelines/ST_Icon_100x153.png" /><br />
+			(50 x 77 jpg)
+			<img src="/images/ui_guidelines/ST_Icon_50x77.jpg" /><br />
+			(50 x 77 png)
+			<img src="/images/ui_guidelines/ST_Icon_50x77.png" />
+		</section>
+	</div>
+</article>

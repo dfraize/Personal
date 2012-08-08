@@ -1,0 +1,30 @@
+<h1>E-Mail marketing standards and best practices</h1>
+
+#parse("websites/ui_guidelines/email_marketing_nav.vm")
+
+<p>Below is a boilerplate for an email template to help get you started creating an email. The code contains numerous fixes for the not so consistent email platforms out there. This boilerplate is intended to help you get up and running quickly helping you avoid some of the common pitfalls that encompass HTML email.</p>
+
+<article class="col-24">
+	<div class="col-12">
+		<section>
+			<h2>E-Mail boilerplate</h2>
+			<p>
+				<a class="ui-btn get-code" id="cp1" href="javascript:;" name="get_code" tabindex="" title="Get JS Code">
+					<span class="small">
+						<span class="ui-btn-icn ui-btn-icn- ui-icn-sprite"></span>Get HTML Code
+					</span>
+				</a>
+			</p>
+
+			<div class="code-panel" id="cp_cp1">
+				<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+					code goes here
+
+				]]></script>
+			</div>
+		</section>
+	</div>
+	<div class="col-12 last">
+	</div>
+</article>

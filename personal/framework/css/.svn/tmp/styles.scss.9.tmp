@@ -1,0 +1,651 @@
+/*------------------------------------------------------------------------------------------
+UI Guidelines - Styles CSS
+DATE - May 21, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+-------------------------------------------------------------------------------------------*/
+
+//=== CORE v3_5 IMPORT ======================================================================
+@import	"../../core_v3_5/partials/core_v3_5",
+		"../../core_v3_5/components/ui_autocomplete",
+		"../../core_v3_5/components/ui_dialog",
+		"../../core_v3_5/components/ui_slider",
+		"../../core_v3_5/components/ui_tabs",
+		"../../core_v3_5/components/ui_tooltip",
+		"../../core_v3_5/components/ui_accordian",
+		"../../core_v3_5/components/ui_datepicker",
+		"../../core_v3_5/components/ui_iphone_button"
+		;
+
+//=== SASS VARS =============================================================================
+
+//--- SIZE VARS -----------------------------------------------------------------------------
+$context-size:15; // 15px
+
+//--- MASTHEAD MAIN NAV WIDTH VARS ----------------------------------------------------------
+$nav-items:8;
+
+//--- SIZE FUNCTION -------------------------------------------------------------------------
+
+// $target-size = size you want in pixels
+// $context-size = base size in pixels
+// $target-size/$context-size = size in ems
+
+@function size($target-size) {
+	@return $target-size/$context-size;
+}
+
+//--- MASTHEAD MAIN NAV WIDTH FUNCTION ------------------------------------------------------
+$nav-width: 100%/$nav-items;
+
+/*=== WEBSITE STYLES ======================================================================*/
+
+/*--- GLOBAL ------------------------------------------------------------------------------*/
+.grid-adjust							{
+										@include border-radius(6px, all);
+										margin-top:#{size(90)}em;
+										padding-top:#{size(20)}em;
+										padding-bottom:#{size(20)}em;
+										}
+
+.bookmark								{
+										display: block;
+										width:0;
+										height:0;
+										position: relative;
+										top: -90px;
+										}
+
+/*----- TOOLS SECTION --------------------------------------------------------------------*/
+#debug-grid,
+.gutters
+								{
+								display:none;
+								position:fixed;
+								z-index:999999;
+								top:-20px;
+								left:0;
+								right:0;
+								bottom:0;
+								width:100%;
+								height:100%;
+								pointer-events:none;
+	.grid-adjust
+									{
+									background-color:transparent;
+									box-shadow:0 0 0;
+									border:0;
+									}
+
+	.grid-adjust .col-1
+									{
+									background-color:#50b7d7;
+									opacity:.2;
+									height:800px;
+									}
+								}
+
+.gutters						{
+								top:0;
+								width:980px;
+								margin:0 auto;
+								border-left:30px solid #50b7d7;
+								border-right:30px solid #50b7d7;
+								}
+/*--- NAVBAR -------------------------------------------------------------------------------*/
+.masthead								{
+										border-top:0;
+										position:fixed;
+										width:100%;
+										top:0;
+										z-index:2;
+	.logo									{
+											margin-top:#{size(20)}em;
+											margin-left:0;
+											}
+	.ui-navbar								{
+											float:right;
+		a										{
+												font-size:14px;
+												display:block;
+												}
+		ul										{
+												@include clearfix;
+												margin:#{size(3)}em 0 0 0;
+			li										{
+													float:left;
+													display:block;
+													text-align:center;
+													position:relative;
+													padding:#{size(4)}em #{size(10)}em;
+													border:none;
+				.sub-menu								{
+														@include border-radius(#{size(5)}em 0 #{size(5)}em #{size(5)}em, all);
+														position:absolute;
+														left:-999em; /* Hides the drop down */
+														z-index:30;
+														text-align:left;
+														border:1px solid #777777;
+														border-top:none;
+														width:#{size(180)}em;
+					dl										{
+															margin:0;
+															}
+														}
+				&:hover									{
+														@include border-radius(#{size(5)}em #{size(5)}em 0px 0px, all);
+														border:1px solid #777777;
+														padding:#{size(4)}em #{size(9)}em;
+						.sub-menu 							{
+															left:auto;
+															right:-1px;
+															top:auto;
+							dt									{
+																padding:#{size(2)}em #{size(10)}em;
+																}
+							dd									{
+								a									{
+																	display:block;
+																	padding:#{size(4)}em #{size(10)}em;
+																	}			
+																}
+							.first								{
+								a									{
+									&:hover								{
+																		@include border-radius(#{size(5)}em 0 0 0, all);
+																		}
+																	}
+																}
+							.last								{
+								a									{
+									&:hover								{
+																		@include border-radius(0 0 #{size(5)}em #{size(5)}em, all);
+																		}
+																	}
+																}
+							.indent								{
+								a									{
+																	padding-left:#{size(18)}em;
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+
+/*--- MASTHEAD DEMO -----------------------------------------------------------------------*/
+.masthead-demo							{
+										position:fixed;
+										top:0px;
+	.masthead-adjust						{
+		
+		/*--- MASTHEAD UTILITY NAV ---------------------------------------------------------*/
+		.ui-masthead-util-nav					{
+			.js-logout								{
+													display:none;
+													}
+												}
+
+		/*--- MASTHEAD MAIN NAV -------------------------------------------------------------*/
+		.ui-masthead-nav						{
+			dd										{
+													width:$nav-width;
+													}
+												}
+											}
+										}
+
+/*--- FOOTER -------------------------------------------------------------------------------*/
+.footer									{
+										@include border-radius(0,all);
+										margin-top:#{size(30)}em;
+										margin-bottom:0;
+										padding-bottom:#{size(5)}em;
+	dl										{
+		dt										{
+												margin-bottom:#{size(5)}em;
+												}
+											}
+	.ui-back-to-top							{
+											padding:0;
+											}
+										}
+	
+/*--- HOMEPAGE -----------------------------------------------------------------------------*/
+	/*--- SWIPE JS -----------------------------------------------------------------------------*/
+
+	.swipe								{
+		ul, li								{margin:0; padding:0;}
+		li									{display:none;}
+		li:first-child						{
+											display:block;
+											}
+		.swipe-content-ctn					{
+											@include background-gradient(#94d8fc, #1db1ff);
+											@include border-radius(#{size(6)}em, all);
+											color:#fff;
+											margin:0 0 10px 0;
+											padding:25px;
+											height:180px;
+			p									{
+												color:#FFF;
+												text-shadow:1px 1px 1px #666;
+												}
+											}
+										}
+
+	.mb-swipe-navbar					{
+		a,
+		.indicator							{
+											float:left;
+											}
+		a									{
+											font-weight:bold;
+											width:5%;
+											}
+		.previous							{
+											text-align:right;
+											}
+		.indicator							{
+											width:90%;
+											text-align:center;
+			span								{
+												border-radius:30px;
+												background-color:#EFEFEF;
+												display:inline-block;
+												border:1px solid #666;
+												height:10px; width:10px;
+												}
+			.on									{background-color:#CCC;}
+											}
+										}
+
+
+.qr-code-ctn							{
+										float:right;
+										position:relative;
+	.qr-code-link							{
+											background:url(/images/ui_guidelines/qr_code_icon24.png) 100% 0 no-repeat;
+											padding-right:#{size(25)}em;
+											font-weight:bold;
+											}
+	img										{
+											display:none;
+											@include box-shadow(#{size(2)}em, #{size(2)}em, #{size(2)}em, #CCC);
+											position:absolute;
+											top:#{size(20)}em;
+											right:0;
+											border:1px solid #CCC;
+											}
+										}
+
+.hp-framework-description				{
+										padding-bottom:#{size(15)}em;
+
+	h3										{
+											font-size:#{size(18)}em;
+											margin-bottom:#{size(4)}em;
+											}
+										}
+
+.fw-version								{
+										@include border-radius(#{size(30)}em, all);
+										display:inline-block;
+										font-size:#{size(10)}em;
+										padding:#{size(5)}em;
+										text-align:center;
+										-webkit-transform: rotate(10deg);
+										-moz-transform: rotate(10deg);
+										-ms-transform: rotate(10deg);
+										-o-transform: rotate(10deg);
+										position:relative;
+										top:#{size(-3)}em;
+										}
+
+/*--- LAYOUT/GRIDS PAGE --------------------------------------------------------------------*/
+.unit									{
+										@include border-radius(#{size(6)}em, all);
+										margin-bottom:#{size(15)}em;
+										}
+
+/*--- FORM PAGE ----------------------------------------------------------------------------*/
+.ui-tooltip								{
+										width:17px;
+										height:17px;
+										margin-right:#{size(4)}em;
+										vertical-align:#{size(-4)}em;
+										}
+.ui-tooltip-close-icn					{
+										width:10px;
+										height:10px;
+										margin-right:#{size(5)}em;
+										}
+.ui-icn-sprite							{
+										background-image:url("/images/core/icon_sprite.png");
+										}
+.ui-form-inline							{
+	label									{
+											width:#{size(120)}em;
+											}
+	.chx-radio								{
+		label									{
+												width:auto;
+												margin-right:#{size(10)}em;
+												}
+											}
+										}
+
+/*--- BUTTON PAGE --------------------------------------------------------------------------*/
+.close-btn .ui-btn-icn					{
+										width:9px;
+										height:9px;
+										vertical-align:#{size(.65)}em;
+										}
+.add-btn .ui-btn-icn					{
+										width:12px;
+										height:12px;
+										vertical-align:#{size(-2.6)}em;
+										}
+.fav-btn .ui-btn-icn					{
+										width:16px;
+										height:15px;
+										vertical-align:#{size(-3.38)}em;
+										}
+.dl-btn .ui-btn-icn						{
+										width:12px;
+										height:15px;
+										vertical-align:#{size(-.65)}em;
+										}
+.calc-btn .ui-btn-icn					{
+										width:15px;
+										height:16px;
+										}
+.gs-btn .ui-btn-icn						{
+										width:17px;
+										height:17px;
+										}
+
+/*--- LOGO PAGE ---------------------------------------------------------------------------*/
+.logo-ctn								{
+	 img									{
+	 										display:block;
+	 										margin:20px 0;
+	 										}
+										}
+
+/*--- COLOR PAGE --------------------------------------------------------------------------*/
+.color-tbl								{
+										border:0;
+										}
+.color-tbl td,
+.color-tbl th							{
+										padding:#{size(7)}em #{size(4)}em; // 7px/13px, 4px/13px
+										text-align:center;
+										width:16.67%;
+										}
+.color-tbl th:nth-child(1),
+.color-tbl td:nth-child(1)				{
+										text-align:right;
+										}
+.color-tbl td:first-child				{
+										border-left:0;
+										font-size:#{size(20.8)}em;
+										text-align:center;
+										}
+.color-tbl .select-row td				{
+										border-top:0;
+										font-size:#{size(20.8)}em;
+										text-align:center;
+										}
+.color-tbl tr td:first-child:hover		{
+										border:0;
+										}
+.color-tbl thead tr:hover				{
+										border:0;
+										}
+.color-tbl thead tr td:hover			{
+										border:0;
+										}
+
+/*--- CORE VERSION PAGE --------------------------------------------------------------------*/
+.core-version-tbl						{
+										border:0;
+	td,
+	th										{
+											padding:#{size(7)}em #{size(4)}em; // 7px/13px, 4px/13px
+											width:10%;
+											font-size:#{size(20.8)}em;
+											text-align:center;
+											}
+	tbody									{
+		td										{
+			p 										{
+													font-size:#{size(8)}em;
+													}
+												}
+		small									{
+												font-size:#{size(7)}em !important;
+												display:block;
+												}
+		td:first-child							{
+												border-left:0;
+												}
+		td:last-child							{
+												border-right:0;
+												}
+		.select-row								{
+			td										{
+													border-top:0;
+													}
+												}
+		tr										{
+			td:first-child:hover					{
+													border-left: 0;
+													}
+												}
+											}
+	thead									{
+		tr										{
+			td:first-child							{
+													border-left:0;
+													}
+			td:last-child							{
+													border-right:0;
+													}
+												}
+											}
+										}
+
+/*--- MEDIAQUERY BREAKPOINTS PAGE ----------------------------------------------------------*/
+.media-query-tbl						{
+	thead									{
+		td										{
+												font-size:#{size(12)}em;
+												font-weight:bold;
+												}
+											}
+	tbody									{
+		td										{
+			p 										{
+													font-size:#{size(7)}em;
+													}
+												}
+											}
+										}
+
+/*--- DEVICES PAGE -------------------------------------------------------------------------*/
+.device_sizes							{
+	#frames									{
+											margin-left:0;
+											margin-bottom:10px;
+											padding-bottom:20px;
+											overflow-x:scroll;
+											width:1500px;
+											}
+	.frame									{
+											margin-right:20px;
+											float:left;
+		img										{
+												display:none;
+												vertical-align:middle;
+												}
+											}
+	.frame:last-child						{
+											margin-right:0;
+											}
+	.widthOnly 								{
+											height:580px;
+											}
+	.ui-form								{
+											padding-bottom:15px;
+											margin-bottom:15px;
+		li										{
+												float:left;
+												margin-right:15px;
+												width:75%;
+												}
+		input									{
+												padding:6px;
+												max-width:100%;
+												}
+		.ui-form-action							{
+												margin-top:3px;
+												width:20%;
+												}
+											}
+										}
+
+/*--- LIBRARIES PAGE ------------------------------------------------------------------------*/
+.libraries								{
+	.libraries-table						{
+		td,
+		th										{
+												vertical-align:top;
+												}
+											}
+	.get-code								{
+											margin-top:0;
+											}
+										}
+
+/*--- CODE SYNTAX HIGHLIGHTING --------------------------------------------------------------*/
+.code-panel								{
+										display:none;
+										}
+.get-code								{
+										margin-top:#{size(10)}em;
+										}
+
+//=== WEBSITE THEME IMPORT ==================================================================
+@import	"theme";
+
+//=== MEDIA QUERIES =========================================================================
+
+/*--- Portrait iPhone, landscape iPhone, portrait smart phones ----------------------------*/
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	.masthead							{
+										height:auto;
+										margin-bottom:0;
+										}
+	.mediaquery_breakpoints				{
+										background:red;
+										}
+	.media-query-tbl					{
+		tbody								{
+			td									{
+				p 									{
+													font-size:#{size(5)}em;
+													}
+												}
+											}
+										}
+}
+
+/*--- Portrait e-readers (Nook/Kindle/Kindle Fire) -------------------------------------------*/
+@media only screen and (min-width : 481px) and (max-width : 640px) {
+	
+	/*--- NAVBAR -------------------------------------------------------------------------------*/
+	.masthead							{
+		.ui-navbar							{
+			.ui-navbar-menu-btn					{
+				.ui-dwn-arrow						{
+													display:none;
+													}
+												}
+											}
+										}
+
+	.mediaquery_breakpoints				{
+										background:green;
+										}
+}
+
+/*--- Portrait iPad, portrait tablets ---------------------------------------------------------*/
+@media only screen and (min-width : 641px) and (max-width : 768px) {
+
+	/*--- NAVBAR -------------------------------------------------------------------------------*/
+	.masthead							{
+		.ui-navbar							{
+			.ui-navbar-menu-btn					{
+				.ui-dwn-arrow						{
+													display:none;
+													}
+												}
+											}
+										}
+
+	.mediaquery_breakpoints				{
+										background:cyan;
+										}
+			
+	/*=== _UI_BTN.SCSS ========================================================================*/
+	
+	/*--- BUTTON GROUP ------------------------------------------------------------------------*/
+	.ui-btn-grp-horz					{
+		.ui-btn								{
+			.large	 							{
+												min-width:5em;
+												}
+											}
+										}
+}
+
+/*--- Low-resolution laptops and desktops ----------------------------------------------------*/
+@media only screen and (min-width : 769px) and (max-width : 980px) {
+	.mediaquery_breakpoints				{
+										background:orange;
+										}
+}
+
+/*--- Landscape iPad, laptops and desktops beyond 980px --------------------------------------*/
+@media only screen and (min-width : 981px) and (max-width : 1024px) {
+	.mediaquery_breakpoints				{
+										background:magenta;
+										}
+			
+	/*=== _UI_BTN.SCSS ========================================================================*/
+	
+	/*--- BUTTON GROUP ------------------------------------------------------------------------*/
+	.ui-btn-grp-horz					{
+		.ui-btn								{
+			.large	 							{
+												min-width:5em;
+												}
+											}
+										}
+}
+
+/*--- Big landscape tablets, laptops and desktops beyond 980px --------------------------------*/
+@media only screen and (min-width : 1025px) and (max-width : 1280px) {
+	.mediaquery_breakpoints				{
+										background:yellow;
+										}
+}
+
+/*--- Hi-res laptops and desktops -------------------------------------------------------------*/
+@media only screen and (min-width : 1281px) {
+	.mediaquery_breakpoints				{
+										background:blue;
+										}
+}

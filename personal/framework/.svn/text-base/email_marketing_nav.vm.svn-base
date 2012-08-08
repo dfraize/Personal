@@ -1,0 +1,9 @@
+<nav>
+	<h5>Sections</h5>
+	<dl class="link-list-horz">
+		<dd><a href="/email_marketing_boilerplate">Boilerplate</a><span class="pipe">|</span></dd>
+		<dd><a href="/email_marketing_html_snippets">HTML snippets</a><span class="pipe">|</span></dd>
+		<dd><a href="/email_marketing_email_type">Email type</a></dd>
+	</dl>
+</nav>
+<hr />
