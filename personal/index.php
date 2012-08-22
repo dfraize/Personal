@@ -7,34 +7,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<?php 
-if ($_GET['page'] == 'home' ){
-	$title = "Home";
-}else if ($_GET['page'] == 'work' ){
-	$title = "Work";
-}else if ($_GET['page'] == 'portfolio' ){
-	$title = "Life";
-}
-?>
-
-
-	<title><?php echo $title; ?></title>
-	<meta name="keywords" content="<?php echo $metas; ?>">
-	<meta name="description" content="<?php echo $description; ?>" />
-
-
-<!--
-<?php
-	$title = "Doug Fraize - Home";
-	$description = "Your Meta Description";
-	$keywords = "Your Keywords";
-?>
-
-	<title><?php echo $title; ?></title>
-	<meta name="author" content="">
-	<meta name="description" content="<?php echo $description; ?>" />
-	<meta name="keywords" content="<?php echo $keywords; ?>" />
--->
+	<title>Welcome</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="" />
 
 	<!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
 	<meta name="HandheldFriendly" content="True">
@@ -56,7 +31,7 @@ if ($_GET['page'] == 'home' ){
 	<!-- Modernizr - Used to check HTML & CSS3 support in browsers -->
 	<script src="assets/js/modernizr_2.5.3.js"></script>
 
-	<link media="screen,print" rel="stylesheet" href="assets/css/theme_v5.css">
+	<link media="screen,print" rel="stylesheet" href="assets/css/theme_v6.css">
 </head>
 
 <body>

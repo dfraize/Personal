@@ -1,9 +1,0 @@
-<nav>
-	<h5>Sections</h5>
-	<dl class="link-list-horz">
-		<dd><a href="/brand">Introduction</a><span class="pipe">|</span></dd>
-		<dd><a href="/logos">Logos</a><span class="pipe">|</span></dd>
-		<dd><a href="/colors">Colors</a></dd>
-	</dl>
-</nav>
-<hr />
