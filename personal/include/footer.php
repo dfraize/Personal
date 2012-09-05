@@ -12,6 +12,7 @@
 		<p>I DELIVER impressive results on time, on budget, and with a smile. Why not try me out?</p>
 	</section>
 
+	<hr>
 
 	<section class="col-6">
 		Get In Touch!
