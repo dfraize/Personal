@@ -35,33 +35,31 @@
 </head>
 
 <body>
-
-	<div class="page">
-		<div class="page-container page-adjust">
-			<header><? include "include/navbar.php";?></header>
-			<div class="grid min-height grid-adjust">
-
-				<?php
-					$pages_dir = 'include';
-					if (!empty($_GET['p'])) {
-						$pages = scandir($pages_dir, 0);
-						unset($pages[0], $pages[1]);
+	<!-- MASTHEAD -->
+	<header role="banner" class="masthead"><? include "include/navbar.php";?></header>
 	
-						$p = $_GET['p'];
-						if (in_array($p.'.inc.php', $pages)) {
-							include($pages_dir.'/'.$p.'.inc.php');
-						} else {
-							include($pages_dir.'/not_found.inc.php');
-						}
-					} else {
-						include($pages_dir.'/home.inc.php');
-					}
-				?>
+	<!-- GRID SETUP -->
+	<section role="main" class="grid min-height grid-adjust">
+		<?php
+			$pages_dir = 'include';
+			if (!empty($_GET['p'])) {
+				$pages = scandir($pages_dir, 0);
+				unset($pages[0], $pages[1]);
 
-			</div>
-			<footer class="clearfix"><? include "include/footer.php";?></footer>
-		</div>
-	</div>
+				$p = $_GET['p'];
+				if (in_array($p.'.inc.php', $pages)) {
+					include($pages_dir.'/'.$p.'.inc.php');
+				} else {
+					include($pages_dir.'/not_found.inc.php');
+				}
+			} else {
+				include($pages_dir.'/home.inc.php');
+			}
+		?>
+	</section>
+	
+	<!-- FOOTER -->
+	<footer class="footer"><? include "include/footer.php";?></footer>
 
 	<!-- ALL JAVASCRIPT INCLUDES GO HERE -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

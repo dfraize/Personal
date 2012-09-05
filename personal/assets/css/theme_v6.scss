@@ -24,9 +24,49 @@ $context-size:15; // 15px
 
 /*=== WEBSITE STYLES ======================================================================*/
 
+
+
 /*--- HEADER SECTION ----------------------------------------------------------------------*/
+.masthead	{
+			@include box-shadow(0, #{size(10)}em, #{size(10)}em, #CCC);
+			background-color:#000;
+			height:#{size(60)}em;
+			padding-top:#{size(17)}em;
+
+	.masthead-ctn
+				{
+				margin:0 auto;
+				width:#{size(980)}em;
+
+		.tagline	{
+					font-family: Lobster, Georgia, serif;
+					font-size:#{size(22)}em;
+					color:#FFF;
+			span		{color:#666;}
+					}
+
+		nav			{
+					text-align:right;
+			a			{
+						@include href-link(#38A2D4, none);
+						font-weight:bold;
+				&:hover		{color:#FFF;}
+						}
+					}
+
+				}
+			}
 
 /*--- FOOTER SECTION ----------------------------------------------------------------------*/
+.footer		{
+			border-top:1px solid #CCC;
+			padding-top:#{size(15)}em;
+
+	.footer-ctn	{
+				margin:0 auto;
+				width:#{size(980)}em;
+				}
+			}
 
 /*--- PORTFOLIO PAGE ------------------------------------------------------------------*/
 .curled-box		{

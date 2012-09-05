@@ -273,7 +273,7 @@ html {
   *zoom: 1;
   text-align: left;
   display: block;
-  padding: 0 2em; }
+  padding: 0; }
   .grid:after {
     content: "\0020";
     display: block;
@@ -1571,7 +1571,40 @@ IE9 FIXES
 
 /*=== WEBSITE STYLES ======================================================================*/
 /*--- HEADER SECTION ----------------------------------------------------------------------*/
+.masthead {
+  -moz-box-shadow: 0 0.66667em 0.66667em #cccccc;
+  -webkit-box-shadow: 0 0.66667em 0.66667em #cccccc;
+  -o-box-shadow: 0 0.66667em 0.66667em #cccccc;
+  box-shadow: 0 0.66667em 0.66667em #cccccc;
+  background-color: #000;
+  height: 4em;
+  padding-top: 1.13333em; }
+  .masthead .masthead-ctn {
+    margin: 0 auto;
+    width: 65.33333em; }
+    .masthead .masthead-ctn .tagline {
+      font-family: Lobster, Georgia, serif;
+      font-size: 1.46667em;
+      color: #FFF; }
+      .masthead .masthead-ctn .tagline span {
+        color: #666; }
+    .masthead .masthead-ctn nav {
+      text-align: right; }
+      .masthead .masthead-ctn nav a {
+        color: #38a2d4;
+        text-decoration: none;
+        font-weight: bold; }
+        .masthead .masthead-ctn nav a:hover {
+          color: #FFF; }
+
 /*--- FOOTER SECTION ----------------------------------------------------------------------*/
+.footer {
+  border-top: 1px solid #CCC;
+  padding-top: 1em; }
+  .footer .footer-ctn {
+    margin: 0 auto;
+    width: 65.33333em; }
+
 /*--- PORTFOLIO PAGE ------------------------------------------------------------------*/
 .curled-box {
   background-color: #FFF;

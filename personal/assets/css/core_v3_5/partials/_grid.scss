@@ -67,7 +67,7 @@ html				{
 					@include clearfix;
 					text-align:left;
 					display:block;
-					padding:0 #{size(30)}em;
+					padding:0;
 					}
 .grid-adjust		{
 					width:$grid-adjust-width;
