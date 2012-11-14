@@ -1,0 +1,163 @@
+/*------------------------------------------------------------------------------------------
+SASS Boilerplate - Styles CSS
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+
+//=== CORE v3_4 IMPORT ========================================================================
+@import	"core_v3_5/partials/core_v3_5";
+
+//=== SASS VARS =============================================================================
+
+//--- SIZE VARS -----------------------------------------------------------------------------
+$context-size:15; // 15px
+
+//--- SIZE FUNCTION -------------------------------------------------------------------------
+
+// $target-size = size you want in pixels
+// $context-size = base size in pixels
+// $target-size/$context-size = size in ems
+
+@function size($target-size) {
+	@return $target-size/$context-size;
+}
+
+/*=== WEBSITE STYLES ======================================================================*/
+
+
+
+/*--- HEADER SECTION ----------------------------------------------------------------------*/
+.masthead	{
+			@include box-shadow(0, #{size(10)}em, #{size(10)}em, #CCC);
+			background-color:#000;
+			height:#{size(60)}em;
+			padding-top:#{size(17)}em;
+
+	.masthead-ctn
+				{
+				margin:0 auto;
+				width:#{size(980)}em;
+
+		.tagline	{
+					font-family: Lobster, Georgia, serif;
+					font-size:#{size(22)}em;
+					color:#FFF;
+			span		{color:#666;}
+					}
+
+		nav			{
+					text-align:right;
+			a			{
+						@include href-link(#38A2D4, none);
+						font-weight:bold;
+				&:hover		{color:#FFF;}
+						}
+					}
+
+				}
+			}
+
+/*--- FOOTER SECTION ----------------------------------------------------------------------*/
+.footer		{
+			border-top:1px solid #CCC;
+			padding-top:#{size(15)}em;
+
+	.footer-ctn	{
+				margin:0 auto;
+				width:#{size(980)}em;
+				}
+			}
+
+/*--- PORTFOLIO PAGE ------------------------------------------------------------------*/
+.curled-box		{
+				background-color:#FFF;
+				border:1px solid #e6e6e6;
+				border-bottom:0;
+				padding:#{size(20)}em #{size(15)}em;
+				position:relative;
+				float:left;
+				margin:0 #{size(26)}em #{size(30)}em 0;
+				height:#{size(200)}em; width:#{size(280)}em;
+
+	.masking-tape	{
+					background:url(../images/masking_tape.png) 0 0 no-repeat;
+					height:28px; width:22px;
+					position:absolute; top:-12px;
+					}
+	.masking-left	{left:12px;}
+	.masking-right	{right:12px;}
+	.box-shadow		{
+					background:url(../images/box_shadow.png) 0 0 no-repeat;
+					height:8px; width:#{size(300)}em;
+					position:absolute; bottom:#{size(-8)}em; left:#{size(-4)}em;
+					}
+	p				{
+					color:#6F6F6F;
+					font-size:#{size(12)}em;
+					margin-top:#{size(8)}em; margin-left:#{size(2)}em;
+					}
+				}
+
+/*--- TUMBLR PAGE -------------------------------------------------------------------------*/
+.ui-tumblr		{
+	ol.tumblr_posts	{
+					list-style-type:none;
+		li.tumblr_post	{
+						border-left:#{size(20)}em solid #dcd5c9;
+						padding-left:#{size(15)}em;
+						margin-bottom:#{size(45)}em;
+			a				{
+										
+				&:link			{
+								@include href-link(red,underline);
+								cursor:pointer;
+								font-weight:normal;
+								font-size:#{size(18)}em;
+								}
+				&:visited		{color:#666;}
+				&:hover,
+				&:focus,
+				&:active		{@include href-link-hover(none);}
+							}
+						}
+			div.tumblr_title
+							{font-size:#{size(20)}em;}
+			div.tumblr_body,
+			div.tumblr_description
+							{}
+				p.read_more_container
+							{}
+					}
+				}
+
+
+//=== MEDIA QUERIES =========================================================================
+/*--- Portrait iPhone, landscape iPhone, portrait smart phones ----------------------------*/
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+}
+
+/*--- Portrait e-readers (Nook/Kindle/Kindle Fire) ----------------------------------------*/
+@media only screen and (min-width : 481px) and (max-width : 640px) {
+
+}
+
+/*--- Portrait iPad, portrait tablets, low-res laptops and desktops ------------------------*/
+@media only screen and (min-width : 641px) and (max-width : 980px) {
+
+}
+
+/*--- Landscape iPad, laptops and desktops beyond 980px ------------------------------------*/
+@media only screen and (min-width : 981px) and (max-width : 1024px) {
+
+}
+
+/*--- Big landscape tablets, laptops and desktops beyond 980px -----------------------------*/
+@media only screen and (min-width : 1025px) and (max-width : 1280px) {
+
+}
+
+/*--- Hi-res laptops and desktops ----------------------------------------------------------*/
+@media only screen and (min-width : 1281px) {
+	
+}
