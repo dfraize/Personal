@@ -1,0 +1,30 @@
+//-------------------------------------------------------------------------------------------
+// UI Guidelines - SASS Variables
+// DATE - October 2, 2012
+// AUTHOR - Doug Fraize & Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//=== STYLE VARS ============================================================================
+
+
+//=== THEME VARS ============================================================================
+
+// WEBSITE SPRITE
+/* Uncomment code below and insert website name where it indicates [website] below */
+/* $websiteSpritePath:"/images/[website]/icon_sprite24.png"; */
+
+// GRID
+$gridSiteGutterPadding:			0; // 30px
+
+// TYPOGRAPHY
+$baseLinkColor:					#4E84B0;
+$baseLinkVisitedColor:			#4E84B0;
+
+$museoFontStack:				'museo-slab', Helvetica, Arial, sans-serif;
+
+$baseFontFamily:				$museoFontStack;
+
+
+//=== IE VARS ===============================================================================
+
+

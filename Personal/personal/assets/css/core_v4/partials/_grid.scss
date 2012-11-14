@@ -1,0 +1,56 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - Core Grid Partial
+DATE - October 1, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+-------------------------------------------------------------------------------------------*/
+
+/*=== GLOBAL SETUP ========================================================================*/
+.masthead-adjust,
+.footer-adjust,
+.grid					{
+						@include grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridColumnWidth);
+						@include grid-fluid-col;
+						@include grid-fluid-offset-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
+						@include clearfix;
+						margin:0 auto;
+						width:$gridWidth;
+						max-width:$gridMaxWidth;
+						min-width:$gridMinWidth;
+
+	[class*="col-"].first
+							{
+							margin-left:0;
+							}
+	.col-24					{
+							@include clearfix;
+							float:none;
+							padding:0 0 #{size(1)}em 0; /* fixes collapsing margins */
+							min-height:$fluidGridColumnWidth;
+							margin-left:0;
+							}
+						}
+
+/*=== HTML SETUP ==========================================================================*/
+html					{
+						min-height:$htmlMinHeight;
+						height:auto !important;
+						height:$htmlMinHeight;
+						}
+
+/*=== MASTHEAD & FOOTER SETUP =============================================================*/
+.footer-adjust			{padding:0 #{size($gridSiteGutterPadding)}em;}
+
+/*=== GRID SETUP ==========================================================================*/
+.grid					{
+						display:block;
+						height:auto !important;
+						height:#{size($gridMinHeight)}em;
+						min-height:#{size($gridMinHeight)}em;
+						padding:0 #{size($gridSiteGutterPadding)}em;
+						text-align:left;
+						}
+.grid-nomargin			{
+						@include grid-nomargin-span-x($gridColumns, $fluidGridNoMarginColumnWidth, $fluidGridGutterWidth);
+						@include grid-nomargin-col;
+						@include clearfix;
+						}

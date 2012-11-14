@@ -1,0 +1,14 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - FUNCTIONS
+DATE - October 2, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+-------------------------------------------------------------------------------------------*/
+
+//=== SIZE FUNCTION =========================================================================
+// $targetSize = size you want in pixels
+// $contextSize = base size in pixels
+// $targetSize/$contextSize = size in ems
+
+@function size($targetSize) {
+	@return $targetSize/$contextSize;
+}

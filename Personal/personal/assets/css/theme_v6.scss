@@ -1,0 +1,197 @@
+/*------------------------------------------------------------------------------------------
+SASS Boilerplate - Styles CSS
+DATE - March 5, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+------------------------------------------------------------------------------------------ */
+//=== SITE IMPORTS ==========================================================================
+@import	"vars";
+
+//=== CORE v4 IMPORT ========================================================================
+@import	"core_v4/partials/core";
+
+/*
+[class*="col-"]					{outline:1px dotted green;}
+div:empty, span:empty,
+li:empty, p:empty,
+td:empty, th:empty				{
+								padding:0.5em;
+								background:yellow;
+								}
+
+*[style], font, center			{outline:5px solid red;}
+*[class=""], *[id=""]			{outline:5px dotted red;}
+
+img[alt=""]						{border:3px dotted red;}
+img:not([alt])					{border:5px solid red;}
+img[title=""]					{outline:3px dotted fuchsia;}
+img:not([title])				{outline:5px solid fuchsia;}
+
+table:not([summary])			{outline:5px solid red;}
+table[summary=""]				{outline:3px dotted red;}
+th								{border:2px solid red;}
+th[scope="col"],
+th[scope="row"]					{border:none;}
+
+a[href]:not([title])			{border:5px solid red;}
+a[title=""]						{outline:3px dotted red;}
+a[href="#"]						{background:lime;}
+a[href=""]						{background:fuchsia;}
+*/
+
+a,
+a:link,
+a:visited			{@include href-link($baseLinkColor, none);}
+a:hover				{@include href-link-hover(underline);}
+
+body				{
+					background:url(../images/body-bg.png) 0 0 repeat #EFEFEF;
+					}
+
+/*--- HEADER SECTION ----------------------------------------------------------------------*/
+.masthead	{
+			@include box-shadow(0, #{size(5)}em, #{size(5)}em, #CCC);
+			background-color:#000;
+			height:#{size(8)}em;
+	.masthead-adjust
+				{
+				margin:0 auto;
+				width:#{size(980)}em;
+		.nav		{
+					@include border-radius(0 0 #{size(50)}em #{size(50)}em, all);
+					@include box-shadow(0, #{size(4)}em, #{size(5)}em, #CCC);
+					@include href-link(#FFF, none);
+					background-color:#000;
+					display:none;
+					font-weight:bold;
+					padding-top:#{size(10)}em;
+					height:#{size(35)}em;
+					width:#{size(70)}em;
+					text-align:center;
+					margin:0 auto;
+					}
+				}
+			}
+
+/*--- FOOTER SECTION ----------------------------------------------------------------------*/
+.footer		{
+			border-top:1px solid #CCC;
+			padding-top:#{size(15)}em;
+			margin-bottom:#{size(15)}em;
+
+	.footer-adjust
+				{
+				margin:0 auto;
+				width:#{size(980)}em;
+		#socialLinks
+					{
+					height:#{size(24)}em;
+					overflow:hidden;
+			img			{margin:0;}
+					}
+				}
+			}
+
+/*--- HOMEPAGE PAGE -------------------------------------------------------------------*/
+.hp-intro
+			{
+			text-align:center;
+	h2			{
+				text-shadow:1px 1px 2px #666;
+				color:#4E84AF;
+				margin-top:#{size(75)}em;
+				}
+	p			{
+				font-size:#{size(32)}em;
+				text-align:left;
+				margin-left:#{size(21)}em;
+				margin-right:#{size(21)}em;
+				
+				}
+	.recent-work-link
+				{
+				font-size:#{size(10)}em;
+				text-align:center;
+				display:block;
+				}
+			}
+
+/*--- PORTFOLIO PAGE ------------------------------------------------------------------*/
+.portfolio		{
+	.masthead		{
+		.masthead-adjust
+						{
+			.nav			{display:block;}
+						}
+					}
+				}
+
+.curled-box		{
+				background-color:#FFF;
+				border:1px solid #e6e6e6;
+				border-bottom:0;
+				padding:#{size(20)}em #{size(15)}em;
+				position:relative;
+				float:left;
+				margin:0 #{size(13)}em #{size(30)}em #{size(13)}em;
+				height:#{size(200)}em; width:#{size(300)}em;
+				text-align:center;
+
+	.masking-tape	{
+					background:url(../images/masking_tape.png) 0 0 no-repeat;
+					height:28px; width:22px;
+					position:absolute; top:-12px;
+					}
+	.masking-left	{left:12px;}
+	.masking-right	{right:12px;}
+	.box-shadow		{
+					background:url(../images/box_shadow.png) 0 0 no-repeat;
+					height:8px; width:#{size(300)}em;
+					position:absolute;
+					bottom:#{size(-9)}em;
+					left:#{size(4)}em;
+					}
+	p				{
+					color:#6F6F6F;
+					font-size:#{size(12)}em;
+					text-align:left;
+					}
+				}
+
+/*--- TUMBLR PAGE -------------------------------------------------------------------------*/
+.ui-tumblr		{
+	ol.tumblr_posts	{
+					list-style-type:none;
+		li.tumblr_post	{
+						border-left:#{size(20)}em solid #dcd5c9;
+						padding-left:#{size(15)}em;
+						margin-bottom:#{size(45)}em;
+			a				{
+										
+				&:link			{
+								@include href-link(red,underline);
+								cursor:pointer;
+								font-weight:normal;
+								font-size:#{size(18)}em;
+								}
+				&:visited		{color:#666;}
+				&:hover,
+				&:focus,
+				&:active		{@include href-link-hover(none);}
+							}
+						}
+			div.tumblr_title
+							{font-size:#{size(20)}em;}
+			div.tumblr_body,
+			div.tumblr_description
+							{}
+				p.read_more_container
+							{}
+					}
+				}
+
+
+//=== MEDIA QUERIES ===========================================================================
+@import	"core_v4/partials/responsive",
+		"responsive_320",
+		"responsive_768",
+		"responsive_980";

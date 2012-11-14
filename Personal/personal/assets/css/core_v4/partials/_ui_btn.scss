@@ -1,0 +1,187 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - Core UI Button Partial
+DATE - October 1, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+-------------------------------------------------------------------------------------------*/
+
+/*=== CORE BUTTON SETUP ===================================================================*/
+.ui-btn											{
+												@include background-gradient($uiButtonBackgroundStartColor,$uiButtonBackgroundEndColor);
+												@include border-radius(#{size($baseBorderRadius)}em, all);
+												@include box-shadow($uiButtonVShadow, $uiButtonHShadow, $uiButtonShadowBlur, $uiButtonShadowColor);
+												@include text-shadow(0, -1px, 1px, $uiButtonTextShadowColor);
+												@include transition(box-shadow 0.15s ease-in-out 0s);
+												@include backface-visibility(hidden);
+												margin-left:$fluidGridColumnWidth;
+												padding:#{size($uiButtonPaddingTopBottom)}em #{size($uiButtonPaddingLeftRight)}em;
+												position:relative;
+												display:inline-block;
+												font-size:#{size($contextSize)}em;
+												line-height:#{size($contextSize)}em;
+												text-align:center;
+												color:$uiButtonFontColor;
+												border:$uiButtonBorderSize $uiButtonBorderStyle $uiButtonBorderColor;
+												font-family:$myriadFontStack;
+												font-weight:$baseFontWeightBold;
+												cursor:pointer;
+
+	// LINK STATES
+	&:link,
+	&:visited
+													{
+													color:$uiButtonFontColor;
+													text-decoration:none;
+													}
+	&:hover											{
+													@include background-gradient($uiButtonHoverBackgroundStartColor, $uiButtonHoverBackgroundEndColor);
+													border:$uiButtonHoverBorderSize $uiButtonHoverBorderStyle $uiButtonHoverBorderColor;
+													}
+	&:active										{
+													@include background-gradient($uiButtonHoverBackgroundEndColor,$uiButtonHoverBackgroundStartColor);
+													@include box-shadow(0, 0, 0, transparent);
+													@include transition(translate(0, 0));
+													@include text-shadow(0, -1px, 1px, $uiButtonTextShadowColor);
+													}
+
+	// ICON OPTIONS
+	.ui-btn-icn-left,
+	.ui-btn-icn-right								{display:inline-block;}
+	.ui-btn-icn-left								{margin-right:#{size($uiButtonIconLeftMargin)}em}
+	.ui-btn-icn-right								{margin-left:#{size($uiButtonIconRightMargin)}em;}
+	.ui-btn-icn-top,
+	.ui-btn-icn-bottom								{display:block;}
+	.ui-btn-icn-top									{margin:0 auto #{size($uiButtonIconTopMargin)}em auto;}
+	.ui-btn-icn-bottom								{margin:#{size($uiButtonIconBottomMargin)}em auto 0 auto;}
+												}
+
+// FIRST CHILD BUTTON
+.ui-btn.first									{
+												margin-left:0;
+												}
+
+// 100% WIDE BUTTON												
+.ui-btn.col-24									{
+												float:left;
+												padding:#{size($uiButtonPaddingTopBottom)}em #{size($uiButtonPaddingLeftRight)}em;
+												}
+
+// FONT SIZE OPTIONS
+.ui-btn.xxx-small								{
+												font-size:#{size($uiButtonXXXSmallFontSize)}em;
+												font-weight:$baseFontWeight;
+												}
+.ui-btn.xx-small								{
+												font-size:#{size($uiButtonXXSmallFontSize)}em;
+												font-weight:$baseFontWeight;
+												}
+.ui-btn.x-small									{
+												font-size:#{size($uiButtonXSmallFontSize)}em;
+												}
+.ui-btn.small									{
+												font-size:#{size($uiButtonSmallFontSize)}em;
+												}
+.ui-btn.medium									{
+												font-size:#{size($uiButtonMediumFontSize)}em;
+												}
+.ui-btn.large									{
+												font-size:#{size($uiButtonLargeFontSize)}em;
+												}
+.ui-btn.x-large									{
+												font-size:#{size($uiButtonXLargeFontSize)}em;
+												}
+.ui-btn.xx-large								{
+												font-size:#{size($uiButtonXXLargeFontSize)}em;
+												}
+.ui-btn.xxx-large								{
+												font-size:#{size($uiButtonXXXLargeFontSize)}em;
+												}
+
+// COLOR OPTIONS
+	
+// Orange gradient button
+.ui-btn.orange,
+.ui-btn.orange:link,
+.ui-btn.orange:visited 							{
+												@include background-gradient($uiButtonOrangeBackgroundStartColor,$uiButtonOrangeBackgroundEndColor);
+												@include text-shadow(0, -1px, 1px, $uiButtonOrangeTextShadowColor);
+												}
+.ui-btn.orange:hover							{
+												@include background-gradient($uiButtonHoverOrangeBackgroundStartColor,$uiButtonHoverOrangeBackgroundEndColor);
+												}	
+.ui-btn.orange:active							{
+												@include background-gradient($uiButtonHoverOrangeBackgroundEndColor,$uiButtonHoverOrangeBackgroundStartColor);
+												@include text-shadow(0, -1px, 1px, $uiButtonOrangeTextShadowColor);
+												}
+
+// Green gradient button
+.ui-btn.green,
+.ui-btn.green:link,
+.ui-btn.green:visited							{
+												@include background-gradient($uiButtonGreenBackgroundStartColor,$uiButtonGreenBackgroundEndColor);
+												@include text-shadow(0, -1px, 1px, $uiButtonGreenTextShadowColor);
+												}
+.ui-btn.green:hover								{
+												@include background-gradient($uiButtonHoverGreenBackgroundStartColor,$uiButtonHoverGreenBackgroundEndColor);
+												}
+.ui-btn.green:active							{
+												@include background-gradient($uiButtonHoverGreenBackgroundEndColor,$uiButtonHoverGreenBackgroundStartColor);
+												@include text-shadow(0, -1px, 1px, $uiButtonGreenTextShadowColor);
+												}
+
+// Blue gradient button
+.ui-btn.blue,
+.ui-btn.blue:link,
+.ui-btn.blue:visited							{
+												@include background-gradient($uiButtonBlueBackgroundStartColor,$uiButtonBlueBackgroundEndColor);
+												@include text-shadow(0, -1px, 1px, $uiButtonBlueTextShadowColor);
+												}
+.ui-btn.blue:hover								{
+												@include background-gradient($uiButtonHoverBlueBackgroundStartColor,$uiButtonHoverBlueBackgroundEndColor);
+												}
+.ui-btn.blue:active								{
+												@include background-gradient($uiButtonHoverBlueBackgroundEndColor,$uiButtonHoverBlueBackgroundStartColor);
+												@include text-shadow(0, -1px, 1px, $uiButtonBlueTextShadowColor);
+												}
+
+// NO MARGIN OPTION											
+.ui-btn.nomargin								{
+												margin-left:0;
+												}
+												
+/*=== BUTTON GROUP =========================================================================*/
+.ui-btn-grp-vert								{
+												@include clearfix;
+	.ui-btn											{
+													@include border-radius(0, all);
+													display:block;
+													float:none;
+													border-top:0;
+													margin-left:0;
+													}
+	.ui-btn:first-child								{
+													@include border-radius(#{size($baseBorderRadius)}em #{size($baseBorderRadius)}em 0 0, all);
+													border-top:$uiButtonVertGroupBorderTopSize $uiButtonVertGroupBorderTopStyle $uiButtonVertGroupBorderTopColor;
+													}
+	.ui-btn:last-child								{
+													@include border-radius(0 0 #{size($baseBorderRadius)}em #{size($baseBorderRadius)}em, all);
+													}
+												}
+.ui-btn-grp-horz								{
+												@include clearfix;
+	.ui-btn											{
+													@include border-radius(0, all);
+													float:left;
+													margin-left:0;
+													border-top:$uiButtonHorzGroupBorderTopSize $uiButtonHorzGroupBorderTopStyle $uiButtonHorzGroupBorderTopColor;
+													border-bottom:$uiButtonHorzGroupBorderBottomSize $uiButtonHorzGroupBorderBottomStyle $uiButtonHorzGroupBorderBottomColor;
+													border-left:0;
+													border-right:$uiButtonHorzGroupBorderRightSize $uiButtonHorzGroupBorderRightStyle $uiButtonHorzGroupBorderRightColor;
+													}
+	.ui-btn:first-child								{
+													@include border-radius(#{size($baseBorderRadius)}em 0 0 #{size($baseBorderRadius)}em, all);
+													border-left:$uiButtonHorzGroupFirstChildBorderLeftSize $uiButtonHorzGroupFirstChildBorderLeftStyle $uiButtonHorzGroupFirstChildBorderLeftColor;
+													}
+	.ui-btn:last-child								{
+													@include border-radius(0 #{size($baseBorderRadius)}em #{size($baseBorderRadius)}em 0, all);
+													}
+												}

@@ -1,0 +1,34 @@
+//-------------------------------------------------------------------------------------------
+// UI Guidelines - SASS Variables
+// DATE - October 2, 2012
+// AUTHOR - Doug Fraize
+//-------------------------------------------------------------------------------------------
+
+//=== STYLE VARS ============================================================================
+
+// MASTHEAD MAIN NAV ITEMS
+// ------------------------------------------------------------------------------------------
+$nav-items:8;
+
+
+//=== THEME VARS ============================================================================
+
+// CORE OVERRIDES
+$baseLinkColor:						#666;
+
+// WEBSITE SPRITE
+/* Uncomment code below and insert website name where it indicates [website] below */
+/* $websiteSpritePath:"/images/[website]/icon_sprite24.png"; */
+
+// GLOBAL
+$siteBackgroundImagePath:			"../images/bg_graph.png";
+$siteBackgroundImage:				#{url($siteBackgroundImagePath)};
+
+// MASTHEAD
+$siteMastheadBackgroundStartColor:	#ccc;
+$siteMastheadBackgroundEndColor:	#333;
+
+
+//=== IE VARS ===============================================================================
+
+

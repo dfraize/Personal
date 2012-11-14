@@ -1,0 +1,48 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - UI Slider Partial
+DATE - October 1, 2012
+AUTHOR - Doug Fraize
+-------------------------------------------------------------------------------------------*/
+
+/*--- SLIDER SETUP ------------------------------------------------------------------------*/
+.ui-slider 						{
+								position:relative;
+								text-align:left;
+								display:inline-block;
+								width:100%;
+								
+	/*--- SLIDER HANDLE -------------------------------------------------------------------*/
+	.ui-slider-handle				{
+									@include border-radius(#{size(30)}em,all);
+									@include background-gradient($uiSliderHandleBackgroundStartColor,$uiSliderHandleBackgroundEndColor);
+									@include box-shadow(0,1px,3px,$uiSliderHandleShadowColor);
+									border:$uiSliderHandleBorderSize $uiSliderHandleBorderStyle $uiSliderHandleBorderColor;
+									position:absolute;
+									top:#{size(-6.5)}em;
+									z-index:9997;
+									width:#{size(15.6)}em;
+									height:#{size(15.6)}em;
+									margin-left:#{size(-3)}em;
+									cursor:pointer;
+									}
+	.ui-state-focus					{
+									border:$uiSliderHandleBorderSize $uiSliderHandleBorderStyle $uiSliderHandleBorderColor;
+									@include background-gradient($uiSliderHandleFocusBackgroundStartColor,$uiSliderHandleFocusBackgroundEndColor);
+									}
+	.ui-state-hover					{
+									border:$uiSliderHandleBorderSize $uiSliderHandleBorderStyle $uiSliderHandleBorderColor;
+									@include background-gradient($uiSliderHandleHoverBackgroundStartColor,$uiSliderHandleHoverBackgroundEndColor);
+									}
+	.ui-state-active 				{
+									border:$uiSliderHandleBorderSize $uiSliderHandleBorderStyle $uiSliderHandleBorderColor;
+									@include background-gradient($uiSliderHandleActiveBackgroundStartColor,$uiSliderHandleActiveBackgroundEndColor);
+									}
+								}
+
+/*--- SLIDER BAR --------------------------------------------------------------------------*/
+.ui-slider-horizontal 			{
+								@include border-radius(#{size($baseBorderRadius)}em,all);
+								@include background-gradient($uiSliderBarBackgroundStartColor,$uiSliderBarBackgroundEndColor);
+								border:$uiSliderBarBorderSize $uiSliderBarBorderStyle $uiSliderBarBorderColor;
+								height:#{size(5)}em;
+								}

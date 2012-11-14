@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - UI accordion Partial
+DATE - October 1, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+-------------------------------------------------------------------------------------------*/
+
+.ui-accordion										{
+													margin-bottom:#{size($baseMargin)}em;
+	h5													{
+														font-size:#{size($hdrH5FontSize)}em;
+		a													{
+															@include border-radius(#{size($baseBorderRadius)}em, all);
+															@include background-gradient($uiAcccordianBackgroundStartColor,$uiAcccordianBackgroundEndColor);
+															@include text-shadow(1px, 1px, 1px, $uiAcccordianTextShadowColor);
+															border:$uiAcccordianBorderSize $uiAcccordianBorderStyle $uiAcccordianBorderColor;
+															color:$uiAcccordianFontColor;
+															display:block;
+															padding:#{size($uiAcccordianMarginTopBottom)}em #{size($uiAcccordianMarginLeftRight)}em;
+															text-decoration:none;
+			&:hover												{
+																@include background-gradient($uiAcccordianHoverBackgroundStartColor,$uiAcccordianHoverBackgroundEndColor);
+																}
+															}
+														}
+	.ui-accordion-content								{
+														@include box-sizing(content-box);
+														padding:#{size($uiAcccordianContentMarginTopBottom)}em #{size($uiAcccordianContentMarginLeftRight)}em;
+														}
+													}

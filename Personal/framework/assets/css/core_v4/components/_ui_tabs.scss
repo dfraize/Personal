@@ -1,0 +1,59 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - UI Tabs Partial
+DATE - October 1, 2012
+AUTHOR - Doug Fraize
+-------------------------------------------------------------------------------------------*/
+
+.ui-tabs												{
+														position:relative; /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	.ui-tabs-nav											{
+															margin:0;
+															padding:0;
+															height:#{size(35)}em;
+		.ui-state-default										{
+																@include border-radius(#{size($baseBorderRadius)}em #{size($baseBorderRadius)}em 0 0, all);
+																@include background-gradient($uiTabsTabBackgroundStartColor,$uiTabsTabBackgroundEndColor);
+																list-style:none;
+																float:left;
+																position:relative;
+																top:1px;
+																height:#{size(35)}em;
+																width:auto;
+																margin:0 #{size(3)}em #{size(1)}em 0;
+																padding:0;
+																white-space:nowrap;
+																display:block;
+																border:$uiTabsTabBorderSize $uiTabsTabBorderStyle $uiTabsTabBorderColor;
+																border-bottom:0;
+			a														{
+																	@include text-shadow(1px, 1px, 1px, $uiTabsTabTextShadowColor);
+																	float:left;
+																	padding:#{size(6.5)}em #{size(13)}em;
+																	text-decoration:none;
+																	cursor:pointer;
+																	display:block;
+																	color:$uiTabsTabFontColor;
+																	font-weight:$baseFontWeightBold;
+																	}
+																}
+		.ui-state-hover											{
+																@include background-gradient($uiTabsTabHoverBackgroundStartColor,$uiTabsTabHoverBackgroundEndColor);
+																}
+		.ui-tabs-selected										{
+																@include background-gradient($uiTabsTabActiveBackgroundStartColor,$uiTabsTabActiveBackgroundEndColor);
+			a														{
+																	color:$uiTabsTabFontColor;
+																	cursor:default !important;
+																	}
+																}
+															}
+	.ui-tabs-panel											{
+															@include border-radius(0 #{size($baseBorderRadius)}em #{size($baseBorderRadius)}em #{size($baseBorderRadius)}em, all);
+															padding:#{size($baseMargin)}em;
+															border:$uiTabsTabPanelBorderSize $uiTabsTabPanelBorderStyle $uiTabsTabPanelBorderColor;
+															background-color:$uiTabsTabPanelBackgroundColor;
+															}
+	.ui-tabs-hide											{
+															display:none !important;
+															}
+														}

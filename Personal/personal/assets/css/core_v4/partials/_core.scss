@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - Core Import Partial
+DATE - October 1, 2012
+AUTHOR - Doug Fraize & Matthew Holmes
+-------------------------------------------------------------------------------------------*/
+
+//=== SASS IMPORTS ==========================================================================
+// NOTE #1: Make sure variables partial is called before mixins partial since mixins partial requires variables partial
+// NOTE #2: Make sure mixins partial is called before all other partials (excluding variables) since all other partials require mixins partial
+
+//--- CORE FUNCTIONS, VARIABLES, AND MIXINS -------------------------------------------------
+@import	"variables";
+@import	"functions";
+@import	"mixins";
+
+//--- CSS RESET -----------------------------------------------------------------------------
+@import	"reset";
+
+//--- GRID SYSTEM AND PAGE STRUCTURE --------------------------------------------------------
+@import	"grid";
+
+//--- BASE CSS ------------------------------------------------------------------------------
+@import	"type";
+@import "form";
+@import "page";
+
+//--- BASE UI COMPONENTS --------------------------------------------------------------------
+@import "ui_box";
+@import "ui_btn";
+
+//--- BASE IE FIXES -------------------------------------------------------------------------
+@import "ie";
