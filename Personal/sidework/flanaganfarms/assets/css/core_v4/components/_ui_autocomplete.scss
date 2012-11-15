@@ -1,0 +1,65 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - UI Autocomplete Partial
+DATE - October 1, 2012
+AUTHOR - Doug Fraize
+-------------------------------------------------------------------------------------------*/
+
+.ui-menu				{
+						@include border-radius(0 0 #{size($baseBorderRadius)}em #{size($baseBorderRadius)}em,all);
+						position:absolute;
+						z-index:$zindexAutocomplete;
+						padding:0;
+						margin:0;
+						display:block;
+						width:100%;
+						max-width:#{size(271)}em;
+						list-style:none;
+						background-color:$uiAutocompleteBackgroundColor;
+						border:$uiAutocompleteBorderSize $uiAutocompleteBorderStyle $uiAutocompleteBorderColor;
+						border-top:0;
+	.ui-menu-item			{
+							@include text-shadow(-1px, -1px, 1px, $uiAutocompleteItemTextShadowColor);
+							margin:0;
+							padding:0;
+							width:100%;
+							border-top:$uiAutocompleteItemBorderTopSize $uiAutocompleteItemBorderTopStyle $uiAutocompleteItemBorderTopColor;
+							border-bottom:$uiAutocompleteItemBorderBottomSize $uiAutocompleteItemBorderBottomStyle $uiAutocompleteItemBorderBottomColor;
+							font-size:#{size($uiAutocompleteItemFontSize)}em;
+							font-weight:$baseFontWeightBold;
+							color:$uiAutocompleteItemFontColor;
+		a 						{
+								text-decoration:none;
+								display:block;
+								padding:.2em .4em;
+								line-height:1.25em;
+								height:auto;
+								}
+		.ui-state-hover,
+		.ui-state-active		{
+								@include background-gradient($uiAutocompleteItemHoverBackgroundStartColor,$uiAutocompleteItemHoverBackgroundEndColor);
+								@include text-shadow(-1px, -1px, 1px, $uiAutocompleteItemHoverTextShadowColor);
+								color:$uiAutocompleteItemHoverFontColor;
+								}
+								
+		/* styles for secondary text in autocomplete list item */
+		.ui-menu-secondary		{
+								display:block;
+								color:$uiAutocompleteItemSecondaryFontColor;
+								font-weight:$baseFontWeight;
+								}
+							}
+	.ui-menu-item:first-child
+							{
+							border-top:0;
+							}
+							
+	/* styles for autocomplete list item hover and active state on last item */
+	.ui-menu-item:last-child
+							{
+							border-bottom:0;
+		.ui-state-hover,
+		.ui-state-active		{
+								@include border-radius(0 0 #{size($baseBorderRadius)}em #{size($baseBorderRadius)}em,all);
+								}
+							}
+						}

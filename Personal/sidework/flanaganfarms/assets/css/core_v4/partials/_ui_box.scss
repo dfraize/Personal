@@ -1,0 +1,70 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - Core UI Box Partial
+DATE - October 1, 2012
+AUTHOR - Doug Fraize
+-------------------------------------------------------------------------------------------*/
+
+/*=== BOX BASE SETUP ======================================================================*/
+.ui-box						{
+							@include clearfix; /* must clearfix the box to use grid cols inside ui-box */
+							position:relative;
+							margin-bottom:#{size($baseMargin)}em;
+							background-color:$uiBoxBackgroundColor;
+							border:$uiBoxBorderSize $uiBoxBorderStyle $uiBoxBorderColor;
+	.box-hdr					{
+								padding:#{size($baseMargin)}em;
+								border-bottom:$uiBoxHdrBorderSize $uiBoxHdrBorderStyle $uiBoxHdrBorderColor;
+		h6							{
+									@include text-shadow(1px, 1px, 1px, $uiBoxHdrTextShadowColor);
+									color:$uiBoxHdrFontColor;
+									font-weight:$baseFontWeightBold;
+									}
+								}
+	.box-bdy					{
+								padding:#{size($baseMargin)}em #{size($baseMargin)}em #{size(1)}em #{size($baseMargin)}em;
+								border-top:$uiBoxBdyBorderTopSize $uiBoxBdyBorderTopStyle $uiBoxBdyBorderTopColor;
+								}
+	.box-ftr					{
+								display:none;
+								padding:0 #{size($baseMargin)}em;
+								}
+							}
+
+/*--- BOX WITH ROUNDED CORNERS ---------------------------------------------------------------*/
+.ui-box-rnd					{
+							@extend .ui-box;
+							@include border-radius(#{size($baseBorderRadius)}em, all);
+							padding:#{size($baseMargin)}em #{size($baseMargin)}em #{size(1)}em #{size($baseMargin)}em;
+							}
+
+.ui-box-rnd-adv				{
+							@extend .ui-box;
+							@include border-radius(#{size($baseBorderRadius)}em, all);
+
+	.box-hdr					{
+								@include border-radius(#{size($baseBorderRadius)}em #{size($baseBorderRadius)}em 0 0, all);
+								}
+							}
+
+/*--- BOX WITH A DROP SHADOW -----------------------------------------------------------------*/
+.ui-box-shadow				{
+							@extend .ui-box;
+							@include box-shadow($uiBoxVShadow, $uiBoxHShadow, $uiBoxShadowBlur, $uiBoxShadowColor);
+							padding:#{size($baseMargin)}em #{size($baseMargin)}em #{size(1)}em #{size($baseMargin)}em;
+							}
+
+.ui-box-shadow-adv			{
+							@extend .ui-box;
+							@include box-shadow($uiBoxVShadow, $uiBoxHShadow, $uiBoxShadowBlur, $uiBoxShadowColor);
+							}
+
+/*--- ROUNDED CORNER BOX WITH A DROP SHADOW ------------------------------------------------*/
+.ui-box-rnd-shadow			{
+							@extend .ui-box-rnd;
+							@include box-shadow($uiBoxVShadow, $uiBoxHShadow, $uiBoxShadowBlur, $uiBoxShadowColor);
+							}
+
+.ui-box-rnd-shadow-adv		{
+							@extend .ui-box-rnd-adv;
+							@include box-shadow($uiBoxVShadow, $uiBoxHShadow, $uiBoxShadowBlur, $uiBoxShadowColor);
+							}

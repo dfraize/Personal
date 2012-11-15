@@ -1,0 +1,435 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - VARIABLES
+DATE - October 2, 2012
+AUTHOR - Doug Fraize
+-------------------------------------------------------------------------------------------*/
+
+// GLOBAL
+// ------------------------------------------------------------------------------------------
+$contextSize:					15 !default; // 15px
+$htmlMinHeight:					100% !default;
+$websiteSpritePath:				"/images/core/icon_sprite.png" !default;
+$websiteSprite:					#{url($websiteSpritePath)} !default;
+
+$baseMargin:					15 !default; // 15px
+$baseBorderRadius:				6 !default; // 6px
+$baseBorderRadiusIE:			0 !default; // 0px
+
+
+// BRAND
+// ------------------------------------------------------------------------------------------
+
+// COLORS
+$darkBlue:						#00417D !default;
+$LightBlue:						#0096DC !default;
+$orange:						#FA961E !default;
+$green:							#73BE46 !default;
+$gray:							#8C8C8C !default;
+$black:							#000 !default;
+
+// BUTTON GRADIENT COLORS
+$uiButtonOrangeBackgroundStartColor:#ffae00 !default;
+$uiButtonOrangeBackgroundEndColor:#e17f00 !default;
+$uiButtonHoverOrangeBackgroundStartColor:#ffae00 !default;
+$uiButtonHoverOrangeBackgroundEndColor:#cf7500 !default;
+$uiButtonOrangeTextShadowColor:	#666 !default;
+
+$uiButtonGreenBackgroundStartColor:#a0de22 !default;
+$uiButtonGreenBackgroundEndColor:#86b32d !default;
+$uiButtonHoverGreenBackgroundStartColor:#a0de22 !default;
+$uiButtonHoverGreenBackgroundEndColor:#7ea630 !default;
+$uiButtonGreenTextShadowColor:	#666 !default;
+
+$uiButtonBlueBackgroundStartColor:#00a8ff !default;
+$uiButtonBlueBackgroundEndColor:#0082c3 !default;
+$uiButtonHoverBlueBackgroundStartColor:#00a8ff !default;
+$uiButtonHoverBlueBackgroundEndColor:#0374ac !default;
+$uiButtonBlueTextShadowColor:	#666 !default;
+
+
+// TYPOGRAPHY
+// ------------------------------------------------------------------------------------------
+// Remember to change the font-size on the body tag to correspond to the context, for example:
+// if the context size is 10 (10px) you need to change the body font-size to .625em or 62.5%.
+// 62.5% on the body is 62.5% of 16px which is the base font size for most browsers,
+// giving you a base of 10px
+$myriadFontStack:				"myriad-pro-1", "myriad-pro-2", "Myriad Pro", Arial, Helvetica, sans-serif;
+$myriadFontStackIE8:			"myriad-pro-n4", "myriad-pro-1", "myriad-pro-2"; /* IE8 for Typekit when using Myriad Pro */
+$arialFontStack:				"Arial", Helvetica, sans-serif;
+
+$baseFontFamily:				$myriadFontStack !default;
+$baseFontSize:					.9375em !default; // 15px
+$baseFontColor:					#494949 !default;
+$baseLineHeight:		        22 !default; // 22px
+$baseFontWeight:				normal !default;
+$baseFontWeightBold:			bold !default;
+
+$baseLinkColor:					#01417E !default;
+$baseLinkVisitedColor:			#666 !default;
+
+$hdrColor:						#000 !default;
+$hdrH1FontSize:					36 !default; // 30px
+$hdrH2FontSize:					30 !default; // 36px
+$hdrH3FontSize:					24 !default; // 24px
+$hdrH4FontSize:					18 !default; // 18px
+$hdrH5FontSize:					14 !default; // 14px
+
+$smallFontSize:					12 !default;
+
+$dtFontColor:					#000 !default;
+
+$abbrBorderBottomColor:			#000 !default;
+
+$textSelectionTextColor:		#fff !default;
+$textSelectionBackgroundColor:	#999 !default;
+
+
+// GRID
+// ------------------------------------------------------------------------------------------
+$gridWidth:						100% !default;
+$gridMaxWidth:					980px !default;
+$gridMinWidth:					320px !default;
+$gridMinHeight:					550 !default; // 550px
+$gridSiteGutterPadding:			30 !default; // 30px
+
+$gridColumns:					24 !default;
+$gridColumnWidth:				20px !default;
+$gridGutterWidth:				20px !default;
+
+$gridNoMarginColumnWidth:		39.15px !default;
+
+$gridRowWidth:					($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+// FLUID GRID
+$fluidGridColumnWidth:			percentage($gridColumnWidth/$gridRowWidth);
+$fluidGridGutterWidth:			percentage($gridGutterWidth/$gridRowWidth);
+$fluidGridNoMarginColumnWidth:	percentage($gridNoMarginColumnWidth/$gridRowWidth);
+
+
+// FORM
+// ------------------------------------------------------------------------------------------
+$baseInputColor:				#666 !default;
+$baseInputBorderColor:			#DEDED0 !default;
+$baseInputBorderRadius:			3 !default; // 3px
+
+$inputFocusShadowColor:			#9ECAED !default;
+$inputFocusBorderColor:			#9ECAED !default;
+
+$inputBorderSize:				2px !default;
+$inputPadding:					2 !default; // 2px
+$checkboxRadioWidth:			18 !default; // 18px
+
+$spacingAboveInputs:			2 !default; // 2px
+$spacingBelowInputs:			10 !default; // 10px
+
+// FORM ACTION CONTAINER
+$uiFormActionMargin:			5 !default; // 5px
+
+// FIELDHINTS
+$fieldhintColor:				#999 !default;
+$placeholderTextColor:			#ccc !default;
+
+// FORM HELP TEXT
+$uiHelpTextColor:				#666 !default;
+
+// FORM ERROR HANDLING
+$inputValidTextColor:			#999 !default;
+$inputInvalidTextColor:			#FF0000 !default;
+
+// NOTIFICATION BOXES
+$msgBorderWidth:				2px !default;
+$msgBorderStyle:				solid !default;
+
+$errorBackgroundColor:			#FBE3E4 !default;
+$errorBorderColor:				#FBC2C4 !default;
+$errorFontColor:				#8A1F11 !default;
+
+$noticeBoxBackgroundColor:		#FFF6BF !default;
+$noticeBoxBorderColor:			#FFD324 !default;
+$noticeBoxFontColor:			#514721 !default;
+
+$infoBoxBackgroundColor:		#D5EDF8 !default;
+$infoBoxBorderColor:			#92CAE4 !default;
+$infoBoxFontColor:				#205791 !default;
+
+$successBoxBackgroundColor:		#E6EFC2 !default;
+$successBoxBorderColor:			#C6D880 !default;
+$successBoxFontColor:			#264409 !default;
+
+
+// PAGE
+// ------------------------------------------------------------------------------------------
+
+// MASTHEAD UTILITY NAV
+$mastheadUtilShadowColor:		#333 !default;
+$mastheadUtilNavBackgroundColor:#ccc !default;
+$mastheadUtilNavFontColor: 		#666 !default;
+$mastheadUtilNavPipeColor:		#999 !default;
+
+// MASTHEAD MAIN NAV
+$mastheadNavHeight:				38 !default; // 38px
+$mastheadNavBackgroundColor:	#efefef !default;
+$mastheadNavFontSize:			13 !default; // 13px
+$mastheadNavBorderLeftColor:	#666 !default;
+$mastheadNavBorderTopColor:		#333 !default;
+$mastheadNavBorderBottomColor:	#666 !default;
+$mastheadNavHoverBackgroundColor:#ccc !default;
+$mastheadNavCurrentBackgroundColor: #ccc !default;
+$mastheadNavFirstChildBorderLeftColor: #666 !default;
+$mastheadNavLastChildBorderLeftColor: #666 !default;
+$mastheadNavMenuBorderTopColor:	#666 !default;
+$mastheadNavMenuBorderRightColor: #666 !default;
+$mastheadNavMenuLastChildBorderBottomColor: #666 !default;
+
+// KEYLINES
+$uiKeylineRightBorderRightColor: #ccc !default;
+$uiKeylineLeftBorderLeftColor:	#ccc !default;
+
+// HORIZONTAL RULES
+$hrBackgroundColor: 			#fff !default;
+$hrBorderTopColor:				#ccc !default;
+$hrFontColor:					#fff !default;
+$hrHeight:						2 !default; // 2px
+$hrMarginTopBottom:				20 !default; // 20px
+
+// TABLES
+$tableBorderColor:				#CCC !default;
+$tableBorderStyle:				dotted !default;
+$tableFontColor:				#000 !default;
+$tableThBackgroundColor:		#CCC !default;
+$tableThBorderRightColor:		#fff !default;
+$tableTdBorderColor:			#CCC !default;
+$tableTdBorderStyle:			dotted !default;
+$tableEvenTdBackgroundColor:	#fff !default;
+$tableOddTdBackgroundColor:		#efefef !default;
+
+// BACK TO TOP
+$backToTopBorderTopColor:		#ccc !default;
+$backToTopLinkFontColor:		#666 !default;
+$backToTopHoverBackgroundStartColor:#efefef !default;
+$backToTopHoverBackgroundEndColor:#cccccd !default;
+$backToTopHoverShadowColor:		#ccc !default;
+$backToTopHoverBorderColor:		#B4B4B4 !default;
+$backToTopHoverFontColor:		#333 !default;
+$backToTopHoverTextShadowColor:	#fff !default;
+
+
+// COMPONENT VARIABLES
+// ------------------------------------------------------------------------------------------
+
+// Z-INDEX MASTER LIST
+// Used for a bird's eye view of components dependent on the z-axis
+$zindexSlider:           		9996 !default;
+$zindexDatepicker:           	9997 !default;
+$zindexAutocomplete:          	9998 !default;
+$zindexTooltip:           		9999 !default;
+$zindexMastheadNavMenu:         10000 !default;
+
+// NAVBAR
+$navbarHeight:					40 !default; // 40px
+
+// UI BOX
+$uiBoxBackgroundColor:			#efefef !default;
+$uiBoxBorderSize:				1px !default;
+$uiBoxBorderStyle:				solid !default;
+$uiBoxBorderColor:				#ddd !default;
+$uiBoxHdrBorderSize:			1px !default;
+$uiBoxHdrBorderStyle:			solid !default;
+$uiBoxHdrBorderColor:			#ddd !default;
+$uiBoxHdrFontColor:				#333 !default;
+$uiBoxHdrTextShadowColor:		#fff !default;
+$uiBoxBdyBorderTopSize:			1px !default;
+$uiBoxBdyBorderTopStyle:		solid !default;
+$uiBoxBdyBorderTopColor:		#fff !default;
+$uiBoxVShadow:					1px !default;
+$uiBoxHShadow:					1px !default;
+$uiBoxShadowBlur:				1px !default;
+$uiBoxShadowColor:				#999 !default;
+
+// UI BTN
+$uiButtonBackgroundStartColor:	#666 !default;
+$uiButtonBackgroundEndColor:	#333 !default;
+$uiButtonVShadow:				0 !default;
+$uiButtonHShadow:				1px !default;
+$uiButtonShadowBlur:			1px !default;
+$uiButtonShadowColor:			#ccc !default;
+$uiButtonPaddingTopBottom:		10 !default; // 10px
+$uiButtonPaddingLeftRight:		15 !default; // 15px
+$uiButtonFontColor:				#fff !default;
+$uiButtonBorderSize:			1px !default;
+$uiButtonBorderStyle:			solid !default;
+$uiButtonBorderColor:			#B4B4B4 !default;
+$uiButtonTextShadowColor:		#000 !default;
+
+$uiButtonHoverBackgroundStartColor:#666 !default;
+$uiButtonHoverBackgroundEndColor:#000 !default;
+$uiButtonHoverBorderSize:		1px !default;
+$uiButtonHoverBorderStyle:		solid !default;
+$uiButtonHoverBorderColor:		#999 !default;
+
+$uiButtonIconLeftMargin:		5 !default; // 5px
+$uiButtonIconRightMargin:		5 !default; // 5px
+$uiButtonIconTopMargin:			3 !default; // 3px
+$uiButtonIconBottomMargin:		3 !default; // 3px
+
+$uiButtonXXXSmallFontSize:		10 !default; // 10px
+$uiButtonXXSmallFontSize:		12 !default; // 12px
+$uiButtonXSmallFontSize:		13 !default; // 13px
+$uiButtonSmallFontSize:			14 !default; // 14px
+$uiButtonMediumFontSize:		15 !default; // 15px
+$uiButtonLargeFontSize:			18 !default; // 18px
+$uiButtonXLargeFontSize:		22 !default; // 22px
+$uiButtonXXLargeFontSize:		26 !default; // 26px
+$uiButtonXXXLargeFontSize:		33 !default; // 33px
+
+$uiButtonVertGroupBorderTopSize:1px !default;
+$uiButtonVertGroupBorderTopStyle:solid !default;
+$uiButtonVertGroupBorderTopColor:#B4B4B4 !default;
+
+$uiButtonHorzGroupBorderTopSize:1px !default;
+$uiButtonHorzGroupBorderTopStyle:solid !default;
+$uiButtonHorzGroupBorderTopColor:#B4B4B4 !default;
+$uiButtonHorzGroupBorderBottomSize:1px !default;
+$uiButtonHorzGroupBorderBottomStyle:solid !default;
+$uiButtonHorzGroupBorderBottomColor:#B4B4B4 !default;
+$uiButtonHorzGroupBorderRightSize:1px !default;
+$uiButtonHorzGroupBorderRightStyle:solid !default;
+$uiButtonHorzGroupBorderRightColor:#B4B4B4 !default;
+$uiButtonHorzGroupFirstChildBorderLeftSize:1px !default;
+$uiButtonHorzGroupFirstChildBorderLeftStyle:solid !default;
+$uiButtonHorzGroupFirstChildBorderLeftColor:#B4B4B4 !default;
+
+// UI ACCORDIAN
+$uiAcccordianBackgroundStartColor:#efefef !default;
+$uiAcccordianBackgroundEndColor:#cccccd	!default;
+$uiAcccordianHoverBackgroundStartColor:#efefef !default;
+$uiAcccordianHoverBackgroundEndColor:#999 !default;
+$uiAcccordianBorderSize:		1px !default;
+$uiAcccordianBorderStyle:		solid !default;
+$uiAcccordianBorderColor:		#ccc !default;
+$uiAcccordianFontColor:			#333 !default;
+$uiAcccordianTextShadowColor:	#fff !default;
+$uiAcccordianMarginTopBottom: 	4 !default; // 4px
+$uiAcccordianMarginLeftRight: 	8 !default; // 8px
+$uiAcccordianContentMarginTopBottom: 8 !default; // 8px
+$uiAcccordianContentMarginLeftRight: 15 !default; // 15px
+
+// UI AUTOCOMPLETE
+$uiAutocompleteBackgroundColor:	#EFEFEF !default;
+$uiAutocompleteBorderSize:		2px !default;
+$uiAutocompleteBorderStyle:		solid !default;
+$uiAutocompleteBorderColor:		#DEDED0 !default;
+$uiAutocompleteItemFontColor:	#000 !default;
+$uiAutocompleteItemFontSize:	16 !default; // 16px
+$uiAutocompleteItemBorderTopSize:1px !default;
+$uiAutocompleteItemBorderTopStyle:solid !default;
+$uiAutocompleteItemBorderTopColor:#fff !default;
+$uiAutocompleteItemBorderBottomSize:1px !default;
+$uiAutocompleteItemBorderBottomStyle:solid !default;
+$uiAutocompleteItemBorderBottomColor:#ccc !default;
+$uiAutocompleteItemTextShadowColor:#fff !default;
+
+$uiAutocompleteItemHoverBackgroundStartColor:#999 !default;
+$uiAutocompleteItemHoverBackgroundEndColor:#333 !default;
+$uiAutocompleteItemHoverFontColor:#fff !default;
+$uiAutocompleteItemHoverTextShadowColor:#333 !default;
+$uiAutocompleteItemSecondaryFontColor:#999 !default;
+
+// UI CAROUSEL
+$uiCarouselNavItemBackgroundColor: rgba(0, 0, 0, 0.5) !default;
+$uiCarouselNavItemBackgroundColorIE: #666 !default;
+$uiCarouselNavItemHoverBackgroundColor: rgba(0, 0, 0, 0.7) !default;
+$uiCarouselNavItemHoverBackgroundColorIE: #333 !default;
+$uiCarouselNavItemActiveBackgroundColor: rgba(0, 0, 0, 0.9) !default;
+$uiCarouselNavItemActiveBackgroundColorIE: #000 !default;
+
+// UI DATEPICKER
+$uiDatepickerShadowColor:		#999 !default;
+$uiDatepickerBackgroundColor:	#fff !default;
+$uiDatepickerThFontColor:		#666 !default;
+$uiDatepickerBorderColor:		#f7f7f7 !default;
+$uiDatepickerLinkColor:			#666 !default;
+$uiDatepickerHdrBackgroundStartColor:#EFEFEF !default;
+$uiDatepickerHdrBackgroundEndColor:#cbcccc !default;
+$uiDatepickerHdrFontColor:		#333 !default;
+$uiDatepickerHighlightBackgroundColor: #dcdcdc !default;
+$uiDatepickerActiveBackgroundColor: #bfe7fa !default;
+$uiDatepickerActiveFontColor:	#317bc0 !default;
+$uiDatepickerHoverBackgroundColor: #efefef !default;
+
+// UI DIALOG
+$uiDialogOverlayBackgroundColor:#000 !default;
+$uiDialogVShadow:				1px	!default;
+$uiDialogHShadow:				1px	!default;
+$uiDialogShadowBlur:			1px	!default;
+$uiDialogShadowColor:			#666 !default;
+$uiDialogHdrBackgroundColor:	#EFEFEF !default;
+$uiDialogHdrBorderBottomSize:	1px !default;
+$uiDialogHdrBorderBottomStyle:	solid !default;
+$uiDialogHdrBorderBottomColor:	#ccc !default;
+$uiDialogHdrFontSize:			23 !default; // 23px
+$uiDialogHdrFontColor:			#000 !default;
+$uiDialogContentBackgroundColor:#EFEFEF !default;
+$uiDialogContentBorderTopSize:	1px !default;
+$uiDialogContentBorderTopStyle:	solid !default;
+$uiDialogContentBorderTopColor: #fff !default;
+
+// UI IPHONE BUTTON
+$uiIphoneButtonEnableDisableFontColor: #fff !default;
+
+// UI SLIDER
+$uiSliderHandleBackgroundStartColor:#efefef !default;
+$uiSliderHandleBackgroundEndColor:#ccc !default;
+$uiSliderHandleShadowColor: 	#999 !default;
+$uiSliderHandleBorderSize:		1px !default;
+$uiSliderHandleBorderStyle:		solid !default;
+$uiSliderHandleBorderColor:		#999 !default;
+$uiSliderHandleFocusBackgroundStartColor:#efefef !default;
+$uiSliderHandleFocusBackgroundEndColor:#ccc !default;
+$uiSliderHandleHoverBackgroundStartColor:#ccc !default;
+$uiSliderHandleHoverBackgroundEndColor:#b3b3b3 !default;
+$uiSliderHandleActiveBackgroundStartColor:#ccc !default;
+$uiSliderHandleActiveBackgroundEndColor:#b3b3b3 !default;
+$uiSliderBarBackgroundStartColor:#efefef !default;
+$uiSliderBarBackgroundEndColor:#dcdbdb !default;
+$uiSliderBarBorderSize:			1px !default;
+$uiSliderBarBorderStyle: 		solid !default;
+$uiSliderBarBorderColor: 		#ccc !default;
+
+// UI TABS
+$uiTabsTabBackgroundStartColor:	#efefef !default;
+$uiTabsTabBackgroundEndColor:	#ccc !default;
+$uiTabsTabBorderSize:			1px	!default;
+$uiTabsTabBorderStyle:			solid !default;
+$uiTabsTabBorderColor:			#ccc !default;
+$uiTabsTabTextShadowColor:		#fff !default;
+$uiTabsTabFontColor:			#333 !default;
+$uiTabsTabHoverBackgroundStartColor:#efefef !default;
+$uiTabsTabHoverBackgroundEndColor:#999 !default;
+$uiTabsTabActiveBackgroundStartColor:#fff !default;
+$uiTabsTabActiveBackgroundEndColor:#fff !default;
+$uiTabsTabFontColor:			#000 !default;
+$uiTabsTabPanelBorderSize:		1px !default;
+$uiTabsTabPanelBorderStyle:		solid !default;
+$uiTabsTabPanelBorderColor:		#ccc !default;
+$uiTabsTabPanelBackgroundColor: #fff !default;
+
+// UI TOOLTIP
+$uiTooltipBackgroundColor:		#efefef !default;
+$uiTooltipBorderSize:			1px !default;
+$uiTooltipBorderStyle:			solid !default;
+$uiTooltipBorderColor:			#b2b2b2 !default;
+$uiTooltipCloseLinkFontColor:	#666 !default;
+$uiTooltipArrowBorderColor:		#b2b2b2 !default;
+$uiTooltipArrowInnerBorderColor:#efefef !default;
+
+
+// RESPONSIVE VARIABLES
+// ------------------------------------------------------------------------------------------
+
+// TYPOGRAPHY
+$baseFontSize320:				1em !default; // 16px
+
+// PAGE
+$mbLinkListDtVertBorderBottomColor320: #ccc !default;
+$mbLinkListDdVertBorderBottomColor320: #ccc !default;

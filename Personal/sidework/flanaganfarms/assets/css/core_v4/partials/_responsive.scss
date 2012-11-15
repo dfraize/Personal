@@ -1,0 +1,255 @@
+/*------------------------------------------------------------------------------------------
+CORE v4 - Core Responsive Design Partial
+DATE - October 1, 2012
+AUTHOR - Doug Fraize
+-------------------------------------------------------------------------------------------*/
+
+//=== MEDIA QUERIES =========================================================================
+
+/*--- Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire ---*/
+@media only screen and (min-width : 320px) and (max-width : 767px) {
+			
+	/*=== _TYPE.SCSS ======================================================================*/
+	// Remember to change the font-size on the body tag to correspond to the context, for example:
+	// if the context size is 10 (10px) you need to change the body font-size to .625em or 62.5%.
+	// 62.5% on the body is 62.5% of 16px which is the base font size for most browsers,
+	// giving you a base of 10px
+
+	body											{
+													font-size:$baseFontSize320;
+													}
+			
+	/*=== _GRID.SCSS ======================================================================*/
+
+	/*--- GRID GLOBAL ATTRIBUTES  ---------------------------------------------------------*/
+	.masthead-adjust,
+	.footer-adjust,
+	.grid,
+	.grid-nomargin									{
+													@include responsive-320-width-reset;
+													}
+
+	/*--- MASTHEAD & FOOTER ADJUST --------------------------------------------------------*/
+	.masthead-adjust								{
+													padding:0 #{size(10)}em;
+													}
+	.footer-adjust									{
+													padding:0;
+													}
+
+	/*--- GRID ----------------------------------------------------------------------------*/
+	.grid											{
+													padding:0 #{size(15)}em;
+													}
+													
+	/*=== _FORM.SCSS =======================================================================*/
+	.ui-form										{
+
+		// DEFAULT ADDRESS FIELDSET LAYOUT
+		.city-zip-lyt									{
+			.state-label									{
+															clear:both;
+															margin:0;
+															}
+														}
+													}
+													
+	/*=== _PAGE.SCSS ======================================================================*/
+
+	/*--- MOBILE VERTICAL NAVIGATION SETUP ------------------------------------------------*/
+	.mb-link-list-vert								{
+													padding:0;
+													margin:0;
+		dt												{
+														margin-bottom:0;
+														padding:#{size(12)}em #{size($baseMargin)}em;
+														border-bottom:1px solid $mbLinkListDtVertBorderBottomColor320;
+														}
+		dd,
+		li												{
+														display:block;
+														padding:0;
+														margin:0;
+														border-bottom:1px solid $mbLinkListDdVertBorderBottomColor320;
+			a												{
+															display:block;
+															padding:#{size(8)}em #{size(10)}em;
+															margin:0;
+															}
+			.pipe											{
+															display:none;
+															}
+			&.last-child									{
+															border-bottom:0;
+															}
+														}
+													}
+
+	/*--- MASTHEAD ------------------------------------------------------------------------*/
+	.masthead										{
+													margin-bottom:0;
+													padding:0;
+		.masthead-adjust								{
+														position:relative;
+														padding:0 #{size(10)}em #{size(8)}em #{size(10)}em;	
+			.mb-menu-btn									{
+															display:block;
+															position:absolute;
+															top:14px;
+															right:10px;
+															}
+														}
+													}
+
+	/*--- FOOTER ---------------------------------------------------------------------------*/
+	.footer											{
+													margin-top:0;
+													padding:0;
+		.footer-adjust									{
+			.mb-link-list-vert								{
+				dt												{
+																margin-bottom:0;
+																}
+															}
+			.ui-back-to-top-top-ctn							{
+															display:block;
+															padding:#{size($baseMargin)}em;
+				.ui-back-to-top									{
+																padding:0 !important;
+																}
+															}
+														}
+													}
+
+	/*--- KEYLINES -----------------------------------------------------------------------------*/
+	.ui-keyline-right,
+	.ui-keyline-left				{
+									padding-right:0;
+									padding-left:0;
+									border-right:0;
+									border-left:0;
+		img								{
+										margin-top:0;
+										}
+									}
+													
+	/*=== _UI_BTN.SCSS ====================================================================*/
+
+	/*--- CORE BUTTON SETUP ---------------------------------------------------------------*/
+	
+	// FONT SIZE OPTIONS
+	.ui-btn.xxx-small,
+	.ui-btn.xx-small,
+	.ui-btn.x-small,
+	.ui-btn.small									{
+													min-width:5.5em;
+													}
+
+	/*--- BUTTON GROUP --------------------------------------------------------------------*/
+	.ui-btn-grp-horz								{
+		.ui-btn.xxx-small,
+		.ui-btn.xx-small,		
+		.ui-btn.x-small	 								{
+														min-width:2em;
+														}
+		.ui-btn.small	 								{
+														min-width:3em;
+														}
+		.ui-btn.medium	 								{
+														min-width:4em;
+														}
+		.ui-btn.large,
+		.ui-btn.x-large,
+		.ui-btn.xx-large,
+		.ui-btn.xxx-large	 							{
+														min-width:2.5em;
+														}
+													}
+
+	/*=== _UI_AUTOCOMPLETE.SCSS ===========================================================*/
+	.ui-menu										{
+		.ui-menu-item									{
+			a												{
+															@include text-overflow;
+															display:block;
+				.ui-menu-secondary								{
+																@include text-overflow;
+																margin-left:#{size(5)}em;
+																display:inline;
+																}
+															}
+														}
+													}
+
+
+	/*=== _UI_CAROUSEL.SCSS ===============================================================*/
+	.flex-control-nav 								{
+		 li 											{
+		 												margin:0 #{size(15)}em;
+		 												}
+													}
+
+	.flex-control-paging li a 						{
+													@include border-radius(#{size(40)}em, all);
+													width:22px;
+													height:22px;
+													}
+
+	/*=== _UI_DIALOG.SCSS ==================================================================*/
+	.ui-dialog										{
+													max-width:#{size(280)}em;
+			.ui-dialog-titlebar							{
+														padding-right:#{size(60)}em;
+				.ui-dialog-title							{
+															font-size:#{size(18)}em;
+															}
+				.ui-dialog-titlebar-close					{
+															top:8px;
+															right:7px;
+															min-width:#{size(30)}em;
+															}
+														}
+													}
+
+	/*=== _UI_SLIDER.SCSS ==================================================================*/
+	
+	/*--- SLIDER SETUP ---------------------------------------------------------------------*/
+	.ui-slider 										{
+								
+		/*--- SLIDER HANDLE ----------------------------------------------------------------*/
+		.ui-slider-handle								{
+														width:#{size(20)}em;
+														height:#{size(20)}em;
+														top:#{size(-9)}em;
+														}
+													}
+	
+	/*=== _UI_TOOLTIP.SCSS =================================================================*/
+	.ui-tooltip-ctn									{
+													max-width:55% !important;
+		p												{
+														margin:0;
+														font-size:#{size(11)}em;
+														line-height:#{size(22)}em !important;
+														}
+													}
+}
+
+/*--- Portrait iPad, portrait tablets, Low-resolution laptops and desktops ----------------*/
+@media only screen and (min-width : 768px) and (max-width : 979px) {
+
+	/*=== _UI_BTN.SCSS ====================================================================*/
+
+	/*--- BUTTON GROUP --------------------------------------------------------------------*/
+		.ui-btn.large,
+		.ui-btn.x-large,
+		.ui-btn.xx-large,
+		.ui-btn.xxx-large	 							{
+														min-width:2.5em;
+														}
+}
+
+/*--- Landscape iPad, laptops and desktops ------------------------------------------------*/
+@media only screen and (min-width : 980px) {
+
+}
