@@ -14,33 +14,30 @@ $nav-items:8;
 //=== THEME VARS ============================================================================
 
 // CORE OVERRIDES
-$baseLinkColor:						#666;
-$baseFontColor:						#FFF;
+$baseLinkColor:						#555;
+$baseFontColor:						#241700;
 
-$hdrColor:							#FFF;
+$hdrColor:							#241700;
 
-$baseLinkColor:						#FFF;
+$baseLinkColor:						#241700;
 
 // WEBSITE SPRITE
 /* Uncomment code below and insert website name where it indicates [website] below */
 /* $websiteSpritePath:"/images/[website]/icon_sprite24.png"; */
 
 // GLOBAL
-$siteBackgroundImagePath:			"../images/wood_bck.jpg";
+$siteBackgroundImagePath:			"../images/wood_bck.png";
 $siteBackgroundImage:				#{url($siteBackgroundImagePath)};
 
 $gridSiteGutterPadding:				10;
 
 // MASTHEAD
-$mastheadHeight:					120;
-$navbarLinkColor:					#241711;
-$navbarLinkShadowColor:				#D2C2B1;
-$navbarLinkHoverColor:				#FFF;
+$navbarLinkColor:					#FFF;
+$navbarLinkHoverColor:				#a4cd39;
 
 // FOOTER
-$footerBackgroundColor:				#241700;
+$footerBackgroundColor:				#a4cd39;
 $footerMinHeight:					150;
-$footerBorderTopColor:				#a4cd39;
 
 //=== IE VARS ===============================================================================
 

@@ -17,12 +17,21 @@ AUTHOR - Doug Fraize
 /*=== WEBSITE STYLES ======================================================================*/
 // div {outline:1px solid red;}
 /*--- GLOBAL ------------------------------------------------------------------------------*/
-body			{background:url($siteBackgroundImagePath) 0 0 no-repeat;}
-p				{text-shadow:1px 1px 1px #000;}
+body			{
+				background:url($siteBackgroundImagePath) 0 0 repeat-x #000;
+				}
+
+.grid			{
+				@include border-radius(#{size(8)}em #{size(8)}em 0 0, all);
+				@include box-shadow(0, 0, #{size(15)}em, #666);
+				background-color:#FFF;
+				padding-top:#{size(10)}em;
+				}
 
 // SIDEBAR
 .ui-sidebar		{
 				color:#3E1B04;
+				margin-top:#{size(55)}em;
 	.box-hdr		{
 		h6				{
 						color:#3E1B04;
@@ -38,6 +47,7 @@ p				{text-shadow:1px 1px 1px #000;}
 //	.box-ftr		{}
 				}
 
+// [class*="col-"]			{outline:1px solid red;}
 /*--- NAVBAR -------------------------------------------------------------------------------*/
 .masthead		{
 				@include box-shadow(0, 0, 0, transparent);
@@ -46,7 +56,7 @@ p				{text-shadow:1px 1px 1px #000;}
 
 	.masthead-adjust
 					{
-					height:#{size($mastheadHeight)}em;
+//					height:#{size($mastheadHeight)}em;
 
 		.logo			{
 						margin:0;
@@ -56,6 +66,8 @@ p				{text-shadow:1px 1px 1px #000;}
 							display:block;
 							float:left;
 							margin-right:#{size(5)}em;
+							text-shadow:2px 2px 2px #000;
+				img				{margin:0;}
 							
 				span			{
 								display:block;
@@ -69,15 +81,20 @@ p				{text-shadow:1px 1px 1px #000;}
 							}
 						}
 		.ui-navbar		{
-						margin-top:#{size(35)}em;
+						margin-top:#{size(50)}em;
+						text-align:right;
+			dl				{
+				dd				{margin:0;}
+							}
 			a				{
 							@include href-link($navbarLinkColor, none);
-							text-shadow:-1px -1px 8px $navbarLinkShadowColor, 1px 1px 8px $navbarLinkShadowColor;
-							font-size:#{size(30)}em;
+							font-size:#{size(28)}em;
 							font-weight:bold;
+							text-shadow:1px 1px 1px #000;
 				&:hover			{
 								color:$navbarLinkHoverColor;
-								text-shadow:0 0 0 transparent, 0 0 0 transparent;
+								@include transition(color .15s ease-out);
+								text-shadow:1px 1px 20px #241700;
 								}
 							}
 						}
@@ -90,14 +107,28 @@ p				{text-shadow:1px 1px 1px #000;}
 .footer			{
 				@include box-shadow(0, 0, 0, transparent);
 				@include border-radius(0, all);
-				background-color:$footerBackgroundColor;
+				background:transparent;
 				border:0;
-				border-top:20px solid $footerBorderTopColor;
-				min-height:#{size($footerMinHeight)}em;
+	.footer-adjust	{
+					@include border-radius(0 0 #{size(8)}em #{size(8)}em, all);
+					background-color:$footerBackgroundColor;
+					min-height:#{size($footerMinHeight)}em;
+					padding-top:#{size(10)}em;
+		a				{
+						@include href-link(#000, none);
+			&:hover			{
+							@include href-link-hover(underline);
+							}
+						}
+					}
 				}
 
 /*--- HOMEPAGE -----------------------------------------------------------------------------*/
 
+/*--- SIGNATURE BURGERS --------------------------------------------------------------------*/
+.sig-burgers	{
+	.ctn			{min-height:#{size(320)}em;}
+				}
 
 
 //=== WEBSITE THEME IMPORT =====================================================================

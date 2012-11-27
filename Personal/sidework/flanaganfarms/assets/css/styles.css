@@ -554,7 +554,7 @@ AUTHOR - Doug Fraize
   background: #999999; }
 
 body {
-  color: white;
+  color: #241700;
   font-family: "myriad-pro-1", "myriad-pro-2", "Myriad Pro", Arial, Helvetica, sans-serif;
   font-size: 0.9375em; }
 
@@ -562,7 +562,7 @@ body {
 h1, .h1, h2, .h2,
 h3, .h3, h4, .h4,
 h5, .h5 {
-  color: white;
+  color: #241700;
   font-weight: bold;
   margin: 0.18333em 0;
   text-rendering: optimizelegibility; }
@@ -657,7 +657,7 @@ table {
 
 /*----- LINKS ----------------------------------------------------------------------*/
 a:link {
-  color: white;
+  color: #241700;
   text-decoration: underline;
   cursor: pointer; }
 a:visited {
@@ -695,7 +695,7 @@ AUTHOR - Doug Fraize
 -------------------------------------------------------------------------------------------*/
 /*=== GLOBAL FORM ELEMENTS ================================================================*/
 form, legend, label {
-  color: white; }
+  color: #241700; }
 
 input, select, button {
   color: #666666;
@@ -1910,13 +1910,23 @@ AUTHOR - Doug Fraize
 /*=== WEBSITE STYLES ======================================================================*/
 /*--- GLOBAL ------------------------------------------------------------------------------*/
 body {
-  background: url("../images/wood_bck.jpg") 0 0 no-repeat; }
+  background: url("../images/wood_bck.png") 0 0 repeat-x black; }
 
-p {
-  text-shadow: 1px 1px 1px #000; }
+.grid {
+  -moz-border-radius: 0.53333em 0.53333em 0 0;
+  -webkit-border-radius: 0.53333em 0.53333em 0 0;
+  -o-border-radius: 0.53333em 0.53333em 0 0;
+  border-radius: 0.53333em 0.53333em 0 0;
+  -moz-box-shadow: 0 0 1em #666666;
+  -webkit-box-shadow: 0 0 1em #666666;
+  -o-box-shadow: 0 0 1em #666666;
+  box-shadow: 0 0 1em #666666;
+  background-color: #FFF;
+  padding-top: 0.66667em; }
 
 .ui-sidebar {
-  color: #3E1B04; }
+  color: #3E1B04;
+  margin-top: 3.66667em; }
   .ui-sidebar .box-hdr h6 {
     color: #3E1B04;
     font-size: 1.46667em; }
@@ -1935,34 +1945,42 @@ p {
   box-shadow: 0 0 0 transparent;
   background-color: transparent;
   border: 0; }
-  .masthead .masthead-adjust {
-    height: 8em; }
-    .masthead .masthead-adjust .logo {
-      margin: 0; }
-      .masthead .masthead-adjust .logo a {
-        color: white;
-        text-decoration: none;
+  .masthead .masthead-adjust .logo {
+    margin: 0; }
+    .masthead .masthead-adjust .logo a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      float: left;
+      margin-right: 0.33333em;
+      text-shadow: 2px 2px 2px #000; }
+      .masthead .masthead-adjust .logo a img {
+        margin: 0; }
+      .masthead .masthead-adjust .logo a span {
         display: block;
-        float: left;
-        margin-right: 0.33333em; }
-        .masthead .masthead-adjust .logo a span {
-          display: block;
-          font-size: 0.53333em;
-          margin: -11px 0 0 111px;
-          font-style: italic; }
-      .masthead .masthead-adjust .logo .logo-text {
-        margin-top: 0.53333em; }
-    .masthead .masthead-adjust .ui-navbar {
-      margin-top: 2.33333em; }
-      .masthead .masthead-adjust .ui-navbar a {
-        color: #241711;
-        text-decoration: none;
-        text-shadow: -1px -1px 8px #d2c2b1, 1px 1px 8px #d2c2b1;
-        font-size: 2em;
-        font-weight: bold; }
-        .masthead .masthead-adjust .ui-navbar a:hover {
-          color: white;
-          text-shadow: 0 0 0 transparent, 0 0 0 transparent; }
+        font-size: 0.53333em;
+        margin: -11px 0 0 111px;
+        font-style: italic; }
+    .masthead .masthead-adjust .logo .logo-text {
+      margin-top: 0.53333em; }
+  .masthead .masthead-adjust .ui-navbar {
+    margin-top: 3.33333em;
+    text-align: right; }
+    .masthead .masthead-adjust .ui-navbar dl dd {
+      margin: 0; }
+    .masthead .masthead-adjust .ui-navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.86667em;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px #000; }
+      .masthead .masthead-adjust .ui-navbar a:hover {
+        color: #a4cd39;
+        -webkit-transition: color 0.15s ease-out;
+        -moz-transition: color 0.15s ease-out;
+        -o-transition: color 0.15s ease-out;
+        transition: color 0.15s ease-out;
+        text-shadow: 1px 1px 20px #241700; }
 
 /*--- FOOTER -------------------------------------------------------------------------------*/
 .footer {
@@ -1974,12 +1992,27 @@ p {
   -webkit-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
-  background-color: #241700;
-  border: 0;
-  border-top: 20px solid #a4cd39;
-  min-height: 10em; }
+  background: transparent;
+  border: 0; }
+  .footer .footer-adjust {
+    -moz-border-radius: 0 0 0.53333em 0.53333em;
+    -webkit-border-radius: 0 0 0.53333em 0.53333em;
+    -o-border-radius: 0 0 0.53333em 0.53333em;
+    border-radius: 0 0 0.53333em 0.53333em;
+    background-color: #a4cd39;
+    min-height: 10em;
+    padding-top: 0.66667em; }
+    .footer .footer-adjust a {
+      color: black;
+      text-decoration: none; }
+      .footer .footer-adjust a:hover {
+        text-decoration: underline; }
 
 /*--- HOMEPAGE -----------------------------------------------------------------------------*/
+/*--- SIGNATURE BURGERS --------------------------------------------------------------------*/
+.sig-burgers .ctn {
+  min-height: 21.33333em; }
+
 /*--- HOMEPAGE -----------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------
 CORE v4 - Core Responsive Design Partial

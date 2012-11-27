@@ -18,7 +18,7 @@
 		Bán in County Roscommon.  Since the days of Queen Maeve, the lands surrounding the Sliabh Bán 
 		have been known to produce the finest cattle in Ireland.  Combining generations of both farming 
 		and butchering experience, Thomas Flanagan and local butcher and farmer Noel Dockery, began 
-		raising Black Angus cattle to provide the neighboring community and restaurants with a local 
+		raising Aberdeen Angus cattle to provide the neighboring community and restaurants with a local 
 		product of the highest quality.
 	</p>
 	<p>
@@ -34,9 +34,9 @@
 
 	<h4>Our Farming Family</h4>
 	<p>
-		As hands-on owners, Tom Flanagan and Noel Dockery are dedicated to quality and excellence in every 
+		As hands-on owners, Thomas Flanagan and Noel Dockery are dedicated to quality and excellence in every 
 		aspect of Flanagan Farms. Together, they have spent countless hours building their herd and perfecting 
-		the product so they can offer it selectively to local restaurants, butcher shops and markets.
+		the products so they can offer it selectively to local restaurants, butcher shops and markets.
 	</p>
 	<p>
 		Flanagan Farms’ Aberdeen Angus herd is raised the old-fashioned way – in a gentle, country 
