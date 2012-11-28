@@ -52,6 +52,7 @@ body				{
 			@include box-shadow(0, #{size(5)}em, #{size(5)}em, #CCC);
 			background-color:#000;
 			height:#{size(8)}em;
+			margin-bottom:#{size(30)}em;
 	.masthead-adjust
 				{
 				margin:0 auto;
@@ -107,16 +108,19 @@ body				{
 				margin-right:#{size(21)}em;
 				
 				}
-	.recent-work-link
+	.work-link
 				{
-				font-size:#{size(10)}em;
-				text-align:center;
-				display:block;
+		a			{font-size:#{size(20)}em;}
+		.projects-link
+					{
+					padding-left:#{size(100)}em;
+					}
 				}
 			}
 
 /*--- PORTFOLIO PAGE ------------------------------------------------------------------*/
-.portfolio		{
+.portfolio,
+.thoughts		{
 	.masthead		{
 		.masthead-adjust
 						{
@@ -161,19 +165,18 @@ body				{
 .ui-tumblr		{
 	ol.tumblr_posts	{
 					list-style-type:none;
+					margin-left:0;
 		li.tumblr_post	{
-						border-left:#{size(20)}em solid #dcd5c9;
-						padding-left:#{size(15)}em;
 						margin-bottom:#{size(45)}em;
 			a				{
-										
+							@include href-link($tumblrLinkColor, underline);		
 				&:link			{
-								@include href-link(red,underline);
+								@include href-link($tumblrLinkColor,underline);
 								cursor:pointer;
 								font-weight:normal;
 								font-size:#{size(18)}em;
 								}
-				&:visited		{color:#666;}
+				&:visited		{color:$tumblrLinkColor;}
 				&:hover,
 				&:focus,
 				&:active		{@include href-link-hover(none);}
@@ -189,6 +192,23 @@ body				{
 					}
 				}
 
+// SIDEBAR
+.ui-sidebar		{
+				@include background-gradient(#CCC, #FFF);
+				color:#3E1B04;
+				padding:0;
+	.box-hdr		{
+					@include border-radius(#{size(4)}em #{size(4)}em 0 0, all);
+					@include background-gradient(#EFEFEF, #999);
+					border-bottom-color:#000; 
+		h6				{}
+					}
+	.box-bdy		{}
+//	.box-ftr		{}
+				}
+
+.ui-sidebar-top
+				{margin-top:#{size(68)}em;}
 
 //=== MEDIA QUERIES ===========================================================================
 @import	"core_v4/partials/responsive",

@@ -1133,6 +1133,8 @@ img {
     .link-list-horz dd a, .link-list-horz li a {
       padding: 0 0.53333em 0 0;
       margin: 0; }
+    .link-list-horz dd .pipe, .link-list-horz li .pipe {
+      border-left: 1px solid #4e84b0; }
 
 /*--- BACK TO TOP STYLES -------------------------------------------------------------------*/
 .ui-back-to-top {
@@ -1797,7 +1799,8 @@ body {
   -o-box-shadow: 0 0.33333em 0.33333em #cccccc;
   box-shadow: 0 0.33333em 0.33333em #cccccc;
   background-color: #000;
-  height: 0.53333em; }
+  height: 0.53333em;
+  margin-bottom: 2em; }
   .masthead .masthead-adjust {
     margin: 0 auto;
     width: 65.33333em; }
@@ -1847,13 +1850,14 @@ body {
     text-align: left;
     margin-left: 1.4em;
     margin-right: 1.4em; }
-  .hp-intro .recent-work-link {
-    font-size: 0.66667em;
-    text-align: center;
-    display: block; }
+  .hp-intro .work-link a {
+    font-size: 1.33333em; }
+  .hp-intro .work-link .projects-link {
+    padding-left: 6.66667em; }
 
 /*--- PORTFOLIO PAGE ------------------------------------------------------------------*/
-.portfolio .masthead .masthead-adjust .nav {
+.portfolio .masthead .masthead-adjust .nav,
+.thoughts .masthead .masthead-adjust .nav {
   display: block; }
 
 .curled-box {
@@ -1891,23 +1895,54 @@ body {
 
 /*--- TUMBLR PAGE -------------------------------------------------------------------------*/
 .ui-tumblr ol.tumblr_posts {
-  list-style-type: none; }
+  list-style-type: none;
+  margin-left: 0; }
   .ui-tumblr ol.tumblr_posts li.tumblr_post {
-    border-left: 1.33333em solid #dcd5c9;
-    padding-left: 1em;
     margin-bottom: 3em; }
-    .ui-tumblr ol.tumblr_posts li.tumblr_post a:link {
-      color: red;
-      text-decoration: underline;
-      cursor: pointer;
-      font-weight: normal;
-      font-size: 1.2em; }
-    .ui-tumblr ol.tumblr_posts li.tumblr_post a:visited {
-      color: #666; }
-    .ui-tumblr ol.tumblr_posts li.tumblr_post a:hover, .ui-tumblr ol.tumblr_posts li.tumblr_post a:focus, .ui-tumblr ol.tumblr_posts li.tumblr_post a:active {
-      text-decoration: none; }
+    .ui-tumblr ol.tumblr_posts li.tumblr_post a {
+      color: #4e84b0;
+      text-decoration: underline; }
+      .ui-tumblr ol.tumblr_posts li.tumblr_post a:link {
+        color: #4e84b0;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: normal;
+        font-size: 1.2em; }
+      .ui-tumblr ol.tumblr_posts li.tumblr_post a:visited {
+        color: #4e84b0; }
+      .ui-tumblr ol.tumblr_posts li.tumblr_post a:hover, .ui-tumblr ol.tumblr_posts li.tumblr_post a:focus, .ui-tumblr ol.tumblr_posts li.tumblr_post a:active {
+        text-decoration: none; }
   .ui-tumblr ol.tumblr_posts div.tumblr_title {
     font-size: 1.33333em; }
+
+.ui-sidebar {
+  background-color: #dfdfdf;
+  background-image: -moz-linear-gradient(top, #cccccc, white);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(white));
+  background-image: -webkit-linear-gradient(top, #cccccc, white);
+  background-image: -o-linear-gradient(top, #cccccc, white);
+  background-image: linear-gradient(to bottom, #cccccc, white);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFCCCCCC', endColorstr='#FFFFFFFF', GradientType=0);
+  color: #3E1B04;
+  padding: 0; }
+  .ui-sidebar .box-hdr {
+    -moz-border-radius: 0.26667em 0.26667em 0 0;
+    -webkit-border-radius: 0.26667em 0.26667em 0 0;
+    -o-border-radius: 0.26667em 0.26667em 0 0;
+    border-radius: 0.26667em 0.26667em 0 0;
+    background-color: #cecece;
+    background-image: -moz-linear-gradient(top, #efefef, #999999);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#efefef), to(#999999));
+    background-image: -webkit-linear-gradient(top, #efefef, #999999);
+    background-image: -o-linear-gradient(top, #efefef, #999999);
+    background-image: linear-gradient(to bottom, #efefef, #999999);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEFEFEF', endColorstr='#FF999999', GradientType=0);
+    border-bottom-color: #000; }
+
+.ui-sidebar-top {
+  margin-top: 4.53333em; }
 
 /*------------------------------------------------------------------------------------------
 CORE v4 - Core Responsive Design Partial

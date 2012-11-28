@@ -2,12 +2,14 @@
 
 	<div class="col-24">
 		<h1>Portfolio</h1>
+		<hr>
 		<p>
 			Here are just some of the projects that I have worked on over the years. All of the projects listed I have hand-coded with HTML, CSS, JavaScript and done some light design work on.
 			<a href="http://www.linkedin.com/in/dfraize" style="padding-left:10px;">
 				<img src="http://www.linkedin.com/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Doug Fraize's LinkedIn profile" border="0" style="margin-bottom:-2px;">View Doug Fraize's profile
 			</a>
 		</p>
+		<hr>
 	</div>
 
 	<div class="col-24">

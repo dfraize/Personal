@@ -1,6 +1,6 @@
 <h1>CSS framework versions for websites</h1>
 <div class="notice-ctn">
-	<strong>Last updated:</strong> 10/01/2012 - <a href="index.php?p=framework_changelog">change log</a>
+	<strong>Last updated:</strong> 11/28/2012 - <a href="index.php?p=framework_changelog">change log</a>
 </div>
 
 <table class="core-version-tbl" cellpadding="0" cellspacing="0" border="0">

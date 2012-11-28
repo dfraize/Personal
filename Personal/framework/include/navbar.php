@@ -43,7 +43,7 @@
 				</li>
 
 				<li>
-					<a href="javascript:;">Corporate</a>
+					<a href="javascript:;">Site</a>
 					<div class="sub-menu">
 						<dl>
 							<dd class="first"><a href="index.php?p=brand">Brand</a></dd>

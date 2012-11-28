@@ -1,10 +1,23 @@
 <h1>CSS framework changelog</h1>
 <div class="notice-ctn">
-	<strong>Last updated:</strong> 10/22/2012
+	<strong>Last updated:</strong> 11/28/2012
 </div>
 <div class="col-24">
 	<article class="col-12 first">
 		<h2>Core CSS</h2>
+		<section class="ui-box-rnd-adv">
+			<div class="box-hdr">
+				<h6>Core v4</h6>
+			</div>
+			<div class="box-bdy">
+				<ol>
+					<li>Removed the pipe from the link list</li>
+					<li>Added a variable now to put a border on the link list</li>
+					<li>Update the snippet to no longer include the HTML pipe for link list</li>
+				</ol>
+			</div>
+			<div class="box-ftr"></div>
+		</section>
 
 		<section class="ui-box-rnd-adv">
 			<div class="box-hdr">

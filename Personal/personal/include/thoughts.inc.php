@@ -1,13 +1,14 @@
 <div class="col-17 first ui-tumblr">
 	<h1>Inter-web findings</h1>
-	<p>Below is a list of things I have found of interest while reading.</p>
-
+	<hr>
+	<p>Below is a list of things I have found around the web, some are work career related others are just personal interests.</p>
+	<hr>
 	<script type="text/javascript" src="http://dfraize-designs.tumblr.com/js"></script>
 </div>
 
 <div class="col-6 offset-1">
 
-	<div class="ui-box ui-box-rnd-shadow-adv">
+	<div class="ui-box ui-box-rnd-shadow-adv ui-sidebar ui-sidebar-top">
 		<div class="box-hdr">
 			<h6>Technology reads</h6>
 		</div>
@@ -27,7 +28,7 @@
 	</div>
 
 
-	<div class="ui-box ui-box-rnd-shadow-adv">
+	<div class="ui-box ui-box-rnd-shadow-adv ui-sidebar">
 		<div class="box-hdr">
 			<h6>Personal reads</h6>
 		</div>
