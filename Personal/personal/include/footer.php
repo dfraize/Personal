@@ -23,5 +23,5 @@
 			</li>
 		</ul>
 	</section>
-	<section class="col-5 offset-13">&copy;20011-2012 Doug Fraize</section>
+	<section class="col-5 offset-13">&copy;2011-2012 Doug Fraize</section>
 </div>
