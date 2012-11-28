@@ -1,9 +1,7 @@
 <div id="nav-bookmark" class="footer-adjust">
-	<div class="col-24">
+	<div class="col-23 offset-1">
 		<p>&copy; 2012 Flanagan Farms - Pure Irish Angus</p>
-	</div>
 
-	<div class="col-24">
 		<div class="col-8 first">
 			<dl class="link-list-vert mb-link-list-vert">
 				<dt>Products</dt>
@@ -27,6 +25,5 @@
 				<dd><a href="index.php?p=shop">Coming soon</a></dd>
 			</dl>
 		</div>
-	</div>	
-	
+	</div>
 </div>

@@ -15,7 +15,7 @@ AUTHOR - Doug Fraize
 		;
 
 /*=== WEBSITE STYLES ======================================================================*/
-// div {outline:1px solid red;}
+
 /*--- GLOBAL ------------------------------------------------------------------------------*/
 body			{
 				background:url($siteBackgroundImagePath) 0 0 repeat-x #000;
@@ -24,18 +24,34 @@ body			{
 .grid			{
 				@include border-radius(#{size(8)}em #{size(8)}em 0 0, all);
 				@include box-shadow(0, 0, #{size(15)}em, #666);
+				@include ie-gradient-reset-filter;
+				@include background-gradient(#FFF, #DDD);
 				background-color:#FFF;
-				padding-top:#{size(10)}em;
+				border:1px solid #000;
+				padding-top:#{size(25)}em;
+				padding-bottom:#{size(25)}em;
+				}
+
+h1				{
+				color:#a4cd39;
+				text-shadow:1px 1px 1px #57740a;
 				}
 
 // SIDEBAR
 .ui-sidebar		{
+				@include background-gradient(#CCC, #FFF);
 				color:#3E1B04;
-				margin-top:#{size(55)}em;
+				margin-top:#{size(68)}em;
+				padding:0;
 	.box-hdr		{
+					border-bottom-color:#8bb128; 
+					padding:0;
 		h6				{
+						@include border-radius(#{size(4)}em #{size(4)}em 0 0, all);
+						@include background-gradient(#b7e341, #a4cd39);
 						color:#3E1B04;
 						font-size:#{size(22)}em;
+						padding:#{size(10)}em;
 						}
 					}
 	.box-bdy		{
@@ -56,53 +72,108 @@ body			{
 
 	.masthead-adjust
 					{
-//					height:#{size($mastheadHeight)}em;
-
 		.logo			{
 						margin:0;
+						position:absolute;
+						top:-15px;
+						left:10px;
+						@include rotate(-8deg);
 
 			a				{
 							@include href-link(#FFF, none);
 							display:block;
-							float:left;
-							margin-right:#{size(5)}em;
 							text-shadow:2px 2px 2px #000;
-				img				{margin:0;}
-							
-				span			{
-								display:block;
-								font-size:#{size(8)}em;
-								margin:-11px 0 0 111px;
-								font-style:italic;
-								}
-							}
-			.logo-text		{
-							margin-top:#{size(8)}em;
 							}
 						}
 		.ui-navbar		{
 						margin-top:#{size(50)}em;
 						text-align:right;
 			dl				{
-				dd				{margin:0;}
-							}
-			a				{
-							@include href-link($navbarLinkColor, none);
-							font-size:#{size(28)}em;
-							font-weight:bold;
-							text-shadow:1px 1px 1px #000;
-				&:hover			{
-								color:$navbarLinkHoverColor;
-								@include transition(color .15s ease-out);
-								text-shadow:1px 1px 20px #241700;
+				dd				{
+								margin:0;
+					a				{
+									@include href-link($navbarLinkColor, none);
+									font-size:#{size(28)}em;
+									font-weight:bold;
+									text-shadow:1px 1px 1px #000;
+									border-left:1px solid #a4cd39;
+									padding:0 10px;
+						&.first-child	{border-left:0;}
+						&:hover			{
+										color:$navbarLinkHoverColor;
+										@include transition(color .15s ease-out);
+										text-shadow:1px 1px 20px #241700;
+										}
+									}
 								}
 							}
 						}
-
 					}
-
-	
 				}
+
+// NAVIGATION SELECTED
+.signature_burgers
+				{
+	.masthead		{
+		.masthead-adjust
+						{
+			.ui-navbar		{
+				.burgers		{@include href-link($navbarLinkHoverColor, none);}
+							}
+						}
+					}					
+				}
+
+.products
+				{
+	.masthead		{
+		.masthead-adjust
+						{
+			.ui-navbar		{
+				.products		{@include href-link($navbarLinkHoverColor, none);}
+							}
+						}
+					}					
+				}
+
+.shop
+				{
+	.masthead		{
+		.masthead-adjust
+						{
+			.ui-navbar		{
+				.shop			{@include href-link($navbarLinkHoverColor, none);}
+							}
+						}
+					}					
+				}
+
+.about,
+.where_to_buy,
+.why_grass_fed
+				{
+	.masthead		{
+		.masthead-adjust
+						{
+			.ui-navbar		{
+				.about			{@include href-link($navbarLinkHoverColor, none);}
+							}
+						}
+					}					
+				}
+
+.contact
+				{
+	.masthead		{
+		.masthead-adjust
+						{
+			.ui-navbar		{
+				.contact		{@include href-link($navbarLinkHoverColor, none);}
+							}
+						}
+					}					
+				}
+
 /*--- FOOTER -------------------------------------------------------------------------------*/
 .footer			{
 				@include box-shadow(0, 0, 0, transparent);
@@ -113,7 +184,8 @@ body			{
 					@include border-radius(0 0 #{size(8)}em #{size(8)}em, all);
 					background-color:$footerBackgroundColor;
 					min-height:#{size($footerMinHeight)}em;
-					padding-top:#{size(10)}em;
+					padding-top:#{size(15)}em;
+					padding-bottom:#{size(15)}em;
 		a				{
 						@include href-link(#000, none);
 			&:hover			{
@@ -125,18 +197,40 @@ body			{
 
 /*--- HOMEPAGE -----------------------------------------------------------------------------*/
 
-/*--- SIGNATURE BURGERS --------------------------------------------------------------------*/
-.sig-burgers	{
-	.ctn			{min-height:#{size(320)}em;}
+// CAROUSEL
+.flex-viewport
+				{
+				@include border-radius(#{size(6)}em, all);
+				border:1px solid #a4cd39;
+				height:#{size(275)}em;
+	img				{
+					@include border-radius(#{size(6)}em, all);
+					}
 				}
 
+/*--- SIGNATURE BURGERS --------------------------------------------------------------------*/
+.sig-burgers	{
+	.ctn			{
+		img				{
+						border:1px solid #666;
+						height:#{size(125)}em;
+						overflow:hidden;
+						padding:1px;
+						}
+					}
+				}
 
-//=== WEBSITE THEME IMPORT =====================================================================
-
-/*--- HOMEPAGE -----------------------------------------------------------------------------*/
-
-
-
+/*--- OTHER PRODUCTS PAGE ------------------------------------------------------------------*/
+.products		{
+	.ctn			{
+		img				{
+						border:1px solid #666;
+						overflow:hidden;
+						height:#{size(160)}em;
+						padding:1px;
+						}
+					}
+				}
 
 
 //=== MEDIA QUERIES ===========================================================================

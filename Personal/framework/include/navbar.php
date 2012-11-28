@@ -25,7 +25,7 @@
 							<dd class="indent"><a href="index.php?p=mediaquery_breakpoints">Media Queries</a></dd>
 							<dd class="indent"><a href="index.php?p=device_sizes">Device sizes</a></dd>
 							<dt class="indent">Reference</dt>
-							<dd class="indent"><a href="index.php?p=Reference">Snippet bindings</a></dd>
+							<dd class="indent"><a href="index.php?p=reference">Snippet bindings</a></dd>
 							<dd class="last indent"><a href="index.php?p=libraries">Libraries</a></dd>
 						</dl>
 					</div>

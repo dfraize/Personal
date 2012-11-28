@@ -1,4 +1,4 @@
-<div class="col-16 first">
+<div class="col-14 offset-1">
 	<h1>Why grass fed?</h1>
 	<p>
 		Cattle were meant to eat grass and people were meant to eat cattle.  As omnivores, about the only 
@@ -35,6 +35,6 @@
 		construct was prepared to capture the nutritional value of meat.
 	</p>
 </div>
-<div class="col-8">
+<div class="col-7 offset-1">
 	<? include "include/about_us_sidebar.php";?>
 </div>

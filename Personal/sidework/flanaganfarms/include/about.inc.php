@@ -1,6 +1,6 @@
-<div class="col-16 first">
+<div class="col-14 offset-1">
 	<h1>About us</h1>
-
+	<hr>
 	<p>
 		Flanagan Farms specializes in all-natural, pasture-raised beef for the most discerning 
 		palates. Hand-selected and pasture-raised in the lush rolling hills surrounding Strokestown, 
@@ -69,9 +69,9 @@
 		achieve an unmatched buttery flavour and soft texture, our all-natural Aberdeen Angus beef – including 
 		our ground beef – is dry-aged for twenty eight days.  Our proprietary mix of ground beef uses prime 
 		cuts, not the left over bits and pieces that make up most burgers, to produce the finest tasting 
-		burgers in Ireland today.
+		burgers in Ireland.
 	</p>
 </div>
-<div class="col-8">
+<div class="col-7 offset-1">
 	<? include "include/about_us_sidebar.php";?>
 </div>

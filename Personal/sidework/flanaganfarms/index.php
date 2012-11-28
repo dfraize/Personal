@@ -76,12 +76,9 @@ function curPageURL() {
 
 	<!-- JAVASCRIPT PLUGINS -->
 	<script src="assets/js/plugins/carousel.js"></script>
-<!--	<script src="js/plugins/tooltip.js"></script> -->
-
 
 	<!-- MAIN JS FILES -->
-	<script src="assets/js/core.js"></script>
-	<script src="assets/js/framework.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
 </html>
