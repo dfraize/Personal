@@ -1,0 +1,19 @@
+<snippet>
+	<content>
+<![CDATA[
+<li class="email">
+	<label for="email_address">$1</label>
+	<input id="email_address" name="email_address" value="$2" tabindex="$3" type="email" title="Enter your email address" fieldhint="Enter your email address" />
+</li>
+<li class="email-optin">
+	<label for="optin">
+		<input id="optin" name="optin" type="checkbox" checked="checked">$4
+	</label>
+</li>
+$5
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>optin</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

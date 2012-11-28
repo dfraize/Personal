@@ -1,0 +1,20 @@
+<snippet>
+	<content>
+<![CDATA[
+<form class="ui-form" id="$1" name="$2" method="$3" action="$4" title="$5">
+	<fieldset>
+		<ol>
+			$6
+			<li class="ui-form-action">
+				$7
+			</li>
+		</ol>
+	</fieldset>
+</form>
+$8
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>form</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

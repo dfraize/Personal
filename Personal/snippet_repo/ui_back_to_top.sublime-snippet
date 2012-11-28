@@ -1,0 +1,12 @@
+<snippet>
+	<content>
+<![CDATA[
+<div class="col-24 ui-back-to-top">
+	<p><a href="#top"><span class="ui-back-to-top-icn">&uarr;</span>Top</a></p>
+</div>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>backtotop</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>
