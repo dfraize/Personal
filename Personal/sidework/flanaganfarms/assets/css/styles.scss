@@ -33,7 +33,7 @@ body			{
 				}
 
 h1				{
-				color:#a4cd39;
+				color:#8bb223;
 				text-shadow:1px 1px 1px #57740a;
 				}
 
@@ -48,7 +48,7 @@ h1				{
 					padding:0;
 		h6				{
 						@include border-radius(#{size(4)}em #{size(4)}em 0 0, all);
-						@include background-gradient(#b7e341, #a4cd39);
+						@include background-gradient(#b7e341, #8bb223);
 						color:#3E1B04;
 						font-size:#{size(22)}em;
 						padding:#{size(10)}em;
@@ -72,12 +72,15 @@ h1				{
 
 	.masthead-adjust
 					{
+					height:118px;
 		.logo			{
 						margin:0;
+						padding:0;
 						position:absolute;
-						top:-15px;
-						left:10px;
+						top:-16px;
+						left:5px;
 						@include rotate(-8deg);
+						max-height:200px;
 
 			a				{
 							@include href-link(#FFF, none);
@@ -86,17 +89,17 @@ h1				{
 							}
 						}
 		.ui-navbar		{
-						margin-top:#{size(50)}em;
+						margin-top:#{size(92)}em;
 						text-align:right;
 			dl				{
 				dd				{
 								margin:0;
 					a				{
 									@include href-link($navbarLinkColor, none);
-									font-size:#{size(28)}em;
+									font-size:#{size(25)}em;
 									font-weight:bold;
 									text-shadow:1px 1px 1px #000;
-									border-left:1px solid #a4cd39;
+									border-left:1px solid #8bb223;
 									padding:0 10px;
 						&.first-child	{border-left:0;}
 						&:hover			{
@@ -196,12 +199,38 @@ h1				{
 				}
 
 /*--- HOMEPAGE -----------------------------------------------------------------------------*/
+// HOME BOX
+.hp-ui-box		{
+				@include box-shadow(0, 0, 10px, #666);
+				position:relative;
+	.benefits-button
+					{
+					position:absolute;
+					width:70px;
+					right:-30px; top:-30px;
+					@include rotate(12deg);
+					}
+	.box-bdy		{
+					border-top:0;
+		img				{
+						border:1px solid #CCC;
+						padding:1px;
+						}
+					}
+				}
+
+// BLOCKQUOTE
+blockquote		{
+				padding:0;
+	p				{font-size:100%;}
+	.author			{font-size:90%;}
+				}
 
 // CAROUSEL
 .flex-viewport
 				{
 				@include border-radius(#{size(6)}em, all);
-				border:1px solid #a4cd39;
+				border:1px solid #8bb223;
 				height:#{size(275)}em;
 	img				{
 					@include border-radius(#{size(6)}em, all);

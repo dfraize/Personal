@@ -1,5 +1,5 @@
 <div class="col-22 offset-1 products">
-	<h1>Products</h1>
+	<h1>Other products</h1>
 	<hr>
 	<p>
 		Flanagan Farms’ burgers are designed to produce the tastiest, highest quality burgers in the 

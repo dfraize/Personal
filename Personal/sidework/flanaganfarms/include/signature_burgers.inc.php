@@ -30,7 +30,7 @@
 		<img src="assets/images/burger_03.jpg" />
 		<p>
 			If you are looking to try something new, we highly recommend 
-			our Farmhouse Blend which are made from a combination of chuck, 
+			our Farmhouse Blend which is made from a combination of chuck, 
 			brisket, and short-rib from Aberdeen  Black Angus Beef in 
 			addition to Noel’s proprietary, all natural seasoning.
 		</p>

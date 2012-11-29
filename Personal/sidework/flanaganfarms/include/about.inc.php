@@ -17,7 +17,7 @@
 		For over 300 years the Flanagans have reared cattle on the fertile land surrounding the Sliabh 
 		Bán in County Roscommon.  Since the days of Queen Maeve, the lands surrounding the Sliabh Bán 
 		have been known to produce the finest cattle in Ireland.  Combining generations of both farming 
-		and butchering experience, Thomas Flanagan and local butcher and farmer Noel Dockery, began 
+		and butchering experience, Thomas Flanagan and local butcher and farmer Noel Dockery began 
 		raising Aberdeen Angus cattle to provide the neighboring community and restaurants with a local 
 		product of the highest quality.
 	</p>
@@ -26,7 +26,7 @@
 		treatment of our animals and a high level of environmental consciousness.
 	</p>
 	<p>
-		Our carefully bred cattle graze freely on verdant grass pastures with access to the fresh, clean 
+		Our carefully bred cattle graze freely on verdant grass pastures with access to fresh, clean 
 		water. They are never given supplemental growth hormones or steroids. We believe we produce the 
 		best tasting cuts of beef and burgers in Ireland today.  Simply put, we produce beef for optimum 
 		taste, while our competitors produce beef for optimum size and return on investment.

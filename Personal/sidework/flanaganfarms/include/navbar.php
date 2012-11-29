@@ -1,18 +1,18 @@
 <div class="masthead-adjust">
-	<div class="col-6 first">
+	<div class="col-4 first">
 		&nbsp;
 		<h1 class="logo" title="Flanagan Farms - Pure Irish Angus">
 			<a href="index.php?p=home"><img src="assets/images/flanagan_farms_logo.png" /></a>
 		</h1>
 	</div>
-	<div class="col-18">
+	<div class="col-20">
 
 		<nav role="navigation" class="ui-navbar">
 			<dl class="link-list-horz">
-				<dd><a class="first-child burgers" href="index.php?p=signature_burgers">Burgers</a></dd>
-				<dd><a class="products" href="index.php?p=products">Products</a></dd>
+				<dd><a class="first-child about" href="index.php?p=about">About</a></dd>
+				<dd><a class="burgers" href="index.php?p=signature_burgers">Signature burgers</a></dd>
+				<dd><a class="products" href="index.php?p=products">Other products</a></dd>
 				<dd><a class="shop" href="index.php?p=shop">Shop</a></dd>
-				<dd><a class="about" href="index.php?p=about">About</a></dd>
 				<dd><a class="contact" href="index.php?p=contact">Contact us</a></dd>
 			</dl>
 		</nav>
