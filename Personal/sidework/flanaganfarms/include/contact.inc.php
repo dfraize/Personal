@@ -1,5 +1,6 @@
 <div class="col-15 offset-1">
 	<h1>Contact us</h1>
+	<hr>
 	<p>For more information about us or if you are a restaurant looking to place in order please use the following contact information listed below.</p>
 
 	<p>
