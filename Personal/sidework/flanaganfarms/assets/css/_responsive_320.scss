@@ -20,42 +20,25 @@
 	.bookmark							{
 										top:0;
 										}
+	.mb-divider							{display:block;}
+	h1									{
+										font-size:#{size(26)}em;
+										margin-top:20px;
+										}
 
 	/*--- NAVBAR --------------------------------------------------------------------------*/
 	.masthead							{
 										position:static;
+										height:98px;
 		.masthead-adjust					{
 			h1									{
-												text-align:left;
-												line-height:1em;
 												margin-bottom:0;
-												font-size:#{size(20)}em;
-												position:relative;
-												top:15px;
+												font-size:#{size(10)}em;
+				img									{height:140px;}
 												}
 											}
-			.ui-navbar						{
-											display:none;
-											}
-										}
 
-	/*--- MASTHEAD DEMO -------------------------------------------------------------------*/
-	.masthead-demo						{
-										display:block;
-										position:relative;
-										top:0;
-		.masthead-adjust					{
-			.logo								{
-				img									{
-													margin:#{size(10)}em 0 0 0;
-													}
-												}
-
-			/*--- MASTHEAD MAIN NAV --------------------------------------------------------*/
-			.ui-masthead-nav					{
-												display:none;
-												}
-											}
+			.ui-navbar						{display:none;}
 										}
 
 	/*--- FOOTER ---------------------------------------------------------------------------*/
@@ -81,33 +64,6 @@
 											}
 										}
 
-	/*--- HOMEPAGE ------------------------------------------------------------------------*/
-	.qr-code-ctn						{
-										display:none;
-										}
-
-	.intro								{
-										margin:0 0 #{size(15)}em 0;
-		h1									{
-											font-size:#{size(35)}em;
-											line-height:1.15em;
-											}
-		h2									{
-											font-size:#{size(18)}em;
-		}
-										}
-	
-	/*--- MEDIAQUERY BREAKPOINTS PAGE -----------------------------------------------------*/
-	.media-query-tbl					{
-		tbody								{
-			td									{
-				p 									{
-													font-size:#{size(5)}em;
-													}
-												}
-											}
-										}
-
 	/*--- NAVBAR --------------------------------------------------------------------------*/
 	.masthead							{
 		.masthead-adjust					{
@@ -115,10 +71,11 @@
 												@include border-radius(6px,all);
 												@include box-shadow(0,0,0,transparent);
 												background-image:none;
-												background-color:transparent;
-												color:#fff;
-												text-shadow:0 -1px 1px #333;
+												background-color:#EFEFEF;
+												color:#000;
+												text-shadow:0 -1px 1px #999;
 												border:1px solid #999;
+												margin-top:40px;
 												}
 											}
 										}
@@ -159,10 +116,5 @@
 													}
 												}
 											}
-										}
-
-	/*--- MEDIAQUERY BREAKPOINTS PAGE -----------------------------------------------------*/
-	.mediaquery_breakpoints				{
-										background:cyan;
 										}
 }

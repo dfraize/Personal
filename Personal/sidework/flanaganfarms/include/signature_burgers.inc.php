@@ -15,6 +15,7 @@
 			and short-rib from Aberdeen  Black Angus Beef. This versatile 
 			blend tastes great cooked to any level of doneness.
 		</p>
+		<hr class="mb-divider">
 	</div>
 	<div class="col-8 ctn">
 		<h4>Dry-Aged Black Label Blend</h4>
@@ -23,7 +24,8 @@
 			Our Dry-Aged Original Burger Blend uses 30-day dry-aged beef. 
 			This blend is a combination of chuck, brisket, and short-rib 
 			Dry-Aged Aberdeen Black Angus Beef.
-		</p>	
+		</p>
+		<hr class="mb-divider">
 	</div>
 	<div class="col-8 ctn">
 		<h4>Farmhouse Blend</h4>

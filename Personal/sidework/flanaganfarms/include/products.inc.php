@@ -22,6 +22,7 @@
 			brisket, and short-rib from Aberdeen  Black Angus Beef in 
 			addition to Noel’s proprietary, all natural seasoning.
 		</p>
+		<hr class="mb-divider">
 	</div>
 
 	<div class="col-11 offset-1 ctn">

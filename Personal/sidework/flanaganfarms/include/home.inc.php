@@ -14,7 +14,7 @@
 	<br>
 	<div class="carousel">
 		<ul class="slides">
-			<li><img src="assets/images/hp_burgers_03.jpg" /></li>
+			<li><img src="assets/images/hp_burgers_04.jpg" /></li>
 			<li><img src="assets/images/hp_sausage_01.jpg" /></li>
 			<li><img src="assets/images/hp_steak_01.jpg" /></li>
 		</ul>
@@ -27,7 +27,7 @@
 			<img src="assets/images/benefits.png">
 		</span>
 		<div class="box-bdy">
-			<img src="assets/images/hp_angus_02.jpg">
+			<img src="assets/images/hp_angus_03.jpg">
 			<p>
 				Flanagan Farms specializes in all-natural, pasture-raised beef for 
 				the most discerning palates. Hand-selected and pasture-raised in 

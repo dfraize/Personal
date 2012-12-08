@@ -49,7 +49,9 @@ function curPageURL() {
 
 <body class="<?php echo curPageURL(); ?>">
 
-	<header role="banner" class="ui-box-shadow masthead"><? include "include/navbar.php";?></header>
+	<header role="banner" class="ui-box-shadow masthead">
+		<? include "include/navbar.php";?>
+	</header>
 	<section class="grid">
 	<?php
 		$pages_dir = 'include';

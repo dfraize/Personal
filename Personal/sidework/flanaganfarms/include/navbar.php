@@ -2,8 +2,11 @@
 	<div class="col-4 first">
 		&nbsp;
 		<h1 class="logo" title="Flanagan Farms - Pure Irish Angus">
-			<a href="index.php?p=home"><img src="assets/images/flanagan_farms_logo.png" /></a>
+			<a href="index.php?p=home">
+				<img src="assets/images/flanagan_farms_logo.png" />
+			</a>
 		</h1>
+		<a class="ui-btn xx-small mb-menu-btn" href="#nav-bookmark" title="Favorite">Menu</a>
 	</div>
 	<div class="col-20">
 

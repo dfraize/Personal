@@ -1977,6 +1977,9 @@ h1 {
       color: #3e1b04;
       text-decoration: none; }
 
+.mb-divider {
+  display: none; }
+
 /*--- NAVBAR -------------------------------------------------------------------------------*/
 .masthead {
   -moz-box-shadow: 0 0 0 transparent;
@@ -1987,7 +1990,7 @@ h1 {
   border: 0; }
   .masthead .masthead-adjust {
     height: 118px; }
-    .masthead .masthead-adjust .logo {
+    .masthead .masthead-adjust h1 {
       margin: 0;
       padding: 0;
       position: absolute;
@@ -1999,7 +2002,7 @@ h1 {
       -o-transform: rotate(-8deg);
       transform: rotate(-8deg);
       max-height: 200px; }
-      .masthead .masthead-adjust .logo a {
+      .masthead .masthead-adjust h1 a {
         color: white;
         text-decoration: none;
         display: block;
@@ -2026,6 +2029,8 @@ h1 {
             -o-transition: color 0.15s ease-out;
             transition: color 0.15s ease-out;
             text-shadow: 1px 1px 20px #241700; }
+    .masthead .masthead-adjust .mb-menu-btn {
+      display: none; }
 
 .signature_burgers .masthead .masthead-adjust .ui-navbar .burgers {
   color: #8bb223;
@@ -2524,30 +2529,24 @@ AUTHOR - Doug Fraize
   .bookmark {
     top: 0; }
 
+  .mb-divider {
+    display: block; }
+
+  h1 {
+    font-size: 1.73333em;
+    margin-top: 20px; }
+
   /*--- NAVBAR --------------------------------------------------------------------------*/
   .masthead {
-    position: static; }
+    position: static;
+    height: 98px; }
     .masthead .masthead-adjust h1 {
-      text-align: left;
-      line-height: 1em;
       margin-bottom: 0;
-      font-size: 1.33333em;
-      position: relative;
-      top: 15px; }
+      font-size: 0.66667em; }
+      .masthead .masthead-adjust h1 img {
+        height: 140px; }
     .masthead .ui-navbar {
       display: none; }
-
-  /*--- MASTHEAD DEMO -------------------------------------------------------------------*/
-  .masthead-demo {
-    display: block;
-    position: relative;
-    top: 0; }
-    .masthead-demo .masthead-adjust {
-      /*--- MASTHEAD MAIN NAV --------------------------------------------------------*/ }
-      .masthead-demo .masthead-adjust .logo img {
-        margin: 0.66667em 0 0 0; }
-      .masthead-demo .masthead-adjust .ui-masthead-nav {
-        display: none; }
 
   /*--- FOOTER ---------------------------------------------------------------------------*/
   .footer .footer-adjust .blank {
@@ -2563,22 +2562,6 @@ AUTHOR - Doug Fraize
   .footer .footer-adjust .copyright {
     padding: 1em; }
 
-  /*--- HOMEPAGE ------------------------------------------------------------------------*/
-  .qr-code-ctn {
-    display: none; }
-
-  .intro {
-    margin: 0 0 1em 0; }
-    .intro h1 {
-      font-size: 2.33333em;
-      line-height: 1.15em; }
-    .intro h2 {
-      font-size: 1.2em; }
-
-  /*--- MEDIAQUERY BREAKPOINTS PAGE -----------------------------------------------------*/
-  .media-query-tbl tbody td p {
-    font-size: 0.33333em; }
-
   /*--- NAVBAR --------------------------------------------------------------------------*/
   .masthead .masthead-adjust .mb-menu-btn {
     -moz-border-radius: 6px;
@@ -2590,10 +2573,11 @@ AUTHOR - Doug Fraize
     -o-box-shadow: 0 0 0 transparent;
     box-shadow: 0 0 0 transparent;
     background-image: none;
-    background-color: transparent;
-    color: #fff;
-    text-shadow: 0 -1px 1px #333333;
-    border: 1px solid #999; }
+    background-color: #EFEFEF;
+    color: #000;
+    text-shadow: 0 -1px 1px #999999;
+    border: 1px solid #999;
+    margin-top: 40px; }
 
   /*--- FOOTER -------------------------------------------------------------------------------*/
   .footer .footer-adjust .mb-link-list-vert dt {
@@ -2638,18 +2622,4 @@ AUTHOR - Doug Fraize
         background-image: linear-gradient(to bottom, #bbbbbb, #eeeeed);
         background-repeat: repeat-x;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFBBBBBB', endColorstr='#FFEEEEED', GradientType=0);
-        text-shadow: 0 1px -1px white; }
-
-  /*--- MEDIAQUERY BREAKPOINTS PAGE -----------------------------------------------------*/
-  .mediaquery_breakpoints {
-    background: cyan; } }
-/*--- Portrait iPad, portrait tablets, Low-resolution laptops and desktops ----------------*/
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  /*--- MEDIAQUERY BREAKPOINTS PAGE -----------------------------------------------------*/
-  .mediaquery_breakpoints {
-    background: magenta; } }
-/*--- Landscape iPad, laptops and desktops ------------------------------------------------*/
-@media only screen and (min-width: 980px) {
-  /*--- MEDIAQUERY BREAKPOINTS PAGE -----------------------------------------------------*/
-  .mediaquery_breakpoints {
-    background: yellow; } }
+        text-shadow: 0 1px -1px white; } }
