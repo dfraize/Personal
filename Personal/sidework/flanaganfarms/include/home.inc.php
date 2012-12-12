@@ -22,18 +22,17 @@
 </div>
 <div class="col-7 offset-1">
 
-	<div class="ui-box ui-box-rnd-shadow hp-ui-box" style="margin-top:68px;">
+	<div class="ui-box ui-box-rnd-shadow hp-ui-box">
 		<span class="benefits-button">
 			<img src="assets/images/benefits.png">
 		</span>
 		<div class="box-bdy">
 			<img src="assets/images/hp_angus_03.jpg">
 			<p>
-				Flanagan Farms specializes in all-natural, pasture-raised beef for 
-				the most discerning palates. Hand-selected and pasture-raised in 
-				the lush rolling hills surrounding Strokestown, County Roscommon, 
-				our Aberdeen Black Angus beef cattle produce tender, healthy cuts 
-				of meat that are infused with exceptional flavour.
+				We have hand-selected and acquired some of the finest Registered Aberdeen 
+				Angus cattle in the country. Each animal was 100% source verified and we 
+				have maintained a closed herd, only purchasing stock and beef occasionally 
+				from trusted partners who raise their beef in an identical manner.
 			</p>
 		</div>
 		<div class="box-ftr"></div>

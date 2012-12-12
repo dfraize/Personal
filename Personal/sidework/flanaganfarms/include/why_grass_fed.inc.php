@@ -1,5 +1,7 @@
 <div class="col-14 offset-1">
 	<h1>Why grass fed?</h1>
+	<hr>
+	<? include "include/mobile_about_us_sidebar.php";?>
 	<p>
 		Cattle were meant to eat grass and people were meant to eat cattle.  As omnivores, about the only 
 		thing humans cannot eat is grass.  To capture the nutritional value of grass, which has harvested 

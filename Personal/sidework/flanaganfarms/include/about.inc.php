@@ -1,6 +1,9 @@
 <div class="col-14 offset-1">
 	<h1>About us</h1>
 	<hr>
+
+	<? include "include/mobile_about_us_sidebar.php";?>
+
 	<p>
 		Flanagan Farms specializes in all-natural, pasture-raised beef for the most discerning 
 		palates. Hand-selected and pasture-raised in the lush rolling hills surrounding Strokestown, 

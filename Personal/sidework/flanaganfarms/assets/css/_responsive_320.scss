@@ -83,6 +83,10 @@
 	/*--- FOOTER -------------------------------------------------------------------------------*/
 	.footer								{
 		.footer-adjust						{
+			.copyright							{
+												padding:0 #{size(10)}em;
+												}
+
 			.mb-link-list-vert					{
 				dt									{
 													border-top:1px solid #666;
@@ -117,4 +121,33 @@
 												}
 											}
 										}
+
+	/*--- ABOUT US PAGE -------------------------------------------------------------------------*/
+	.ui-sidebar							{display:none;}
+	.mb-about-sidebar					{
+										display:block;
+			dd									{
+				a									{font-size:#{size(12.5)}em;}
+												}
+										}
+
+	/*--- HOMEPAGE PAGE -------------------------------------------------------------------------*/
+	.carousel							{display:none;}
+	.hp-ui-box							{
+										margin-top:#{size(15)}em;
+		.benefits-button
+											{
+											right:-12px; top:-30px;
+											}
+										}
+
+	/*--- OTHER PRODUCTS PAGE -------------------------------------------------------------------*/
+	.products		{
+		.ctn			{
+			img				{
+							float:none;
+							margin-left:0;
+							}
+						}
+					}
 }

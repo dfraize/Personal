@@ -1,5 +1,6 @@
 <div class="col-16 first">
 	<h1>Cooking guide</h1>
+	<hr>
 	<p>
 		Flanagan Farms uses the highest quality beef and our flash freezing process locks in the taste and 
 		texture. Just take what you need from your box of Flanagan Farms and cook them up.

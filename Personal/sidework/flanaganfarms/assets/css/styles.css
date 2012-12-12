@@ -1977,6 +1977,9 @@ h1 {
       color: #3e1b04;
       text-decoration: none; }
 
+.mb-about-sidebar {
+  display: none; }
+
 .mb-divider {
   display: none; }
 
@@ -2087,7 +2090,8 @@ h1 {
   -webkit-box-shadow: 0 0 10px #666666;
   -o-box-shadow: 0 0 10px #666666;
   box-shadow: 0 0 10px #666666;
-  position: relative; }
+  position: relative;
+  margin-top: 68px; }
   .hp-ui-box .benefits-button {
     position: absolute;
     width: 70px;
@@ -2580,6 +2584,8 @@ AUTHOR - Doug Fraize
     margin-top: 40px; }
 
   /*--- FOOTER -------------------------------------------------------------------------------*/
+  .footer .footer-adjust .copyright {
+    padding: 0 0.66667em; }
   .footer .footer-adjust .mb-link-list-vert dt {
     border-top: 1px solid #666;
     border-bottom: 1px solid #333;
@@ -2622,4 +2628,28 @@ AUTHOR - Doug Fraize
         background-image: linear-gradient(to bottom, #bbbbbb, #eeeeed);
         background-repeat: repeat-x;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFBBBBBB', endColorstr='#FFEEEEED', GradientType=0);
-        text-shadow: 0 1px -1px white; } }
+        text-shadow: 0 1px -1px white; }
+
+  /*--- ABOUT US PAGE -------------------------------------------------------------------------*/
+  .ui-sidebar {
+    display: none; }
+
+  .mb-about-sidebar {
+    display: block; }
+    .mb-about-sidebar dd a {
+      font-size: 0.83333em; }
+
+  /*--- HOMEPAGE PAGE -------------------------------------------------------------------------*/
+  .carousel {
+    display: none; }
+
+  .hp-ui-box {
+    margin-top: 1em; }
+    .hp-ui-box .benefits-button {
+      right: -12px;
+      top: -30px; }
+
+  /*--- OTHER PRODUCTS PAGE -------------------------------------------------------------------*/
+  .products .ctn img {
+    float: none;
+    margin-left: 0; } }

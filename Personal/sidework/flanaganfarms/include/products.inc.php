@@ -12,15 +12,11 @@
 		<img class="right" src="assets/images/hp_sausage_01.jpg" />
 		<p>
 			If you are looking to try something new, we highly recommend 
-			our Farmhouse Blend which are made from a combination of chuck, 
-			brisket, and short-rib from Aberdeen  Black Angus Beef in 
-			addition to Noel’s proprietary, all natural seasoning.
-		</p>
-		<p>
-			If you are looking to try something new, we highly recommend 
-			our Farmhouse Blend which are made from a combination of chuck, 
-			brisket, and short-rib from Aberdeen  Black Angus Beef in 
-			addition to Noel’s proprietary, all natural seasoning.
+			our Flanagan Farms' all natural sausage. Which are made from
+			a combination of chuck, brisket, and short-rib from Aberdeen 
+			Black Angus Beef in addition to Noel’s proprietary, all 
+			natural seasoning. This product will be available soon so 
+			please check back soon.
 		</p>
 		<hr class="mb-divider">
 	</div>
@@ -30,15 +26,11 @@
 		<img class="right" src="assets/images/hp_steak_01.jpg" />
 		<p>
 			If you are looking to try something new, we highly recommend 
-			our Farmhouse Blend which are made from a combination of chuck, 
-			brisket, and short-rib from Aberdeen  Black Angus Beef in 
-			addition to Noel’s proprietary, all natural seasoning.
-		</p>
-		<p>
-			If you are looking to try something new, we highly recommend 
-			our Farmhouse Blend which are made from a combination of chuck, 
-			brisket, and short-rib from Aberdeen  Black Angus Beef in 
-			addition to Noel’s proprietary, all natural seasoning.
+			our Flanagan Farms' black angus beef steaks. Which are made from
+			a combination of chuck, brisket, and short-rib from Aberdeen 
+			Black Angus Beef in addition to Noel’s proprietary, all 
+			natural seasoning. This product will be available soon so 
+			please check back soon.
 		</p>
 	</div>
 
