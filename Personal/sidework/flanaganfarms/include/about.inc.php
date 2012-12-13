@@ -32,7 +32,7 @@
 		Our carefully bred cattle graze freely on verdant grass pastures with access to fresh, clean 
 		water. They are never given supplemental growth hormones or steroids. We believe we produce the 
 		best tasting cuts of beef and burgers in Ireland today.  Simply put, we produce beef for optimum 
-		taste, while our competitors produce beef for optimum size and return on investment.
+		taste.
 	</p>
 
 	<h4>Our Farming Family</h4>

@@ -2131,7 +2131,8 @@ blockquote {
 /*--- SIGNATURE BURGERS --------------------------------------------------------------------*/
 .sig-burgers .ctn img {
   border: 1px solid #666;
-  height: 8.33333em;
+  height: 16.66667em;
+  width: 100%;
   overflow: hidden;
   padding: 1px; }
 
@@ -2139,7 +2140,7 @@ blockquote {
 .products .ctn img {
   border: 1px solid #666;
   overflow: hidden;
-  height: 10.66667em;
+  height: 7.66667em;
   padding: 1px; }
 
 /*------------------------------------------------------------------------------------------

@@ -248,7 +248,8 @@ blockquote		{
 	.ctn			{
 		img				{
 						border:1px solid #666;
-						height:#{size(125)}em;
+						height:#{size(250)}em;
+						width:100%;
 						overflow:hidden;
 						padding:1px;
 						}
@@ -261,7 +262,7 @@ blockquote		{
 		img				{
 						border:1px solid #666;
 						overflow:hidden;
-						height:#{size(160)}em;
+						height:#{size(115)}em;
 						padding:1px;
 						}
 					}

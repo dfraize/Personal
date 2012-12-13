@@ -6,7 +6,7 @@
 			<dl class="link-list-vert mb-link-list-vert">
 				<dt>Products</dt>
 				<dd><a href="index.php?p=signature_burgers">Signature burgers</a></dd>
-				<dd><a href="index.php?p=products">More products</a></dd>
+				<dd><a href="index.php?p=products">Other products</a></dd>
 			</dl>
 		</div>
 		<div class="col-8">
