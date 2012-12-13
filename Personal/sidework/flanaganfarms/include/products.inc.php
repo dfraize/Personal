@@ -1,11 +1,6 @@
 <div class="col-22 offset-1 products">
 	<h1>Other products</h1>
 	<hr>
-	<p>
-		Flanagan Farms’ burgers are designed to produce the tastiest, highest quality burgers in the 
-		country.  By consistently striving for the highest quality you can be assured that each time 
-		you cook a Flanagan Farms burger it will be tasty, juicy and healthy.
-	</p>
 
 	<div class="col-12 first ctn">
 		<h4>All natural sausage</h4>
