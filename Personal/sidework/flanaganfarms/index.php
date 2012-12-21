@@ -33,6 +33,7 @@
 	<script src="assets/js/plugins/modernizr_2.5.3.js"></script>
 
 	<link media="screen,print" rel="stylesheet" href="assets/css/styles.css">
+	<!--[if IE]><link media="screen,print" rel="stylesheet" href="assets/css/ie.css"><![endif]-->
 </head>
 
 <?php
