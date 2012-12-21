@@ -15,7 +15,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>Baseline framework<small>framework</small></td>
+			<td>Outline framework<small>framework</small></td>
 			<td></td>
 			<td></td>
 			<td></td>

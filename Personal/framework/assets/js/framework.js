@@ -31,7 +31,11 @@
 		/*=== UI EXAMPLES ======================================================================*/
 		// JQUERY UI DIALOG
 	 	jQuery('.js-ui-dialog-example-btn').click(function(){
-			notify.idDialog('js-ui-dialog-example',{draggable:false,resizable:false});
+			jQuery('#js-ui-dialog-example').dialog({
+				draggable:false,
+				resizable:false,
+				modal:true
+			});
 		});
 
 		// JQUERY UI TABS
@@ -102,7 +106,7 @@
 			jQuery('.js-logout').toggle();
 		});
 	}
-	
+
 	$T.ui_guidelines = new f();
  	$T.registerInit($T.ui_guidelines.init);
 

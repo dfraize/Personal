@@ -5,7 +5,7 @@
 <article class="col-24">
 	<h2><span class="bookmark" id="snippets"></span>Snippet key commands for Sublime</h2>
 	<div class="col-12 first">
-		<p>Use the following key commands in Sublime for easy insertion of Baseline code snippets.</p>
+		<p>Use the following key commands in Sublime for easy insertion of Outline code snippets.</p>
 		<h5>Instructions for adding custom user key bindings to Sublime:</h5>
 		<p><small>(These instructions assume you are using Sublime text editor for MacOS X)</small></p>
 		<ol>

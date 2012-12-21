@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Baseline framework</title>
+	<title>Outline framework</title>
 	<meta name="keywords" content="<?php echo $metas; ?>">
 	<meta name="description" content="<?php echo $description; ?>" />
 
@@ -111,7 +111,7 @@ function curPageURL() {
 	<script src="assets/js/plugins/fieldhints.js"></script>
 	<script src="assets/js/plugins/iphone_button.js"></script>
 	<script src="assets/js/plugins/carousel.js"></script>
-<!--	<script src="js/plugins/tooltip.js"></script> -->
+<!--	<script src="assets/js/plugins/tooltip.js"></script> -->
 
 
 	<!-- MAIN JS FILES -->

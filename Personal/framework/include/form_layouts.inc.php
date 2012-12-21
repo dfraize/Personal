@@ -14,7 +14,7 @@
 					<ol>
 						<li class="col-13 first">
 							<label for="dummy1">
-								<a href="javascript:;" id="js_baseline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="First Test Tip"></a>First name
+								<a href="javascript:;" id="js_outline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="First Test Tip"></a>First name
 							</label>
 							<input id="dummy1" name="dummy1" value="" tabindex="" type="text" title="Text input title" fieldhint="First name" placeholder="First name" />
 						</li>
@@ -132,7 +132,7 @@
 					<ol>
 						<li>
 							<label for="dummy6">
-								<a href="javascript:;" id="js_baseline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="First Test Tip"></a>First name
+								<a href="javascript:;" id="js_outline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="First Test Tip"></a>First name
 							</label>
 							<input class="js-required-field" id="dummy6" name="dummy6" value="" tabindex="" type="text" title="Text input title" fieldhint="First name" placeholder="First name" />
 						</li>
@@ -394,7 +394,7 @@
 					<ol>
 						<li>
 							<label class="col-7 first" for="dummy15">
-								<a href="javascript:;" id="js_baseline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="First Test Tip"></a>First name
+								<a href="javascript:;" id="js_outline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="First Test Tip"></a>First name
 							</label>
 							<input class="col-17" id="dummy15" name="dummy15" value="" tabindex="" type="text" title="Text input title" fieldhint="First name" placeholder="First name" />
 						</li>

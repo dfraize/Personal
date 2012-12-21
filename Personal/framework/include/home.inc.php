@@ -5,18 +5,18 @@
 
 <div class="col-24">
 	<hgroup class="intro">
-		<h1>Introducing Baseline</h1>
+		<h1>Introducing Outline</h1>
 		<h2>Powerful front-end framework for faster and easier web development</h2>
 	</hgroup>
 </div>
 
 <div class="col-8 first">
 	<p class="ui-center-inline"><img src="assets/images/core_graphic.jpg"></p>
-	<p>We've built Baseline to help you quickly get a site off the ground and to a state where you can easily adapt and modify it into a release.</p>
+	<p>We've built Outline to help you quickly get a site off the ground and to a state where you can easily adapt and modify it into a release.</p>
 </div>
 <div class="col-8">
 	<p class="ui-center-inline"><img src="assets/images/responsive.png"></p>
-	<p>Baseline was made to not only look and behave great in desktop browsers, but in tablet and smartphone browsers via responsive CSS.
+	<p>Outline was made to not only look and behave great in desktop browsers, but in tablet and smartphone browsers via responsive CSS.
 </div>
 <div class="col-8">
 	<p class="ui-center-inline"><img src="assets/images/grid.png"></p>

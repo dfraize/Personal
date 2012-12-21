@@ -13,6 +13,11 @@
 				<a class="ui-btn large first js-ui-dialog-example-btn" href="javascript:;" title="Click for dialog">Click for dialog</a>
 			</p>
 
+			<div id="js-ui-dialog-example" class="js-dialog ui-dialog-ctn">
+				<div id="js-ui-dialog-example-title" class="never">This is a jQuery UI dialog/titlebar</div>
+				<p>This is content for a jQuery UI dialog.</p>
+			</div>
+
 			<a class="ui-btn xx-small first get-code" id="cp1" href="javascript:;" name="get_code" tabindex="" title="Get HTML Code">Get HTML Code</a>
 
 			<a class="ui-btn xx-small get-code" id="cp2" href="javascript:;" name="get_code" tabindex="" title="Get JS Code">Get JS Code</a>
@@ -284,7 +289,7 @@
 			<section>
 				<h4>Default</h4>
 				
-				<label><a href="javascript:;" id="js_baseline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="Tooltip label"></a>Label</label>
+				<label><a href="javascript:;" id="js_outline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="Tooltip label"></a>Label</label>
 
 				<p>
 					<a class="ui-btn xx-small first get-code" id="cp14" href="javascript:;" name="get_code" tabindex="" title="Get HTML Code">Get HTML Code</a>
@@ -294,7 +299,7 @@
 				<div class="code-panel" id="cp_cp14">
 					<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
 
-						<a href="javascript:;" id="js_baseline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="Tooltip label"></a>Label
+						<a href="javascript:;" id="js_outline_test" class="js-tt ui-icn-sprite ui-tooltip" alt="Tooltip label"></a>Label
 
 					]]></script>
 				</div>
@@ -304,12 +309,8 @@
 
 						Put in the p.init (on domready) section of the js file:
 
-						$T.tooltip.registerTips({
-
-							js_baseline_test:"This is the tooltip content for the page, so excited to see how it will look on this wonderful tooltip. Lorem ipsum dolor sit amet&hellip;",
-							js_baseline_test2:"This is the tooltip content for the page, so excited to see how it will look on this wonderful tooltip. Lorem ipsum dolor sit amet&hellip;"
-
-						});
+							js_outline_test:"This is the tooltip content for the page, so excited to see how it will look on this wonderful tooltip. Lorem ipsum dolor sit amet&hellip;",
+							js_outline_test2:"This is the tooltip content for the page, so excited to see how it will look on this wonderful tooltip. Lorem ipsum dolor sit amet&hellip;"
 
 					]]></script>
 				</div>
@@ -318,7 +319,7 @@
 			<section>
 				<h4>With "Read more" link</h4>
 
-				<label><a href="/" id="js_baseline_test2" class="js-tt ui-icn-sprite ui-tooltip" alt="Tooltip label"></a>Label</label>
+				<label><a href="javascript:;" id="js_outline_test2" class="js-tt ui-icn-sprite ui-tooltip" alt="Tooltip label"></a>Label</label>
 
 				<p>
 					<a class="ui-btn xx-small first get-code" id="cp16" href="javascript:;" name="get_code" tabindex="" title="Get HTML Code">Get HTML Code</a>
@@ -328,7 +329,7 @@
 				<div class="code-panel" id="cp_cp16">
 					<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
 
-						<a href="/" id="js_baseline_test2" class="js-tt ui-icn-sprite ui-tooltip" alt="Tooltip label"></a>Label
+						<a href="/" id="js_outline_test2" class="js-tt ui-icn-sprite ui-tooltip" alt="Tooltip label"></a>Label
 
 					]]></script>
 				</div>
@@ -337,14 +338,8 @@
 					<script type="syntaxhighlighter" class="brush: js"><![CDATA[
 
 						Put in the p.init (on domready) section of the js file:
-
-						$T.tooltip.registerTips({
-
-							js_baseline_test:"This is the tooltip content for the page, so excited to see how it will look on this wonderful tooltip. Lorem ipsum dolor sit amet&hellip;",
-							js_baseline_test2:"This is the tooltip content for the page, so excited to see how it will look on this wonderful tooltip. Lorem ipsum dolor sit amet&hellip;"
-							
-						});
-
+							js_outline_test:"This is the tooltip content for the page, so excited to see how it will look on this wonderful tooltip. Lorem ipsum dolor sit amet&hellip;",
+							js_outline_test2:"This is the tooltip content for the page, so excited to see how it will look on this wonderful tooltip. Lorem ipsum dolor sit amet&hellip;"
 					]]></script>
 				</div>
 			</section>

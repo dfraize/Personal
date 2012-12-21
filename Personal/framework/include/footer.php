@@ -86,7 +86,7 @@
 	</div>
 	<div class="col-24 copyright">
 		<div class="col-20 first">
-			<p>&copy; 2010-2012 Baseline framework</p>
+			<p>&copy; 2010-2012 Outline framework</p>
 		</div>
 		<div class="col-4 ui-back-to-top-btm-ctn">
 			<? include "include/back_to_top.php";?>

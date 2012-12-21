@@ -2,7 +2,7 @@
 	<div class="col-14 first">
 		<h1 class="logo" >
 			<a href="index.php?p=home">
-				Baseline
+				Outline
 				<span>Framework</span>
 			</a>
 		</h1>

@@ -1,5 +1,5 @@
 <h1>Libraries &amp; Applications</h1>
-<p>Baseline uses multiple internal and third party libraries and applications to add functionality or improve efficiency. Download the latest versions of the libraries and applications used by Baseline from this page.</p>
+<p>Outline uses multiple internal and third party libraries and applications to add functionality or improve efficiency. Download the latest versions of the libraries and applications used by Outline from this page.</p>
 
 <hr />
 
@@ -103,7 +103,7 @@
 			<tr>
 				<td>Sublime Text (Application)</td>
 				<td>
-					 Sublime Text is a sophisticated text editor for code, markup and prose. Use Sublime text with Baseline <a href="/reference">snippet key commands</a>. <a href="http://wbond.net/sublime_packages/package_control/installation" target="_blank">Install packages into Sublime</a> for added customization. The following packages are recommended to install to get the most from Sublime Text:<br />
+					 Sublime Text is a sophisticated text editor for code, markup and prose. Use Sublime text with Outline <a href="/reference">snippet key commands</a>. <a href="http://wbond.net/sublime_packages/package_control/installation" target="_blank">Install packages into Sublime</a> for added customization. The following packages are recommended to install to get the most from Sublime Text:<br />
 					 <ul>
 					 	<li>BracketHighlighter</li>
 					 	<li>HTML5</li>

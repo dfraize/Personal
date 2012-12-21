@@ -19,7 +19,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>Baseline<small>framework</small></td>
+			<td>Outline<small>framework</small></td>
 			<td><strong>Yes</strong></td>
 			<td><strong>Yes</strong></td>
 		</tr>
