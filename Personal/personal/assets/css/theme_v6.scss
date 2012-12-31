@@ -129,9 +129,10 @@ body				{
 				}
 
 .curled-box		{
+				@include background-gradient(#FFF, #EEEEEE);
+				@include box-shadow(0, 3px, 3px, #CCC);
 				background-color:#FFF;
 				border:1px solid #e6e6e6;
-				border-bottom:0;
 				padding:#{size(20)}em #{size(15)}em;
 				position:relative;
 				float:left;
@@ -146,17 +147,21 @@ body				{
 					}
 	.masking-left	{left:12px;}
 	.masking-right	{right:12px;}
-	.box-shadow		{
-					background:url(../images/box_shadow.png) 0 0 no-repeat;
-					height:8px; width:#{size(300)}em;
-					position:absolute;
-					bottom:#{size(-9)}em;
-					left:#{size(4)}em;
-					}
 	p				{
 					color:#6F6F6F;
 					font-size:#{size(12)}em;
 					text-align:left;
+					}
+				}
+
+.outline-fw		{border-bottom:2px solid #ef8f05;}
+.fw-key			{
+				margin-top:-10px;
+				margin-bottom:#{size(35)}em;
+				text-align:right;
+	span			{
+					color:#ef8f05;
+					font-weight:bold;
 					}
 				}
 
@@ -193,12 +198,12 @@ body				{
 
 // SIDEBAR
 .ui-sidebar		{
-				@include background-gradient(#CCC, #FFF);
+				background-color:#FFF;
 				color:#3E1B04;
 				padding:0;
 	.box-hdr		{
 					@include border-radius(#{size(4)}em #{size(4)}em 0 0, all);
-					@include background-gradient(#EFEFEF, #999);
+					@include background-gradient(#FFF, #a6cfe5);
 					border-bottom-color:#000; 
 		h6				{}
 					}

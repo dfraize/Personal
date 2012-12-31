@@ -1861,9 +1861,20 @@ body {
   display: block; }
 
 .curled-box {
+  background-color: #f8f8f8;
+  background-image: -moz-linear-gradient(top, white, #eeeeee);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#eeeeee));
+  background-image: -webkit-linear-gradient(top, white, #eeeeee);
+  background-image: -o-linear-gradient(top, white, #eeeeee);
+  background-image: linear-gradient(to bottom, white, #eeeeee);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0);
+  -moz-box-shadow: 0 3px 3px #cccccc;
+  -webkit-box-shadow: 0 3px 3px #cccccc;
+  -o-box-shadow: 0 3px 3px #cccccc;
+  box-shadow: 0 3px 3px #cccccc;
   background-color: #FFF;
   border: 1px solid #e6e6e6;
-  border-bottom: 0;
   padding: 1.33333em 1em;
   position: relative;
   float: left;
@@ -1881,17 +1892,21 @@ body {
     left: 12px; }
   .curled-box .masking-right {
     right: 12px; }
-  .curled-box .box-shadow {
-    background: url(../images/box_shadow.png) 0 0 no-repeat;
-    height: 8px;
-    width: 20em;
-    position: absolute;
-    bottom: -0.6em;
-    left: 0.26667em; }
   .curled-box p {
     color: #6F6F6F;
     font-size: 0.8em;
     text-align: left; }
+
+.outline-fw {
+  border-bottom: 2px solid #ef8f05; }
+
+.fw-key {
+  margin-top: -10px;
+  margin-bottom: 2.33333em;
+  text-align: right; }
+  .fw-key span {
+    color: #ef8f05;
+    font-weight: bold; }
 
 /*--- TUMBLR PAGE -------------------------------------------------------------------------*/
 .ui-tumblr ol.tumblr_posts {
@@ -1916,14 +1931,7 @@ body {
     font-size: 1.33333em; }
 
 .ui-sidebar {
-  background-color: #dfdfdf;
-  background-image: -moz-linear-gradient(top, #cccccc, white);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(white));
-  background-image: -webkit-linear-gradient(top, #cccccc, white);
-  background-image: -o-linear-gradient(top, #cccccc, white);
-  background-image: linear-gradient(to bottom, #cccccc, white);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFCCCCCC', endColorstr='#FFFFFFFF', GradientType=0);
+  background-color: #FFF;
   color: #3E1B04;
   padding: 0; }
   .ui-sidebar .box-hdr {
@@ -1931,14 +1939,14 @@ body {
     -webkit-border-radius: 0.26667em 0.26667em 0 0;
     -o-border-radius: 0.26667em 0.26667em 0 0;
     border-radius: 0.26667em 0.26667em 0 0;
-    background-color: #cecece;
-    background-image: -moz-linear-gradient(top, #efefef, #999999);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#efefef), to(#999999));
-    background-image: -webkit-linear-gradient(top, #efefef, #999999);
-    background-image: -o-linear-gradient(top, #efefef, #999999);
-    background-image: linear-gradient(to bottom, #efefef, #999999);
+    background-color: #ddedf5;
+    background-image: -moz-linear-gradient(top, white, #a6cfe5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#a6cfe5));
+    background-image: -webkit-linear-gradient(top, white, #a6cfe5);
+    background-image: -o-linear-gradient(top, white, #a6cfe5);
+    background-image: linear-gradient(to bottom, white, #a6cfe5);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEFEFEF', endColorstr='#FF999999', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFA6CFE5', GradientType=0);
     border-bottom-color: #000; }
 
 .ui-sidebar-top {
@@ -2332,6 +2340,10 @@ AUTHOR - Doug Fraize & Matthew Holmes
     display: none; }
   .hp-intro .work-link .projects-link {
     padding-left: 0em; }
+
+  /*--- PORTFOLIO PAGE ------------------------------------------------------------------*/
+  .fw-key {
+    text-align: left; }
 
   /*--- HEADER SECTION ----------------------------------------------------------------------*/
   .masthead {
