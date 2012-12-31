@@ -1939,14 +1939,7 @@ body {
     -webkit-border-radius: 0.26667em 0.26667em 0 0;
     -o-border-radius: 0.26667em 0.26667em 0 0;
     border-radius: 0.26667em 0.26667em 0 0;
-    background-color: #ddedf5;
-    background-image: -moz-linear-gradient(top, white, #a6cfe5);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#a6cfe5));
-    background-image: -webkit-linear-gradient(top, white, #a6cfe5);
-    background-image: -o-linear-gradient(top, white, #a6cfe5);
-    background-image: linear-gradient(to bottom, white, #a6cfe5);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFA6CFE5', GradientType=0);
+    background-color: #e6f1f6;
     border-bottom-color: #000; }
 
 .ui-sidebar-top {

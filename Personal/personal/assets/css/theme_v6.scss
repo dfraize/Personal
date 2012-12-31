@@ -203,7 +203,7 @@ body				{
 				padding:0;
 	.box-hdr		{
 					@include border-radius(#{size(4)}em #{size(4)}em 0 0, all);
-					@include background-gradient(#FFF, #a6cfe5);
+					background-color:#e6f1f6;
 					border-bottom-color:#000; 
 		h6				{}
 					}
