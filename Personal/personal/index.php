@@ -7,9 +7,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Doug Fraize - Welcome</title>
-	<meta name="keywords" content="">
-	<meta name="description" content="" />
+	<title>Doug Fraize | Front-end Developer</title>
+	<meta name="keywords" content="web designer, developer, website, css3, html5, user interface, web developer, sass, jquery, user interface developer">
+	<meta name="robots" content="index, follow" />
+	<meta name="description" content="Doug Fraize is a professional web designer and front-end developer based in Lincoln, Rhode Island." />
 
 	<!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
 	<meta name="HandheldFriendly" content="True">

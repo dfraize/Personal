@@ -9,8 +9,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Outline framework</title>
-	<meta name="keywords" content="<?php echo $metas; ?>">
-	<meta name="description" content="<?php echo $description; ?>" />
+	<meta name="keywords" content="">
+	<meta name="robots" content="index, follow" />
+	<meta name="description" content="Outline is a professional front-end template for building fast, robust, and adaptable web sites or apps. Spend more time developing and less time reinventing the wheel." />
 
 	<!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
 	<meta name="HandheldFriendly" content="True">
@@ -23,11 +24,6 @@
 
 	<!-- Mobile Internet Explorer allows us to activate ClearType technology for smoothing fonts for easy reading -->
 	<meta http-equiv="cleartype" content="on">
-
-<!--
-	<script src="http://use.typekit.com/lwt5hsw.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
--->
 
 	<!-- Modernizr - Used to check HTML & CSS3 support in browsers -->
 	<script src="assets/js/plugins/modernizr_2.5.3.js"></script>
