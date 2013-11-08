@@ -1,7 +1,3 @@
-
-<!-- TEST FOR GITHUB -->
-
-
 <!doctype html>
 <html class="no-js" lang="en">
 
