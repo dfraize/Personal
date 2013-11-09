@@ -1,0 +1,145 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<section class="col-24">
+	<h1>{{ model.title }}</h1>
+</section>
+
+<section class="col-24">
+	<section class="col-8 first">
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>The Tab Set control is a supplementary navigational system that controls the display of large groups of related content. It essentially organizes content into logical/easy to digest chunks that are displayed one at a time. Tab Sets help organize content on the page and keep sites looking neat and clean, so users won't be overwhelmed by tons of content.</p>
+			</div>
+			<div id="tabs-2">
+				<p>This Tab Set control should be used when you want to manage the display of distinct, yet related groups of content that are connected to a single concept.
+				</p>
+				
+				<p>It's a great feature when there is a lot of content that needs to be displayed as it only presents a subset of the content and keeps the rest hidden until another tab is selected. </p>
+			</div>
+			<div id="tabs-3">
+				<p>All tabs should be left justified. This makes all Mercer tabs uniform and easy for users to spot on the page.</p>
+				<p>Use Title Case for the tab labels.</p>
+				<p>The tab content area is a variable height, so the height of that container may increase or decrease from one tab to another depending on the amount of content included. </p>
+				<p>Avoid using multiple nested Tab Sets. When you have multiple layers of content or data, use a different UI control for the interior of a tab, such as a <a href="mini-filter">Mini Filter</a>.</p>
+				
+				<h5>States</h5>
+				<p>There are two states to the tab set control:</p>
+				<ul>
+					<li>Active - This is the selected tab. There is only one Active tab at a time in the control.</li>
+					<li>Inactive - These are the other available tabs. There may be more than one Inactive tab at a time in the control.</li>
+				</ul>
+				
+				<h5>Visual Design</h5>
+				<p>The background for the Active tab is #FFFFFF.</p>
+				<p>The background for the Inactive tab is a gradient. The top color is #dfdfdf, and the bottom color is #f2f2f2.
+				
+			</div>
+			<div id="tabs-4">
+				<h5>Cross Browser Compatibility</h5>
+				<p>IE9 doesn't crop background gradients on rounded corners, so we square the corners of the tabs and it looks just like IE8.</p>
+				
+				<h5>Dependencies</h5>
+				<p>Tab Sets are a jQuery UI control. For more information on jQuery UI Tabs and the configurable options available, check out the <a href="http://api.jqueryui.com/tabs/" target="_blank">jQuery UI Tabs API</a>. This site is maintained by The jQuery Foundation, not Mercer.</p>
+			</div>
+		</div>
+
+		<div class="col-24">
+			<h4 class="mul-hdr-rule">Dependencies</h4>
+			<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+				<thead>
+					<tr>
+						<th width="" scope="col">Library</th>
+						<th width="" scope="col">Location or Download</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>jQuery 1.10.2</td>
+						<td>assets/scripts/core_v2/lib/jquery</td>
+					</tr>
+					<tr>
+						<td>jQuery UI 1.10.3</td>
+						<td>assets/scripts/core_v2/lib/jquery</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</section>
+	<section class="col-16">
+		<h4 class="mul-hdr-rule">Example</h4>
+
+		<!-- TAB SET - EXAMPLE - BEGINS -->
+		<div class="js-mul-tabs-example mul-tabs">
+			<ul>
+				<li><a href="#tabs-1">Tab One</a></li>
+				<li><a href="#tabs-2">Tab Two</a></li>
+				<li><a href="#tabs-3">Tab Three</a></li>
+				<li><a href="#tabs-4">Tab Four</a></li>
+			</ul>
+			<div id="tabs-1">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis rutrum elit. Nunc adipiscing mi sit amet malesuada hendrerit. Sed pretium purus vitae sem ullamcorper posuere. Mauris vulputate lorem eget tristique laoreet. In aliquam, quam nec fringilla interdum, eros magna molestie orci, sed ullamcorper lacus lacus vitae est. Donec facilisis nibh ligula, a malesuada mauris venenatis et. Proin et velit magna. Ut pellentesque purus risus, id lobortis erat dapibus tempor. Integer scelerisque auctor varius. Etiam leo diam, porttitor at mauris in, eleifend porta quam. Aenean non augue quis risus rutrum egestas non vel mi. Nam iaculis dui a lobortis lobortis. Sed pretium mollis pretium. Fusce pellentesque metus ligula, at vehicula eros semper non.</p>
+			</div>
+			<div id="tabs-2">
+				<p>Nunc dapibus suscipit neque at ultrices. Suspendisse tincidunt eu nisl a ullamcorper. Sed ultricies mattis sem ut malesuada. Vestibulum eu ipsum fermentum, adipiscing nibh vitae, molestie turpis. Etiam vestibulum aliquam diam, vel varius enim elementum ac. Cras fringilla pretium felis at bibendum. Ut ut turpis neque. Nam gravida magna sit amet elit porta porttitor. Quisque viverra massa ut tellus tristique varius.</p>
+			</div>
+			<div id="tabs-3">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis rutrum elit. Nunc adipiscing mi sit amet malesuada hendrerit. Sed pretium purus vitae sem ullamcorper posuere. Mauris vulputate lorem eget tristique laoreet. In aliquam, quam nec fringilla interdum, eros magna molestie orci, sed ullamcorper lacus lacus vitae est. Donec facilisis nibh ligula, a malesuada mauris venenatis et. Proin et velit magna. Ut pellentesque purus risus, id lobortis erat dapibus tempor. Integer scelerisque auctor varius. Etiam leo diam, porttitor at mauris in, eleifend porta quam. Aenean non augue quis risus rutrum egestas non vel mi. Nam iaculis dui a lobortis lobortis. Sed pretium mollis pretium. Fusce pellentesque metus ligula, at vehicula eros semper non.</p>
+				<p>Maecenas accumsan nec sapien at consectetur. Proin bibendum odio quam, non porta metus blandit non. Sed iaculis fermentum neque id auctor. Sed fermentum augue eu lorem bibendum, at interdum purus euismod. Quisque suscipit, turpis in porta pretium, quam arcu pellentesque mauris, sit amet imperdiet metus lorem vel tellus. Nulla eget eros ac tellus auctor blandit. Curabitur diam enim, placerat nec cursus at, consequat sed libero. Vivamus eu turpis ac elit rutrum tincidunt. Curabitur euismod magna vel ligula egestas, sed consectetur ligula viverra.</p>
+			</div>
+			<div id="tabs-4">
+				<p>Fusce eu dolor tincidunt metus ultricies tincidunt id sed diam. Morbi molestie est nisl, quis fringilla quam gravida quis. Morbi sem nisi, condimentum eget ipsum in, gravida ultrices enim. Vivamus pharetra tortor eu odio pharetra, id aliquam lorem dignissim. Phasellus sed ligula sed tortor bibendum lobortis. Morbi tristique sem quis orci imperdiet sodales. Integer tincidunt auctor sollicitudin. Praesent tempus, dolor eu placerat luctus, metus lorem porttitor enim, non laoreet tellus quam eget nibh. Vestibulum ac augue pretium, iaculis diam eget, malesuada orci. Maecenas vulputate, nunc et semper feugiat, sem leo mattis mauris, et feugiat elit sem eget dolor. Donec rhoncus est eget tellus iaculis molestie.</p>
+			</div>
+		</div>
+		<!-- TAB SET - EXAMPLE - ENDS -->
+
+		<!-- GET CODE - BEGINS
+		<div class="col-24">
+			<div class="col-24 get-code-btn-ctn">
+				{% include "get-code-button" %}
+			</div>
+
+			<div class="col-24 js-mul-toggle-content mul-display-none" id="div1">
+
+				<h4 class="mul-hdr-rule">HTML</h4>
+
+<pre class="prettyprint linenums">
+&lt;div class=&quot;js-mul-tabs-example mul-tabs&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;#tabs-1&quot;&gt;Tab One&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tabs-2&quot;&gt;Tab Two&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tabs-3&quot;&gt;Tab Three&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tabs-4&quot;&gt;Tab Four&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div id=&quot;tabs-1&quot;&gt;
+		Tab 1
+	&lt;/div&gt;
+	&lt;div id=&quot;tabs-2&quot;&gt;
+		Tab 2
+	&lt;/div&gt;
+	&lt;div id=&quot;tabs-3&quot;&gt;
+		Tab 3
+	&lt;/div&gt;
+	&lt;div id=&quot;tabs-4&quot;&gt;
+		Tab 4
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+				<h4 class="mul-hdr-rule">JS</h4>
+				<p>Put the JS code below into the DOM ready section of your javascript file. The class of <code>.js-mul-tabs-example</code> is the same class of the HTML container you want to change into tabs using jQuery UI. You can change this class to whatever you want, just make sure the class names match. Any class name you use with <code>.tabs()</code> in jQuery will become a tabs container, if you have the correct HTML structure for tabs.</p>
+
+<pre class="prettyprint linenums">
+jQuery('.js-mul-tabs-example').tabs();
+</pre>
+
+			</div>
+
+		</div>
+		GET CODE - ENDS -->
+
+	</section>
+</section>
+{% endblock %}

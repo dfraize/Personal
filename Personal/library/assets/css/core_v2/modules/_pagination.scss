@@ -1,0 +1,71 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Core Pagination Module Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-pagination == true{
+
+	.mul-pagination							{
+		ul										{
+												position: relative;
+												right: -1px;
+												display: inline-block;
+												list-style: none;
+												margin: 0;
+												padding: 0;
+			li										{
+													display: inline;
+													text-align: center;
+													vertical-align: middle;
+													font-size: $paginationFontSize;
+				a,
+				span									{
+														display: inline-block;
+														border: 1px $paginationBorderStyle $paginationBorderColor;
+														padding: 9px 6px 8px 6px;
+														line-height: .8em;
+														min-width: 28px;
+														}
+				&.active								{
+					a,
+					span									{
+															font-family: $proximaNovaBoldStack;
+															cursor: default;
+															background-color: $paginationActiveBackgroundColor;
+															color: $paginationActiveFontColor;
+															}
+					a:hover									{color: $paginationActiveFontColor;}
+														}
+				.mul-pagination-icon					{
+														position: relative;
+														top: -1px;
+														left: 1px;
+														width: 7px;
+														height: 6px;
+														padding: 0;
+														min-width: 0;
+														border: 0;
+														background-color: transparent;
+														background-position: top left;
+														background-repeat: no-repeat;
+														}
+				.mul-first-page-icon					{background-image: url("../images/core/icons/pagination-first.png");}
+				.mul-last-page-icon						{background-image: url("../images/core/icons/pagination-last.png");}
+				.mul-next-page-icon,
+				.mul-prev-page-icon						{left: 3px;}
+				.mul-next-page-icon						{background-image: url("../images/core/icons/pagination-next.png");}
+				.mul-prev-page-icon						{background-image: url("../images/core/icons/pagination-prev.png");}
+				a:hover									{
+														background-color: $paginationHoverBackgroundColor;
+														text-decoration: none;
+					.mul-first-page-icon					{background-image: url("../images/core/icons/pagination-first-hover.png");}
+					.mul-last-page-icon						{background-image: url("../images/core/icons/pagination-last-hover.png");}
+					.mul-next-page-icon						{background-image: url("../images/core/icons/pagination-next-hover.png");}
+					.mul-prev-page-icon						{background-image: url("../images/core/icons/pagination-prev-hover.png");}
+														}
+													}
+												}
+											}
+
+}//endif

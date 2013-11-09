@@ -1,0 +1,245 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Libray - Core v1 - Core Page Modules Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+// MASTHEAD ---------------------------------------------------------------------------------
+.masthead								{
+										background-color:$mastheadBackgroundColor;
+										border:0;
+										height:$mastheadHeight;
+										width:100%;
+										position:relative;
+										z-index:10;
+										margin-bottom:#{size(30)}em;
+										
+	.masthead-adjust						{
+		.masthead-content-ctn					{
+												height:$mastheadContentHeight;
+												background:url("../images/core/masthead_bg.png") 0 0 no-repeat;
+			.logo									{
+													border-bottom:0;
+													line-height:51px;
+													margin-bottom:0;
+				a										{
+														@include href-link(#FFF, none);
+														font-weight:400;
+														font-size:33px
+														}
+				span									{
+														font-family:$proximaNovaThinStack;
+														color:#FFF;
+														}
+													}
+												}
+											}
+
+	.global-navbar-ctn						{
+											@include background-gradient(#f4f4f4, #d5d4d4);
+											@include box-shadow(0, 2px, 3px, #dfdfdf);
+											border-bottom:1px solid #b9b9b9;
+											height:35px;
+		.global-navbar							{
+			.link-list-horz							{
+				dd										{
+														border-right:1px solid #b9b9b9;
+														float:left;
+														padding:0;
+														margin:0;
+					a										{
+															@include href-link(#002d86, none);
+															border-right:1px solid #FFF;
+															display:block;
+															height:34px;
+															font-size:14px;
+															font-family: $proximaNovaSemiBoldStack;
+															padding:#{size(9)}em #{size(15)}em 0 #{size(15)}em;
+															margin:0;
+															text-align:center;
+						&.active,
+						&:hover									{@include background-gradient(#f4f4f4, #c3c3c3);}
+						&.active								{cursor:default;}
+															}
+														}
+					.first-child						{
+														border-left:1px solid #b9b9b9;
+						a									{border-left:1px solid #FFF;}
+														}
+					.last-child							{
+						a									{border-left:1px solid #FFF;}
+														}
+													}
+												}
+											}
+										}
+
+// MASTHEAD IE8 + IE9 FIXES
+.ie8,
+.ie9									{
+	.grid									{
+											margin-top:0;
+											border-radius:0;
+											}
+
+
+	.masthead								{position:static;}
+										}
+
+// MASTHEAD MEDIA QUERIES
+
+// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+@media only screen and (min-width : 320px) and (max-width : 767px) {
+
+	// MASTHEAD
+	.masthead							{
+										margin-bottom:0;
+										padding:0;
+		.masthead-adjust					{
+											position:relative;
+											padding:0 #{size(10)}em #{size(8)}em #{size(10)}em;	
+			.mb-menu-btn						{
+												display:block;
+												position:absolute;
+												top:14px;
+												right:10px;
+												}
+											}
+										}
+
+}
+
+// FOOTER ---------------------------------------------------------------------------
+.footer									{
+										@include clearfix;
+										@include backface-visibility(hidden);
+										position: relative;
+										text-align: left;
+										margin:$baseMargin 0 5px 0;
+										color:$footerFontColor;
+	.footer-adjust							{
+		.footer-content-ctn						{
+												padding-top:$baseMargin;
+												border-top:1px solid $footerBorderTopColor;
+			.footer-copyright						{
+													text-align:right;
+													}
+												}
+											}
+										}
+
+// FOOTER MEDIA QUERIES
+
+// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+@media only screen and (min-width : 320px) and (max-width : 767px) {
+
+	// FOOTER
+	.footer								{
+										margin-top:0;
+										padding:0;
+		.footer-adjust						{
+			.mb-link-list-vert					{
+				dt									{margin-bottom:0;}
+												}
+			.ui-back-to-top-top-ctn				{
+												display:block;
+												padding:$baseMargin;
+				.ui-back-to-top						{padding:0 !important;}
+												}
+											}
+										}
+
+}
+
+// HORIZONTAL NAVIGATION STYLES ---------------------------------------------------------
+.link-list-horz							{
+										padding: 0;
+										margin: 0;
+								
+	dd,li									{
+											display: inline;
+											padding: 0;
+											margin: 0 #{size(6)}em 0 0;
+									
+		a										{
+												padding: 0 #{size(8)}em 0 0;
+												margin: 0;
+												}
+											}
+								
+										}
+
+// VERTICAL NAVIGATION STYLES -----------------------------------------------------------
+.link-list-vert							{
+	dd,li									{margin-bottom: 0;}
+										}
+
+// VERTICAL NAVIGATION MEDIA QUERIES
+
+// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+@media only screen and (min-width : 320px) and (max-width : 767px) {
+	
+	// MOBILE VERTICAL NAVIGATION SETUP
+	.mb-link-list-vert					{
+										padding:0;
+										margin:0;
+		dt									{
+											margin-bottom:0;
+											padding:12px $baseMargin;
+											border-bottom:1px solid #ccc;
+											}
+		dd,
+		li									{
+											display:block;
+											padding:0;
+											margin:0;
+											border-bottom:1px solid #ccc;
+			a									{
+												display:block;
+												padding:#{size(8)}em #{size(10)}em;
+												margin:0;
+												}
+			.pipe								{display:none;}
+			&.last-child						{border-bottom:0;}
+											}
+										}
+
+}										
+
+// BACK TO TOP STYLES -------------------------------------------------------------------
+.ui-back-to-top							{
+										padding: #{size(18)}em #{size(20)}em 0 #{size(20)}em !important;
+										border-top: 1px solid $backToTopBorderTopColor;
+	p										{
+											margin: 0;
+											text-align: right;
+											font-size: #{size(12)}em;
+											text-transform: uppercase;
+		a										{
+												padding: #{size(5)}em;
+												text-decoration: none;
+												border: 1px solid transparent;
+												color: $backToTopLinkFontColor;
+			.ui-back-to-top-icn						{
+													font-family: $proximaNovaSemiBoldStack;
+													font-size: #{size(16)}em;
+													vertical-align: #{size(3)}em;
+													padding-right: #{size(5)}em;
+													}
+			&:hover									{
+													@include background-gradient($backToTopHoverBackgroundStartColor, $backToTopHoverBackgroundEndColor);
+													@include border-radius(#{size($baseBorderRadius)}em,all);
+													@include box-shadow(0, 1px, 1px, $backToTopHoverShadowColor);
+													@include text-shadow(1px, 1px, 1px, $backToTopHoverTextShadowColor);
+													border:1px solid $backToTopHoverBorderColor;
+													color:$backToTopHoverFontColor;
+													}
+			&:active								{
+													@include background-gradient($backToTopHoverBackgroundEndColor, $backToTopHoverBackgroundStartColor);
+													@include border-radius(#{size($baseBorderRadius)}em,all);
+													@include box-shadow(0, 1px, -1px, $backToTopHoverShadowColor);
+													@include text-shadow(1px, 1px, -1px, $backToTopHoverTextShadowColor);
+													}
+												}
+											}
+										}

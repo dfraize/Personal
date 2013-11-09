@@ -1,0 +1,26 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Core Page Footer Module Partial
+// DATE - September 20, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-footer == true{
+
+	.mul-footer								{
+											@include clearfix;
+											@include backface-visibility(hidden);
+											position: relative;
+											text-align: left;
+											margin:$baseMargin 0 5px 0;
+											color:$footerFontColor;
+		.mul-footer-adjust						{
+			.mul-footer-content-ctn						{
+													padding-top:$baseMargin;
+													border-top:1px solid $footerBorderTopColor;
+				.mul-footer-copyright						{
+														text-align:right;
+														}
+													}
+												}
+											}
+}

@@ -1,0 +1,127 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<section class="col-24">
+	<h1>{{ model.title }}</h1>
+</section>
+
+<section class="col-24">
+	<section class="col-8 first">
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					The Multi-Column Stacked Form takes the <a href="form-stacked">Stacked Form</a> and allows it to be split into multiple columns using any of the underlying Mercer Grid systems.
+				</p>
+				<p><small>**Not all form layouts will work well together</small></p>
+			</div>
+			<div id="tabs-2">
+				<p>Multi-Column Stacked Forms work well when Form Elements have multiple parts, like a mailing address. It's also a good option if a Form has several Fields grouped together, like on an employment history section on an online job application. </p>
+				<p>
+					The Multi-Column Stacked Form allows for the high level of configurability support offered by the Stacked Form, while at the same time providing a higher degree of manipulation of screen real estate for grouping or aesthetic purposes. 
+				</p>
+			</div>
+			<div id="tabs-3">
+				<h5>Margins</h5>
+				<p>In order to keep with Mercer consistency, the margins between Elements have been standardized:</p>
+				<ul>
+					<li>Use a 10 pixel bottom between the Element and next Field Label. </li>
+					<li>Use a 3 pixel bottom margin between a Label and an Input.</li>
+				</ul>
+				
+				<h5>Labels</h5>
+				<p>All field labels should use Title Case. See the <a href="nar-copy-text-styleguide">Copy/Text Style Guide narrative</a> for more detail.</p>
+
+				<h5>Active State</h5>
+				<p>The active state for any field should be indicated by the application of the "Attention" color to the border of the specific field the user has clicked into.</p>
+				
+				<h5>Required Fields</h5>
+				<p>All required fields should be denoted by placing the  Required icon (the "asterisk-required.png" image from the <a href="base-icons">list of icons</a>) immediately to the left of the Field Label.</p>
+
+				<h5>Error Handling</h5>
+				<p>See the <a href="form-error-message">Field Specific Error Message</a> page for details.</p>
+			</div>
+			<div id="tabs-4">
+				<h5>Placeholder Text</h5>
+				<p>Some Form Fields contain Placeholder Text. However, IE9 doesn't understand the polyfill needed to create this type of text. In this case, you will need Java Script to put the Placeholder Text where it needs to go.</p>
+			</div>
+		</div>
+
+	</section>
+	<section class="col-16">
+		<h4 class="mul-hdr-rule">Example</h4>
+
+		<!-- FORM MULTI-COLUMN STACKED - EXAMPLE - BEGINS -->
+		<form class="mul-form mul-form-table-layout" id="" name="" method="" action="" title="">
+			<fieldset>
+				<ol>
+					<li>
+						<label class="mul-required" for="">Basic Text Input:</label>
+						<input class="" id="" name="" value="" tabindex="" type="text" title="" />
+						<small class="mul-info">This is form info text.</small>
+					</li>
+					<li>
+						<label for="">Label:</label>
+						<select id="" tabindex="">
+							<option selected="selected" value="Select an item">choose one...</option>
+							<option>One</option>
+							<option>Two</option>
+							<option>Three</option>
+						</select>
+						<small class="mul-info">This is form info text.</small>
+					</li>
+					<li>
+						<label for="js-mul-datepicker-range-stacked-from">Date:</label>
+						<div class="mul-datepicker-range">
+							<input class="col-22 mul-datepicker-range-input" id="js-mul-datepicker-range-stacked-from" readonly="true" name="" value="" tabindex="" type="text" title="Select date." data-mul-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+						</div>
+						<small class="mul-info">This is form info text.</small>
+					</li>
+				</ol>
+				<ol>
+					<li>
+						<label for="">Name:</label>
+						<input class="" id="" name="" value="" tabindex="" type="text" title="Name" />
+						<small class="mul-info">This is form info text.</small>
+					</li>
+					<li>
+						<label for="">Middle name of your child's uncle's brother's sister:</label>
+						<input class="" id="" name="" value="" tabindex="" type="text" title="Name" />
+						<small class="mul-info">This is form info text.</small>
+					</li>
+					<li>
+						<label for="">Last Name:</label>
+						<input class="" id="" name="" value="" tabindex="" type="text" title="Name" />
+						<small class="mul-info">This is form info text.</small>
+					</li>
+				</ol>
+				<ol class="col-24">
+					<li class="mul-form-action col-24"></li>
+				</ol>
+			</fieldset>
+		</form>
+		<!-- FORM MULTI-COLUMN STACKED - EXAMPLE - ENDS -->
+
+		<!-- GET CODE - BEGINS
+		<div class="col-24">
+			<div class="col-24 get-code-btn-ctn">
+				{% include "get-code-button" %}
+			</div>
+
+			<div class="col-24 js-mul-toggle-content mul-display-none" id="div1">
+
+				<h4 class="mul-hdr-rule">HTML</h4>
+				<p>Put any content you want in here.</p>
+
+<pre class="prettyprint linenums">
+
+</pre>
+
+			</div>
+
+		</div>
+		GET CODE - ENDS -->
+
+	</section>
+</section>
+{% endblock %}

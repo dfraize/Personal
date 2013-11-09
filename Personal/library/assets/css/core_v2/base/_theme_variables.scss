@@ -1,0 +1,310 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Theme Variables Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+
+// HELPERS
+// ------------------------------------------------------------------------------------------
+// TYPE
+$footnoteFontColor:							$gray-mid !default;
+
+// KEYLINES
+$keylineRightBorderRightColor: 				$gray-light !default;
+$keylineLeftBorderLeftColor:				$gray-light !default;
+
+
+// TYPOGRAPHY
+// ------------------------------------------------------------------------------------------
+$baseFontColor:								$black !default;
+
+$baseLinkColor:								$blue-chroma !default;
+$baseLinkVisitedColor:						$blue-chroma !default;
+$baseLinkHoverColor:						$gray-dark !default;
+
+$baseHdrFontColor:							$gray-darker !default;
+
+$hdrRuleBorderColor:						$gray-dark !default;
+
+$hdrBackgroundColor:						$gray-light !default;
+
+$abbrBorderBottomColor:						$black !default;
+
+$textSelectionTextColor:					$white !default;
+$textSelectionBackgroundColor:				$gray-mid !default;
+
+// HORIZONTAL RULES
+$hrBackgroundColor: 						$white !default;
+$hrBorderTopColor:							$gray-light !default;
+$hrFontColor:								$white !default;
+
+
+// BOXES
+// ------------------------------------------------------------------------------------------
+$boxBackgroundColor:						$gray-lighter !default;
+$boxBorderColor:							$gray-light !default;
+$boxHdrBorderColor:							$gray-light !default;
+$boxBdyBorderTopColor:						$white !default;
+$boxShadowColor:							$gray-mid !default;
+
+// CUSTOM CONTAINERS
+$boxFeaturedBackgroundColor:				$white !default;
+$boxFeaturedBorderBottomColor:				$blue-chroma-light !default;
+
+$boxSidebarBackgroundColor:					$gray-lighter !default;
+$boxSidebarBorderBottomColor:				$gray-light !default;
+
+$boxInlineSearchBackgroundColor:			$gray-lighter !default;
+$boxInlineSearchBorderColor:				$gray-dark !default;
+
+$boxSupportBackgroundColor:					$blue-lighter !default;
+$boxSupportBottomColor:						$blue-light !default;
+$boxSupportBorderBottomColor:				$blue-light !default;
+
+
+// FORM
+// ------------------------------------------------------------------------------------------
+
+// FORM LABELS
+$labelFontColor:							$black !default;
+$baseInputColor:							$gray-dark !default;
+$baseInputBorderColor:						$gray-light !default;
+$baseInputBackgroundColor:					$white !default;
+
+// FORM INPUT FOCUS
+$inputFocusShadowColor:						$yellow-darker !default;
+$inputFocusBorderColor:						$yellow !default;
+
+// FIELDHINTS
+$placeholderTextColor:						$gray-light !default;
+
+// FORM INFO TEXT
+$formInfoTextColor:							$gray-mid !default;
+
+// FORM ERROR HANDLING
+$inputValidTextColor:						$gray-dark !default;
+$inputInvalidTextColor:						$red !default;
+
+
+// BUTTONS
+// ------------------------------------------------------------------------------------------
+
+// BUTTON CORE
+$buttonBackgroundStartColor:				$gray-chroma-lighter !default;
+$buttonBackgroundEndColor:					$gray-chroma-dark !default;
+$buttonHoverBackgroundStartColor: 			$gray-chroma-lighter !default;
+$buttonHoverBackgroundEndColor: 			$gray-chroma-darker !default;
+$buttonHoverBorderColor:					$gray-mid !default;
+$buttonActiveBackgroundStartColor:			$gray-chroma-darker !default;
+$buttonActiveBackgroundEndColor:			$gray-chroma-lighter !default;
+$buttonShadowColor:							$transparent !default;
+$buttonFontColor:							$gray-darker !default;
+$buttonBorderColor:							$gray-light !default;
+$buttonTextShadowColor:						$transparent !default;
+
+// PRIMARY BUTTON
+$buttonPrimaryBackgroundStartColor:			$green-chroma-light !default;
+$buttonPrimaryBackgroundEndColor:			$green-chroma-dark !default;
+$buttonHoverPrimaryBackgroundStartColor:	$green-chroma-light !default;
+$buttonHoverPrimaryBackgroundEndColor:		$green-chroma-darker !default;
+$buttonActivePrimaryBackgroundStartColor:	$green-chroma-darker !default;
+$buttonActivePrimaryBackgroundEndColor:		$green-chroma-light !default;
+$buttonPrimaryFontColor:					$white !default;
+$buttonPrimaryTextShadowColor:				$transparent !default;
+
+// BUTTON DISABLED
+$buttonDisabledBackgroundColor:				$gray-lighter !default;
+$buttonDisabledBorderColor:					$gray-light !default;
+$buttonDisabledFontColor:					$gray-mid !default;
+$buttonPrimaryDisabledBackgroundColor:		$green-chroma-dark !default;
+$buttonPrimaryDisabledBorderColor:			$gray-dark !default;
+$buttonPrimaryDisabledFontColor:			$gray-lighter !default;
+
+// BUTTON GROUP VERTICAL
+$buttonVertGroupBorderTopColor:				$gray-light !default;
+
+// BUTTON GROUP HORIZONTAL
+$buttonHorzGroupBorderTopColor:				$gray-light !default;
+$buttonHorzGroupBorderBottomColor:			$gray-light !default;
+$buttonHorzGroupBorderRightColor:			$gray-light !default;
+$buttonHorzGroupFirstChildBorderLeftColor:	$gray-light !default;
+
+
+// TABLES
+// ------------------------------------------------------------------------------------------
+$tableBackgroundColor:						$white !default;
+$tableBorderColor:							$gray-light !default;
+$tableFontColor:							$black !default;
+$tableThFontColor:							$black !default;
+
+$tableThBackgroundColor:					$blue-lighter !default;
+
+$tableThBorderColor:						#A9BCD3 !default;
+$tableTdBorderColor:						$gray-light !default;
+
+$tableEvenTdBackgroundColor:				$white !default;
+$tableEvenTdSortedBackgroundColor: 			#F8F8F8 !default;
+
+$tableOddTdBackgroundColor:					#F8F8F8 !default;
+$tableOddTdSortedBackgroundColor: 			$gray-lighter !default;
+
+$tableRowHoverColor:						$yellow-lighter !default;
+
+$tableSubHeaderBackgroundColor:				#E8F0F7 !default;
+$tableSubHeaderFontColor:					$gray-darker !default;
+$tableSubHeaderBorderColor:					#C3D2E5 !default;
+
+$tableSubTotalBackgroundColor:				$gray-lighter !default;
+$tableSubTotalFontColor:					$gray-darker !default;
+
+$tableTotalBackgroundColor:					#E6E6E6 !default;
+$tableTotalFontColor:						$black !default;
+
+
+// MODULE VARIABLES
+// ------------------------------------------------------------------------------------------
+
+// HEADER
+//-------
+$mastheadBackgroundColor:					$blue !default;
+$mastheadLogoLinkColor:						$white !default;
+$mastheadProfileMenuBackgroundStartColor:	#4674a9 !default;
+$mastheadProfileMenuBackgroundEndColor:		#385882 !default;
+$mastheadProfileMenuBorderColor:			#385882 !default;
+$mastheadProfileMenuIconColor:				#c0d7f0 !default;
+$mastheadProfileMenuTextColor:				$white !default;
+$mastheadProfileMenuAvatarBorderColor:		$white !default;
+$mastheadProfileMenuShadowColor:			$gray-dark !default;
+$mastheadProfileMenuHoverColor:				$blue !default;
+
+// NAVIGATION
+//-----------
+$navBackgroundStartColor:					$gray-chroma-lighter !default;
+$navBackgroundEndColor:						$gray-chroma-mid !default;
+$navBoxShadowColor:							$gray-lighter !default;
+$navBorderColor:							$gray-chroma-dark !default;
+$navLinkColor:								$blue-chroma !default;
+$navLinkBorderColor:						$white !default;
+$navActiveBackgroundStartColor:				$gray-chroma-lighter !default;
+$navActiveBackgroundEndColor:				$gray-chroma-dark !default;
+$navBorderLeftColor:						$white !default;
+
+// FOOTER
+//-------
+$footerBorderTopColor:						$gray-light !default;
+$footerFontColor:							$gray-mid !default;
+
+// MINI FILTER
+// -----------
+$miniFilterLabelFontColor:					$black !default;
+$miniFilterItemSeperatorColor:				$gray-mid !default;
+$miniFilterActiveBackgroundColor: 			$yellow-lighter !default;
+$miniFilterActiveFontColor:					$black !default;
+
+// PAGINATION
+// -----------
+$paginationBorderColor:						$gray-light !default;
+$paginationHoverBackgroundColor:			$yellow-lighter !default;
+$paginationActiveBackgroundColor:			$yellow-lighter !default;
+$paginationActiveFontColor:					$black !default;
+
+
+// COMPONENT VARIABLES
+// ------------------------------------------------------------------------------------------
+
+// ACCORDIAN
+$uiAcccordianBackgroundStartColor:			$gray-lighter !default;
+$uiAcccordianBackgroundEndColor:			$gray-light !default;
+$uiAcccordianHoverBackgroundStartColor:		$gray-lighter !default;
+$uiAcccordianHoverBackgroundEndColor:		$gray-mid !default;
+$uiAcccordianBorderColor:					$gray-light !default;
+$uiAcccordianFontColor:						$gray-darker !default;
+$uiAcccordianTextShadowColor:				$white !default;
+
+// AUTOCOMPLETE
+$autocompleteBackgroundColor:				$gray-lighter !default;
+$autocompleteBorderColor:					$gray-light !default;
+$autocompleteItemFontColor:					$baseFontColor !default;
+$autocompleteItemBorderTopColor:			$white !default;
+$autocompleteItemBorderBottomColor:			$gray-light !default;
+
+$autocompleteItemHighlightText:				$yellow !default;
+
+$autocompleteItemHoverBackgroundStartColor:	$yellow-lighter !default;
+$autocompleteItemHoverBackgroundEndColor:	$yellow-light !default;
+
+// CAROUSEL
+$uiCarouselNavItemBackgroundColor: 			$black !default;
+$uiCarouselNavItemBackgroundColorIE: 		$gray-dark !default;
+$uiCarouselNavItemHoverBackgroundColor: 	$black !default;
+$uiCarouselNavItemHoverBackgroundColorIE: 	$gray-darker !default;
+$uiCarouselNavItemActiveBackgroundColor: 	$black !default;
+$uiCarouselNavItemActiveBackgroundColorIE: 	$black !default;
+
+// DATEPICKER
+$datepickerShadowColor:						$gray-mid !default;
+$datepickerBackgroundColor:					$white !default;
+$datepickerThFontColor:						$gray-dark !default;
+$datepickerBorderColor:						$gray-lighter !default;
+$datepickerLinkColor:						$gray-dark !default;
+$datepickerHdrBackgroundStartColor:			$gray-lighter !default;
+$datepickerHdrBackgroundEndColor:			$gray-light !default;
+$datepickerHdrFontColor:					$gray-darker !default;
+$datepickerTodayFontColor:					$green !default;
+$datepickerTodayBackgroundColor: 			$green-lighter !default;
+$datepickerCurrentDayBackgroundColor: 		$yellow-lighter !default;
+$datepickerCurrentDayFontColor:				$yellow !default;
+$datepickerHoverBackgroundColor: 			$yellow-lighter !default;
+$datepickerDisabledFontColor:				$gray-light !default;
+$datepickerDisabledBackgroundColor:			$white !default;
+$datepickerDisabledBorderColor:				$gray-lighter !default;
+$datepickerMessageFontColor:				$gray-darker !default;
+$datepickerMessageBackgroundColor:			$yellow-lighter !default;
+$datepickerIE8BorderColor:					$gray-mid !default;
+
+// DIALOG
+$dialogOverlayBackgroundColor:				$black !default;
+$dialogShadowColor:							$gray-dark !default;
+$dialogBackgroundColor:						$white !default;
+$dialogHdrFontColor:						$baseHdrFontColor !default;
+$dialogContentBorderTopColor: 				$white !default;
+$dialogHdrBorderBottomColor:				$transparent !default;
+
+// SCROLL PANE
+$scrollPaneBarBackgroundColor:				$gray-mid !default;
+
+// SLIDER
+$uiSliderHandleBackgroundStartColor:		$gray-lighter !default;
+$uiSliderHandleBackgroundEndColor:			$gray-light !default;
+$uiSliderHandleShadowColor: 				$gray-mid !default;
+$uiSliderHandleBorderColor:					$gray-mid !default;
+$uiSliderHandleFocusBackgroundStartColor:	$gray-lighter !default;
+$uiSliderHandleFocusBackgroundEndColor:		$gray-light !default;
+$uiSliderHandleHoverBackgroundStartColor:	$gray-light !default;
+$uiSliderHandleHoverBackgroundEndColor:		$gray-light !default;
+$uiSliderHandleActiveBackgroundStartColor:	$gray-light !default;
+$uiSliderHandleActiveBackgroundEndColor:	$gray-light !default;
+$uiSliderBarBackgroundStartColor:			$gray-lighter !default;
+$uiSliderBarBackgroundEndColor:				$gray-light !default;
+$uiSliderBarBorderColor: 					$gray-light !default;
+
+// TABS
+$tabsBackgroundStartColor:					$gray-light !default;
+$tabsBackgroundEndColor:					$gray-lighter !default;
+$tabsBorderColor:							$gray-light !default;
+$tabsFontColor:								$blue-dark !default;
+$tabsSelectedTabFontColor:					$gray-lighter !default;
+$tabsHoverBackgroundStartColor:				$gray-mid !default;
+$tabsHoverBackgroundEndColor:				$gray-lighter !default;
+$tabsActiveFontColor:						$gray-darker !default;
+$tabsActiveBackgroundStartColor:			$white !default;
+$tabsActiveBackgroundEndColor:				$white !default;
+$tabsPanelBorderColor:						$gray-light !default;
+$tabsPanelBackgroundColor: 					$white !default;
+
+// TOOLTIP
+$tooltipShadowColor:						$gray-light !default;
+$tooltipBorderColor:						$gray-light !default;
+$tooltipBackgroundColor:					$blue-lighter !default;
+$tooltipFontColor:							$gray-darker !default;

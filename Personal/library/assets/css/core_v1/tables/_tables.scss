@@ -1,0 +1,168 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Libray - Core v1 - Core Tables Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+// BASIC TABLE STYLES
+table							{
+								max-width: 100%;
+								background-color: transparent;
+								border-collapse: collapse;
+								border-spacing: 0;
+								}
+
+// MUL TABLE
+.mul-table						{
+								color:$tableFontColor;
+								margin-bottom:$tableMarginBottom;
+								width: 100%;
+								border-bottom:1px $tableBorderStyle $tableBorderColor;
+								background-color:$tableBackgroundColor;
+	th,
+	td								{
+									font-size: $tableBaseFontSize;
+									padding: 5px 10px;
+									line-height: 13px;
+									}
+	th								{
+									background-color: $tableThBackgroundColorStart;
+									border-top:1px solid $tableThBorderColor;
+									border-bottom:1px solid $tableThBorderColor;
+									color:$tableThFontColor;
+									font-family: $proximaNovaBoldStack;
+									vertical-align: bottom;
+									text-align:left;
+		&[class*="col-"]				{
+										float: none;
+										margin: 0;
+										}
+									}
+	caption							{
+									padding:1px 0 5px 0;
+									text-align:left;
+									vertical-align: bottom;
+		.mini-filter					{padding-top: 8px;}
+		.mul-tbl-data-filter			{
+			input							{
+											height: 20px;
+											line-height: 20px;
+											margin: 0;
+											}
+										}
+									}
+	td								{
+									border-top:1px $tableTdBorderStyle $tableTdBorderColor;
+									text-align: left;
+									vertical-align: top;
+									}
+
+	// TD HORIZONTAL ALIGNMENT HELPERS
+	.center-data					{text-align: center;}
+	.left-align-data				{text-align: left;}
+	.right-align-data				{text-align: right;}
+
+	//SUB HEADER, THIS IS USED TO GROUP SECTIONS IN A TABLE
+	.sub-hdr-data					{
+									background-color: $tableSubHeaderBackgroundColor !important;
+									border: 1px solid #C3D2E5;
+									color: $tableSubHeaderFontColor;
+									font-family: $proximaNovaBoldStack;
+									}
+
+	// SUBTOTAL AND TOTAL HELPERS
+	.sub-total-data,	
+	.total-data						{
+									font-family: $proximaNovaBoldStack;
+		td								{
+										border-top: 1px $tableBorderStyle $tableBorderColor;
+										}
+									}
+	.sub-total-data					{
+		td								{
+										background-color: $tableSubTotalBackgroundColor !important;
+										color: $tableSubTotalFontColor;
+										}
+									}
+	.total-data						{
+		td								{
+										background-color: $tableTotalBackgroundColor !important;
+										color: $tableTotalFontColor;
+										}
+									}
+								}
+
+
+// MUL TABLE BORDERS
+.mul-table-borders				{
+								border: 1px $tableBorderStyle $tableBorderColor;
+	th								{
+									border-left: 1px solid $tableThBorderColor;
+									border-right: 1px solid $tableThBorderColor;
+									}
+	td								{border-left: 1px $tableBorderStyle $tableBorderColor;}
+								}
+
+// MUL TABLE ROW STRIPING
+.mul-table-striped				{
+	tbody > tr:nth-child(even) > td	{
+									background-color:$tableOddTdBackgroundColor;
+									}
+
+	// FALLBACK ROW STRIPING
+	.even							{
+		td								{
+										background-color:$tableEvenTdBackgroundColor;
+
+			// SORTED COLUMN STYLES - EVEN
+			&[class*="sorting"]				{background-color:$tableEvenTdSortedBackgroundColor;}
+										}
+									}
+	.odd							{
+		td								{
+										background-color:$tableOddTdBackgroundColor;
+
+			// SORTED COLUMN STYLES - ODD
+			&[class*="sorting"]				{background-color:$tableOddTdSortedBackgroundColor;}
+										}
+									}			
+								}
+
+// MUL TABLE ROW HOVER
+.mul-table-hover tbody tr:hover > td,
+.mul-table-hover tbody tr:hover > td[class*="sorting"]
+								{background-color: $tableRowHoverColor;}
+
+
+// FOOTABLES PAGINATION STYLING
+.mul-table-pagination			{
+	.mul-pagination-row				{
+		td								{
+										border-top:1px solid #c4c4c4;
+										border-right:1px solid transparent;
+										border-bottom:1px solid transparent;
+										border-left:1px solid transparent;
+										padding: 10px 0 0 0;
+										text-align:right;
+										}
+
+		ul								{
+										list-style: none;
+										margin: 0;
+										padding: 0;
+			li								{
+											border: 1px solid #CCC;
+											border-left: 0;
+											display: inline-block;
+											width: 3%;
+											text-align: center;
+											vertical-align: middle;
+				&:first-child					{border-left: 1px solid #CCC;}
+				a								{
+												display: block;
+					&:hover							{background-color: #EFEFEF;}
+												}
+											}
+										}
+									}
+								}

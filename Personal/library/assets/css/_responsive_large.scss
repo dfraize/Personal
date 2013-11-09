@@ -1,0 +1,14 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Responsive CSS - Large Media Query - 980px+
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+// Landscape iPad, laptops and desktops
+@if $use-large-mediaquery == true{
+
+	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
+		.grid					{margin-top: 115px;}
+	}
+
+}

@@ -1,0 +1,173 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - JQuery UI Dialog Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-dialog == true{
+
+	// DIALOG SOURCE CONTAINER
+	.mul-dialog-ctn					{
+									display:none;
+									}
+
+	// DIALOG SCREEN OVERLAY
+	.ui-widget-overlay				{
+									@include opacity($dialogOverlayBackgroundColorOpacity);
+									background-color:$dialogOverlayBackgroundColor;
+									position:fixed;
+									z-index:$zindexDialogOverlay;
+									top:0;
+									left:0;
+									width:100%;
+									height:100%;
+									}
+
+	// DIALOG
+	.mul-dialog.ui-dialog			{
+									@include clearfix;
+									@include box-shadow($dialogVShadow, $dialogHShadow, $dialogShadowBlur, $dialogShadowColor);
+									@include border-radius($dialogBorderRadius, all);
+									position:fixed;
+									top:$dialogPositionTop !important;
+									z-index:$zindexDialog;
+									background-color:$dialogBackgroundColor;
+									border:0;
+									outline:none;
+		
+		// DIALOG TITLE BAR
+		.ui-dialog-titlebar				{
+										border-bottom:$dialogHdrBorderBottomSize $dialogHdrBorderBottomStyle $dialogHdrBorderBottomColor;
+										cursor:move;
+										padding:$dialogHdrPaddingTop $dialogHdrPaddingRight $dialogHdrPaddingBottom $dialogHdrPaddingLeft;
+										position:relative;
+			
+			// DIALOG TITLE BAR HEADER
+			.ui-dialog-title				{
+											font-family:$proximaNovaSemiBoldStack;
+											font-weight:$WeightBold200;
+											font-size:$dialogHdrFontSize;
+											color:$dialogHdrFontColor;
+											}
+			
+			// DIALOG TITLE BAR CLOSE ICON
+			.ui-dialog-titlebar-close		{
+											background:url("../images/core/icons/close_icon.png") no-repeat top left;
+											position:absolute;
+											border:0;
+											top:18px;
+											right:10px;
+											display:block;
+											height:16px;
+											width:16px;
+											margin-right:7px;
+											outline:0;
+											}
+										}
+		
+		// DIALOG CONTENT AREA
+		.ui-dialog-content				{
+										@include clearfix;
+										margin:0;
+										padding:0 $dialogContentPaddingLeftRight 0 $dialogContentPaddingLeftRight;
+										border-top:$dialogContentBorderTopSize $dialogContentBorderTopStyle $dialogContentBorderTopColor;
+										}
+		.grid							{
+										min-width: 0;
+										max-width: none;
+										}
+
+		// DIALOG BUTTON PANE
+		.ui-dialog-buttonpane			{
+										padding:18px;
+			.ui-dialog-buttonset			{
+											@include clearfix;
+											}
+										}
+
+		// DIALOG CONTENT - AUTO SCROLLING
+		.mul-dialog-content-scrolling	{
+										width:inherit !important;
+										max-height:$dialogContentMaxHeight !important;
+			&+.ui-dialog-buttonpane			{
+											padding:18px 18px 0 18px;
+											}
+										}
+
+		// DIALOG FOOTER - AUTO SCROLLING - ADDS GUTTER TO BOTTOM OF DIALOG
+		.mul-dialog-scrolling-footer	{
+										height:18px;
+										}
+									}
+
+	// MODAL DIALOG
+	.mul-dialog-modal.ui-dialog		{
+
+		// MODAL DIALOG TITLE BAR
+		.ui-dialog-titlebar				{
+										cursor:default;
+										}
+									}
+
+	// NO CLOSE BUTTON OPTION
+	.mul-dialog.ui-dialog.no-close-button
+									{
+		.ui-dialog-titlebar-close		{
+										display:none;
+										}
+									}
+
+	// CUSTOM MODALS/DIALOGS
+
+	// LOADING ANIMATION MODAL
+	.mul-dialog-loading.ui-dialog	{
+		.ui-dialog-titlebar				{
+										padding: 15px 18px 12px 18px;
+										text-align: center;
+										}
+									}
+
+	// DIALOG IE9 FIXES
+	.ie9							{
+		.mul-dialog.ui-dialog			{
+										border-radius:$baseBorderRadiusIE !important;
+			.ui-dialog-titlebar				{
+											border-radius:$baseBorderRadiusIE !important;
+											}
+			.ui-dialog-content				{
+											border-radius:$baseBorderRadiusIE !important;
+											}
+										}
+									}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+	@if $use-small-mediaquery == true {
+		@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+
+			// DIALOG
+			.mul-dialog.ui-dialog		{
+										max-width:$dialogPhoneMaxWidth;
+				
+				// DIALOG TITLE BAR
+				.ui-dialog-titlebar			{
+					
+					// DIALOG TITLE BAR HEADER
+					.ui-dialog-title			{
+												font-size:$dialogPhoneHdrFontSize;
+												}
+
+					// DIALOG TITLE BAR CLOSE ICON
+					.ui-dialog-titlebar-close	{
+												top:8px;
+												right:7px;
+												min-width:30px;
+												}
+											}
+										}
+
+		}
+	}
+
+}//endif

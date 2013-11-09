@@ -1,0 +1,155 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Core Tables Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-tables == true{
+
+	// BASIC TABLE STYLES
+	table							{
+									max-width: 100%;
+									background-color: transparent;
+									border-collapse: collapse;
+									border-spacing: 0;
+									}
+
+	// MUL TABLE
+	th, td							{text-align: left;}
+
+	.mul-table						{
+									color:$tableFontColor;
+									margin-bottom:$tableMarginBottom;
+									width: 100%;
+									border-bottom:1px $tableBorderStyle $tableBorderColor;
+									background-color:$tableBackgroundColor;
+		th,
+		td								{
+										font-size: $tableBaseFontSize;
+										padding: 5px 10px;
+										line-height: 13px;
+										}
+		th								{
+										background-color: $tableThBackgroundColor;
+										border-top:1px solid $tableThBorderColor;
+										border-bottom:1px solid $tableThBorderColor;
+										color:$tableThFontColor;
+										font-family: $proximaNovaBoldStack;
+										vertical-align: bottom;
+			&[class*="col-"]				{
+											float: none;
+											margin: 0;
+											}
+										}
+		caption							{
+										padding:1px 0 5px 0;
+										text-align:left;
+										vertical-align: bottom;
+			.mul-mini-filter				{padding-top: 8px;}
+			.mul-tbl-data-filter			{
+				input							{
+												height: 20px;
+												line-height: 16px;
+												margin: 0;
+												}
+											}
+										}
+		td								{
+										border-top:1px $tableTdBorderStyle $tableTdBorderColor;
+										vertical-align: top;
+										}
+
+		//SUB HEADER, THIS IS USED TO GROUP SECTIONS IN A TABLE
+		.mul-subheader-row				{
+										background-color: $tableSubHeaderBackgroundColor !important;
+										border: 1px solid $tableSubHeaderBorderColor;
+										color: $tableSubHeaderFontColor;
+										font-family: $proximaNovaBoldStack;
+										}
+
+		// SUBTOTAL AND TOTAL HELPERS
+		.mul-subtotal-row,
+		.mul-total-row					{
+										font-family: $proximaNovaBoldStack;
+			td								{border-top: 1px $tableBorderStyle $tableBorderColor;}
+										}
+		.mul-subtotal-row				{
+			td								{
+											background-color: $tableSubTotalBackgroundColor !important;
+											color: $tableSubTotalFontColor;
+											}
+										}
+		.mul-total-row					{
+			td								{
+											background-color: $tableTotalBackgroundColor !important;
+											color: $tableTotalFontColor;
+											}
+										}
+									}
+
+	// FOOTABLES SORTING CLASSES
+	.mul-footable					{
+		.mul-highlight					{background-color: $tableOddTdSortedBackgroundColor !important;}
+		tbody > tr:nth-child(odd) > .mul-highlight
+										{background-color: $tableOddTdBackgroundColor !important;}
+									}
+
+
+	// MUL TABLE BORDERS
+	.mul-table-borders				{
+									border: 1px $tableBorderStyle $tableBorderColor;
+		th								{
+										border-left: 1px solid $tableThBorderColor;
+										border-right: 1px solid $tableThBorderColor;
+										border-top: 1px solid $tableThBorderColor;
+										border-bottom: 1px solid $tableThBorderColor;
+										}
+		td								{border-left: 1px $tableBorderStyle $tableBorderColor;}
+									}
+
+	// MUL TABLE ROW STRIPING
+	.mul-table-striped				{
+		tbody > tr:nth-child(even) > td	{
+										background-color:$tableOddTdBackgroundColor;
+										}
+
+		// FALLBACK ROW STRIPING
+		.mul-even							{
+			td								{
+											background-color:$tableEvenTdBackgroundColor;
+
+				// SORTED COLUMN STYLES - EVEN
+				&[class*="sorting"]				{background-color:$tableEvenTdSortedBackgroundColor;}
+											}
+										}
+		.mul-odd							{
+			td								{
+											background-color:$tableOddTdBackgroundColor;
+
+				// SORTED COLUMN STYLES - ODD
+				&[class*="sorting"]				{background-color:$tableOddTdSortedBackgroundColor;}
+											}
+										}			
+									}
+
+	// MUL TABLE ROW HOVER
+	.mul-table-hover tbody tr:hover > td,
+	.mul-table-hover tbody tr:hover > td[class*="sorting"]
+									{background-color: $tableRowHoverColor;}
+
+
+	// MUL TABLE PAGINATION
+	.mul-table-pagination			{
+		.mul-pagination-row				{
+			td								{
+											border-top:1px solid $tableBorderColor;
+											border-right:1px solid transparent;
+											border-bottom:1px solid transparent;
+											border-left:1px solid transparent;
+											padding: 5px 0 0 0;
+											text-align:right;
+											}
+										}
+									}
+
+}//endif

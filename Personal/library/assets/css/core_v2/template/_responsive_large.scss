@@ -1,0 +1,14 @@
+//-------------------------------------------------------------------------------------------
+// SASS Boilerplate - Responsive CSS - Large Media Query - 980px+
+// DATE - 
+// AUTHOR - 
+//-------------------------------------------------------------------------------------------
+
+// Landscape iPad, laptops and desktops
+@if $use-large-mediaquery == true{
+
+	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
+
+	}
+	
+}

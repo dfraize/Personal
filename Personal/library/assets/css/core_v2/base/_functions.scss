@@ -1,0 +1,10 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Base Sass Functions Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//=== TABLE COLUMN WIDTH FUNCTION ===========================================================
+@function tableColWidth($tableColWidthTargetSize) {
+	@return $tableColWidthTargetSize * $tableColWidthMultiplier;
+}

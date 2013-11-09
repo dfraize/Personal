@@ -1,0 +1,182 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Core Box Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-boxes == true{
+
+
+	// BOX BASE SETUP
+	.mul-box					{
+								@include clearfix; // must clearfix the box to use grid cols inside mul-box
+								position: relative;
+								margin-bottom: $baseMargin;
+								background-color: $boxBackgroundColor;
+								border: $boxBorderSize $boxBorderStyle $boxBorderColor;
+								padding: $boxPadding $boxPadding 0 $boxPadding;
+		.mul-box-hdr				{
+			.mul-hdr-rule				{
+										border-bottom: $boxHdrBorderSize $boxHdrBorderStyle $boxHdrBorderColor;
+										line-height: 30px;
+										}
+									}
+								}
+
+	
+	// ADVANCED BOX SETUP
+	.mul-box-adv				{
+								@extend .mul-box;
+								background-color: $transparent;
+								padding: 0;
+		.mul-box-hdr				{
+									background-color: $gray-lighter;
+									padding: $boxPadding;
+			.mul-hdr-rule				{
+										border-bottom: 0;
+										line-height: none;
+										margin-bottom: 0;
+										}
+									}
+		.mul-box-bdy				{padding: $boxPadding $boxPadding 1px $boxPadding;}
+		.mul-box-ftr				{padding: 0 $boxPadding 1px $boxPadding;}
+								}
+
+
+	// BOX WITH ROUNDED CORNERS
+	.mul-box-rnd				{
+								@include border-radius($baseBorderRadius, all);
+		.mul-box-hdr				{@include border-radius($baseBorderRadius $baseBorderRadius 0 0, all);}
+								}
+
+	// BOX WITH A DROP SHADOW
+	.mul-box-shadow				{@include box-shadow($boxVShadow, $boxHShadow, $boxShadowBlur, $boxShadowColor);}
+
+	// ROUNDED CORNER BOX WITH A DROP SHADOW
+	.mul-box-rnd-shadow			{
+								@extend .mul-box-rnd;
+								@include box-shadow($boxVShadow, $boxHShadow, $boxShadowBlur, $boxShadowColor);
+								}
+
+
+	@if $use-message-boxes == true{
+
+		// MESSAGE BUILDERS
+		.mul-message-hdr			{
+									font-family: $proximaNovaSemiBoldStack;
+									font-size: 14px;
+									margin-top: 0;
+									}
+		.mul-close-action			{
+									background: url("#{$msgIcons}/icons/close.png") 0 0 no-repeat;
+									cursor: pointer;
+									display: block;
+									float: right;
+									height: 16px;
+									width: 16px;
+									margin: $msgCloseIconPosition;
+									}
+		.mul-message-icon			{
+									float: left;
+									height: 16px;
+									width: 16px;
+									margin-right: 4px;
+									}
+
+		// ERROR MESSAGE
+		.mul-error-ctn				{
+									background-color: $errorBackgroundColor;
+									border-color: $errorBorderColor;
+									color: $errorFontColor;
+			.mul-message-icon			{background: url("#{$msgIcons}/icons/msg_bx_error.png") 0 2px no-repeat;}
+			.mul-message-hdr			{color: $errorHdr;}
+			a							{color: $errorFontColor;}
+									}
+		// ATTENTION MESSAGE
+		.mul-attention-ctn				{
+									background-color: $attentionBoxBackgroundColor;
+									border-color: $attentionBoxBorderColor;
+									color: $attentionBoxFontColor;
+			.mul-message-icon			{background: url("#{$msgIcons}/icons/msg_bx_attention.png") 0 1px no-repeat;}
+			.mul-message-hdr			{color: $attentionHdr;}
+			a							{color: $attentionBoxFontColor;}
+									}
+
+		// INFO MESSAGE
+		.mul-info-ctn					{
+									background-color: $infoBoxBackgroundColor;
+									border-color: $infoBoxBorderColor;
+									color: $infoBoxFontColor;
+			.mul-message-icon			{background: url("#{$msgIcons}/icons/msg_bx_confirmation.png") 0 0 no-repeat;}
+			.mul-message-hdr			{color: $infoHdr;}
+			a							{color: $infoBoxFontColor;}
+									}
+
+		// CONFIRMATION MESSAGE
+		.mul-confirmation-ctn		{
+									background-color: $confirmationBoxBackgroundColor;
+									border-color: $confirmationBoxBorderColor;
+									color: $confirmationBoxFontColor;
+			.mul-message-icon			{background: url("#{$msgIcons}/icons/msg_bx_confirmation.png") 0 3px no-repeat;}
+			.mul-message-hdr			{color: $confirmationHdr;}
+			a							{color: $confirmationBoxFontColor;}
+									}
+
+	}//endif
+
+
+	//--- CUSTOM BOXES -------------------------------------------------------------------------------------------------
+
+	// FEATURE CONTAINER
+	.mul-feature-ctn		{
+							background-color: $boxFeaturedBackgroundColor;
+		.mul-box-hdr			{
+			.mul-hdr-rule			{border-bottom-color: $boxFeaturedBorderBottomColor;}
+								}
+							}
+	
+	// SIDEBAR CONTAINER
+	.mul-sidebar-ctn		{
+							background-color: $boxSidebarBackgroundColor;
+		.mul-box-hdr			{
+			.mul-hdr-rule			{border-bottom-color: $boxSidebarBorderBottomColor;}
+								}
+							}
+
+	// INLINE SEARCH CONTAINER
+	.mul-inline-search-ctn	{
+							background-color: $boxInlineSearchBackgroundColor;
+							border: $boxInlineSearchBorderSizeColor $boxInlineSearchBorderTypeColor $boxInlineSearchBorderColor;
+		.mul-form				{
+								margin: 0 0 5px 0;
+			.mul-form-action		{padding-top: 6%;}
+								}
+		.mul-form-inline		{
+			label					{
+									vertical-align: top;
+									line-height: 26px;
+									}
+								}
+							}
+
+	// SUPPORT CONTAINER
+	.mul-support-ctn		{
+							@include border-radius(0 0 $baseBorderRadius $baseBorderRadius, all);
+							background-color: $boxSupportBackgroundColor;
+							border-color: $boxSupportBottomColor;
+		.mul-box-hdr			{
+			.mul-hdr-rule			{
+									border-bottom-color: $boxSupportBorderBottomColor;
+									line-height: 30px;
+									}
+								}
+							}
+
+	// MESSAGE BOXES IE9 FIXES
+	.ie9					{
+		.mul-box				{
+								border-radius:$baseBorderRadiusIE;
+								}
+							}
+
+}//endif

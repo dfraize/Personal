@@ -1,0 +1,72 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - JQuery UI Slider Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-slider == true{
+
+	// SLIDER SETUP
+	.ui-slider 						{
+									position: relative;
+									text-align: left;
+									display: inline-block;
+									width: 100%;
+									
+		// SLIDER HANDLE
+		.ui-slider-handle				{
+										@include border-radius(30px, all);
+										@include background-gradient($uiSliderHandleBackgroundStartColor,$uiSliderHandleBackgroundEndColor);
+										@include box-shadow(0, 1px, 3px, $uiSliderHandleShadowColor);
+										border: $uiSliderHandleBorderSize $uiSliderHandleBorderStyle $uiSliderHandleBorderColor;
+										position: absolute;
+										top: -6px;
+										z-index: 9997;
+										width: 16px;
+										height: 16px;
+										margin-left: -3px;
+										cursor: pointer;
+										}
+		.ui-state-focus					{
+										border: $uiSliderHandleBorderSize $uiSliderHandleBorderStyle $uiSliderHandleBorderColor;
+										@include background-gradient($uiSliderHandleFocusBackgroundStartColor,$uiSliderHandleFocusBackgroundEndColor);
+										}
+		.ui-state-hover					{
+										border: $uiSliderHandleBorderSize $uiSliderHandleBorderStyle $uiSliderHandleBorderColor;
+										@include background-gradient($uiSliderHandleHoverBackgroundStartColor,$uiSliderHandleHoverBackgroundEndColor);
+										}
+		.ui-state-active 				{
+										border: $uiSliderHandleBorderSize $uiSliderHandleBorderStyle $uiSliderHandleBorderColor;
+										@include background-gradient($uiSliderHandleActiveBackgroundStartColor,$uiSliderHandleActiveBackgroundEndColor);
+										}
+									}
+
+	// SLIDER BAR
+	.ui-slider-horizontal 			{
+									@include border-radius($baseBorderRadius ,all);
+									@include background-gradient($uiSliderBarBackgroundStartColor,$uiSliderBarBackgroundEndColor);
+									border: $uiSliderBarBorderSize $uiSliderBarBorderStyle $uiSliderBarBorderColor;
+									height: 5px;
+									}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+	@if $use-small-mediaquery == true {
+		@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+
+			// SLIDER SETUP
+			.ui-slider 					{
+										
+				// SLIDER HANDLE
+				.ui-slider-handle			{
+											width: 20px;
+											height: 20px;
+											top: -9px;
+											}
+										}
+
+		}
+	}
+
+}//endif

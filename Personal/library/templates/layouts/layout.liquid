@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<!--[if IE 8]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js ie-gt-9" lang="en"><!--<![endif]-->
+	<head>
+
+		<!-- CHARACTER SET -->
+		<meta charset="utf-8" />
+
+		<!-- ALWAYS FORCE LATEST IE RENDERING ENGINE (mul-even IN INTRANET) - REMOVE THIS IF YOU USE THE .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- TITLE AND PAGE META DATA -->
+		<title>{% block title %}{{ global.site_title }}{% endblock %}</title>
+		<meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
+		<meta name="description" content="{% block meta_description %}{% endblock %}" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- MOBILE VIEWPORT OPTIMIZATION http://goo.gl/b9SaQ -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- FAVICON.ICO & APPLE-TOUCH-ICON.PNG REFERENCES -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+		<!-- MOBILE INTERNET EXPLORER ALLOWS US TO ACTIVATE CLEARTYPE TECHNOLOGY FOR SMOOTHING FONTS FOR EASY READING -->
+		<meta http-equiv="cleartype" content="on" />
+
+		<!-- SITE STYLES -->
+		{{ "styles.css" | asset_url | stylesheet_tag }}
+
+		<!-- SITE IE CONDITIONAL STYLES -->
+		<!--[if IE]>{{ "ie.css" | asset_url | stylesheet_tag }}<![endif]-->
+
+		<!-- GOOGLE PRETTIFY STYLES FOR PRETTY CODE PRINTING -->
+		{{ "prettify.css" | asset_url | stylesheet_tag }}
+
+		<!-- MODERNIZR - USED TO CHECK HTML & CSS3 SUPPORT IN BROWSERS -->
+		{{ "modernizr_2.6.2.js" | asset_url | script_tag }}
+
+		<!-- RESPOND.JS - A FAST & LIGHTWEIGHT POLYFILL FOR MIN/MAX-WIDTH CSS3 MEDIA QUERIES (FOR IE 6-8, AND MORE) - https://github.com/scottjehl/Respond -->
+		{{ "respond_1.3.0.js" | asset_url | script_tag }}
+
+	</head>
+	<body>
+
+		<!-- HEADER - BEGINS -->
+		<header role="banner" class="mul-masthead">
+			{% include "header" %}
+		</header>
+		<!-- HEADER - ENDS -->
+
+		<!-- PAGE - BEGINS -->
+		<section role="main" class="mul-grid">
+			{% block content %}{% endblock %}
+		</section>
+		<!-- PAGE - ENDS -->
+
+		<!-- FOOTER - BEGINS -->
+		<footer class="mul-footer">
+			{% include "footer" %}
+		</footer>
+		<!-- FOOTER - BEGINS -->
+
+		<!-- SITE JS -->
+		{{ "site.js" | asset_url | script_tag }}
+
+	</body>
+</html>

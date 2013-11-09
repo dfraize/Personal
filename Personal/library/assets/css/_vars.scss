@@ -1,0 +1,48 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - SASS Variables
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//=== LIBRARY OBJECT TOGGLE SETS (OVERRIDES) ================================================
+
+// These are the library object toggle sets overrides. This is where you can override what will 
+// be turned on/off from the Mercer UX/UI Libray for your site.
+
+// LAYOUT TOGGLES
+// Default layout is 980px wide
+$use-grid-980:								false;
+$use-grid-1200:								true;
+
+// RESPONSIVE TOGGLES
+// small media query = phones
+// medium media query = tablets
+// large media query = desktop
+
+
+// BASE TOGGLES
+
+
+// MODULE TOGGLES
+
+
+// COMPONENT TOGGLES
+$use-accordian:								true;
+$use-autocomplete:							true;
+$use-carousel:								true;
+$use-datepicker:							true;
+$use-dialog:								true;
+$use-scrollpane:							true;
+$use-slider:								true;
+$use-tabs:									true;
+$use-tooltip:								true;
+
+
+// THEME OVERRIDES
+
+
+//=== SITE VARS =============================================================================
+
+
+//=== IE VARS ===============================================================================
+

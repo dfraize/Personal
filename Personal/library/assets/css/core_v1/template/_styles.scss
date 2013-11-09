@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------------------------------
+SASS Boilerplate - Styles CSS
+DATE - 
+AUTHOR - 
+-------------------------------------------------------------------------------------------*/
+
+//=== SITE IMPORTS ==========================================================================
+@import	"vars",
+		"functions"
+		;
+
+//=== CORE IMPORT ===========================================================================
+@import	"core_v1/core",
+		"core_v1/components/autocomplete",
+		"core_v1/components/accordian",
+		"core_v1/components/carousel",
+		"core_v1/components/datepicker",
+		"core_v1/components/dialog",
+		"core_v1/components/iphone_button",
+		"core_v1/components/scroll_pane",
+		"core_v1/components/slider",
+		"core_v1/components/tabs",
+		"core_v1/components/tooltip"
+		;
+
+//=== CORE DEBUG ============================================================================
+// @import	"core_v1/dev_tools/debug";
+// @import	"core_v1/dev_tools/tools";
+
+//=== WEBSITE STYLES ========================================================================
+
+
+//=== MEDIA QUERIES =========================================================================
+@import	"responsive_320",
+		"responsive_768",
+		"responsive_980";

@@ -1,0 +1,39 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<div class="col-24">
+	<div class="col-16 first">
+		<h1 class="mul-hdr-rule">{{ model.title }}</h1>
+		
+		<p>Welcome to our UX Library. Here you will find important guidance on Mercer website and application development. Our goal is to create uniform sites and applications that professionally and consistently represent the Mercer brand.</p>
+	
+		<p>Components are grouped together by their overall function.</p>
+
+		<p>There are <strong>baseline design aspects</strong>, like <a href="typography">typography</a>, <a href="colors">colors</a>, <a href="base-grids">grids</a> and <a href="icons">icons</a>. These are core to any application that uses this framework.</p>
+
+		<p>The largest section of the library is dedicated to <strong>common UI controls</strong>, ranging from things like <a href="buttons">buttons</a> to <a href="comp-modal">modal windows</a> to <a href="interactive-data-table">interactive data tables</a>. Within this library, you'll find everything you need to create a top-notch mercer site or application.</p>
+
+		<p>We've even included <strong>sample narratives</strong> that thoroughly explain certain philosophical approaches that might span multiple components in action. For instance, we provide details on how to incorporate <a href="nar-error-handling">page error messaging and handling</a> into your application and then demonstrate how we handle page error messaging via a detailed narrative, so you can see first-hand how it will appear to your users.</p>
+		
+		<p>One important dependency is required for the icons if you decide to use this via CDN cloud. You must download the entire icon folder onto your local server in order for them to work properly in your coding. If you download the entire framework, this folder will automatically be included.</p>
+		
+		<p>To use this UX library, just click on any of the features to learn all about their capabilities, when you might use the elements, and why we've designed them the way we did.</p>
+		
+		<p><strong>Please note:</strong> This site is currently in-progress, so be sure to check in frequently for new additions or important changes.</p>
+	
+	</div>
+	<div class="col-8">
+
+		<div class="mul-box mul-sidebar-ctn">
+			<div class="mul-box-hdr">
+				<h3 class="mul-hdr-rule">Sidebar</h3>
+			</div>
+			<div class="box-bdy">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis rutrum elit. Nunc adipiscing mi sit amet malesuada hendrerit. Sed pretium purus vitae sem ullamcorper posuere.
+				</p>
+			</div>
+		</div>
+		
+	</div>
+</div>
+{% endblock %}

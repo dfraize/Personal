@@ -1,0 +1,99 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Scroll Pane Partial
+// DATE - August 6, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-scrollpane == true{
+
+	// CSS Styles that are needed by jScrollPane for it to operate correctly.
+	.jspScrollable				{
+								width:inherit !important;
+								outline:none;
+								}
+
+	.jspContainer				{
+								overflow: hidden;
+								position: relative;
+								width:inherit !important;
+								outline:none;
+								}
+
+	.jspPane					{
+								position: absolute;
+								width:inherit !important;
+								outline:none;
+								}
+
+	.jspVerticalBar				{
+								position: absolute;
+								top: 0;
+								right: $scrollPaneVerticalBarPositionRight;
+								width: $scrollPaneVerticalBarWidth;
+								height: 100%;
+								}
+
+	.jspHorizontalBar			{
+								position: absolute;
+								bottom: $scrollPaneHorizontalBarPositionBottom;
+								left: 0;
+								width: 100%;
+								height: $scrollPaneHorizontalBarHeight;
+								}
+
+	.jspVerticalBar *,
+	.jspHorizontalBar *			{
+								margin: 0;
+								padding: 0;
+								opacity:inherit;
+								filter:inherit;
+								}
+
+	.jspCap						{
+								display: none;
+								}
+
+	.jspHorizontalBar			{
+		.jspCap						{
+									float: left;
+									}
+								}
+
+	.jspTrack					{
+								background: transparent;
+								position: relative;
+								}
+
+	.jspDrag					{
+								@include border-radius($scrollPaneBarBorderRadius,all);
+								background: $scrollPaneBarBackgroundColor;
+								position: relative;
+								top: 0;
+								left: 0;
+								cursor: pointer;			
+								}
+
+	.jspHorizontalBar			{
+		.jspTrack,
+		.jspDrag					{
+									float: left;
+									height: 100%;
+									}
+								}
+
+
+	.mul-scroll-pane			{
+								width: $scrollPaneWidth !important;
+								height: $scrollPaneHeight;
+								overflow: auto;
+								padding-right: $scrollPanePaddingRight;
+								}
+
+	// SCROLL PANE IE9 FIXES
+	.ie9						{
+		.jspDrag					{
+									@include border-radius($scrollPaneBarBorderRadiusIE,all);
+									}
+								}
+
+}//endif

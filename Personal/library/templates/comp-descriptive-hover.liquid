@@ -1,0 +1,188 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<section class="col-24">
+	<h1>{{ model.title }}</h1>	
+</section>
+
+<section class="col-24">
+	<section class="col-8 first">
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>The descriptive hover provides additional information for the item being highlighted. This information is longer than the information provided in the Tooltip. Designers can also configure the Descriptive Hover to include HTML text and images or icons.</p>
+			</div>
+			<div id="tabs-2">
+				<p>Use the descriptive hover when the amount of information to be displayed is medium sized, meaning more than 1 line of text. For shorter descriptions (1 line of text or less) use the <a href="comp-tooltip">Tooltip</a>.
+				</p>
+				<p>The Descriptive Hover comes in handy when the designer wants to include a definition or an image along to accompany a word or icon, like in an online glossary or encyclopedia.
+				</p>
+			</div>
+			<div id="tabs-3">
+				<ul>
+					<li>The designer should use concise language in the Descriptive Hover.</li>
+					<li>The Descriptive Hover container has a fixed width of 200 pixels.</li>
+					<li>The height of the Descriptive Hover container is variable and can adapt based on the amount of content.</li>
+					<li>Use the Descriptive Hover when you have more than 1 line of text or want to include an image.</li>
+					<li>The Descriptive Hover container should have a light gray (#bbbbbb) color background.</li>
+					<li>The Descriptive Hover text will be dark gray (#333333).</li>
+					<li>The Descriptive Hover container will open when the user mouses over the parent element and will disappear when the user moves the mouse away from the parent element, unless the user needs to take an action in the Descriptive Hover field.</li>
+					<li>When the user needs to take an action in the Descriptive Hover field, like click on a link, it will remain open for a few seconds so the user has time to take the required action.</li>
+					<li>Positioning of Descriptive Hover field will default to the bottom right of the field when appropriate, but it will adapt via a View Port Plugin if spacing is an issue. This means that the field will be configured to open where there is the most room. For instance, if you have an icon near the right end of the screen, the Descriptive Hover field will adapt to open so that the field is not obstructed due to lack of space.
+					</li>
+				</ul>
+			</div>
+			<div id="tabs-4">
+				<p>Technical details go here&hellip;</p>
+			</div>
+		</div>
+
+		<div class="col-24">
+			<h4 class="mul-hdr-rule">Dependencies</h4>
+			<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+				<thead>
+					<tr>
+						<th width="" scope="col">Library</th>
+						<th width="" scope="col">Location or Download</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>jQuery 1.10.2</td>
+						<td>assets/scripts/core_v2/lib/jquery</td>
+					</tr>
+					<tr>
+						<td>jQuery UI 1.10.3</td>
+						<td>assets/scripts/core_v2/lib/jquery</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</section>
+	<section class="col-16">
+		<h4 class="mul-hdr-rule">Example</h4>
+
+		<!-- 
+		<p>Hover over any of the following icons.</p>
+
+		<style>
+
+		.descriptive-hover {
+			cursor: pointer;
+			position: relative;
+		}
+
+		.descriptive-hover .content {
+			background: #eee;
+			border: 2px solid #bbb;
+			border-radius: 8px;
+			box-shadow: 0 0 4px #bbb;
+			color: #333;
+			display: none;
+			font-size: 12px;
+			left: -90px;
+			padding: 10px;
+			position: absolute;
+			z-index: 9999;
+			width: 200px;
+		}
+
+		.descriptive-hover .content:after {
+			border-width: 10px;
+			border-style: solid;
+			border-color: transparent transparent #bbb transparent;
+			content: "";
+			height: 0;
+			left: 90px;
+			position: absolute;
+			width: 0;
+			top: -20px;
+		}
+
+		.descriptive-hover:hover .content {
+			display: block;
+		}
+
+		</style>
+		-->
+
+		<!-- DESCRIPTIVE HOVER - EXAMPLE - BEGINS -->
+		<!--
+		<span class="descriptive-hover" style="margin: 0 10px 0 0;">
+			<img src="assets/images/core/icons/reassign-task.png" />
+			<span class="content">
+				<strong>Reassign selected tasks</strong><br /><br />
+				Longer descriptive text to identify more information about this task/action.<br /><br />
+				Can include some <em>HTML</em>.<br /><br />
+				<img src="assets/images/core/icons/reassign-task.png" />
+				<img src="assets/images/core/icons/add-comment-task.png" />
+				<img src="assets/images/core/icons/export.png" />
+			</span>
+		</span>
+		<span class="descriptive-hover" style="margin: 0 10px 0 0;">
+			<img src="assets/images/core/icons/delegate-task.png" />
+			<span class="content">
+				<strong>Delegate selected tasks</strong><br /><br />
+				Longer descriptive text to identify more information about this task/action.<br /><br />
+				Can include some <em>HTML</em>.<br /><br />
+				<img src="assets/images/core/icons/reassign-task.png" />
+				<img src="assets/images/core/icons/add-comment-task.png" />
+				<img src="assets/images/core/icons/export.png" />
+			</span>
+		</span>
+		<span class="descriptive-hover" style="margin: 0 10px 0 0;">
+			<img src="assets/images/core/icons/add-comment-task.png" />
+			<span class="content">
+				<strong>Comment on selected tasks</strong><br /><br />
+				Longer descriptive text to identify more information about this task/action.<br /><br />
+				Can include some <em>HTML</em>.<br /><br />
+				<img src="assets/images/core/icons/reassign-task.png" />
+				<img src="assets/images/core/icons/add-comment-task.png" />
+				<img src="assets/images/core/icons/export.png" />
+			</span>
+		</span>
+		<span class="descriptive-hover" style="margin: 0 10px 0 0;">
+			<img src="assets/images/core/icons/export.png" />
+			<span class="content">
+				<strong>Export selected tasks</strong><br /><br />
+				Longer descriptive text to identify more information about this task/action.<br /><br />
+				Can include some <em>HTML</em>.<br /><br />
+				<img src="assets/images/core/icons/reassign-task.png" />
+				<img src="assets/images/core/icons/add-comment-task.png" />
+				<img src="assets/images/core/icons/export.png" />
+			</span>
+		</span>
+		-->
+		<!-- DESCRIPTIVE HOVER - EXAMPLE - ENDS -->
+
+		<!-- GET CODE - BEGINS
+		<div class="col-24">
+			<div class="col-24 get-code-btn-ctn">
+				{% include "get-code-button" %}
+			</div>
+
+			<div class="col-24 js-mul-toggle-content mul-display-none" id="div1">
+
+				<h4 class="mul-hdr-rule">HTML</h4>
+				<p>Put any content you want in here.</p>
+
+<pre class="prettyprint linenums">
+
+</pre>
+
+				<h4 class="mul-hdr-rule">JS</h4>
+				<p>Put any content you want in here.</p>
+
+<pre class="prettyprint linenums">
+
+</pre>
+
+			</div>
+
+		</div>
+		GET CODE - ENDS -->
+
+	</section>
+</section>
+{% endblock %}

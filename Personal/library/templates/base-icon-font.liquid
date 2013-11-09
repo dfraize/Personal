@@ -1,0 +1,793 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<script>
+// Toggle icon character codes
+function toggleCodes(on) {
+	var obj = document.getElementById('icons-ctn');
+	
+	if (on) {
+		obj.className += ' icon-codes-on';
+	} else {
+		obj.className = obj.className.replace(' icon-codes-on', '');
+	}
+}
+// Toggle large icons
+function toggleLargeIcons(on) {
+	var obj = document.getElementById('icons-ctn');
+	
+	if (on) {
+		obj.className += ' icons-x-large-on';
+	} else {
+		obj.className = obj.className.replace(' icons-x-large-on', '');
+	}
+}
+</script>
+
+<h1 class="mul-hdr-rule">{{ model.title }}</h1>
+
+<table class="mul-table mul-footable mul-table-borders" data-filter="#filter" id="icons-ctn" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+	<caption>
+		<div class="col-19 first">
+			<form class="mul-form mul-form-inline mul-no-margin-bottom" id="" name="" method="" action="" title="">
+				<fieldset>
+					<ol>
+						<li>
+							<div class="mul-checkbox mul-no-margin-bottom">
+								<label for="large-switch-checkbox">
+									<input id="large-switch-checkbox" type="checkbox" onclick="toggleLargeIcons(this.checked)" title="Show Large Icons" /> Show X-large Icons
+								</label>
+								<label for="code-switch-checkbox">
+									<input id="code-switch-checkbox" type="checkbox" onclick="toggleCodes(this.checked)" title="Show Character Codes" /> Show Character Codes
+								</label>
+							</div>
+						</li>
+					</ol>
+				</fieldset>
+			</form>
+		</div>
+		<div class="col-5 mul-tbl-data-filter">
+			<input id="filter" type="text" placeholder="Filter" tabindex="" title="Type to filter results." />
+		</div>
+	</caption>
+	<thead>
+		<tr>
+			<th class="col-1 mul-align-center" scope="col">Icon</th>
+			<th class="col-4" data-sort-initial="ascending" scope="col"><a href="javascript:;">Name</a></th>
+			<th class="col-4" scope="col"><a href="javascript:;">Class/Code</a></th>
+			<th class="col-15" scope="col"><a href="javascript:;">Function</a></th>
+		</tr>
+	</thead>
+	<tbody>
+
+		{% for item in model.icon_table_data %}
+		<tr>
+			<td class="mul-align-center"><i class="{{ item.icon_class }}"></i></td>
+			<td>{{ item.icon_name }}</td>
+			<td><span class="i-name">{{ item.icon_class }}</span><span class="i-code">{{ item.icon_code }}</span></td>
+			<td>{{ item.icon_desc }}</td>
+		</tr>
+		{% endfor %}
+
+	</tbody>
+</table>
+
+<article>
+	<div id="icons-ctn">
+
+		<div class="col-24">
+			<div title="Code: 0xe812" class="icon-example col-6 first"><i class="mul-icon-mail-alt"></i> <span class="i-name">mul-icon-mail-alt</span><span class="i-code">0xe812</span></div>
+			<div title="Code: 0xe813" class="icon-example col-6"><i class="mul-icon-heart"></i> <span class="i-name">mul-icon-heart</span><span class="i-code">0xe813</span></div>
+			<div title="Code: 0xe814" class="icon-example col-6"><i class="mul-icon-heart-empty"></i> <span class="i-name">mul-icon-heart-empty</span><span class="i-code">0xe814</span></div>
+			<div title="Code: 0xe815" class="icon-example col-6"><i class="mul-icon-star"></i> <span class="i-name">mul-icon-star</span><span class="i-code">0xe815</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe816" class="icon-example col-6 first"><i class="mul-icon-star-empty"></i> <span class="i-name">mul-icon-star-empty</span><span class="i-code">0xe816</span></div>
+			<div title="Code: 0xe817" class="icon-example col-6"><i class="mul-icon-star-half"></i> <span class="i-name">mul-icon-star-half</span><span class="i-code">0xe817</span></div>
+			<div title="Code: 0xe818" class="icon-example col-6"><i class="mul-icon-star-half-alt"></i> <span class="i-name">mul-icon-star-half-alt</span><span class="i-code">0xe818</span></div>
+			<div title="Code: 0xe819" class="icon-example col-6"><i class="mul-icon-user"></i> <span class="i-name">mul-icon-user</span><span class="i-code">0xe819</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe81a" class="icon-example col-6 first"><i class="mul-icon-users"></i> <span class="i-name">mul-icon-users</span><span class="i-code">0xe81a</span></div>
+			<div title="Code: 0xe81b" class="icon-example col-6"><i class="mul-icon-male"></i> <span class="i-name">mul-icon-male</span><span class="i-code">0xe81b</span></div>
+			<div title="Code: 0xe81c" class="icon-example col-6"><i class="mul-icon-female"></i> <span class="i-name">mul-icon-female</span><span class="i-code">0xe81c</span></div>
+			<div title="Code: 0xe81d" class="icon-example col-6"><i class="mul-icon-video"></i> <span class="i-name">mul-icon-video</span><span class="i-code">0xe81d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe81e" class="icon-example col-6 first"><i class="mul-icon-videocam"></i> <span class="i-name">mul-icon-videocam</span><span class="i-code">0xe81e</span></div>
+			<div title="Code: 0xe81f" class="icon-example col-6"><i class="mul-icon-picture"></i> <span class="i-name">mul-icon-picture</span><span class="i-code">0xe81f</span></div>
+			<div title="Code: 0xe8b9" class="icon-example col-6"><i class="mul-icon-camera"></i> <span class="i-name">mul-icon-camera</span><span class="i-code">0xe8b9</span></div>
+			<div title="Code: 0xe8ba" class="icon-example col-6"><i class="mul-icon-camera-alt"></i> <span class="i-name">mul-icon-camera-alt</span><span class="i-code">0xe8ba</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe800" class="icon-example col-6 first"><i class="mul-icon-th-large"></i> <span class="i-name">mul-icon-th-large</span><span class="i-code">0xe800</span></div>
+			<div title="Code: 0xe803" class="icon-example col-6"><i class="mul-icon-th"></i> <span class="i-name">mul-icon-th</span><span class="i-code">0xe803</span></div>
+			<div title="Code: 0xe820" class="icon-example col-6"><i class="mul-icon-th-list"></i> <span class="i-name">mul-icon-th-list</span><span class="i-code">0xe820</span></div>
+			<div title="Code: 0xe821" class="icon-example col-6"><i class="mul-icon-ok"></i> <span class="i-name">mul-icon-ok</span><span class="i-code">0xe821</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe822" class="icon-example col-6 first"><i class="mul-icon-ok-circled"></i> <span class="i-name">mul-icon-ok-circled</span><span class="i-code">0xe822</span></div>
+			<div title="Code: 0xe823" class="icon-example col-6"><i class="mul-icon-ok-circled2"></i> <span class="i-name">mul-icon-ok-circled2</span><span class="i-code">0xe823</span></div>
+			<div title="Code: 0xe824" class="icon-example col-6"><i class="mul-icon-ok-squared"></i> <span class="i-name">mul-icon-ok-squared</span><span class="i-code">0xe824</span></div>
+			<div title="Code: 0xe825" class="icon-example col-6"><i class="mul-icon-cancel"></i> <span class="i-name">mul-icon-cancel</span><span class="i-code">0xe825</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe826" class="icon-example col-6 first"><i class="mul-icon-cancel-circled"></i> <span class="i-name">mul-icon-cancel-circled</span><span class="i-code">0xe826</span></div>
+			<div title="Code: 0xe827" class="icon-example col-6"><i class="mul-icon-cancel-circled2"></i> <span class="i-name">mul-icon-cancel-circled2</span><span class="i-code">0xe827</span></div>
+			<div title="Code: 0xe828" class="icon-example col-6"><i class="mul-icon-plus"></i> <span class="i-name">mul-icon-plus</span><span class="i-code">0xe828</span></div>
+			<div title="Code: 0xe829" class="icon-example col-6"><i class="mul-icon-plus-circled"></i> <span class="i-name">mul-icon-plus-circled</span><span class="i-code">0xe829</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe82a" class="icon-example col-6 first"><i class="mul-icon-plus-squared"></i> <span class="i-name">mul-icon-plus-squared</span><span class="i-code">0xe82a</span></div>
+			<div title="Code: 0xe82b" class="icon-example col-6"><i class="mul-icon-plus-squared-small"></i> <span class="i-name">mul-icon-plus-squared-small</span><span class="i-code">0xe82b</span></div>
+			<div title="Code: 0xe82c" class="icon-example col-6"><i class="mul-icon-minus"></i> <span class="i-name">mul-icon-minus</span><span class="i-code">0xe82c</span></div>
+			<div title="Code: 0xe82d" class="icon-example col-6"><i class="mul-icon-minus-circled"></i> <span class="i-name">mul-icon-minus-circled</span><span class="i-code">0xe82d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe82e" class="icon-example col-6 first"><i class="mul-icon-minus-squared"></i> <span class="i-name">mul-icon-minus-squared</span><span class="i-code">0xe82e</span></div>
+			<div title="Code: 0xe82f" class="icon-example col-6"><i class="mul-icon-minus-squared-alt"></i> <span class="i-name">mul-icon-minus-squared-alt</span><span class="i-code">0xe82f</span></div>
+			<div title="Code: 0xe8bc" class="icon-example col-6"><i class="mul-icon-minus-squared-small"></i> <span class="i-name">mul-icon-minus-squared-small</span><span class="i-code">0xe8bc</span></div>
+			<div title="Code: 0xe8bb" class="icon-example col-6"><i class="mul-icon-help"></i> <span class="i-name">mul-icon-help</span><span class="i-code">0xe8bb</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe804" class="icon-example col-6 first"><i class="mul-icon-help-circled"></i> <span class="i-name">mul-icon-help-circled</span><span class="i-code">0xe804</span></div>
+			<div title="Code: 0xe805" class="icon-example col-6"><i class="mul-icon-info-circled"></i> <span class="i-name">mul-icon-info-circled</span><span class="i-code">0xe805</span></div>
+			<div title="Code: 0xe830" class="icon-example col-6"><i class="mul-icon-info"></i> <span class="i-name">mul-icon-info</span><span class="i-code">0xe830</span></div>
+			<div title="Code: 0xe831" class="icon-example col-6"><i class="mul-icon-home"></i> <span class="i-name">mul-icon-home</span><span class="i-code">0xe831</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe832" class="icon-example col-6 first"><i class="mul-icon-link"></i> <span class="i-name">mul-icon-link</span><span class="i-code">0xe832</span></div>
+			<div title="Code: 0xe833" class="icon-example col-6"><i class="mul-icon-unlink"></i> <span class="i-name">mul-icon-unlink</span><span class="i-code">0xe833</span></div>
+			<div title="Code: 0xe834" class="icon-example col-6"><i class="mul-icon-link-ext"></i> <span class="i-name">mul-icon-link-ext</span><span class="i-code">0xe834</span></div>
+			<div title="Code: 0xe835" class="icon-example col-6"><i class="mul-icon-link-ext-alt"></i> <span class="i-name">mul-icon-link-ext-alt</span><span class="i-code">0xe835</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe836" class="icon-example col-6 first"><i class="mul-icon-attach"></i> <span class="i-name">mul-icon-attach</span><span class="i-code">0xe836</span></div>
+			<div title="Code: 0xe837" class="icon-example col-6"><i class="mul-icon-lock"></i> <span class="i-name">mul-icon-lock</span><span class="i-code">0xe837</span></div>
+			<div title="Code: 0xe838" class="icon-example col-6"><i class="mul-icon-lock-open"></i> <span class="i-name">mul-icon-lock-open</span><span class="i-code">0xe838</span></div>
+			<div title="Code: 0xe839" class="icon-example col-6"><i class="mul-icon-lock-open-alt"></i> <span class="i-name">mul-icon-lock-open-alt</span><span class="i-code">0xe839</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe83a" class="icon-example col-6 first"><i class="mul-icon-pin"></i> <span class="i-name">mul-icon-pin</span><span class="i-code">0xe83a</span></div>
+			<div title="Code: 0xe83b" class="icon-example col-6"><i class="mul-icon-eye"></i> <span class="i-name">mul-icon-eye</span><span class="i-code">0xe83b</span></div>
+			<div title="Code: 0xe83c" class="icon-example col-6"><i class="mul-icon-eye-off"></i> <span class="i-name">mul-icon-eye-off</span><span class="i-code">0xe83c</span></div>
+			<div title="Code: 0xe83d" class="icon-example col-6"><i class="mul-icon-tag"></i> <span class="i-name">mul-icon-tag</span><span class="i-code">0xe83d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe83e" class="icon-example col-6 first"><i class="mul-icon-tags"></i> <span class="i-name">mul-icon-tags</span><span class="i-code">0xe83e</span></div>
+			<div title="Code: 0xe83f" class="icon-example col-6"><i class="mul-icon-bookmark"></i> <span class="i-name">mul-icon-bookmark</span><span class="i-code">0xe83f</span></div>
+			<div title="Code: 0xe8bd" class="icon-example col-6"><i class="mul-icon-bookmark-empty"></i> <span class="i-name">mul-icon-bookmark-empty</span><span class="i-code">0xe8bd</span></div>
+			<div title="Code: 0xe8be" class="icon-example col-6"><i class="mul-icon-flag"></i> <span class="i-name">mul-icon-flag</span><span class="i-code">0xe8be</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe806" class="icon-example col-6 first"><i class="mul-icon-flag-empty"></i> <span class="i-name">mul-icon-flag-empty</span><span class="i-code">0xe806</span></div>
+			<div title="Code: 0xe807" class="icon-example col-6"><i class="mul-icon-flag-checkered"></i> <span class="i-name">mul-icon-flag-checkered</span><span class="i-code">0xe807</span></div>
+			<div title="Code: 0xe840" class="icon-example col-6"><i class="mul-icon-thumbs-up"></i> <span class="i-name">mul-icon-thumbs-up</span><span class="i-code">0xe840</span></div>
+			<div title="Code: 0xe841" class="icon-example col-6"><i class="mul-icon-thumbs-down"></i> <span class="i-name">mul-icon-thumbs-down</span><span class="i-code">0xe841</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe842" class="icon-example col-6 first"><i class="mul-icon-thumbs-up-alt"></i> <span class="i-name">mul-icon-thumbs-up-alt</span><span class="i-code">0xe842</span></div>
+			<div title="Code: 0xe843" class="icon-example col-6"><i class="mul-icon-thumbs-down-alt"></i> <span class="i-name">mul-icon-thumbs-down-alt</span><span class="i-code">0xe843</span></div>
+			<div title="Code: 0xe844" class="icon-example col-6"><i class="mul-icon-download"></i> <span class="i-name">mul-icon-download</span><span class="i-code">0xe844</span></div>
+			<div title="Code: 0xe845" class="icon-example col-6"><i class="mul-icon-upload"></i> <span class="i-name">mul-icon-upload</span><span class="i-code">0xe845</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe846" class="icon-example col-6 first"><i class="mul-icon-download-cloud"></i> <span class="i-name">mul-icon-download-cloud</span><span class="i-code">0xe846</span></div>
+			<div title="Code: 0xe847" class="icon-example col-6"><i class="mul-icon-upload-cloud"></i> <span class="i-name">mul-icon-upload-cloud</span><span class="i-code">0xe847</span></div>
+			<div title="Code: 0xe848" class="icon-example col-6"><i class="mul-icon-reply"></i> <span class="i-name">mul-icon-reply</span><span class="i-code">0xe848</span></div>
+			<div title="Code: 0xe849" class="icon-example col-6"><i class="mul-icon-reply-all"></i> <span class="i-name">mul-icon-reply-all</span><span class="i-code">0xe849</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe84a" class="icon-example col-6 first"><i class="mul-icon-forward"></i> <span class="i-name">mul-icon-forward</span><span class="i-code">0xe84a</span></div>
+			<div title="Code: 0xe84b" class="icon-example col-6"><i class="mul-icon-quote-left"></i> <span class="i-name">mul-icon-quote-left</span><span class="i-code">0xe84b</span></div>
+			<div title="Code: 0xe84c" class="icon-example col-6"><i class="mul-icon-quote-right"></i> <span class="i-name">mul-icon-quote-right</span><span class="i-code">0xe84c</span></div>
+			<div title="Code: 0xe84d" class="icon-example col-6"><i class="mul-icon-code"></i> <span class="i-name">mul-icon-code</span><span class="i-code">0xe84d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe84e" class="icon-example col-6 first"><i class="mul-icon-export"></i> <span class="i-name">mul-icon-export</span><span class="i-code">0xe84e</span></div>
+			<div title="Code: 0xe84f" class="icon-example col-6"><i class="mul-icon-export-alt"></i> <span class="i-name">mul-icon-export-alt</span><span class="i-code">0xe84f</span></div>
+			<div title="Code: 0xe8bf" class="icon-example col-6"><i class="mul-icon-pencil"></i> <span class="i-name">mul-icon-pencil</span><span class="i-code">0xe8bf</span></div>
+			<div title="Code: 0xe8c0" class="icon-example col-6"><i class="mul-icon-pencil-squared"></i> <span class="i-name">mul-icon-pencil-squared</span><span class="i-code">0xe8c0</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe808" class="icon-example col-6 first"><i class="mul-icon-edit"></i> <span class="i-name">mul-icon-edit</span><span class="i-code">0xe808</span></div>
+			<div title="Code: 0xe80b" class="icon-example col-6"><i class="mul-icon-print"></i> <span class="i-name">mul-icon-print</span><span class="i-code">0xe80b</span></div>
+			<div title="Code: 0xe850" class="icon-example col-6"><i class="mul-icon-retweet"></i> <span class="i-name">mul-icon-retweet</span><span class="i-code">0xe850</span></div>
+			<div title="Code: 0xe851" class="icon-example col-6"><i class="mul-icon-keyboard"></i> <span class="i-name">mul-icon-keyboard</span><span class="i-code">0xe851</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe852" class="icon-example col-6 first"><i class="mul-icon-gamepad"></i> <span class="i-name">mul-icon-gamepad</span><span class="i-code">0xe852</span></div>
+			<div title="Code: 0xe853" class="icon-example col-6"><i class="mul-icon-comment"></i> <span class="i-name">mul-icon-comment</span><span class="i-code">0xe853</span></div>
+			<div title="Code: 0xe854" class="icon-example col-6"><i class="mul-icon-chat"></i> <span class="i-name">mul-icon-chat</span><span class="i-code">0xe854</span></div>
+			<div title="Code: 0xe855" class="icon-example col-6"><i class="mul-icon-comment-empty"></i> <span class="i-name">mul-icon-comment-empty</span><span class="i-code">0xe855</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe856" class="icon-example col-6 first"><i class="mul-icon-chat-empty"></i> <span class="i-name">mul-icon-chat-empty</span><span class="i-code">0xe856</span></div>
+			<div title="Code: 0xe857" class="icon-example col-6"><i class="mul-icon-bell"></i> <span class="i-name">mul-icon-bell</span><span class="i-code">0xe857</span></div>
+			<div title="Code: 0xe858" class="icon-example col-6"><i class="mul-icon-bell-alt"></i> <span class="i-name">mul-icon-bell-alt</span><span class="i-code">0xe858</span></div>
+			<div title="Code: 0xe859" class="icon-example col-6"><i class="mul-icon-attention-alt"></i> <span class="i-name">mul-icon-attention-alt</span><span class="i-code">0xe859</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe85a" class="icon-example col-6 first"><i class="mul-icon-attention"></i> <span class="i-name">mul-icon-attention</span><span class="i-code">0xe85a</span></div>
+			<div title="Code: 0xe85b" class="icon-example col-6"><i class="mul-icon-attention-circled"></i> <span class="i-name">mul-icon-attention-circled</span><span class="i-code">0xe85b</span></div>
+			<div title="Code: 0xe85c" class="icon-example col-6"><i class="mul-icon-location"></i> <span class="i-name">mul-icon-location</span><span class="i-code">0xe85c</span></div>
+			<div title="Code: 0xe85d" class="icon-example col-6"><i class="mul-icon-direction"></i> <span class="i-name">mul-icon-direction</span><span class="i-code">0xe85d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe96e" class="icon-example col-6 first"><i class="mul-icon-compass"></i> <span class="i-name">mul-icon-compass</span><span class="i-code">0xe96e</span></div>
+			<div title="Code: 0xe80c" class="icon-example col-6"><i class="mul-icon-trash"></i> <span class="i-name">mul-icon-trash</span><span class="i-code">0xe80c</span></div>
+			<div title="Code: 0xe8c2" class="icon-example col-6"><i class="mul-icon-doc"></i> <span class="i-name">mul-icon-doc</span><span class="i-code">0xe8c2</span></div>
+			<div title="Code: 0xe8c1" class="icon-example col-6"><i class="mul-icon-docs"></i> <span class="i-name">mul-icon-docs</span><span class="i-code">0xe8c1</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe801" class="icon-example col-6 first"><i class="mul-icon-doc-text"></i> <span class="i-name">mul-icon-doc-text</span><span class="i-code">0xe801</span></div>
+			<div title="Code: 0xe96f" class="icon-example col-6"><i class="mul-icon-doc-inv"></i> <span class="i-name">mul-icon-doc-inv</span><span class="i-code">0xe96f</span></div>
+			<div title="Code: 0xe80d" class="icon-example col-6"><i class="mul-icon-doc-text-inv"></i> <span class="i-name">mul-icon-doc-text-inv</span><span class="i-code">0xe80d</span></div>
+			<div title="Code: 0xe80e" class="icon-example col-6"><i class="mul-icon-folder"></i> <span class="i-name">mul-icon-folder</span><span class="i-code">0xe80e</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe85e" class="icon-example col-6 first"><i class="mul-icon-folder-open"></i> <span class="i-name">mul-icon-folder-open</span><span class="i-code">0xe85e</span></div>
+			<div title="Code: 0xe85f" class="icon-example col-6"><i class="mul-icon-folder-empty"></i> <span class="i-name">mul-icon-folder-empty</span><span class="i-code">0xe85f</span></div>
+			<div title="Code: 0xe860" class="icon-example col-6"><i class="mul-icon-folder-open-empty"></i> <span class="i-name">mul-icon-folder-open-empty</span><span class="i-code">0xe860</span></div>
+			<div title="Code: 0xe861" class="icon-example col-6"><i class="mul-icon-box"></i> <span class="i-name">mul-icon-box</span><span class="i-code">0xe861</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe862" class="icon-example col-6 first"><i class="mul-icon-rss"></i> <span class="i-name">mul-icon-rss</span><span class="i-code">0xe862</span></div>
+			<div title="Code: 0xe863" class="icon-example col-6"><i class="mul-icon-rss-squared"></i> <span class="i-name">mul-icon-rss-squared</span><span class="i-code">0xe863</span></div>
+			<div title="Code: 0xe864" class="icon-example col-6"><i class="mul-icon-phone"></i> <span class="i-name">mul-icon-phone</span><span class="i-code">0xe864</span></div>
+			<div title="Code: 0xe865" class="icon-example col-6"><i class="mul-icon-phone-squared"></i> <span class="i-name">mul-icon-phone-squared</span><span class="i-code">0xe865</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe866" class="icon-example col-6 first"><i class="mul-icon-menu"></i> <span class="i-name">mul-icon-menu</span><span class="i-code">0xe866</span></div>
+			<div title="Code: 0xe867" class="icon-example col-6"><i class="mul-icon-cog"></i> <span class="i-name">mul-icon-cog</span><span class="i-code">0xe867</span></div>
+			<div title="Code: 0xe868" class="icon-example col-6"><i class="mul-icon-cog-alt"></i> <span class="i-name">mul-icon-cog-alt</span><span class="i-code">0xe868</span></div>
+			<div title="Code: 0xe869" class="icon-example col-6"><i class="mul-icon-wrench"></i> <span class="i-name">mul-icon-wrench</span><span class="i-code">0xe869</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe86a" class="icon-example col-6 first"><i class="mul-icon-basket"></i> <span class="i-name">mul-icon-basket</span><span class="i-code">0xe86a</span></div>
+			<div title="Code: 0xe86b" class="icon-example col-6"><i class="mul-icon-calendar"></i> <span class="i-name">mul-icon-calendar</span><span class="i-code">0xe86b</span></div>
+			<div title="Code: 0xe86c" class="icon-example col-6"><i class="mul-icon-calendar-empty"></i> <span class="i-name">mul-icon-calendar-empty</span><span class="i-code">0xe86c</span></div>
+			<div title="Code: 0xe86d" class="icon-example col-6"><i class="mul-icon-login"></i> <span class="i-name">mul-icon-login</span><span class="i-code">0xe86d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe86e" class="icon-example col-6 first"><i class="mul-icon-logout"></i> <span class="i-name">mul-icon-logout</span><span class="i-code">0xe86e</span></div>
+			<div title="Code: 0xe86f" class="icon-example col-6"><i class="mul-icon-mic"></i> <span class="i-name">mul-icon-mic</span><span class="i-code">0xe86f</span></div>
+			<div title="Code: 0xe870" class="icon-example col-6"><i class="mul-icon-mute"></i> <span class="i-name">mul-icon-mute</span><span class="i-code">0xe870</span></div>
+			<div title="Code: 0xe871" class="icon-example col-6"><i class="mul-icon-volume-off"></i> <span class="i-name">mul-icon-volume-off</span><span class="i-code">0xe871</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe872" class="icon-example col-6 first"><i class="mul-icon-volume-down"></i> <span class="i-name">mul-icon-volume-down</span><span class="i-code">0xe872</span></div>
+			<div title="Code: 0xe873" class="icon-example col-6"><i class="mul-icon-volume-up"></i> <span class="i-name">mul-icon-volume-up</span><span class="i-code">0xe873</span></div>
+			<div title="Code: 0xe874" class="icon-example col-6"><i class="mul-icon-headphones"></i> <span class="i-name">mul-icon-headphones</span><span class="i-code">0xe874</span></div>
+			<div title="Code: 0xe875" class="icon-example col-6"><i class="mul-icon-clock"></i> <span class="i-name">mul-icon-clock</span><span class="i-code">0xe875</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe876" class="icon-example col-6 first"><i class="mul-icon-lightbulb"></i> <span class="i-name">mul-icon-lightbulb</span><span class="i-code">0xe876</span></div>
+			<div title="Code: 0xe877" class="icon-example col-6"><i class="mul-icon-block"></i> <span class="i-name">mul-icon-block</span><span class="i-code">0xe877</span></div>
+			<div title="Code: 0xe878" class="icon-example col-6"><i class="mul-icon-resize-full"></i> <span class="i-name">mul-icon-resize-full</span><span class="i-code">0xe878</span></div>
+			<div title="Code: 0xe879" class="icon-example col-6"><i class="mul-icon-resize-full-alt"></i> <span class="i-name">mul-icon-resize-full-alt</span><span class="i-code">0xe879</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe87a" class="icon-example col-6 first"><i class="mul-icon-resize-small"></i> <span class="i-name">mul-icon-resize-small</span><span class="i-code">0xe87a</span></div>
+			<div title="Code: 0xe87b" class="icon-example col-6"><i class="mul-icon-resize-vertical"></i> <span class="i-name">mul-icon-resize-vertical</span><span class="i-code">0xe87b</span></div>
+			<div title="Code: 0xe87c" class="icon-example col-6"><i class="mul-icon-resize-horizontal"></i> <span class="i-name">mul-icon-resize-horizontal</span><span class="i-code">0xe87c</span></div>
+			<div title="Code: 0xe87d" class="icon-example col-6"><i class="mul-icon-move"></i> <span class="i-name">mul-icon-move</span><span class="i-code">0xe87d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe87e" class="icon-example col-6 first"><i class="mul-icon-zoom-in"></i> <span class="i-name">mul-icon-zoom-in</span><span class="i-code">0xe87e</span></div>
+			<div title="Code: 0xe87f" class="icon-example col-6"><i class="mul-icon-zoom-out"></i> <span class="i-name">mul-icon-zoom-out</span><span class="i-code">0xe87f</span></div>
+			<div title="Code: 0xe880" class="icon-example col-6"><i class="mul-icon-down-circled2"></i> <span class="i-name">mul-icon-down-circled2</span><span class="i-code">0xe880</span></div>
+			<div title="Code: 0xe881" class="icon-example col-6"><i class="mul-icon-up-circled2"></i> <span class="i-name">mul-icon-up-circled2</span><span class="i-code">0xe881</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe882" class="icon-example col-6 first"><i class="mul-icon-left-circled2"></i> <span class="i-name">mul-icon-left-circled2</span><span class="i-code">0xe882</span></div>
+			<div title="Code: 0xe883" class="icon-example col-6"><i class="mul-icon-right-circled2"></i> <span class="i-name">mul-icon-right-circled2</span><span class="i-code">0xe883</span></div>
+			<div title="Code: 0xe884" class="icon-example col-6"><i class="mul-icon-down-dir"></i> <span class="i-name">mul-icon-down-dir</span><span class="i-code">0xe884</span></div>
+			<div title="Code: 0xe885" class="icon-example col-6"><i class="mul-icon-up-dir"></i> <span class="i-name">mul-icon-up-dir</span><span class="i-code">0xe885</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe886" class="icon-example col-6 first"><i class="mul-icon-left-dir"></i> <span class="i-name">mul-icon-left-dir</span><span class="i-code">0xe886</span></div>
+			<div title="Code: 0xe887" class="icon-example col-6"><i class="mul-icon-right-dir"></i> <span class="i-name">mul-icon-right-dir</span><span class="i-code">0xe887</span></div>
+			<div title="Code: 0xe888" class="icon-example col-6"><i class="mul-icon-down-open"></i> <span class="i-name">mul-icon-down-open</span><span class="i-code">0xe888</span></div>
+			<div title="Code: 0xe889" class="icon-example col-6"><i class="mul-icon-left-open"></i> <span class="i-name">mul-icon-left-open</span><span class="i-code">0xe889</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe88a" class="icon-example col-6 first"><i class="mul-icon-right-open"></i> <span class="i-name">mul-icon-right-open</span><span class="i-code">0xe88a</span></div>
+			<div title="Code: 0xe88b" class="icon-example col-6"><i class="mul-icon-up-open"></i> <span class="i-name">mul-icon-up-open</span><span class="i-code">0xe88b</span></div>
+			<div title="Code: 0xe88c" class="icon-example col-6"><i class="mul-icon-angle-left"></i> <span class="i-name">mul-icon-angle-left</span><span class="i-code">0xe88c</span></div>
+			<div title="Code: 0xe88d" class="icon-example col-6"><i class="mul-icon-angle-right"></i> <span class="i-name">mul-icon-angle-right</span><span class="i-code">0xe88d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe88e" class="icon-example col-6 first"><i class="mul-icon-angle-up"></i> <span class="i-name">mul-icon-angle-up</span><span class="i-code">0xe88e</span></div>
+			<div title="Code: 0xe88f" class="icon-example col-6"><i class="mul-icon-angle-down"></i> <span class="i-name">mul-icon-angle-down</span><span class="i-code">0xe88f</span></div>
+			<div title="Code: 0xe890" class="icon-example col-6"><i class="mul-icon-angle-circled-left"></i> <span class="i-name">mul-icon-angle-circled-left</span><span class="i-code">0xe890</span></div>
+			<div title="Code: 0xe891" class="icon-example col-6"><i class="mul-icon-angle-circled-right"></i> <span class="i-name">mul-icon-angle-circled-right</span><span class="i-code">0xe891</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe892" class="icon-example col-6 first"><i class="mul-icon-angle-circled-up"></i> <span class="i-name">mul-icon-angle-circled-up</span><span class="i-code">0xe892</span></div>
+			<div title="Code: 0xe893" class="icon-example col-6"><i class="mul-icon-angle-circled-down"></i> <span class="i-name">mul-icon-angle-circled-down</span><span class="i-code">0xe893</span></div>
+			<div title="Code: 0xe894" class="icon-example col-6"><i class="mul-icon-angle-double-left"></i> <span class="i-name">mul-icon-angle-double-left</span><span class="i-code">0xe894</span></div>
+			<div title="Code: 0xe895" class="icon-example col-6"><i class="mul-icon-angle-double-right"></i> <span class="i-name">mul-icon-angle-double-right</span><span class="i-code">0xe895</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8c3" class="icon-example col-6 first"><i class="mul-icon-angle-double-up"></i> <span class="i-name">mul-icon-angle-double-up</span><span class="i-code">0xe8c3</span></div>
+			<div title="Code: 0xe8c4" class="icon-example col-6"><i class="mul-icon-angle-double-down"></i> <span class="i-name">mul-icon-angle-double-down</span><span class="i-code">0xe8c4</span></div>
+			<div title="Code: 0xe8c5" class="icon-example col-6"><i class="mul-icon-down"></i> <span class="i-name">mul-icon-down</span><span class="i-code">0xe8c5</span></div>
+			<div title="Code: 0xe8c6" class="icon-example col-6"><i class="mul-icon-left"></i> <span class="i-name">mul-icon-left</span><span class="i-code">0xe8c6</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8c7" class="icon-example col-6 first"><i class="mul-icon-right"></i> <span class="i-name">mul-icon-right</span><span class="i-code">0xe8c7</span></div>
+			<div title="Code: 0xe8c8" class="icon-example col-6"><i class="mul-icon-up"></i> <span class="i-name">mul-icon-up</span><span class="i-code">0xe8c8</span></div>
+			<div title="Code: 0xe8c9" class="icon-example col-6"><i class="mul-icon-down-big"></i> <span class="i-name">mul-icon-down-big</span><span class="i-code">0xe8c9</span></div>
+			<div title="Code: 0xe8ca" class="icon-example col-6"><i class="mul-icon-left-big"></i> <span class="i-name">mul-icon-left-big</span><span class="i-code">0xe8ca</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8cb" class="icon-example col-6 first"><i class="mul-icon-right-big"></i> <span class="i-name">mul-icon-right-big</span><span class="i-code">0xe8cb</span></div>
+			<div title="Code: 0xe8cc" class="icon-example col-6"><i class="mul-icon-up-big"></i> <span class="i-name">mul-icon-up-big</span><span class="i-code">0xe8cc</span></div>
+			<div title="Code: 0xe8cd" class="icon-example col-6"><i class="mul-icon-right-hand"></i> <span class="i-name">mul-icon-right-hand</span><span class="i-code">0xe8cd</span></div>
+			<div title="Code: 0xe8ce" class="icon-example col-6"><i class="mul-icon-left-hand"></i> <span class="i-name">mul-icon-left-hand</span><span class="i-code">0xe8ce</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8cf" class="icon-example col-6 first"><i class="mul-icon-up-hand"></i> <span class="i-name">mul-icon-up-hand</span><span class="i-code">0xe8cf</span></div>
+			<div title="Code: 0xe8d0" class="icon-example col-6"><i class="mul-icon-down-hand"></i> <span class="i-name">mul-icon-down-hand</span><span class="i-code">0xe8d0</span></div>
+			<div title="Code: 0xe8d1" class="icon-example col-6"><i class="mul-icon-left-circled"></i> <span class="i-name">mul-icon-left-circled</span><span class="i-code">0xe8d1</span></div>
+			<div title="Code: 0xe8d2" class="icon-example col-6"><i class="mul-icon-right-circled"></i> <span class="i-name">mul-icon-right-circled</span><span class="i-code">0xe8d2</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8d3" class="icon-example col-6 first"><i class="mul-icon-up-circled"></i> <span class="i-name">mul-icon-up-circled</span><span class="i-code">0xe8d3</span></div>
+			<div title="Code: 0xe8d4" class="icon-example col-6"><i class="mul-icon-down-circled"></i> <span class="i-name">mul-icon-down-circled</span><span class="i-code">0xe8d4</span></div>
+			<div title="Code: 0xe8d5" class="icon-example col-6"><i class="mul-icon-cw"></i> <span class="i-name">mul-icon-cw</span><span class="i-code">0xe8d5</span></div>
+			<div title="Code: 0xe8d6" class="icon-example col-6"><i class="mul-icon-ccw"></i> <span class="i-name">mul-icon-ccw</span><span class="i-code">0xe8d6</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe896" class="icon-example col-6 first"><i class="mul-icon-arcol-24s-cw"></i> <span class="i-name">mul-icon-arcol-24s-cw</span><span class="i-code">0xe896</span></div>
+			<div title="Code: 0xe897" class="icon-example col-6"><i class="mul-icon-level-up"></i> <span class="i-name">mul-icon-level-up</span><span class="i-code">0xe897</span></div>
+			<div title="Code: 0xe898" class="icon-example col-6"><i class="mul-icon-level-down"></i> <span class="i-name">mul-icon-level-down</span><span class="i-code">0xe898</span></div>
+			<div title="Code: 0xe899" class="icon-example col-6"><i class="mul-icon-shuffle"></i> <span class="i-name">mul-icon-shuffle</span><span class="i-code">0xe899</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe80f" class="icon-example col-6 first"><i class="mul-icon-music"></i> <span class="i-name">mul-icon-music</span><span class="i-code">0xe80f</span></div>
+			<div title="Code: 0xe89b" class="icon-example col-6"><i class="mul-icon-expand"></i> <span class="i-name">mul-icon-expand</span><span class="i-code">0xe89b</span></div>
+			<div title="Code: 0xe89c" class="icon-example col-6"><i class="mul-icon-collapse"></i> <span class="i-name">mul-icon-collapse</span><span class="i-code">0xe89c</span></div>
+			<div title="Code: 0xe89d" class="icon-example col-6"><i class="mul-icon-expand-right"></i> <span class="i-name">mul-icon-expand-right</span><span class="i-code">0xe89d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe89e" class="icon-example col-6 first"><i class="mul-icon-collapse-left"></i> <span class="i-name">mul-icon-collapse-left</span><span class="i-code">0xe89e</span></div>
+			<div title="Code: 0xe89f" class="icon-example col-6"><i class="mul-icon-play"></i> <span class="i-name">mul-icon-play</span><span class="i-code">0xe89f</span></div>
+			<div title="Code: 0xe8a0" class="icon-example col-6"><i class="mul-icon-play-circled"></i> <span class="i-name">mul-icon-play-circled</span><span class="i-code">0xe8a0</span></div>
+			<div title="Code: 0xe8a1" class="icon-example col-6"><i class="mul-icon-play-circled2"></i> <span class="i-name">mul-icon-play-circled2</span><span class="i-code">0xe8a1</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8a2" class="icon-example col-6 first"><i class="mul-icon-stop"></i> <span class="i-name">mul-icon-stop</span><span class="i-code">0xe8a2</span></div>
+			<div title="Code: 0xe8a3" class="icon-example col-6"><i class="mul-icon-pause"></i> <span class="i-name">mul-icon-pause</span><span class="i-code">0xe8a3</span></div>
+			<div title="Code: 0xe8a4" class="icon-example col-6"><i class="mul-icon-to-end"></i> <span class="i-name">mul-icon-to-end</span><span class="i-code">0xe8a4</span></div>
+			<div title="Code: 0xe8a5" class="icon-example col-6"><i class="mul-icon-to-end-alt"></i> <span class="i-name">mul-icon-to-end-alt</span><span class="i-code">0xe8a5</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8a6" class="icon-example col-6 first"><i class="mul-icon-to-start"></i> <span class="i-name">mul-icon-to-start</span><span class="i-code">0xe8a6</span></div>
+			<div title="Code: 0xe8d7" class="icon-example col-6"><i class="mul-icon-to-start-alt"></i> <span class="i-name">mul-icon-to-start-alt</span><span class="i-code">0xe8d7</span></div>
+			<div title="Code: 0xe8d8" class="icon-example col-6"><i class="mul-icon-fast-fw"></i> <span class="i-name">mul-icon-fast-fw</span><span class="i-code">0xe8d8</span></div>
+			<div title="Code: 0xe8d9" class="icon-example col-6"><i class="mul-icon-fast-bw"></i> <span class="i-name">mul-icon-fast-bw</span><span class="i-code">0xe8d9</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe809" class="icon-example col-6 first"><i class="mul-icon-eject"></i> <span class="i-name">mul-icon-eject</span><span class="i-code">0xe809</span></div>
+			<div title="Code: 0xe80a" class="icon-example col-6"><i class="mul-icon-target"></i> <span class="i-name">mul-icon-target</span><span class="i-code">0xe80a</span></div>
+			<div title="Code: 0xe8a7" class="icon-example col-6"><i class="mul-icon-signal"></i> <span class="i-name">mul-icon-signal</span><span class="i-code">0xe8a7</span></div>
+			<div title="Code: 0xe8a8" class="icon-example col-6"><i class="mul-icon-award"></i> <span class="i-name">mul-icon-award</span><span class="i-code">0xe8a8</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8a9" class="icon-example col-6 first"><i class="mul-icon-desktop"></i> <span class="i-name">mul-icon-desktop</span><span class="i-code">0xe8a9</span></div>
+			<div title="Code: 0xe8aa" class="icon-example col-6"><i class="mul-icon-laptop"></i> <span class="i-name">mul-icon-laptop</span><span class="i-code">0xe8aa</span></div>
+			<div title="Code: 0xe8ab" class="icon-example col-6"><i class="mul-icon-tablet"></i> <span class="i-name">mul-icon-tablet</span><span class="i-code">0xe8ab</span></div>
+			<div title="Code: 0xe8ac" class="icon-example col-6"><i class="mul-icon-mobile"></i> <span class="i-name">mul-icon-mobile</span><span class="i-code">0xe8ac</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8ad" class="icon-example col-6 first"><i class="mul-icon-inbox"></i> <span class="i-name">mul-icon-inbox</span><span class="i-code">0xe8ad</span></div>
+			<div title="Code: 0xe8ae" class="icon-example col-6"><i class="mul-icon-globe"></i> <span class="i-name">mul-icon-globe</span><span class="i-code">0xe8ae</span></div>
+			<div title="Code: 0xe8af" class="icon-example col-6"><i class="mul-icon-sun"></i> <span class="i-name">mul-icon-sun</span><span class="i-code">0xe8af</span></div>
+			<div title="Code: 0xe8b0" class="icon-example col-6"><i class="mul-icon-cloud"></i> <span class="i-name">mul-icon-cloud</span><span class="i-code">0xe8b0</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8b1" class="icon-example col-6 first"><i class="mul-icon-flash"></i> <span class="i-name">mul-icon-flash</span><span class="i-code">0xe8b1</span></div>
+			<div title="Code: 0xe8b2" class="icon-example col-6"><i class="mul-icon-moon"></i> <span class="i-name">mul-icon-moon</span><span class="i-code">0xe8b2</span></div>
+			<div title="Code: 0xe8b3" class="icon-example col-6"><i class="mul-icon-umbrella"></i> <span class="i-name">mul-icon-umbrella</span><span class="i-code">0xe8b3</span></div>
+			<div title="Code: 0xe8b4" class="icon-example col-6"><i class="mul-icon-flight"></i> <span class="i-name">mul-icon-flight</span><span class="i-code">0xe8b4</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8b5" class="icon-example col-6 first"><i class="mul-icon-fighter-jet"></i> <span class="i-name">mul-icon-fighter-jet</span><span class="i-code">0xe8b5</span></div>
+			<div title="Code: 0xe8b6" class="icon-example col-6"><i class="mul-icon-leaf"></i> <span class="i-name">mul-icon-leaf</span><span class="i-code">0xe8b6</span></div>
+			<div title="Code: 0xe8b7" class="icon-example col-6"><i class="mul-icon-font"></i> <span class="i-name">mul-icon-font</span><span class="i-code">0xe8b7</span></div>
+			<div title="Code: 0xe8b8" class="icon-example col-6"><i class="mul-icon-bold"></i> <span class="i-name">mul-icon-bold</span><span class="i-code">0xe8b8</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8da" class="icon-example col-6 first"><i class="mul-icon-italic"></i> <span class="i-name">mul-icon-italic</span><span class="i-code">0xe8da</span></div>
+			<div title="Code: 0xe8db" class="icon-example col-6"><i class="mul-icon-text-height"></i> <span class="i-name">mul-icon-text-height</span><span class="i-code">0xe8db</span></div>
+			<div title="Code: 0xe8e0" class="icon-example col-6"><i class="mul-icon-text-width"></i> <span class="i-name">mul-icon-text-width</span><span class="i-code">0xe8e0</span></div>
+			<div title="Code: 0xe8dc" class="icon-example col-6"><i class="mul-icon-align-left"></i> <span class="i-name">mul-icon-align-left</span><span class="i-code">0xe8dc</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8dd" class="icon-example col-6 first"><i class="mul-icon-align-center"></i> <span class="i-name">mul-icon-align-center</span><span class="i-code">0xe8dd</span></div>
+			<div title="Code: 0xe8de" class="icon-example col-6"><i class="mul-icon-align-right"></i> <span class="i-name">mul-icon-align-right</span><span class="i-code">0xe8de</span></div>
+			<div title="Code: 0xe8df" class="icon-example col-6"><i class="mul-icon-align-justify"></i> <span class="i-name">mul-icon-align-justify</span><span class="i-code">0xe8df</span></div>
+			<div title="Code: 0xe8e1" class="icon-example col-6"><i class="mul-icon-list"></i> <span class="i-name">mul-icon-list</span><span class="i-code">0xe8e1</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8e3" class="icon-example col-6 first"><i class="mul-icon-indent-left"></i> <span class="i-name">mul-icon-indent-left</span><span class="i-code">0xe8e3</span></div>
+			<div title="Code: 0xe8e2" class="icon-example col-6"><i class="mul-icon-indent-right"></i> <span class="i-name">mul-icon-indent-right</span><span class="i-code">0xe8e2</span></div>
+			<div title="Code: 0xe8e4" class="icon-example col-6"><i class="mul-icon-list-bullet"></i> <span class="i-name">mul-icon-list-bullet</span><span class="i-code">0xe8e4</span></div>
+			<div title="Code: 0xe8e5" class="icon-example col-6"><i class="mul-icon-list-numbered"></i> <span class="i-name">mul-icon-list-numbered</span><span class="i-code">0xe8e5</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8e6" class="icon-example col-6 first"><i class="mul-icon-strike"></i> <span class="i-name">mul-icon-strike</span><span class="i-code">0xe8e6</span></div>
+			<div title="Code: 0xe8e7" class="icon-example col-6"><i class="mul-icon-underline"></i> <span class="i-name">mul-icon-underline</span><span class="i-code">0xe8e7</span></div>
+			<div title="Code: 0xe8e8" class="icon-example col-6"><i class="mul-icon-superscript"></i> <span class="i-name">mul-icon-superscript</span><span class="i-code">0xe8e8</span></div>
+			<div title="Code: 0xe8e9" class="icon-example col-6"><i class="mul-icon-subscript"></i> <span class="i-name">mul-icon-subscript</span><span class="i-code">0xe8e9</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8ea" class="icon-example col-6 first"><i class="mul-icon-table"></i> <span class="i-name">mul-icon-table</span><span class="i-code">0xe8ea</span></div>
+			<div title="Code: 0xe8eb" class="icon-example col-6"><i class="mul-icon-columns"></i> <span class="i-name">mul-icon-columns</span><span class="i-code">0xe8eb</span></div>
+			<div title="Code: 0xe8ec" class="icon-example col-6"><i class="mul-icon-crop"></i> <span class="i-name">mul-icon-crop</span><span class="i-code">0xe8ec</span></div>
+			<div title="Code: 0xe8ed" class="icon-example col-6"><i class="mul-icon-scissors"></i> <span class="i-name">mul-icon-scissors</span><span class="i-code">0xe8ed</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8ee" class="icon-example col-6 first"><i class="mul-icon-paste"></i> <span class="i-name">mul-icon-paste</span><span class="i-code">0xe8ee</span></div>
+			<div title="Code: 0xe8ef" class="icon-example col-6"><i class="mul-icon-briefcase"></i> <span class="i-name">mul-icon-briefcase</span><span class="i-code">0xe8ef</span></div>
+			<div title="Code: 0xe8f0" class="icon-example col-6"><i class="mul-icon-suitcase"></i> <span class="i-name">mul-icon-suitcase</span><span class="i-code">0xe8f0</span></div>
+			<div title="Code: 0xe8f1" class="icon-example col-6"><i class="mul-icon-ellipsis"></i> <span class="i-name">mul-icon-ellipsis</span><span class="i-code">0xe8f1</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8f2" class="icon-example col-6 first"><i class="mul-icon-ellipsis-vert"></i> <span class="i-name">mul-icon-ellipsis-vert</span><span class="i-code">0xe8f2</span></div>
+			<div title="Code: 0xe8f3" class="icon-example col-6"><i class="mul-icon-off"></i> <span class="i-name">mul-icon-off</span><span class="i-code">0xe8f3</span></div>
+			<div title="Code: 0xe8f4" class="icon-example col-6"><i class="mul-icon-road"></i> <span class="i-name">mul-icon-road</span><span class="i-code">0xe8f4</span></div>
+			<div title="Code: 0xe8f5" class="icon-example col-6"><i class="mul-icon-list-alt"></i> <span class="i-name">mul-icon-list-alt</span><span class="i-code">0xe8f5</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8f6" class="icon-example col-6 first"><i class="mul-icon-qrcode"></i> <span class="i-name">mul-icon-qrcode</span><span class="i-code">0xe8f6</span></div>
+			<div title="Code: 0xe8f7" class="icon-example col-6"><i class="mul-icon-barcode"></i> <span class="i-name">mul-icon-barcode</span><span class="i-code">0xe8f7</span></div>
+			<div title="Code: 0xe8f8" class="icon-example col-6"><i class="mul-icon-book"></i> <span class="i-name">mul-icon-book</span><span class="i-code">0xe8f8</span></div>
+			<div title="Code: 0xe8fa" class="icon-example col-6"><i class="mul-icon-ajust"></i> <span class="i-name">mul-icon-ajust</span><span class="i-code">0xe8fa</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8f9" class="icon-example col-6 first"><i class="mul-icon-tint"></i> <span class="i-name">mul-icon-tint</span><span class="i-code">0xe8f9</span></div>
+			<div title="Code: 0xe8fb" class="icon-example col-6"><i class="mul-icon-check"></i> <span class="i-name">mul-icon-check</span><span class="i-code">0xe8fb</span></div>
+			<div title="Code: 0xe8fc" class="icon-example col-6"><i class="mul-icon-check-empty"></i> <span class="i-name">mul-icon-check-empty</span><span class="i-code">0xe8fc</span></div>
+			<div title="Code: 0xe8fd" class="icon-example col-6"><i class="mul-icon-circle"></i> <span class="i-name">mul-icon-circle</span><span class="i-code">0xe8fd</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe8fe" class="icon-example col-6 first"><i class="mul-icon-circle-empty"></i> <span class="i-name">mul-icon-circle-empty</span><span class="i-code">0xe8fe</span></div>
+			<div title="Code: 0xe8ff" class="icon-example col-6"><i class="mul-icon-dot-circled"></i> <span class="i-name">mul-icon-dot-circled</span><span class="i-code">0xe8ff</span></div>
+			<div title="Code: 0xe900" class="icon-example col-6"><i class="mul-icon-asterisk"></i> <span class="i-name">mul-icon-asterisk</span><span class="i-code">0xe900</span></div>
+			<div title="Code: 0xe901" class="icon-example col-6"><i class="mul-icon-gift"></i> <span class="i-name">mul-icon-gift</span><span class="i-code">0xe901</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe902" class="icon-example col-6 first"><i class="mul-icon-fire"></i> <span class="i-name">mul-icon-fire</span><span class="i-code">0xe902</span></div>
+			<div title="Code: 0xe903" class="icon-example col-6"><i class="mul-icon-magnet"></i> <span class="i-name">mul-icon-magnet</span><span class="i-code">0xe903</span></div>
+			<div title="Code: 0xe904" class="icon-example col-6"><i class="mul-icon-chart-bar"></i> <span class="i-name">mul-icon-chart-bar</span><span class="i-code">0xe904</span></div>
+			<div title="Code: 0xe905" class="icon-example col-6"><i class="mul-icon-ticket"></i> <span class="i-name">mul-icon-ticket</span><span class="i-code">0xe905</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe906" class="icon-example col-6 first"><i class="mul-icon-credit-card"></i> <span class="i-name">mul-icon-credit-card</span><span class="i-code">0xe906</span></div>
+			<div title="Code: 0xe907" class="icon-example col-6"><i class="mul-icon-floppy"></i> <span class="i-name">mul-icon-floppy</span><span class="i-code">0xe907</span></div>
+			<div title="Code: 0xe908" class="icon-example col-6"><i class="mul-icon-megaphone"></i> <span class="i-name">mul-icon-megaphone</span><span class="i-code">0xe908</span></div>
+			<div title="Code: 0xe909" class="icon-example col-6"><i class="mul-icon-hdd"></i> <span class="i-name">mul-icon-hdd</span><span class="i-code">0xe909</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe90a" class="icon-example col-6 first"><i class="mul-icon-key"></i> <span class="i-name">mul-icon-key</span><span class="i-code">0xe90a</span></div>
+			<div title="Code: 0xe90b" class="icon-example col-6"><i class="mul-icon-fork"></i> <span class="i-name">mul-icon-fork</span><span class="i-code">0xe90b</span></div>
+			<div title="Code: 0xe90c" class="icon-example col-6"><i class="mul-icon-rocket"></i> <span class="i-name">mul-icon-rocket</span><span class="i-code">0xe90c</span></div>
+			<div title="Code: 0xe90d" class="icon-example col-6"><i class="mul-icon-bug"></i> <span class="i-name">mul-icon-bug</span><span class="i-code">0xe90d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe90e" class="icon-example col-6 first"><i class="mul-icon-certificate"></i> <span class="i-name">mul-icon-certificate</span><span class="i-code">0xe90e</span></div>
+			<div title="Code: 0xe90f" class="icon-example col-6"><i class="mul-icon-tasks"></i> <span class="i-name">mul-icon-tasks</span><span class="i-code">0xe90f</span></div>
+			<div title="Code: 0xe910" class="icon-example col-6"><i class="mul-icon-filter"></i> <span class="i-name">mul-icon-filter</span><span class="i-code">0xe910</span></div>
+			<div title="Code: 0xe911" class="icon-example col-6"><i class="mul-icon-beaker"></i> <span class="i-name">mul-icon-beaker</span><span class="i-code">0xe911</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe912" class="icon-example col-6 first"><i class="mul-icon-magic"></i> <span class="i-name">mul-icon-magic</span><span class="i-code">0xe912</span></div>
+			<div title="Code: 0xe913" class="icon-example col-6"><i class="mul-icon-truck"></i> <span class="i-name">mul-icon-truck</span><span class="i-code">0xe913</span></div>
+			<div title="Code: 0xe914" class="icon-example col-6"><i class="mul-icon-money"></i> <span class="i-name">mul-icon-money</span><span class="i-code">0xe914</span></div>
+			<div title="Code: 0xe915" class="icon-example col-6"><i class="mul-icon-euro"></i> <span class="i-name">mul-icon-euro</span><span class="i-code">0xe915</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe916" class="icon-example col-6 first"><i class="mul-icon-pound"></i> <span class="i-name">mul-icon-pound</span><span class="i-code">0xe916</span></div>
+			<div title="Code: 0xe917" class="icon-example col-6"><i class="mul-icon-dollar"></i> <span class="i-name">mul-icon-dollar</span><span class="i-code">0xe917</span></div>
+			<div title="Code: 0xe918" class="icon-example col-6"><i class="mul-icon-rupee"></i> <span class="i-name">mul-icon-rupee</span><span class="i-code">0xe918</span></div>
+			<div title="Code: 0xe919" class="icon-example col-6"><i class="mul-icon-yen"></i> <span class="i-name">mul-icon-yen</span><span class="i-code">0xe919</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe91a" class="icon-example col-6 first"><i class="mul-icon-rouble"></i> <span class="i-name">mul-icon-rouble</span><span class="i-code">0xe91a</span></div>
+			<div title="Code: 0xe91b" class="icon-example col-6"><i class="mul-icon-try"></i> <span class="i-name">mul-icon-try</span><span class="i-code">0xe91b</span></div>
+			<div title="Code: 0xe91c" class="icon-example col-6"><i class="mul-icon-won"></i> <span class="i-name">mul-icon-won</span><span class="i-code">0xe91c</span></div>
+			<div title="Code: 0xe91d" class="icon-example col-6"><i class="mul-icon-bitcoin"></i> <span class="i-name">mul-icon-bitcoin</span><span class="i-code">0xe91d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe91e" class="icon-example col-6 first"><i class="mul-icon-sort"></i> <span class="i-name">mul-icon-sort</span><span class="i-code">0xe91e</span></div>
+			<div title="Code: 0xe91f" class="icon-example col-6"><i class="mul-icon-sort-down"></i> <span class="i-name">mul-icon-sort-down</span><span class="i-code">0xe91f</span></div>
+			<div title="Code: 0xe920" class="icon-example col-6"><i class="mul-icon-sort-up"></i> <span class="i-name">mul-icon-sort-up</span><span class="i-code">0xe920</span></div>
+			<div title="Code: 0xe921" class="icon-example col-6"><i class="mul-icon-sort-alt-up"></i> <span class="i-name">mul-icon-sort-alt-up</span><span class="i-code">0xe921</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe922" class="icon-example col-6 first"><i class="mul-icon-sort-alt-down"></i> <span class="i-name">mul-icon-sort-alt-down</span><span class="i-code">0xe922</span></div>
+			<div title="Code: 0xe923" class="icon-example col-6"><i class="mul-icon-sort-name-up"></i> <span class="i-name">mul-icon-sort-name-up</span><span class="i-code">0xe923</span></div>
+			<div title="Code: 0xe924" class="icon-example col-6"><i class="mul-icon-sort-name-down"></i> <span class="i-name">mul-icon-sort-name-down</span><span class="i-code">0xe924</span></div>
+			<div title="Code: 0xe925" class="icon-example col-6"><i class="mul-icon-sort-number-up"></i> <span class="i-name">mul-icon-sort-number-up</span><span class="i-code">0xe925</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe926" class="icon-example col-6 first"><i class="mul-icon-sort-number-down"></i> <span class="i-name">mul-icon-sort-number-down</span><span class="i-code">0xe926</span></div>
+			<div title="Code: 0xe927" class="icon-example col-6"><i class="mul-icon-hammer"></i> <span class="i-name">mul-icon-hammer</span><span class="i-code">0xe927</span></div>
+			<div title="Code: 0xe928" class="icon-example col-6"><i class="mul-icon-gauge"></i> <span class="i-name">mul-icon-gauge</span><span class="i-code">0xe928</span></div>
+			<div title="Code: 0xe929" class="icon-example col-6"><i class="mul-icon-sitemap"></i> <span class="i-name">mul-icon-sitemap</span><span class="i-code">0xe929</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe92a" class="icon-example col-6 first"><i class="mul-icon-spinner"></i> <span class="i-name">mul-icon-spinner</span><span class="i-code">0xe92a</span></div>
+			<div title="Code: 0xe92b" class="icon-example col-6"><i class="mul-icon-coffee"></i> <span class="i-name">mul-icon-coffee</span><span class="i-code">0xe92b</span></div>
+			<div title="Code: 0xe92c" class="icon-example col-6"><i class="mul-icon-food"></i> <span class="i-name">mul-icon-food</span><span class="i-code">0xe92c</span></div>
+			<div title="Code: 0xe92d" class="icon-example col-6"><i class="mul-icon-beer"></i> <span class="i-name">mul-icon-beer</span><span class="i-code">0xe92d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe92e" class="icon-example col-6 first"><i class="mul-icon-user-md"></i> <span class="i-name">mul-icon-user-md</span><span class="i-code">0xe92e</span></div>
+			<div title="Code: 0xe930" class="icon-example col-6"><i class="mul-icon-stethoscope"></i> <span class="i-name">mul-icon-stethoscope</span><span class="i-code">0xe930</span></div>
+			<div title="Code: 0xe92f" class="icon-example col-6"><i class="mul-icon-ambulance"></i> <span class="i-name">mul-icon-ambulance</span><span class="i-code">0xe92f</span></div>
+			<div title="Code: 0xe931" class="icon-example col-6"><i class="mul-icon-medkit"></i> <span class="i-name">mul-icon-medkit</span><span class="i-code">0xe931</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe932" class="icon-example col-6 first"><i class="mul-icon-h-sigh"></i> <span class="i-name">mul-icon-h-sigh</span><span class="i-code">0xe932</span></div>
+			<div title="Code: 0xe933" class="icon-example col-6"><i class="mul-icon-hospital"></i> <span class="i-name">mul-icon-hospital</span><span class="i-code">0xe933</span></div>
+			<div title="Code: 0xe934" class="icon-example col-6"><i class="mul-icon-building"></i> <span class="i-name">mul-icon-building</span><span class="i-code">0xe934</span></div>
+			<div title="Code: 0xe935" class="icon-example col-6"><i class="mul-icon-smile"></i> <span class="i-name">mul-icon-smile</span><span class="i-code">0xe935</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe936" class="icon-example col-6 first"><i class="mul-icon-fcol-24n"></i> <span class="i-name">mul-icon-fcol-24n</span><span class="i-code">0xe936</span></div>
+			<div title="Code: 0xe937" class="icon-example col-6"><i class="mul-icon-meh"></i> <span class="i-name">mul-icon-meh</span><span class="i-code">0xe937</span></div>
+			<div title="Code: 0xe938" class="icon-example col-6"><i class="mul-icon-anchor"></i> <span class="i-name">mul-icon-anchor</span><span class="i-code">0xe938</span></div>
+			<div title="Code: 0xe939" class="icon-example col-6"><i class="mul-icon-terminal"></i> <span class="i-name">mul-icon-terminal</span><span class="i-code">0xe939</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe93a" class="icon-example col-6 first"><i class="mul-icon-eraser"></i> <span class="i-name">mul-icon-eraser</span><span class="i-code">0xe93a</span></div>
+			<div title="Code: 0xe93b" class="icon-example col-6"><i class="mul-icon-puzzle"></i> <span class="i-name">mul-icon-puzzle</span><span class="i-code">0xe93b</span></div>
+			<div title="Code: 0xe93c" class="icon-example col-6"><i class="mul-icon-shield"></i> <span class="i-name">mul-icon-shield</span><span class="i-code">0xe93c</span></div>
+			<div title="Code: 0xe93d" class="icon-example col-6"><i class="mul-icon-extinguisher"></i> <span class="i-name">mul-icon-extinguisher</span><span class="i-code">0xe93d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe93e" class="icon-example col-6 first"><i class="mul-icon-bullseye"></i> <span class="i-name">mul-icon-bullseye</span><span class="i-code">0xe93e</span></div>
+			<div title="Code: 0xe93f" class="icon-example col-6"><i class="mul-icon-wheelchair"></i> <span class="i-name">mul-icon-wheelchair</span><span class="i-code">0xe93f</span></div>
+			<div title="Code: 0xe940" class="icon-example col-6"><i class="mul-icon-adn"></i> <span class="i-name">mul-icon-adn</span><span class="i-code">0xe940</span></div>
+			<div title="Code: 0xe941" class="icon-example col-6"><i class="mul-icon-android"></i> <span class="i-name">mul-icon-android</span><span class="i-code">0xe941</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe942" class="icon-example col-6 first"><i class="mul-icon-apple"></i> <span class="i-name">mul-icon-apple</span><span class="i-code">0xe942</span></div>
+			<div title="Code: 0xe943" class="icon-example col-6"><i class="mul-icon-bitbucket"></i> <span class="i-name">mul-icon-bitbucket</span><span class="i-code">0xe943</span></div>
+			<div title="Code: 0xe944" class="icon-example col-6"><i class="mul-icon-bitbucket-squared"></i> <span class="i-name">mul-icon-bitbucket-squared</span><span class="i-code">0xe944</span></div>
+			<div title="Code: 0xe945" class="icon-example col-6"><i class="mul-icon-css3"></i> <span class="i-name">mul-icon-css3</span><span class="i-code">0xe945</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe946" class="icon-example col-6 first"><i class="mul-icon-dribbble"></i> <span class="i-name">mul-icon-dribbble</span><span class="i-code">0xe946</span></div>
+			<div title="Code: 0xe947" class="icon-example col-6"><i class="mul-icon-dropbox"></i> <span class="i-name">mul-icon-dropbox</span><span class="i-code">0xe947</span></div>
+			<div title="Code: 0xe948" class="icon-example col-6"><i class="mul-icon-facebook"></i> <span class="i-name">mul-icon-facebook</span><span class="i-code">0xe948</span></div>
+			<div title="Code: 0xe949" class="icon-example col-6"><i class="mul-icon-facebook-squared"></i> <span class="i-name">mul-icon-facebook-squared</span><span class="i-code">0xe949</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe94a" class="icon-example col-6 first"><i class="mul-icon-flickr"></i> <span class="i-name">mul-icon-flickr</span><span class="i-code">0xe94a</span></div>
+			<div title="Code: 0xe94b" class="icon-example col-6"><i class="mul-icon-foursquare"></i> <span class="i-name">mul-icon-foursquare</span><span class="i-code">0xe94b</span></div>
+			<div title="Code: 0xe94c" class="icon-example col-6"><i class="mul-icon-github"></i> <span class="i-name">mul-icon-github</span><span class="i-code">0xe94c</span></div>
+			<div title="Code: 0xe94d" class="icon-example col-6"><i class="mul-icon-github-squared"></i> <span class="i-name">mul-icon-github-squared</span><span class="i-code">0xe94d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe94e" class="icon-example col-6 first"><i class="mul-icon-github-circled"></i> <span class="i-name">mul-icon-github-circled</span><span class="i-code">0xe94e</span></div>
+			<div title="Code: 0xe94f" class="icon-example col-6"><i class="mul-icon-gittip"></i> <span class="i-name">mul-icon-gittip</span><span class="i-code">0xe94f</span></div>
+			<div title="Code: 0xe950" class="icon-example col-6"><i class="mul-icon-gplus-squared"></i> <span class="i-name">mul-icon-gplus-squared</span><span class="i-code">0xe950</span></div>
+			<div title="Code: 0xe951" class="icon-example col-6"><i class="mul-icon-gplus"></i> <span class="i-name">mul-icon-gplus</span><span class="i-code">0xe951</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe952" class="icon-example col-6 first"><i class="mul-icon-html5"></i> <span class="i-name">mul-icon-html5</span><span class="i-code">0xe952</span></div>
+			<div title="Code: 0xe953" class="icon-example col-6"><i class="mul-icon-instagramm"></i> <span class="i-name">mul-icon-instagramm</span><span class="i-code">0xe953</span></div>
+			<div title="Code: 0xe954" class="icon-example col-6"><i class="mul-icon-linkedin-squared"></i> <span class="i-name">mul-icon-linkedin-squared</span><span class="i-code">0xe954</span></div>
+			<div title="Code: 0xe955" class="icon-example col-6"><i class="mul-icon-linux"></i> <span class="i-name">mul-icon-linux</span><span class="i-code">0xe955</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe956" class="icon-example col-6 first"><i class="mul-icon-linkedin"></i> <span class="i-name">mul-icon-linkedin</span><span class="i-code">0xe956</span></div>
+			<div title="Code: 0xe957" class="icon-example col-6"><i class="mul-icon-maxcdn"></i> <span class="i-name">mul-icon-maxcdn</span><span class="i-code">0xe957</span></div>
+			<div title="Code: 0xe958" class="icon-example col-6"><i class="mul-icon-pagelines"></i> <span class="i-name">mul-icon-pagelines</span><span class="i-code">0xe958</span></div>
+			<div title="Code: 0xe959" class="icon-example col-6"><i class="mul-icon-pinterest-circled"></i> <span class="i-name">mul-icon-pinterest-circled</span><span class="i-code">0xe959</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe95a" class="icon-example col-6 first"><i class="mul-icon-pinterest-squared"></i> <span class="i-name">mul-icon-pinterest-squared</span><span class="i-code">0xe95a</span></div>
+			<div title="Code: 0xe95b" class="icon-example col-6"><i class="mul-icon-renren"></i> <span class="i-name">mul-icon-renren</span><span class="i-code">0xe95b</span></div>
+			<div title="Code: 0xe95c" class="icon-example col-6"><i class="mul-icon-skype"></i> <span class="i-name">mul-icon-skype</span><span class="i-code">0xe95c</span></div>
+			<div title="Code: 0xe95d" class="icon-example col-6"><i class="mul-icon-stackexchange"></i> <span class="i-name">mul-icon-stackexchange</span><span class="i-code">0xe95d</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe95e" class="icon-example col-6 first"><i class="mul-icon-stackoverflow"></i> <span class="i-name">mul-icon-stackoverflow</span><span class="i-code">0xe95e</span></div>
+			<div title="Code: 0xe95f" class="icon-example col-6"><i class="mul-icon-trello"></i> <span class="i-name">mul-icon-trello</span><span class="i-code">0xe95f</span></div>
+			<div title="Code: 0xe960" class="icon-example col-6"><i class="mul-icon-tumblr"></i> <span class="i-name">mul-icon-tumblr</span><span class="i-code">0xe960</span></div>
+			<div title="Code: 0xe961" class="icon-example col-6"><i class="mul-icon-tumblr-squared"></i> <span class="i-name">mul-icon-tumblr-squared</span><span class="i-code">0xe961</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe970" class="icon-example col-6 first"><i class="mul-icon-twitter-squared"></i> <span class="i-name">mul-icon-twitter-squared</span><span class="i-code">0xe970</span></div>
+			<div title="Code: 0xe962" class="icon-example col-6"><i class="mul-icon-twitter"></i> <span class="i-name">mul-icon-twitter</span><span class="i-code">0xe962</span></div>
+			<div title="Code: 0xe963" class="icon-example col-6"><i class="mul-icon-vimeo-squared"></i> <span class="i-name">mul-icon-vimeo-squared</span><span class="i-code">0xe963</span></div>
+			<div title="Code: 0xe964" class="icon-example col-6"><i class="mul-icon-vkontakte"></i> <span class="i-name">mul-icon-vkontakte</span><span class="i-code">0xe964</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe965" class="icon-example col-6 first"><i class="mul-icon-weibo"></i> <span class="i-name">mul-icon-weibo</span><span class="i-code">0xe965</span></div>
+			<div title="Code: 0xe966" class="icon-example col-6"><i class="mul-icon-windows"></i> <span class="i-name">mul-icon-windows</span><span class="i-code">0xe966</span></div>
+			<div title="Code: 0xe967" class="icon-example col-6"><i class="mul-icon-xing"></i> <span class="i-name">mul-icon-xing</span><span class="i-code">0xe967</span></div>
+			<div title="Code: 0xe968" class="icon-example col-6"><i class="mul-icon-xing-squared"></i> <span class="i-name">mul-icon-xing-squared</span><span class="i-code">0xe968</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe969" class="icon-example col-6 first"><i class="mul-icon-youtube"></i> <span class="i-name">mul-icon-youtube</span><span class="i-code">0xe969</span></div>
+			<div title="Code: 0xe96a" class="icon-example col-6"><i class="mul-icon-youtube-squared"></i> <span class="i-name">mul-icon-youtube-squared</span><span class="i-code">0xe96a</span></div>
+			<div title="Code: 0xe96b" class="icon-example col-6"><i class="mul-icon-youtube-play"></i> <span class="i-name">mul-icon-youtube-play</span><span class="i-code">0xe96b</span></div>
+			<div title="Code: 0xe96c" class="icon-example col-6"><i class="mul-icon-blank"></i> <span class="i-name">mul-icon-blank</span><span class="i-code">0xe96c</span></div>
+		</div>
+		<div class="col-24">
+			<div title="Code: 0xe89a" class="icon-example col-6  first"><i class="mul-icon-exchange"></i> <span class="i-name">mul-icon-exchange</span><span class="i-code">0xe89a</span></div>
+		</div>
+	</div>
+
+</article>
+
+<hr />
+
+<h3 class="mul-hdr-rule">Icon Positioning</h3>
+<div class="col-24">
+	<label class="col-6 first">
+		<i class="mul-icon-search mul-icon-position-left" title=""></i>This is a label with an icon on the left
+	</label>
+
+	<label class="col-6">
+		This is a label with an icon on the right<i class="mul-icon-search mul-icon-position-right" title=""></i>
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-position-top" title=""></i>This is a label with an icon on the top
+	</label>
+
+	<label class="col-6 mul-align-center">
+		This is a label with an icon on the bottom<i class="mul-icon-search mul-icon-position-bottom" title=""></i>
+	</label>
+</div>
+<div class="col-24">
+	<form class="mul-form" id="" name="" method="" action="" title="">
+		<fieldset>
+			<ol>
+				<li class="col-6 first">
+					<label for="email"><i class="mul-icon-mail mul-icon-position-left" title=""></i>Email Address:</label>
+					<input id="email" name="" value="" tabindex="" type="text" placeholder="example@email.com" title="" />
+				</li>
+				<li class="col-6">
+					<label for="">Tooltip icons:</label>
+					<i class="mul-icon-retweet mul-icon-position-left js-mul-tooltip js-mul-tooltip-hover-top-object" title="Reassign"></i>
+					<i class="mul-icon-logout mul-icon-position-left js-mul-tooltip js-mul-tooltip-hover-top-object" title="Delegate"></i>
+					<i class="mul-icon-comment mul-icon-position-left js-mul-tooltip js-mul-tooltip-hover-top-object" title="Comment"></i>
+					<i class="mul-icon-export-alt mul-icon-position-left js-mul-tooltip js-mul-tooltip-hover-top-object" title="Export"></i>
+				</li>
+			</ol>
+		</fieldset>
+	</form>
+</div>
+
+<h4>Rules</h4>
+<p>Remember to put the icon code in the correct content order so the icon is before or after the label text</p>
+<ul>
+	<li>If you want an icon on the left, then have the icon HTML code before the label text inside the label tag</li>
+	<li>If you want an icon on the right, then have the icon HTML code after the label text inside the label tag</li>
+	<li>If you want an icon on the top, then have the icon HTML code before the label text inside the label tag, and add the icon top positioning class to the icon HTML code</li>
+	<li>If you want an icon on the bottom, then have the icon HTML code after the label text inside the label tag, and add the icon bottom positioning class to the icon HTML code</li>
+</ul>
+
+<h3 class="mul-hdr-rule">Icon Sizes</h3>
+<div class="col-24">
+	<label class="col-6 mul-align-center first">
+		<i class="mul-icon-search mul-icon-size-small mul-icon-position-top"></i>Small
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-medium mul-icon-position-top"></i>Medium
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-large mul-icon-position-top"></i>Large
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-x-large mul-icon-position-top"></i>X-large
+	</label>
+</div>
+
+<h3 class="mul-hdr-rule">Icon Only (with accessible text)</h3>
+<div class="col-24">
+	<label class="col-6 mul-align-center first">
+		<i class="mul-icon-search mul-icon-size-small mul-icon-position-top"></i><span class="mul-icon-hide-text">Small</span>
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-medium mul-icon-position-top"></i><span class="mul-icon-hide-text">Medium</span>
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-large mul-icon-position-top"></i><span class="mul-icon-hide-text">Large</span>
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-x-large mul-icon-position-top"></i><span class="mul-icon-hide-text">X-large</span>
+	</label>
+</div>
+
+<h3 class="mul-hdr-rule">Icon Styles</h3>
+<h4>Text Shadow</h4>
+<div class="col-24">
+	<label class="col-6 mul-align-center first">
+		<i class="mul-icon-search mul-icon-size-small mul-icon-style-shadow mul-icon-position-top"></i>Small
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-medium mul-icon-style-shadow mul-icon-position-top"></i>Medium
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-large mul-icon-style-shadow mul-icon-position-top"></i>Large
+	</label>
+
+	<label class="col-6 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-x-large mul-icon-style-shadow mul-icon-position-top"></i>X-large
+	</label>
+</div>
+<h4>Background Gradient</h4>
+<p>Webkit only (Safari, Chrome) with fallback font color for other browsers.</p>
+<div class="col-24">
+	<label class="col-4 mul-align-center first">
+		<i class="mul-icon-ok mul-icon-size-medium mul-icon-style-gradient-confirmation mul-icon-position-top"></i>Positive Icon
+	</label>
+
+	<label class="col-4 mul-align-center">
+		<i class="mul-icon-attention-circled mul-icon-size-medium mul-icon-style-gradient-error mul-icon-position-top"></i>Negative Icon
+	</label>
+
+	<label class="col-4 mul-align-center">
+		<i class="mul-icon-attention mul-icon-size-medium mul-icon-style-gradient-attention mul-icon-position-top"></i>Warning Icon
+	</label>
+
+	<label class="col-4 mul-align-center">
+		<i class="mul-icon-info-circled mul-icon-size-medium mul-icon-style-gradient-info mul-icon-position-top"></i>Info Icon
+	</label>
+
+	<label class="col-4 mul-align-center">
+		<i class="mul-icon-search mul-icon-size-medium mul-icon-style-gradient-utility mul-icon-position-top"></i>Utility Icon
+	</label>
+
+	<label class="col-4 mul-align-center">
+		<i class="mul-icon-menu mul-icon-size-medium mul-icon-style-gradient mul-icon-position-top"></i>Default Icon
+	</label>
+</div>
+
+<br />
+
+<h3 class="mul-hdr-rule">Icon Colors</h3>
+<div class="col-24">
+	<label class="col-4 first">
+		<i class="mul-icon-ok mul-icon-size-small mul-icon-color-confirmation mul-icon-position-left"></i>Positive Icon
+	</label>
+
+	<label class="col-4">
+		<i class="mul-icon-attention-circled mul-icon-size-small mul-icon-color-error mul-icon-position-left"></i>Negative Icon
+	</label>
+
+	<label class="col-4">
+		<i class="mul-icon-attention mul-icon-size-small mul-icon-color-attention mul-icon-position-left"></i>Warning Icon
+	</label>
+
+	<label class="col-4">
+		<i class="mul-icon-info-circled mul-icon-size-small mul-icon-color-info mul-icon-position-left"></i>Info Icon
+	</label>
+
+	<label class="col-4">
+		<i class="mul-icon-search mul-icon-size-small mul-icon-color-utility mul-icon-position-left"></i>Utility Icon
+	</label>
+
+	<label class="col-4">
+		<i class="mul-icon-menu mul-icon-size-small mul-icon-position-left"></i>Default Icon
+	</label>
+</div>
+{% endblock %}

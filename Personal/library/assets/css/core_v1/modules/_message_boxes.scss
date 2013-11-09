@@ -1,0 +1,80 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Libray - Core v1 - Core Message Box Module Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+// GLOBAL MESSAGING
+.message-ctn									{
+												@include border-radius(#{size($baseBorderRadius)}em, all);
+												border-width: $msgBorderWidth;
+												border-style: $msgBorderStyle;
+												margin-bottom: $baseMargin;
+												padding: $msgBoxPadding;
+	.close-ctn										{
+													background: url("#{$msgIcons}/icons/close.png") 0 0 no-repeat;
+													cursor: pointer;
+													float: right;
+													height: 16px;
+													width: 16px;
+													margin: $msgCloseIconPosition;
+													}
+	.hdr-icon										{
+													float: left;
+													height: 16px;
+													width: 16px;
+													margin-right: 4px;
+													}
+	.h5												{
+													font-family: $proximaNovaSemiBoldStack;
+													margin-top: 0;
+													}
+												}
+
+// ERROR/ALERT MESSAGING
+.error-ctn,
+.alert-ctn										{
+												background-color: $errorBackgroundColor;
+												border-color: $errorBorderColor;
+												color: $errorFontColor;
+	.hdr-icon										{background: url("#{$msgIcons}/icons/msg_bx_error.png") 0 2px no-repeat;}
+	.hdr											{color: $errorHdr;}
+	a												{color: $errorFontColor;}
+												}
+
+// NOTICE MESSAGING
+.notice-ctn										{
+												background-color: $noticeBoxBackgroundColor;
+												border-color: $noticeBoxBorderColor;
+												color: $noticeBoxFontColor;
+	.hdr											{color: $noticeHdr;}
+	.hdr-icon										{background: url("#{$msgIcons}/icons/msg_bx_attention.png") 0 1px no-repeat;}
+	a												{color: $noticeBoxFontColor;}
+												}
+
+// INFO MESSAGING
+.info-ctn										{
+												background-color: $infoBoxBackgroundColor;
+												border-color: $infoBoxBorderColor;
+												color: $infoBoxFontColor;
+	.hdr											{color: $infoHdr;}
+	.hdr-icon										{background: url("#{$msgIcons}/icons/msg_bx_confirmation.png") 0 0 no-repeat;}
+	a												{color: $infoBoxFontColor;}
+												}
+
+// SUCCESS MESSAGING
+.success-ctn									{
+												background-color: $successBoxBackgroundColor;
+												border-color: $successBoxBorderColor;
+												color: $successBoxFontColor;
+	.hdr											{color: $successHdr;}
+	.hdr-icon										{background: url("#{$msgIcons}/icons/msg_bx_confirmation.png") 0 3px no-repeat;}
+	a												{color: $successBoxFontColor;}
+												}
+
+// MESSAGE BOXES IE9 FIXES
+.ie9											{
+	.message-ctn									{
+													border-radius:$baseBorderRadiusIE;
+													}
+												}

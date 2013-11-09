@@ -1,0 +1,84 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Libray - Core v1 - JQuery UI Autocomplete Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+.ui-helper-hidden-accessible
+						{display: none;}
+
+.ui-menu				{
+						@include border-radius(0 0 #{size($baseBorderRadius)}em #{size($baseBorderRadius)}em,all);
+						position: absolute;
+						z-index: $zindexAutocomplete;
+						padding: 0;
+						margin: 0;
+						display: block;
+						width: auto;
+						list-style: none;
+						background-color: $autocompleteBackgroundColor;
+						border: $autocompleteBorderSize $autocompleteBorderStyle $autocompleteBorderColor;
+						border-top: 0;
+						max-height: 287px;
+						overflow-y: auto;
+						overflow-x: hidden;
+	.ui-menu-item			{
+							margin: 0;
+							padding: 0;
+							width: 100%;
+							border-top: $autocompleteItemBorderTopSize $autocompleteItemBorderTopStyle $autocompleteItemBorderTopColor;
+							border-bottom: $autocompleteItemBorderBottomSize $autocompleteItemBorderBottomStyle $autocompleteItemBorderBottomColor;
+							font-size: #{size($autocompleteItemFontSize)}em;
+							font-family:  $proximaNovaSemiBoldStack;
+							color: $autocompleteItemFontColor;
+
+		.ui-menu-item-highlight	{
+								text-decoration: $autocompleteItemUnderlineText;
+								color: $autocompleteItemHighlightText;
+								}
+
+		a 						{
+								text-decoration: none;
+								display: block;
+								padding:  5px;
+								line-height: 20px;
+								height: auto;
+								cursor: pointer;
+								}
+		&:hover,
+		&:active				{@include background-gradient($autocompleteItemHoverBackgroundStartColor,$autocompleteItemHoverBackgroundEndColor);}	
+							}
+	.ui-menu-item:first-child
+							{border-top: 0;}
+							
+	// Styles for autocomplete list item hover and active state on last item
+	.ui-menu-item:last-child
+							{
+							border-bottom: 0;
+		.ui-state-hover,
+		.ui-state-active		{
+								@include border-radius(0 0 #{size($baseBorderRadius)}em #{size($baseBorderRadius)}em,all);
+								}
+							}
+						}
+
+//=== MEDIA QUERIES =========================================================================
+
+// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+@media only screen and (min-width :  320px) and (max-width :  767px) {
+
+	.ui-menu			{
+		.ui-menu-item		{
+			a					{
+								@include text-overflow;
+								display: block;
+				.ui-menu-secondary	{
+									@include text-overflow;
+									margin-left: 5px;
+									display: inline;
+									}
+								}
+							}
+						}
+
+}

@@ -1,0 +1,121 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<section class="col-24">
+	<h1>{{ model.title }}</h1>
+</section>
+
+<section class="col-24">
+	<section class="col-8 first">
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>Description go here&hellip;</p>
+			</div>
+			<div id="tabs-2">
+				<p>When to use details go here&hellip;</p>
+			</div>
+			<div id="tabs-3">
+				<p>Functional details go here&hellip;</p>
+			</div>
+			<div id="tabs-4">
+				<p>Technical details go here&hellip;</p>
+			</div>
+		</div>
+
+	</section>
+	<section class="col-16">
+		<h4 class="mul-hdr-rule">Examples</h4>
+
+		<!-- HTML5 FORM ELEMENTS - EXAMPLE - BEGINS -->
+		<form class="mul-form" id="" name="" method="" action="" title="HTML5 Form Elements">
+			<fieldset>
+				<ol class="col-12 first">
+					<li>
+						<label for="text-input">Basic Text Input (Autofocused):</label>
+						<input class="js-mul-autofocus" id="text-input" name="" value="" tabindex="" type="text" title="Name" placeholder="Name" autocomplete="off" autofocus="autofocus" />
+					</li>
+					<li>
+						<label for="password">Password Input Type:</label>
+						<input class="" id="password" name="" value="" tabindex="" type="password" title="Password" placeholder="Password" autocomplete="off" />
+					</li>
+					<li>
+						<label for="number">Number Input Type:</label>
+						<input class="js-mul-numeric-mask" id="number" name="" value="" tabindex="" type="number" min="" max="" step="" value="" title="Number" placeholder="Enter a number" />
+					</li>
+					<li>
+						<label for="email">Email Input Type:</label>
+						<input class="" id="email" name="" value="" tabindex="" type="email" title="Email" placeholder="Enter your email address" autocomplete="on" />
+					</li>
+					<li>
+						<label for="url">URL Input Type:</label>
+						<input class="" id="url" name="" value="" tabindex="" type="url" title="URL" placeholder="Enter a URL" autocomplete="on" />
+					</li>
+					<li>
+						<label for="tel">Telephone Input Type:</label>
+						<input class="js-mul-numeric-mask" id="tel" name="" value="" tabindex="" type="tel" title="Telephone" placeholder="Enter a telephone #" autocomplete="on" />
+					</li>
+					<li>
+						<label for="time">Time Input Type:</label>
+						<input class="" id="time" name="" value="" tabindex="" type="time" title="Time" placeholder="Enter a time" autocomplete="off" />
+					</li>
+					<li>
+						<label for="date">Date Input Type:</label>
+						<input class="" id="date" name="" value="" tabindex="" type="date" title="Date" placeholder="Enter a date" autocomplete="off" />
+					</li>
+					<li>
+						<label for="month">Month Input Type:</label>
+						<input class="" id="month" name="" value="" tabindex="" type="month" title="Month" placeholder="Enter a month" autocomplete="off" />
+					</li>
+					<li>
+						<label for="week">Week Input Type:</label>
+						<input class="" id="week" name="" value="" tabindex="" type="week" title="Week" placeholder="Enter a week" autocomplete="off" />
+					</li>
+					<li>
+						<label for="datetime">Datetime Input Type:</label>
+						<input class="" id="datetime" name="" value="" tabindex="" type="datetime" title="Datetime" placeholder="Enter a datetime" autocomplete="off" />
+					</li>
+					<li>
+						<label for="datetime-local">Datetime Local Input Type:</label>
+						<input class="" id="datetime-local" name="" value="" tabindex="" type="datetime-local" title="Datetime local" placeholder="Enter a datetime local" autocomplete="off" />
+					</li>
+					<li>
+						<label for="color">Color Input Type:</label>
+						<input class="" id="color" name="" value="" tabindex="" type="color" title="color" placeholder="Choose a color" autocomplete="off" />
+					</li>
+					<li>
+						<label for="range">Range Input Type:</label>
+						<input class="" id="range" name="" value="" tabindex="" type="range" min="1" max="10" step="" value="5" title="Range" autocomplete="off" />
+					</li>
+					<li>
+						<label for="search">Search Input Type:</label>
+						<input class="" id="search" name="" value="" tabindex="" type="search" title="Search" placeholder="Enter search term" autocomplete="on" />
+					</li>
+				</ol>
+			</fieldset>
+		</form>
+		<!-- HTML5 FORM ELEMENTS - EXAMPLE - ENDS -->
+
+		<!-- GET CODE - BEGINS
+		<div class="col-24">
+			<div class="col-24 get-code-btn-ctn">
+				{% include "get-code-button" %}
+			</div>
+
+			<div class="col-24 js-mul-toggle-content mul-display-none" id="div1">
+
+				<h4 class="mul-hdr-rule">HTML</h4>
+				<p>Put any content you want in here.</p>
+
+<pre class="prettyprint linenums">
+
+</pre>
+
+			</div>
+
+		</div>
+		GET CODE - ENDS -->
+
+	</section>
+</section>
+{% endblock %}

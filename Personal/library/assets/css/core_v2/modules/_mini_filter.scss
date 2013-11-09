@@ -1,0 +1,60 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Core Mini Filter Module Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-mini-filter == true{
+
+	.mul-mini-filter						{
+											@include clearfix;
+											margin:0;
+		dt,dd									{
+												float:left;
+												line-height: $miniFilterFontSize;
+												}
+		dt										{
+												font-family: $proximaNovaSemiBoldStack;
+												margin:0 $miniFilterLabelMarginRight 0 0;
+												color: $miniFilterLabelFontColor;
+												font-size: $miniFilterFontSize;
+												}
+		dd										{
+												margin:0 $miniFilterItemMarginRight 0 0;
+												border-right: $miniFilterItemSeperatorWidth $miniFilterItemSeperatorStyle $miniFilterItemSeperatorColor;
+			a										{
+													margin-right: $miniFilterItemMarginRight;
+													font-weight: $miniFilterFontWeight;
+													font-size: $miniFilterFontSize;
+				&.active								{
+														padding: $miniFilterActivePaddingTopBottom $miniFilterActivePaddingLeftRight;
+														background-color: $miniFilterActiveBackgroundColor;
+														color: $miniFilterActiveFontColor;
+														text-decoration: none;
+														cursor: default;
+														}
+													}
+			&:last-child							{
+													border-right:0;
+													margin:0;
+				a										{
+														margin:0;
+														}
+													}
+												}
+											}
+
+	// MINI FILTER IE8 FIXES
+	.ie8									{
+		.mul-mini-filter						{
+			.last-child								{
+													border-right:0;
+													margin:0;
+				a										{
+														margin:0;
+														}
+													}
+												}
+											}
+
+}//endif

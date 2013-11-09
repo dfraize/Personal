@@ -1,0 +1,29 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Libray - Core v1 - JQuery UI Accordion Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+.ui-accordion										{
+													margin-bottom:$baseMargin;
+	h5													{
+														font-size:$hdrH5FontSize;
+		a													{
+															@include border-radius(#{size($baseBorderRadius)}em, all);
+															@include background-gradient($uiAcccordianBackgroundStartColor,$uiAcccordianBackgroundEndColor);
+															@include text-shadow(1px, 1px, 1px, $uiAcccordianTextShadowColor);
+															border:$uiAcccordianBorderSize $uiAcccordianBorderStyle $uiAcccordianBorderColor;
+															color:$uiAcccordianFontColor;
+															display:block;
+															padding:#{size($uiAcccordianMarginTopBottom)}em #{size($uiAcccordianMarginLeftRight)}em;
+															text-decoration:none;
+			&:hover												{
+																@include background-gradient($uiAcccordianHoverBackgroundStartColor,$uiAcccordianHoverBackgroundEndColor);
+																}
+															}
+														}
+	.ui-accordion-content								{
+														@include box-sizing(content-box);
+														padding:#{size($uiAcccordianContentMarginTopBottom)}em #{size($uiAcccordianContentMarginLeftRight)}em;
+														}
+													}

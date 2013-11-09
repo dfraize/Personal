@@ -1,0 +1,124 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<section class="col-24">
+	<h1>{{ model.title }}</h1>	
+</section>
+
+<section class="col-24">
+	<section class="col-8 first">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p> The <strong>Feature Container</strong> functions as a means to highlight the most important information on the page. It's essentially featuring the primary content on the page by placing emphasis on it. Feature containers differ from other types of containers because they are typically bigger in size and hold "main" information.</p>
+			</div>
+			<div id="tabs-2">
+				<p> The Feature Container is used when you want to feature a certain item or set of data on a page or application.</p>
+
+				<p> One thing designers should keep in mind is that the Feature Container should be used sparingly in order to preserve the uniqueness of featuring an item.</p>
+
+			</div>
+			<div id="tabs-3">
+			
+			<h5>Components</h5>
+			<ul>
+				<li>The Feature Container is comprised of the following three components:</li>
+					<ul>
+						<li>Border</li>
+						<li>Header</li>
+						<li>Horizontal Line</li>
+					</ul>
+				<li>The border color should always be a solid, 1 pixel gray line. </li>
+				<li>The headers for Feature Containers can be designated as either h1, h2, or h3. </li>
+				<li>The Horizontal Line directly under the Feature Container's header can be any color depending on where it is used.</li>
+			</ul>
+
+			<h5>Sizing and Layout</h5>
+			<ul>
+				<li>The content margins inside all Mercer Feature Containers will have 15 pixels of padding all around.</li>
+				<li>The padding inside a Feature Container from the line under the header to the beginning of the actual content is also 15 pixels. </li>
+				<li>Feature Container height and width are variable based on inside content height and width. </li>
+			</ul>
+
+			<h5>Grids</h5>
+			<ul>
+				<li>Feature Containers work within the Mercer Grid System.</li>
+				<li>Feature Containers can contain grids inside of them to display and section off data within the container.</li>
+			</ul>
+
+			</div>
+			<div id="tabs-4">
+			<ul>
+				<li>The Feature Container is designed to work and display the same way across all browsers.</li>
+				<li>Feature Containers are created using HTML tags.</li>
+			</ul>
+			</div>
+		</div>
+	</section>
+	<section class="col-16">
+
+		<h4 class="mul-hdr-rule">Example With H1 Header (Default)</h4>
+	<!-- FEATURE CONTAINER - EXAMPLE - BEGINS -->
+		<div class="mul-box mul-feature-ctn">
+			<div class="mul-box-hdr">
+				<h1 class="mul-hdr-rule h1">Header</h1>
+			</div>
+			<div class="box-bdy">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis rutrum elit. Nunc adipiscing mi sit amet malesuada hendrerit. Sed pretium purus vitae sem ullamcorper posuere.</p>
+			</div>
+		</div>
+	<!-- FEATURE CONTAINER - EXAMPLE - ENDS -->
+
+		<h4 class="mul-hdr-rule">Example With H2 Header</h4>
+	<!-- FEATURE CONTAINER - EXAMPLE - BEGINS -->
+		<div class="mul-box mul-feature-ctn">
+			<div class="mul-box-hdr">
+				<h2 class="mul-hdr-rule h2">Header</h2>
+			</div>
+			<div class="box-bdy">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis rutrum elit. Nunc adipiscing mi sit amet malesuada hendrerit. Sed pretium purus vitae sem ullamcorper posuere.</p>
+			</div>
+		</div>
+	<!-- FEATURE CONTAINER - EXAMPLE - ENDS -->
+
+		<h4 class="mul-hdr-rule">Example With H3 Header</h4>
+	<!-- FEATURE CONTAINER - EXAMPLE - BEGINS -->
+		<div class="mul-box mul-feature-ctn">
+			<div class="mul-box-hdr">
+				<h3 class="mul-hdr-rule h3">Header</h3>
+			</div>
+			<div class="box-bdy">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis rutrum elit. Nunc adipiscing mi sit amet malesuada hendrerit. Sed pretium purus vitae sem ullamcorper posuere.</p>
+			</div>
+		</div>
+	<!-- FEATURE CONTAINER - EXAMPLE - ENDS -->
+
+		<!-- GET CODE - BEGINS
+		<div class="col-24">
+			<div class="col-24 get-code-btn-ctn">
+				{% include "get-code-button" %}
+			</div>
+
+			<div class="col-24 js-mul-toggle-content mul-display-none" id="div1">
+
+				<h4 class="mul-hdr-rule">HTML</h4>
+				<p>Put any content you want in here.</p>
+
+<pre class="prettyprint linenums">
+
+</pre>
+
+				<h4 class="mul-hdr-rule">JS</h4>
+				<p>Put any content you want in here.</p>
+
+<pre class="prettyprint linenums">
+
+</pre>
+
+			</div>
+
+		</div>
+		GET CODE - ENDS -->
+
+	</section>
+</section>
+{% endblock %}

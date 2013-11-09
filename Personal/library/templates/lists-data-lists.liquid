@@ -1,0 +1,130 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<section class="col-24">
+	<h1>{{ model.title }}</h1>	
+</section>
+
+<section class="col-24">
+	<section class="col-8 first">
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>Description go here&hellip;</p>
+			</div>
+			<div id="tabs-2">
+				<p>When to use details go here&hellip;</p>
+			</div>
+			<div id="tabs-3">
+				<p>Functional details go here&hellip;</p>
+			</div>
+			<div id="tabs-4">
+				<p>Technical details go here&hellip;</p>
+			</div>
+		</div>
+
+	</section>
+	<section class="col-16">
+
+		<!-- DATA LISTS - EXAMPLE - BEGINS -->
+		<div class="mul-data-list-ctn">
+			<h4 class="mul-hdr-rule">Data Lists</h4>
+			<ul class="mul-data-list">
+				<li>
+					<span class="mul-data-list-label">First Name:</span>
+					<span class="mul-data-list-item">Arquimedez</span>
+				</li>
+				<li>
+					<span class="mul-data-list-label">Last Name:</span>
+					<span class="mul-data-list-item">Pozo</span>
+				</li>
+				<li>
+					<span class="mul-data-list-label">Country:</span>
+					<span class="mul-data-list-item">United States</span>
+				</li>
+				<li>
+					<span class="mul-data-list-label">Language:</span>
+					<span class="mul-data-list-item">English</span>
+				</li>
+			</ul>
+		</div>
+		<!-- DATA LISTS - EXAMPLE - ENDS -->
+
+		<!-- DATA LISTS - STACKED - EXAMPLE - BEGINS -->
+		<div class="mul-data-list-ctn">
+			<h4 class="mul-hdr-rule">Data Lists - Stacked</h4>
+			<ul class="mul-data-list mul-data-list-stacked">
+				<li>
+					<span class="mul-data-list-label">First Name:</span>
+					<span class="mul-data-list-item">Arquimedez</span>
+				</li>
+				<li>
+					<span class="mul-data-list-label">Last Name:</span>
+					<span class="mul-data-list-item">Pozo</span>
+				</li>
+				<li>
+					<span class="mul-data-list-label">Country:</span>
+					<span class="mul-data-list-item">United States</span>
+				</li>
+				<li>
+					<span class="mul-data-list-label">Language:</span>
+					<span class="mul-data-list-item">English</span>
+				</li>
+			</ul>
+		</div>
+		<!-- DATA LISTS - STACKED - EXAMPLE - ENDS -->
+
+		<!-- DATA LISTS - BULLETED - EXAMPLE - BEGINS -->
+		<div class="mul-data-list-ctn">
+			<h4 class="mul-hdr-rule">Data Lists - Bulleted</h4>
+			<ul class="mul-data-list mul-data-list-bulleted">
+				<li>
+					<span class="mul-data-list-label">First Name:</span>
+					<span class="mul-data-list-item">Arquimedez</span>
+				</li>
+				<li>
+					<span class="mul-data-list-label">Last Name:</span>
+					<span class="mul-data-list-item">Pozo</span>
+				</li>
+				<li>
+					<span class="mul-data-list-label">Country:</span>
+					<span class="mul-data-list-item">United States</span>
+				</li>
+				<li>
+					<span class="mul-data-list-label">Language:</span>
+					<span class="mul-data-list-item">English</span>
+				</li>
+			</ul>
+		</div>
+		<!-- DATA LISTS - BULLETED - EXAMPLE - ENDS -->
+
+		<!-- GET CODE - BEGINS
+		<div class="col-24">
+			<div class="col-24 get-code-btn-ctn">
+				{% include "get-code-button" %}
+			</div>
+
+			<div class="col-24 js-mul-toggle-content mul-display-none" id="div1">
+
+				<h4 class="mul-hdr-rule">HTML</h4>
+				<p>Put any content you want in here.</p>
+
+<pre class="prettyprint linenums">
+
+</pre>
+
+				<h4 class="mul-hdr-rule">JS</h4>
+				<p>Put any content you want in here.</p>
+
+<pre class="prettyprint linenums">
+
+</pre>
+
+			</div>
+
+		</div>
+		GET CODE - ENDS -->
+
+	</section>
+</section>
+{% endblock %}

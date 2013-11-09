@@ -1,0 +1,52 @@
+/*------------------------------------------------------------------------------------------
+Mercer UX/UI Library - Styles CSS
+DATE - November 1, 2013
+AUTHOR - Doug Fraize, Matthew Holmes
+-------------------------------------------------------------------------------------------*/
+
+@if $use-profile-containers == true{
+
+	.mul-client-profile			{
+		.mul-box-hdr				{
+									@include background-gradient($gray-mid, $gray-light);
+			.mul-hdr-rule				{
+										border-bottom: 0;
+										color: $white;
+										}
+			.mul-secondary-hdr			{
+										color: $white;
+										}
+			.mul-hdr-icon				{}
+									}
+		.mul-navbar					{background-color: $gray-light;}
+								}
+
+
+	// CLIENT CONTAINER HELPERS
+
+	.mul-client-profile-inactive
+								{
+		.mul-box-hdr				{
+									@include background-gradient($gray-mid, $gray-light);
+									}
+								}
+	.mul-client-profile-active
+								{
+		.mul-box-hdr				{
+									@include background-gradient($purple-darker, $purple-dark);
+									}
+								}
+	.mul-client-profile-prospective
+								{
+		.mul-box-hdr				{
+									@include background-gradient($orange-darker, $orange-dark);
+									}
+								}
+	.mul-user-profile
+								{
+		.mul-box-hdr				{
+									@include background-gradient($turquoise-darker, $turquoise-dark);
+									}
+								}
+
+}//endif

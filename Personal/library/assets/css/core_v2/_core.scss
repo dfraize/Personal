@@ -1,0 +1,142 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Core Config Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//=== TABLE OF CONTENTS ======================================================================
+
+// COLOR VARIABLES............list of colors
+// THEME VARIABLES............List of default theme variables that control the default theme of the library
+// VARIABLES..................List of variables that control the library that are not theme variables
+// FUNCTIONS..................Functions used for calculations
+// MIXINS.....................Dynamic things
+// NORMALIZE..................Used instead of reset
+// HELPERS....................Helper class to add padding, margins, etc...
+// FONTS......................Built in fonts 
+// TYPE.......................Lists out the fonts for the web site, variables you can use
+
+// GRID.......................Mobile frist grid based on 24 column layout
+// BOXES......................
+
+// FORMS......................
+
+// BUTTONS....................
+
+// TABLES.....................
+
+// ICONS......................
+// HEADER.....................
+// NAV........................
+// FOOTER.....................
+// LISTS......................
+// MINI FILTER................
+// PAGINATION.................
+// PROFILE CONTAINERS.........
+
+// ACCORDIAN..................
+// AUTOCOMPLETE...............
+// CAROUSEL...................
+// DATEPICKER.................
+// DIALOG.....................
+// SCROLLPANE.................
+// SLIDER.....................
+// TABS.......................
+// TOOLTIP....................
+//
+
+
+//=== LIBRARY OBJECT TOGGLE SETS (DEFAULTS) =================================================
+
+// These are the library object toggle sets defaults. This is what will be turned on/off from the Mercer 
+// UX/UI Libray for your site unless you override the toggle sets defaults in your site vars.scss file.
+
+// LAYOUT TOGGLES
+// Default layout is 980px wide
+$use-grid-980:								true !default;
+$use-grid-1200:								false !default;
+
+// RESPONSIVE TOGGLES
+// small media query = phones
+// medium media query = tablets
+// large media query = desktop
+$use-small-mediaquery:						true !default;
+$use-medium-mediaquery:						true !default;
+$use-large-mediaquery:						true !default;
+
+// BASE TOGGLES
+$use-buttons:								true !default;
+$use-forms:									true !default;
+$use-boxes:									true !default;
+$use-message-boxes:							true !default;
+$use-tables:								true !default;
+
+// MODULE TOGGLES
+$use-icons:									true !default;
+$use-header:								true !default;
+$use-nav:									true !default;
+$use-footer:								true !default;
+$use-lists:									true !default;
+$use-mini-filter:							true !default;
+$use-pagination:							true !default;
+
+// COMPONENT TOGGLES
+$use-accordian:								false !default;
+$use-autocomplete:							false !default;
+$use-carousel:								false !default;
+$use-datepicker:							false !default;
+$use-dialog:								false !default;
+$use-scrollpane:							false !default;
+$use-slider:								false !default;
+$use-tabs:									false !default;
+$use-tooltip:								false !default;
+
+
+// PAGE LAYOUTS
+$use-profile-containers:					true !default;
+
+
+//=== SASS IMPORTS ==========================================================================
+
+// NOTE #1: Make sure theme variables partial is called before variables partial since variables partial requires theme variables partial
+// NOTE #2: Make sure theme variables and variables partial are called before mixins partial since mixins partial requires both
+// NOTE #3: Make sure mixins partial is called before all other partials (excluding theme variables, variables, and functions) since all other partials require mixins partial
+
+@import "base/color_variables",
+		"base/theme_variables",
+		"base/variables",
+		"base/functions",
+		"base/mixins",
+		"base/normalize",
+		"base/helpers",
+		"base/fonts",
+		"base/type",
+
+		"layouts/grid",
+		"layouts/boxes",
+
+		"forms/form",
+
+		"buttons/buttons",
+
+		"tables/tables",
+
+		"modules/footer",
+		"modules/header",
+		"modules/icons",
+		"modules/lists",
+		"modules/mini_filter",
+		"modules/nav",
+		"modules/pagination",
+		"modules/profile_containers",
+
+		"components/accordian",
+		"components/autocomplete",
+		"components/carousel",
+		"components/datepicker",
+		"components/dialog",
+		"components/scroll_pane",
+		"components/slider",
+		"components/tabs",
+		"components/tooltip"
+		;

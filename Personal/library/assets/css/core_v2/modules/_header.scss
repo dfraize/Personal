@@ -1,0 +1,208 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Core Page Header Module Partial
+// DATE - September 20, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-header == true{
+
+	// HEADER MASTHEAD
+	.mul-masthead							{
+											background-color: $mastheadBackgroundColor;
+											height: $mastheadHeight;
+											width: 100%;
+											position: relative;
+											z-index: $zindexHeader;
+											margin-bottom: $mastheadMarginBottom;
+		.mul-masthead-adjust					{
+			.mul-masthead-content-ctn				{
+													height: $mastheadContentHeight;
+													background: url("../images/core/masthead_bg.png") 0 0 no-repeat;
+				
+				// HEADER MASTHEAD LOGO
+				.mul-logo								{
+														line-height: $mastheadLogoLineHeight;
+														margin-bottom: 0;
+					a										{
+															@include href-link($mastheadLogoLinkColor, none);
+															font-weight: $mastheadLogoFontWeight;
+															font-size: $mastheadLogoFontSize;
+															}
+					span									{
+															font-family: $proximaNovaThinStack;
+															}
+														}
+
+				// HEADER MASTHEAD PROFILE MENU
+				.mul-profile-menu-ctn					{		
+														@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
+														cursor: pointer;
+														height: 52px;
+														position: relative;
+					.mul-profile-menu-user-info-ctn			{
+															border: 1px solid $mastheadProfileMenuBorderColor;
+															padding: 0;
+						.mul-profile-menu-user-info				{
+																padding: 5px 0;
+																height: 50px;
+							.mul-profile-menu-icon					{
+																	height: 40px;
+																	width: 26px;
+																	float: left;
+								&:before								{
+																		color: $mastheadProfileMenuIconColor;
+																		font-size: 20px;
+																		position: relative;
+																		left: 3px;
+																		}
+																	}
+							.mul-icon-right-dir:before				{
+																	top: 2px;
+																	}
+							.mul-icon-down-dir						{
+																	display: none;
+								&:before								{
+																		top: -1px;
+																		}
+																	}
+							dl										{
+																	position: relative;
+																	top: 4px;
+																	margin: 0;
+																	color: $mastheadProfileMenuTextColor;
+																	font-size: 12px;
+								dt, dd									{
+																		@include text-overflow;
+																		margin: 0;
+																		line-height: 16px;
+																		}
+																	}
+																}
+						.mul-profile-menu-user-avatar			{
+																padding: 5px;
+																height: 50px;
+							img										{
+																	border: 1px solid $mastheadProfileMenuAvatarBorderColor;
+																	margin: 0;
+																	}
+																}
+															}
+					.mul-profile-menu						{
+															@include border-radius(0 0 $baseBorderRadius $baseBorderRadius, all);
+															@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
+															display: none;
+															position: absolute;
+															top: 51px;
+															right: 0;
+															padding: 0;
+															z-index: $zindexMastheadProfileMenu;
+															background-color: $mastheadProfileMenuBackgroundEndColor;
+						.mul-vertical-list						{
+							li										{
+								a										{
+																		@include href-link($mastheadProfileMenuTextColor, none);
+																		display: block;
+																		font-size: 12px;
+																		padding: 6px 20px 6px 27px;
+									&:hover									{background-color: $mastheadProfileMenuHoverColor;}
+																		}
+
+								.last-child								{
+																		padding-bottom: 7px;
+									&:hover									{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius, all);}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+
+	// HEADER MASTHEAD NAVBAR
+	.mul-masthead-navbar-ctn				{
+											@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);
+											@include box-shadow(0, 2px, 3px, $navBoxShadowColor);
+											border-bottom: 1px solid $navBorderColor;
+											height: $mastheadNavHeight;
+		.mul-navbar								{
+			.mul-horizontal-list					{
+													border-bottom: 0;
+				.mul-first-child						{
+														border-left: 1px solid $navBorderColor;
+														}
+													}
+												}
+											}
+
+	// HEADER IE8+9 FIXES
+
+	.ie8,
+	.ie9									{
+		
+		// HEADER MASTHEAD
+		.mul-masthead							{
+			.mul-masthead-adjust					{
+
+				// HEADER MASTHEAD PROFILE MENU
+				.mul-profile-menu-ctn					{
+					.mul-profile-menu-user-info-ctn			{
+						.mul-profile-menu-user-info				{
+							dl										{
+																	top: 2px;
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+
+
+	// HEADER IE8 FIXES
+	
+	.ie8									{
+
+		// HEADER MASTHEAD
+		.mul-masthead							{
+			.mul-masthead-adjust					{
+
+				// HEADER MASTHEAD PROFILE MENU
+				.mul-masthead-content-ctn				{
+					.mul-profile-menu-ctn					{
+															height: 53px;
+															}
+														}
+													}
+												}
+											}
+
+	// HEADER IE9 FIXES
+
+	.ie9									{
+		
+		// HEADER MASTHEAD
+		.mul-masthead							{
+			.mul-masthead-adjust					{
+
+				// HEADER MASTHEAD PROFILE MENU
+				.mul-masthead-content-ctn				{
+					.mul-profile-menu-ctn					{
+						.mul-profile-menu						{
+																border-radius: $baseBorderRadiusIE;
+							.mul-vertical-list						{
+								li										{
+									.last-child								{
+										&:hover									{
+																				border-radius: $baseBorderRadiusIE;
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+}

@@ -1,0 +1,228 @@
+//-------------------------------------------------------------------------------------------
+// Mercer UX/UI Library - Core v2 - Core Form Partial
+// DATE - July 3, 2013
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-forms == true{
+
+	// GLOBAL FORM ELEMENTS
+	form											{margin: 0 0 $formMarginBottom 0;}
+	fieldset										{
+													border: 0;
+													padding: 0;
+													margin: 0;
+													}
+	label,
+	input,
+	select,
+	textarea										{
+													font-size: $baseFontSize;
+													line-height: $baseLineHeight;
+													}
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"]								{
+													@include border-radius($baseInputBorderRadius, all);
+													@include box-shadow(inset 0, 1px, 1px, #EFEFEF);
+													background-color: $baseInputBackgroundColor;
+													border: $baseInputBorderSize solid $baseInputBorderColor;
+													color: $baseInputColor;
+													display: inline-block;
+													height: auto;
+													padding: $baseInputPadding;
+													font-size: $baseFontSize;
+													vertical-align: middle;
+													width: 100%;
+													}
+
+	select											{padding: 1px 2px 2px 2px;}
+	label											{
+													color: $labelFontColor;
+													display: block;
+													font-family: $proximaNovaSemiBoldStack;
+													margin-bottom: $labelMarginBottom;
+													vertical-align: bottom;
+													}
+
+	input, textarea									{
+													@include placeholder();
+													}
+	input:focus,
+	select:focus,
+	textarea:focus
+													{
+													@include box-shadow(0, 0, 10px, $inputFocusShadowColor);
+													border-color: $inputFocusBorderColor;
+													}
+
+	legend											{padding: 0;}
+	fieldset ol										{
+													margin: 0;
+													padding: 0;
+													list-style-position: outside;
+													}
+	fieldset ol li									{
+													@include clearfix;
+													list-style-type:none;
+													padding: 0;
+													margin-bottom: $marginBottomFormElements;
+													}
+
+	input[type="hidden"]							{display:none;}
+	input[type="checkbox"],
+	input[type="radio"]								{
+													border:0;
+													display:inline;
+													width:$baseCheckboxRadioWidth;
+													}
+													
+	input[type="text"]								{
+		&:valid											{color:$inputValidTextColor;}
+		&:invalid										{color:$inputInvalidTextColor;}
+													}
+
+	// LEFT ALIGN LABLES
+	.mul-form-label-right							{
+		label											{text-align: right;}
+													}
+
+	// MUL FORM
+	.mul-form										{
+
+		.mul-required									{
+														background: url("../images/core/icons/asterisk-required.png") no-repeat 0 5px;
+														padding-left: 12px;
+														}
+
+		// INLINE FORM ELEMENTS
+		.mul-form-inline-element						{
+														display:inline-block;
+														width:auto;
+														}
+
+		// RADIO AND CHECKBOX STYLES
+		.mul-checkbox,
+		.mul-radio										{
+														display: block;
+			label											{
+															font-family: $proximaNovaRegularStack;
+															margin: 0 8px 0 0;
+															padding: 2px 0 0 0;
+				input											{
+																position: relative;
+																top: 1px;
+																}
+															}
+
+														}
+
+		// FORM INFO TEXT
+		.mul-info										{color: $formInfoTextColor;}
+													}
+
+	// INLINE FORM
+	.mul-form-inline								{
+		label											{display: inline-block;}
+		input, select									{width: auto;}
+													}
+
+	// MUL FORM ACTION ROW
+	.mul-form-action								{
+													margin:$formActionMargin 0 0 0;
+													-webkit-margin-top-collapse:separate;
+													}
+
+	// FORM ERROR HANDLING
+	.mul-error										{
+		.mul-required									{
+														background-image: url("../images/core/icons/asterisk-error.png");
+														color: $inputInvalidTextColor;
+														padding-left: 12px;
+														}
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"],
+		select,
+		textarea										{
+														background-color: $errorBackgroundColor;
+														border-color: $errorBorderColor;
+														color: $inputInvalidTextColor;
+														}
+		.mul-info										{color: $inputInvalidTextColor;}
+													}
+
+	// MUL FORM TABLE LAYOUT
+	// Used on multi-column stacked form
+	.mul-form-table-layout							{
+		fieldset										{
+														display: table;
+			ol												{
+															display: table-row;
+				li												{
+																display: table-cell;
+																padding: 0 $basePadding $basePadding 0;
+																width: 33.3% !important;
+																vertical-align: bottom;
+																}
+															}
+														}
+													}
+
+	// SELECTED CHECKBOX
+	// Highlights that background element when a checkbox has been selected
+	.mul-checkbox-checked							{
+													border-radius: $selectedCheckboxBorderRadius;
+													background-color: $green-light;
+													padding-right: 4px !important;
+													margin-bottom: 2px !important;
+													}
+
+
+	// FORM IE9 FIXES
+	.ie9											{
+		input											{line-height:$baseFontSize;}
+
+		select,
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"]								{border-radius:$baseBorderRadiusIE !important;}
+													}
+
+}//endif
