@@ -44,7 +44,7 @@
 				<td class="odd"></td>
 				<td class="even"></td>
 				<td class="odd"></td>
-				<td class="even">Advanced children</td>
+				<td class="even">Blue-Black Children</td>
 			</tr>
 			<tr class="odd">
 				<td class="time">10:30am</td>
@@ -54,7 +54,7 @@
 				<td class="odd"></td>
 				<td class="even"></td>
 				<td class="odd"></td>
-				<td class="even">Sidekicks children</td>
+				<td class="even">Sidekicks Children</td>
 			</tr>
 			<tr class="even">
 				<td class="time">11:30am</td>
@@ -64,7 +64,7 @@
 				<td class="odd"></td>
 				<td class="even"></td>
 				<td class="odd"></td>
-				<td class="even">Intermediate children</td>
+				<td class="even">All Ranks Adults</td>
 			</tr>
 			<tr class="odd">
 				<td class="time">12:30pm</td>
@@ -74,7 +74,7 @@
 				<td class="odd"></td>
 				<td class="even"></td>
 				<td class="odd"></td>
-				<td class="even">Intermediate adults</td>
+				<td class="even">Kickboxing</td>
 			</tr>
 			<tr class="even">
 				<td class="time">1:30pm</td>
@@ -84,7 +84,7 @@
 				<td class="odd"></td>
 				<td class="even"></td>
 				<td class="odd"></td>
-				<td class="even">Kickboxing</td>
+				<td class="even"></td>
 			</tr>
 			<tr class="odd">
 				<td class="time">2:30pm</td>
@@ -101,48 +101,48 @@
 				<td class="even"></td>
 				<td class="odd"></td>
 				<td class="even"></td>
-				<td class="odd">#2 Beginner children</td>
+				<td class="odd"></td>
 				<td class="even"></td>
 				<td class="odd"></td>
 				<td class="even"></td>
 			</tr>
 			<tr class="odd">
-				<td class="time">5:00pm</td>
+				<td class="time">5:25pm</td>
 				<td class="even"></td>
-				<td class="odd">#2 Beginner children</td>
-				<td class="even">Intermediate children</td>
-				<td class="odd">Advanced children</td>
-				<td class="even">Sidekicks children</td>
-				<td class="odd">#2 Beginner children</td>
+				<td class="odd"></td>
+				<td class="even">All Rank Children</td>
+				<td class="odd">Brown-Black Children</td>
+				<td class="even">Sidekicks Children</td>
+				<td class="odd"></td>
 				<td class="even"></td>
 			</tr>
 			<tr class="even">
-				<td class="time">6:00pm</td>
+				<td class="time">6:15pm</td>
 				<td class="even"></td>
-				<td class="odd">Advanced children</td>
-				<td class="even">Sidekicks children</td>
-				<td class="odd">#3 Beginner children</td>
-				<td class="even">Intermediate children</td>
-				<td class="odd">#3 Beginner children</td>
+				<td class="odd"></td>
+				<td class="even">Sidekicks Children</td>
+				<td class="odd">White-Blue Children</td>
+				<td class="even">All Rank Children</td>
+				<td class="odd"></td>
 				<td class="even"></td>
 			</tr>
 			<tr class="odd">
 				<td class="time">7:00pm</td>
 				<td class="even"></td>
+				<td class="odd"></td>
+				<td class="even">White-Purple Adults</td>
 				<td class="odd">Kickboxing</td>
-				<td class="even">Beginner adults</td>
-				<td class="odd">Kickboxing</td>
-				<td class="even">Beginner adults</td>
-				<td class="odd">Adult grappling</td>
+				<td class="even">All Rank Adults</td>
+				<td class="odd"></td>
 				<td class="even"></td>
 			</tr>
 			<tr class="even">
 				<td class="time">8:00pm</td>
 				<td class="even"></td>
-				<td class="odd">Intermediate adults</td>
-				<td class="even">Black belts</td>
-				<td class="odd">Intermediate adults</td>
-				<td class="even"></td>
+				<td class="odd"></td>
+				<td class="even">Kickboxing</td>
+				<td class="odd">Purple-Black Adults</td>
+				<td class="even">Personal Lessons</td>
 				<td class="odd"></td>
 				<td class="even"></td>
 			</tr>
