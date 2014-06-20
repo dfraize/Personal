@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--[if IE 8]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js ie-gt-9" lang="en"><!--<![endif]-->
+	<head>
+
+		<!-- CHARACTER SET -->
+		<meta charset="utf-8" />
+
+		<!-- ALWAYS FORCE LATEST IE RENDERING ENGINE (EVEN IN INTRANET) -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- TITLE AND PAGE META DATA -->
+		<title>TITLE</title>
+		<meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
+		<meta name="description" content="{% block meta_description %}{% endblock %}" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- MOBILE OPTIMIZATIONS -->
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+
+		<!-- Viewport setting for responsiveness -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+		<!-- Mobile Internet Explorer font smoothing for easy reading -->
+		<meta http-equiv="cleartype" content="on" />
+		
+		<!-- Mobile touch icons - http://goo.gl/6nVq0 -->
+		<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png" /> -->
+		<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" /> -->
+		<!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png" /> -->
+		<!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" /> -->
+		<!-- For the iPad mini and the first and second-generation iPad on iOS ≥ 7: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png" /> -->
+		<!-- For the iPad mini and the first and second-generation iPad on iOS ≤ 6: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" /> -->
+		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+		<!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" /> -->
+		<!-- For nokia devices: -->
+		<!-- <link rel="shortcut icon" href="apple-touch-icon-precomposed.png" /> -->
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<!-- <meta name="msapplication-TileImage" content="apple-touch-icon-144x144-precomposed.png" /> -->
+		<!-- <meta name="msapplication-TileColor" content="#002C77" /> -->
+
+		<!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+		<!--
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="" />
+		-->
+
+		<!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!-- STYLE SHEETS -->
+		<link rel="stylesheet" href="assets/css/evolution_2.4.css">
+		<link rel="stylesheet" href="assets/css/ie.css">
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<link rel="stylesheet" href="assets/css/theme.css">
+
+		<script src="scripts/core_v2-4/lib/modernizr/modernizr_2.6.2.min.js"></script>
+		<script src="scripts/core_v2-4/lib/respond/respond_1.3.0.min.js"></script>
+
+		<!-- 1. Load platform.js for polyfill support. -->
+		<script src="bower_components/platform/platform.js"></script>
+
+		<!-- 2. Use an HTML Import to bring in the element. -->
+		<link rel="import" href="bower_components/core-ajax/core-ajax.html">
+		<link rel="import" href="elements/element-test-1.html">
+		<link rel="import" href="elements/proto-element.html">
+		<link rel="import" href="elements/message-box.html">
+		<link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+  	</head>
+	<body>
+
+		<section role="main" class="mul-grid">
+
+			<core-scaffold></core-scaffold>
+
+			<div class="col-24">
+				<message-box containerType="mul-box" containerIconType="checkmark-circle" containerContent="Messaging area here" containerHeader="Header"></message-box>
+				
+				<message-box containerType="confirmation" containerIconType="checkmark-circle" containerContent="Confirmation message text" containerHeader="Confirmation"></message-box>
+				
+				<message-box containerType="error" containerIconType="notification" containerContent="Error message text" containerHeader="Error"></message-box>
+				
+				<message-box containerType="attention" containerIconType="warning" containerContent="Attention message text" containerHeader="Attention"></message-box>
+				
+			</div>
+
+
+		</section>
+
+
+	</body>
+</html>

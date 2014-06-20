@@ -1,0 +1,16 @@
+{
+  "name": "context-free-parser",
+  "private": true,
+  "dependencies": {},
+  "homepage": "https://github.com/Polymer/context-free-parser",
+  "version": "0.3.1",
+  "_release": "0.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.1",
+    "commit": "8c40192fbab45230b5be85d1311808f2d14cf8f9"
+  },
+  "_source": "git://github.com/Polymer/context-free-parser.git",
+  "_target": ">=0.3.0 <1.0.0",
+  "_originalSource": "Polymer/context-free-parser"
+}
